@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_name">Memento Mori</string>
+    <string name="widget_description">Dein Leben in Wochen: die aktuelle Woche und die verbleibende Zeit</string>
+    <string name="widget_week_label">Woche</string>
+    <string name="widget_week_number">Woche %1$s</string>
+    <string name="widget_of_total">von %1$s</string>
+    <string name="widget_percent">%1$d\u00A0%%</string>
+    <string name="widget_percent_lived">%1$d\u00A0%% gelebt</string>
+    <string name="widget_setup_message">Öffne die App und gib dein Geburtsdatum ein</string>
+    <!-- Statische Beispielwerte für die Widget-Vorschau -->
+    <string name="widget_preview_week_label">WOCHE</string>
+    <string name="widget_preview_week_number">1.912</string>
+    <string name="widget_preview_remaining">noch 2.249 Wochen</string>
+    <string name="widget_preview_percent" formatted="false">45\u00A0% gelebt</string>
+    <string name="widget_grid_description">Dein Leben in Wochen</string>
+    <plurals name="widget_weeks_left">
+        <item quantity="one">noch %1$s Woche</item>
+        <item quantity="other">noch %1$s Wochen</item>
+    </plurals>
+    <plurals name="widget_months_left">
+        <item quantity="one">noch %1$s Monat</item>
+        <item quantity="other">noch %1$s Monate</item>
+    </plurals>
+    <plurals name="widget_years_left">
+        <item quantity="one">noch %1$s Jahr</item>
+        <item quantity="other">noch %1$s Jahre</item>
+    </plurals>
+    <plurals name="widget_days_left">
+        <item quantity="one">noch %1$s Tag</item>
+        <item quantity="other">noch %1$s Tage</item>
+    </plurals>
+</resources>

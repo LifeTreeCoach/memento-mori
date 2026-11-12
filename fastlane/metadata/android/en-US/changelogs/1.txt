@@ -1,0 +1,8 @@
+First release.
+• Your life as a grid of weeks, months or years
+• A lifespan estimate from UN data, with optional lifestyle questions
+• Compass: life phases, a weekly question, up to three intentions, moments on your grid
+• People: birthday reminders, import from contacts or a vCard file, and the Together view
+• Daily quotes, home-screen widgets and a Wear OS app
+• English, German, French and Spanish
+Everything stays on your device.

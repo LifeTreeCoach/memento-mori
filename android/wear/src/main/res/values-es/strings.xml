@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Memento Mori</string>
+    <string name="tile_label">Vida en semanas</string>
+    <string name="complication_label">Semana de vida</string>
+    <string name="watch_week_label">Semana</string>
+    <string name="watch_percent">%1$d %%</string>
+    <string name="watch_percent_lived">%1$d %% vivido</string>
+    <string name="watch_years_title">Tu vida en años</string>
+    <string name="watch_needs_phone">Abre Memento Mori en tu móvil</string>
+    <!-- Abreviatura de una letra de «semana» para la complicación de texto corto («S1912») -->
+    <string name="complication_week_prefix">S</string>
+    <plurals name="watch_weeks_left">
+        <item quantity="one">queda %1$s semana</item>
+        <item quantity="many">quedan %1$s semanas</item>
+        <item quantity="other">quedan %1$s semanas</item>
+    </plurals>
+    <plurals name="watch_months_left">
+        <item quantity="one">queda %1$s mes</item>
+        <item quantity="many">quedan %1$s meses</item>
+        <item quantity="other">quedan %1$s meses</item>
+    </plurals>
+    <plurals name="watch_years_left">
+        <item quantity="one">queda %1$s año</item>
+        <item quantity="many">quedan %1$s años</item>
+        <item quantity="other">quedan %1$s años</item>
+    </plurals>
+    <plurals name="watch_days_left">
+        <item quantity="one">queda %1$s día</item>
+        <item quantity="many">quedan %1$s días</item>
+        <item quantity="other">quedan %1$s días</item>
+    </plurals>
+</resources>

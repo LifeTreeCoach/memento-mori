@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Memento Mori</string>
+    <string name="tile_label">Life in weeks</string>
+    <string name="complication_label">Week of life</string>
+    <string name="watch_week_label">Week</string>
+    <string name="watch_percent">%1$d%%</string>
+    <string name="watch_percent_lived">%1$d%% lived</string>
+    <string name="watch_years_title">Your life in years</string>
+    <string name="watch_needs_phone">Open Memento Mori on your phone</string>
+    <!-- One-letter week abbreviation for the short-text complication ("W1912") -->
+    <string name="complication_week_prefix">W</string>
+    <plurals name="watch_weeks_left">
+        <item quantity="one">%1$s week left</item>
+        <item quantity="other">%1$s weeks left</item>
+    </plurals>
+    <plurals name="watch_months_left">
+        <item quantity="one">%1$s month left</item>
+        <item quantity="other">%1$s months left</item>
+    </plurals>
+    <plurals name="watch_years_left">
+        <item quantity="one">%1$s year left</item>
+        <item quantity="other">%1$s years left</item>
+    </plurals>
+    <plurals name="watch_days_left">
+        <item quantity="one">%1$s day left</item>
+        <item quantity="other">%1$s days left</item>
+    </plurals>
+</resources>

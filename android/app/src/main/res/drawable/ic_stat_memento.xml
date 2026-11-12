@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Notification small icon: a simple hourglass, white on transparent
+     (Android tints it; only the alpha channel matters). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Top and bottom caps -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M5,2h14v2H5z M5,20h14v2H5z" />
+    <!-- Glass with two hollow chambers -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M7,4h10v3c0,2 -2,3.5 -3.5,5c1.5,1.5 3.5,3 3.5,5v3H7v-3c0,-2 2,-3.5 3.5,-5C9,10.5 7,9 7,7z M9,6v1c0,1.2 1.4,2.4 3,3.8c1.6,-1.4 3,-2.6 3,-3.8V6z M9,18h6v-1c0,-1.2 -1.4,-2.4 -3,-3.8c-1.6,1.4 -3,2.6 -3,3.8z" />
+    <!-- Sand: a little left on top, a pile below -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M10.4,7.6h3.2L12,9.2z M9.6,18h4.8L12,15.4z" />
+</vector>

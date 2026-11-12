@@ -1,0 +1,48 @@
+Memento Mori montre ta vie sous forme de grille de semaines. Chaque case remplie est une semaine vécue, chaque case vide une semaine encore devant toi. Le but n’est pas de te faire peur. C’est un rappel discret que ton temps est compté, pour que tu le consacres à ce qui compte pour toi.
+
+Ta vie d’un seul coup d’œil
+• Vois ta vie en semaines, en mois ou en années, zoome et touche une case pour savoir à quand elle correspond
+• D’autres affichages si tu veux : spirale, jauge liquide ou cernes d’arbre
+• Une courte citation chaque jour et le prochain anniversaire
+
+Avec combien d’années compter ?
+• L’estimation part des tables de mortalité des World Population Prospects 2024 de l’ONU pour ton pays, ton âge et ton sexe
+• Cinq questions facultatives sur ton mode de vie (tabac, activité, alcool, poids, lien avec les autres) la rendent plus personnelle
+• Le calcul se fait sur ton appareil. C’est une moyenne statistique, pas une prédiction, et tu peux choisir ton propre chiffre à tout moment
+
+Boussole
+• Une question douce pour chaque semaine
+• Phases de vie : vois dans quelle phase tu es et quelle part de ta durée de vie elle représente ; ajoute des phases passées si tu veux
+• Des intentions pour cette phase, pour accomplir quelque chose ou pour en profiter : trois au plus pour « Maintenant » ; le reste peut attendre sous « Un jour »
+• Clôture une phase en conscience et choisis ce que tu emportes et ce que tu lâches
+• Après avoir accompli quelque chose, un moment calme pour le savourer : le temps qu’il t’a fallu, sa place dans ta vie et le temps encore devant toi, avec une note de gratitude facultative
+• Garde les moments vécus et retrouve-les sur ta grille
+• Ta grille de vie aux couleurs de tes phases, aussi dans les autres affichages
+• Un regard en arrière sur ce que tu as vécu
+• Pas de séries, pas de points, pas de pression
+
+Proches
+• Garde les anniversaires de tes amis et de ta famille, avec groupes, avatars, recherche et tri
+• Importe en quelques gestes les anniversaires de tes contacts ou d’un fichier vCard, même sans année ; tout se passe sur ton appareil et seules les personnes que tu choisis sont enregistrées
+• Des rappels d’anniversaire le jour même et, si tu veux, la veille
+• En option, un événement annuel d’anniversaire dans le calendrier de ton appareil
+• Ensemble : vos deux vies sur une même frise et une estimation approximative du nombre de fois où vous pourriez encore vous voir à votre rythme habituel, avec de quoi prévoir du temps ensemble
+
+Sur ton écran d’accueil et à ton poignet
+• Des widgets en trois tailles ; le grand affiche ta grille de semaines
+• Une appli Wear OS avec une vignette et une complication pour le cadran (la synchronisation avec la montre nécessite la version Google Play)
+
+Et aussi
+• Un rappel facultatif le dimanche soir : chaque semaine avec la question de la semaine, ou toutes les 4 semaines avec un point sur ta phase
+• Deux styles apaisants, Stoïque et Chaleureux, en clair et en sombre, et des couleurs de grille au choix
+• Sauvegarde et restauration dans un fichier JSON, avatars compris
+• Français, anglais, allemand et espagnol
+
+Tes données restent chez toi
+• Tout est enregistré sur ton appareil
+• Tes contacts ne sont lus que lorsque tu importes des anniversaires, et seules les personnes que tu choisis sont gardées
+• Pas de compte, pas de publicité, pas de pistage
+• L’appli n’a pas l’autorisation d’accéder à Internet : elle ne peut envoyer tes données nulle part
+
+Open source
+Memento Mori est un logiciel libre et open source, sous licence GPL-3.0.

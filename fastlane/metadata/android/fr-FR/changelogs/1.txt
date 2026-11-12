@@ -1,0 +1,8 @@
+Première version.
+• Ta vie sous forme de grille : semaines, mois ou années
+• Ta durée de vie estimée d’après l’ONU, avec des questions facultatives sur ton mode de vie
+• Boussole : phases de vie, une question par semaine, trois intentions au plus, des moments sur ta grille
+• Proches : rappels d’anniversaire, import des contacts ou d’une vCard et la vue « Ensemble »
+• Citations du jour, widgets et une appli Wear OS
+• Français, anglais, allemand et espagnol
+Tout reste sur ton appareil.

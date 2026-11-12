@@ -1,0 +1,8 @@
+Primera versión.
+• Tu vida como una cuadrícula de semanas, meses o años
+• Una estimación de tu esperanza de vida con datos de la ONU y preguntas opcionales sobre tu estilo de vida
+• Brújula: etapas de la vida, una pregunta por semana, hasta tres intenciones, momentos en tu cuadrícula
+• Personas: recordatorios de cumpleaños, importación desde contactos o vCard y la vista «Juntos»
+• Citas diarias, widgets y una app para Wear OS
+• Español, inglés, alemán y francés
+Todo se queda en tu dispositivo.

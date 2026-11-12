@@ -1,0 +1,48 @@
+Memento Mori muestra tu vida como una cuadrícula de semanas. Cada casilla llena es una semana que has vivido, cada casilla vacía una semana que aún tienes por delante. No pretende asustarte. Es un recordatorio tranquilo de que tu tiempo es limitado, para que lo dediques a lo que de verdad te importa.
+
+Tu vida de un vistazo
+• Mira tu vida en semanas, meses o años, acércate y toca una casilla para ver a qué momento corresponde
+• Otras vistas si quieres: espiral, progreso líquido o anillos de árbol
+• Una cita breve cada día y el próximo cumpleaños
+
+¿Con cuántos años contar?
+• La estimación parte de las tablas de vida de World Population Prospects 2024 de la ONU para tu país, tu edad y tu sexo
+• Cinco preguntas opcionales sobre tu estilo de vida (tabaco, actividad, alcohol, peso, conexión con los demás) la hacen más personal
+• Se calcula en tu dispositivo. Es una media estadística, no una predicción, y puedes elegir tu propio número cuando quieras
+
+Brújula
+• Una pregunta amable para cada semana
+• Etapas de la vida: mira en qué etapa estás y qué parte de tu vida ocupa; añade etapas anteriores si quieres
+• Intenciones para esta etapa, para hacer algo o para disfrutarlo: como mucho tres para «Ahora»; lo demás puede esperar en «Algún día»
+• Cierra una etapa de forma consciente y decide qué te llevas y qué sueltas
+• Después de completar algo, un momento tranquilo para asimilarlo: cuánto tiempo te llevó, qué lugar ocupa en tu vida y el tiempo que aún tienes por delante, con una nota de gratitud opcional
+• Guarda los momentos vividos y míralos marcados en tu cuadrícula
+• Tu cuadrícula de vida con los colores de tus etapas, también en las otras vistas
+• Una mirada atrás a lo que has vivido
+• Sin rachas, sin puntos, sin presión
+
+Personas
+• Guarda los cumpleaños de tus amigos y tu familia, con grupos, avatares, búsqueda y orden
+• Importa en pocos toques los cumpleaños de tus contactos o de un archivo vCard, también sin año; todo ocurre en tu dispositivo y solo se guardan las personas que elijas
+• Recordatorios de cumpleaños el mismo día y, si quieres, el día anterior
+• Si quieres, eventos anuales de cumpleaños en el calendario de tu dispositivo
+• Juntos: las dos vidas en una misma línea de tiempo y un cálculo aproximado de cuántas veces podríais veros todavía a vuestro ritmo habitual, con una forma de planear tiempo juntos
+
+En tu pantalla de inicio y en tu muñeca
+• Widgets en tres tamaños; el grande muestra tu cuadrícula de semanas
+• Una app para Wear OS con una tarjeta y una complicación para la esfera (la sincronización con el reloj necesita la versión de Google Play)
+
+Y además
+• Un recordatorio opcional el domingo por la tarde: cada semana con la pregunta de la semana o cada 4 semanas con una mirada a tu etapa
+• Dos estilos tranquilos, Estoico y Cálido, en claro y oscuro, y colores de cuadrícula opcionales
+• Copia de seguridad y restauración en un archivo JSON, con avatares incluidos
+• Español, inglés, alemán y francés
+
+Tus datos se quedan contigo
+• Todo se guarda en tu dispositivo
+• Tus contactos solo se leen cuando importas cumpleaños, y solo se guardan las personas que elijas
+• Sin cuenta, sin anuncios, sin rastreo
+• La app no tiene permiso de acceso a internet, así que no puede enviar tus datos a ninguna parte
+
+Código abierto
+Memento Mori es software libre y de código abierto, con licencia GPL-3.0.

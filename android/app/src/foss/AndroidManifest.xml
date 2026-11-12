@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <application>
+        <!-- image_picker_android declares this (disabled) service so Play
+             services can backport the system photo picker. foss builds have
+             no Play services, so drop it here; play builds keep it. -->
+        <service
+            android:name="com.google.android.gms.metadata.ModuleDependencies"
+            tools:node="remove" />
+    </application>
+</manifest>

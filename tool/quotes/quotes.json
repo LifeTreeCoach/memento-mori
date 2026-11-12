@@ -1,0 +1,4330 @@
+[
+ {
+  "id": "seneca_brev_1_3",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "De Brevitate Vitae 1.3",
+  "text": {
+   "en": "It is not that we have little time, but that we lose much of it.",
+   "de": "Wir haben nicht zu wenig Zeit, sondern wir verlieren viel davon.",
+   "fr": "Ce n’est pas que nous ayons peu de temps, c’est que nous en perdons beaucoup.",
+   "es": "No es que tengamos poco tiempo, sino que perdemos mucho."
+  },
+  "original": "la",
+  "themes": [
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/sen.brevita.shtml – Latin: \"Non exiguum temporis habemus, sed multum perdidimus.\""
+ },
+ {
+  "id": "seneca_brev_2_1",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "De Brevitate Vitae 2.1",
+  "text": {
+   "en": "Life is long, if you know how to use it.",
+   "de": "Das Leben ist lang, wenn du es zu nutzen weißt.",
+   "fr": "La vie est longue, si tu sais t’en servir.",
+   "es": "La vida es larga, si sabes usarla."
+  },
+  "original": "la",
+  "themes": [
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/sen.brevita.shtml – Latin: \"vita, si uti scias, longa est\""
+ },
+ {
+  "id": "seneca_brev_9_1",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "De Brevitate Vitae 9.1",
+  "text": {
+   "en": "The greatest obstacle to living is waiting, which hangs on tomorrow and loses today.",
+   "de": "Das größte Hindernis für das Leben ist das Warten: Es hängt am Morgen und verliert das Heute.",
+   "fr": "Le plus grand obstacle à la vie, c’est l’attente : elle dépend de demain et perd aujourd’hui.",
+   "es": "El mayor obstáculo para vivir es la espera: depende del mañana y pierde el hoy."
+  },
+  "original": "la",
+  "themes": [
+   "presence",
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/sen.brevita.shtml – Latin: \"Maximum vivendi impedimentum est exspectatio, quae pendet ex crastino, perdit hodiernum.\""
+ },
+ {
+  "id": "seneca_brev_7_3_learn",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "De Brevitate Vitae 7.3",
+  "text": {
+   "en": "It takes a whole life to learn how to live, and, what may surprise you more, a whole life to learn how to die.",
+   "de": "Leben zu lernen braucht das ganze Leben, und, was dich vielleicht mehr wundert, sterben zu lernen auch.",
+   "fr": "Il faut toute la vie pour apprendre à vivre et, ce qui t’étonnera peut-être davantage, toute la vie pour apprendre à mourir.",
+   "es": "Aprender a vivir lleva toda la vida y, lo que quizá te sorprenda más, aprender a morir también."
+  },
+  "original": "la",
+  "themes": [
+   "growth",
+   "mortality"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/sen.brevita.shtml – Latin: \"vivere tota vita discendum est et ... tota vita discendum est mori\""
+ },
+ {
+  "id": "seneca_brev_7_3_busy",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "De Brevitate Vitae 7.3",
+  "text": {
+   "en": "Nothing can be done well by someone who is too busy: a mind pulled in all directions takes nothing in deeply.",
+   "de": "Wer zu beschäftigt ist, kann nichts gut tun: Ein zerrissener Geist nimmt nichts tief in sich auf.",
+   "fr": "Rien ne se fait bien quand on est trop occupé : un esprit tiraillé ne reçoit rien en profondeur.",
+   "es": "Nada se hace bien cuando se está demasiado ocupado: una mente dispersa no acoge nada en profundidad."
+  },
+  "original": "la",
+  "themes": [
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/sen.brevita.shtml – Latin: \"nullam rem bene exerceri posse ab homine occupato ... quando districtus animus nihil altius recipit\""
+ },
+ {
+  "id": "seneca_ep_1_3_postpone",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "Letters to Lucilius 1.3",
+  "text": {
+   "en": "While we are postponing, life speeds by.",
+   "de": "Während wir aufschieben, eilt das Leben vorbei.",
+   "fr": "Pendant que nous remettons à plus tard, la vie file.",
+   "es": "Mientras lo aplazamos, la vida pasa corriendo."
+  },
+  "original": "la",
+  "themes": [
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/seneca.ep1.shtml – Latin: \"Dum differtur vita transcurrit.\" (English: Gummere 1917, PD)"
+ },
+ {
+  "id": "seneca_ep_1_3_own",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "Letters to Lucilius 1.3",
+  "text": {
+   "en": "Everything else belongs to others; only our time is our own.",
+   "de": "Alles andere gehört nicht uns; nur die Zeit ist wirklich unser.",
+   "fr": "Tout le reste nous est étranger ; seul le temps est à nous.",
+   "es": "Todo lo demás es ajeno; solo el tiempo es nuestro."
+  },
+  "original": "la",
+  "themes": [
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/seneca.ep1.shtml – Latin: \"Omnia, Lucili, aliena sunt, tempus tantum nostrum est\""
+ },
+ {
+  "id": "seneca_ep_101_10",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "Letters to Lucilius 101.10",
+  "text": {
+   "en": "Begin at once to live, and count each separate day as a separate life.",
+   "de": "Beeil dich zu leben, und betrachte jeden einzelnen Tag als ein eigenes Leben.",
+   "fr": "Hâte-toi de vivre, et tiens chaque jour pour une vie à part entière.",
+   "es": "Apresúrate a vivir, y considera cada día como una vida entera."
+  },
+  "original": "la",
+  "themes": [
+   "time",
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/seneca.ep17-18.shtml – Latin: \"propera, Lucili mi, vivere, et singulos dies singulas vitas puta\" (English: Gummere 1925, PD)"
+ },
+ {
+  "id": "seneca_tranq_17_5",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "De Tranquillitate Animi 17.5",
+  "text": {
+   "en": "The mind must be given rest: it rises better and keener after resting.",
+   "de": "Dem Geist muss man Erholung gönnen: Ausgeruht steht er besser und frischer wieder auf.",
+   "fr": "Il faut accorder du repos à l’esprit : reposé, il se relève meilleur et plus vif.",
+   "es": "Hay que dar descanso al espíritu: tras reposar, se levanta mejor y más despierto."
+  },
+  "original": "la",
+  "themes": [
+   "rest",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/sen.tranq.shtml – Latin: \"Danda est animis remissio: meliores acrioresque requieti surgent.\""
+ },
+ {
+  "id": "seneca_tranq_17_8",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "De Tranquillitate Animi 17.8",
+  "text": {
+   "en": "Be gentle with your mind and give it leisure now and then. Walk in the open, so that under a free sky it may grow and lift itself.",
+   "de": "Sei nachsichtig mit deinem Geist und gönn ihm ab und zu Muße. Geh unter freiem Himmel spazieren, damit er sich weiten und aufrichten kann.",
+   "fr": "Sois indulgent avec ton esprit et accorde-lui parfois du loisir. Promène-toi au grand air, pour que sous un ciel libre il grandisse et s’élève.",
+   "es": "Sé indulgente con tu mente y dale descanso de vez en cuando. Pasea al aire libre, para que bajo un cielo abierto crezca y se eleve."
+  },
+  "original": "la",
+  "themes": [
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/sen.tranq.shtml – Latin: \"Indulgendum est animo dandumque subinde otium ... Et in ambulationibus apertis vagandum, ut caelo libero et multo spiritu augeat attollatque se animus\""
+ },
+ {
+  "id": "seneca_ep_9_6",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "Letters to Lucilius 9.6",
+  "text": {
+   "en": "If you want to be loved, love.",
+   "de": "Willst du geliebt werden, so liebe.",
+   "fr": "Si tu veux être aimé, aime.",
+   "es": "Si quieres ser amado, ama."
+  },
+  "original": "la",
+  "themes": [
+   "love",
+   "connection"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/seneca.ep1.shtml – Latin: \"si vis amari, ama\" (Seneca quoting the Stoic Hecaton)"
+ },
+ {
+  "id": "seneca_ep_2_6",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "Letters to Lucilius 2.6",
+  "text": {
+   "en": "It is not the one who has little who is poor, but the one who craves more.",
+   "de": "Arm ist nicht, wer wenig hat, sondern wer mehr begehrt.",
+   "fr": "Le pauvre n’est pas celui qui a peu, mais celui qui désire davantage.",
+   "es": "No es pobre quien tiene poco, sino quien desea más."
+  },
+  "original": "la",
+  "themes": [
+   "simplicity",
+   "gratitude"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/seneca.ep1.shtml – Latin: \"non qui parum habet, sed qui plus cupit, pauper est\""
+ },
+ {
+  "id": "seneca_ep_6_7",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "Letters to Lucilius 6.7",
+  "text": {
+   "en": "What progress have I made? I have begun to be a friend to myself. Such a person will never be alone.",
+   "de": "Welchen Fortschritt ich gemacht habe? Ich habe begonnen, mir selbst ein Freund zu sein. Wer das tut, ist nie allein.",
+   "fr": "Quels progrès ai-je faits ? J’ai commencé à être mon propre ami. Celui-là ne sera jamais seul.",
+   "es": "¿Qué progreso he hecho? He empezado a ser amigo de mí mismo. Quien lo logra nunca estará solo."
+  },
+  "original": "la",
+  "themes": [
+   "compassion",
+   "growth"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/seneca.ep1.shtml – Latin: \"Quaeris quid profecerim? amicus esse mihi coepi. Multum profecit: numquam erit solus.\" (Seneca quoting Hecaton, then commenting)"
+ },
+ {
+  "id": "seneca_ep_12_4",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "Letters to Lucilius 12.4",
+  "text": {
+   "en": "Let us embrace old age and love it; it is full of pleasure if you know how to use it. Fruit is sweetest just as its season ends.",
+   "de": "Lass uns das Alter umarmen und lieben; es ist voller Freude, wenn du es zu nutzen weißt. Am köstlichsten ist das Obst, wenn seine Zeit zu Ende geht.",
+   "fr": "Embrassons la vieillesse et aimons-la : elle est pleine de plaisir, si tu sais en user. Les fruits sont les plus doux quand leur saison s’achève.",
+   "es": "Abracemos la vejez y amémosla: está llena de placer si sabes aprovecharla. La fruta es más dulce cuando su estación termina."
+  },
+  "original": "la",
+  "themes": [
+   "aging",
+   "gratitude"
+  ],
+  "stages": [
+   "harvest",
+   "wisdom"
+  ],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/seneca.ep1.shtml – Latin: \"Complectamur illam et amemus; plena est voluptatis, si illa scias uti. Gratissima sunt poma cum fugiunt\""
+ },
+ {
+  "id": "seneca_ep_13_4",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "Letters to Lucilius 13.4",
+  "text": {
+   "en": "More things frighten us than actually harm us; we suffer more often in imagination than in reality.",
+   "de": "Vieles erschreckt uns mehr, als es uns wirklich bedrückt; öfter leiden wir in der Vorstellung als in der Wirklichkeit.",
+   "fr": "Bien des choses nous effraient plus qu’elles ne nous accablent ; nous souffrons plus souvent en imagination qu’en réalité.",
+   "es": "Son más las cosas que nos asustan que las que nos oprimen; sufrimos más a menudo en la imaginación que en la realidad."
+  },
+  "original": "la",
+  "themes": [
+   "courage",
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/seneca.ep2.shtml – Latin: \"Plura sunt, Lucili, quae nos terrent quam quae premunt, et saepius opinione quam re laboramus.\""
+ },
+ {
+  "id": "seneca_ep_15_9",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "Letters to Lucilius 15.9",
+  "text": {
+   "en": "The foolish life is ungrateful and anxious; it is carried entirely toward the future.",
+   "de": "Das törichte Leben ist undankbar und ängstlich; es richtet sich ganz auf die Zukunft.",
+   "fr": "La vie insensée est ingrate et inquiète : elle est tout entière tournée vers l’avenir.",
+   "es": "La vida necia es ingrata y temerosa: se vuelca entera hacia el futuro."
+  },
+  "original": "la",
+  "themes": [
+   "gratitude",
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/seneca.ep2.shtml – Latin: \"stulta vita ingrata est, trepida; tota in futurum fertur\" (Seneca quoting Epicurus)"
+ },
+ {
+  "id": "seneca_ira_3_43_5",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "De Ira 3.43.5",
+  "text": {
+   "en": "Soon we will breathe our last. Meanwhile, while we are still among people, let us cherish our humanity.",
+   "de": "Bald hauchen wir unser Leben aus. Bis dahin, solange wir noch unter Menschen sind, lass uns Menschlichkeit pflegen.",
+   "fr": "Bientôt nous rendrons notre dernier souffle. En attendant, tant que nous sommes parmi les hommes, cultivons notre humanité.",
+   "es": "Pronto exhalaremos el último aliento. Mientras tanto, mientras sigamos entre los hombres, cultivemos nuestra humanidad."
+  },
+  "original": "la",
+  "themes": [
+   "compassion",
+   "mortality"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/sen.ira3.shtml – Latin: \"Iam istum spiritum expuemus. Interim, dum trahimus, dum inter homines sumus, colamus humanitatem\""
+ },
+ {
+  "id": "seneca_ep_48_2",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "Letters to Lucilius 48.2",
+  "text": {
+   "en": "No one can live happily who looks only at himself. You must live for others if you want to live for yourself.",
+   "de": "Niemand kann glücklich leben, der nur auf sich selbst schaut. Du musst für andere leben, wenn du für dich leben willst.",
+   "fr": "Nul ne peut vivre heureux s’il ne regarde que lui-même. Il faut vivre pour autrui si tu veux vivre pour toi.",
+   "es": "Nadie puede vivir feliz si solo se mira a sí mismo. Debes vivir para los demás si quieres vivir para ti."
+  },
+  "original": "la",
+  "themes": [
+   "connection",
+   "compassion"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/seneca.ep5.shtml – Latin: \"Nec potest quisquam beate degere qui se tantum intuetur ... alteri vivas oportet, si vis tibi vivere.\""
+ },
+ {
+  "id": "seneca_ep_93_2",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "Letters to Lucilius 93.2",
+  "text": {
+   "en": "Let us care not to live long, but to live enough. Life is long if it is full.",
+   "de": "Lass uns nicht danach streben, lange zu leben, sondern genug. Lang ist das Leben, wenn es erfüllt ist.",
+   "fr": "Ne cherchons pas à vivre longtemps, mais assez. La vie est longue si elle est pleine.",
+   "es": "No procuremos vivir mucho, sino lo bastante. La vida es larga si está llena."
+  },
+  "original": "la",
+  "themes": [
+   "time",
+   "aging"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/seneca.ep14-15.shtml – Latin: \"Non ut diu vivamus curandum est, sed ut satis ... Longa est vita si plena est\""
+ },
+ {
+  "id": "seneca_ep_77_20",
+  "author": {
+   "en": "Seneca",
+   "de": "Seneca",
+   "fr": "Sénèque",
+   "es": "Séneca"
+  },
+  "source": "Letters to Lucilius 77.20",
+  "text": {
+   "en": "As with a play, so with life: what matters is not how long it lasts, but how well it is acted.",
+   "de": "Mit dem Leben ist es wie mit einem Theaterstück: Es kommt nicht darauf an, wie lange es dauert, sondern wie gut es gespielt wird.",
+   "fr": "Il en va de la vie comme d’une pièce de théâtre : ce qui compte n’est pas sa durée, mais la qualité du jeu.",
+   "es": "Con la vida pasa como con una obra de teatro: no importa cuánto dura, sino lo bien que se representa."
+  },
+  "original": "la",
+  "themes": [
+   "mortality",
+   "aging"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/sen/seneca.ep9.shtml – Latin: \"Quomodo fabula, sic vita: non quam diu, sed quam bene acta sit, refert.\""
+ },
+ {
+  "id": "marcus_meditations_2_11",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 2.11",
+  "text": {
+   "en": "You could leave life at this very moment. Let that guide everything you do and think.",
+   "de": "Du könntest das Leben in diesem Augenblick verlassen. Lass das alles leiten, was du tust und denkst.",
+   "fr": "Tu pourrais quitter la vie à cet instant même. Que cela guide chacun de tes actes et de tes pensées.",
+   "es": "Podrías dejar la vida en este mismo instante. Deja que eso guíe todo lo que haces y piensas."
+  },
+  "original": "grc",
+  "themes": [
+   "mortality",
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"Since it is possible that thou mayest depart from life this very moment, regulate every act and thought accordingly.\""
+ },
+ {
+  "id": "marcus_meditations_4_17",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 4.17",
+  "text": {
+   "en": "Do not live as if you had ten thousand years ahead of you. While you live, while you still can, be good.",
+   "de": "Lebe nicht, als hättest du noch zehntausend Jahre vor dir. Solange du lebst, solange du noch kannst, sei gut.",
+   "fr": "Ne vis pas comme si tu avais dix mille ans devant toi. Tant que tu vis, tant que tu le peux encore, sois bon.",
+   "es": "No vivas como si tuvieras diez mil años por delante. Mientras vivas, mientras aún puedas, sé bueno."
+  },
+  "original": "grc",
+  "themes": [
+   "mortality",
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"Do not act as if thou wert going to live ten thousand years. Death hangs over thee. While thou livest, while it is in thy power, be good.\""
+ },
+ {
+  "id": "marcus_meditations_7_67",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 7.67",
+  "text": {
+   "en": "Very little is needed to live a happy life.",
+   "de": "Es braucht sehr wenig, um ein glückliches Leben zu führen.",
+   "fr": "Il faut très peu de chose pour vivre heureux.",
+   "es": "Se necesita muy poco para vivir una vida feliz."
+  },
+  "original": "grc",
+  "themes": [
+   "simplicity",
+   "gratitude"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"very little indeed is necessary for living a happy life\""
+ },
+ {
+  "id": "marcus_meditations_10_16",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 10.16",
+  "text": {
+   "en": "Stop talking about what a good person should be, and be one.",
+   "de": "Hör auf, darüber zu reden, wie ein guter Mensch sein sollte, und sei einer.",
+   "fr": "Cesse de discuter de ce que doit être une personne de bien, et sois-le.",
+   "es": "Deja de hablar de cómo debe ser una buena persona, y sélo."
+  },
+  "original": "grc",
+  "themes": [
+   "work",
+   "growth"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"No longer talk at all about the kind of man that a good man ought to be, but be such.\""
+ },
+ {
+  "id": "marcus_meditations_7_47",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 7.47",
+  "text": {
+   "en": "Look at the courses of the stars, as if you were running along with them.",
+   "de": "Betrachte den Lauf der Sterne, als zögest du mit ihnen dahin.",
+   "fr": "Contemple la course des étoiles, comme si tu cheminais avec elles.",
+   "es": "Contempla el curso de las estrellas, como si caminaras junto a ellas."
+  },
+  "original": "grc",
+  "themes": [
+   "presence",
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"Look round at the courses of the stars, as if thou wert going along with them\""
+ },
+ {
+  "id": "marcus_meditations_4_3",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 4.3",
+  "text": {
+   "en": "People seek retreats in the country, by the sea, in the mountains. Yet you can retreat into yourself whenever you choose; nowhere is quieter.",
+   "de": "Menschen suchen Rückzug auf dem Land, am Meer, in den Bergen. Doch du kannst dich jederzeit in dich selbst zurückziehen; nirgends ist es stiller.",
+   "fr": "On cherche des retraites à la campagne, au bord de la mer, à la montagne. Mais tu peux te retirer en toi-même quand tu veux ; nulle part il n’est plus calme.",
+   "es": "La gente busca retiros en el campo, junto al mar, en las montañas. Pero puedes retirarte en ti mismo cuando quieras; en ningún lugar hay más calma."
+  },
+  "original": "grc",
+  "themes": [
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"Men seek retreats for themselves, houses in the country, sea-shores, and mountains ... it is in thy power whenever thou shalt choose to retire into thyself. For nowhere either with more quiet ... does a man retire than into his own soul\""
+ },
+ {
+  "id": "marcus_meditations_7_22",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 7.22",
+  "text": {
+   "en": "It is human to love even those who stumble. Remember that they are your kin, that they err out of ignorance, and that soon you will both be gone.",
+   "de": "Es ist dem Menschen eigen, auch die zu lieben, die Fehler machen. Denk daran: Sie sind dir verwandt, sie irren aus Unwissen, und bald seid ihr beide nicht mehr.",
+   "fr": "Le propre de l’homme est d’aimer même ceux qui commettent des fautes. Souviens-toi qu’ils sont tes proches, qu’ils se trompent par ignorance, et que bientôt vous ne serez plus.",
+   "es": "Lo propio del ser humano es amar incluso a quienes se equivocan. Recuerda que son de tu familia, que yerran por ignorancia y que pronto ambos ya no estaréis."
+  },
+  "original": "grc",
+  "themes": [
+   "compassion",
+   "love"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"It is peculiar to man to love even those who do wrong ... they are kinsmen, and that they do wrong through ignorance ... and that soon both of you will die\""
+ },
+ {
+  "id": "marcus_meditations_7_27",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 7.27",
+  "text": {
+   "en": "Think less of what you lack than of what you have. Pick the best of what you have, and consider how eagerly you would seek it if you did not have it.",
+   "de": "Denk weniger an das, was dir fehlt, als an das, was du hast. Wähle das Beste davon und bedenke, wie sehr du es suchen würdest, wenn du es nicht hättest.",
+   "fr": "Pense moins à ce qui te manque qu’à ce que tu as. Choisis le meilleur de ce que tu as, et songe avec quelle ardeur tu le chercherais si tu ne l’avais pas.",
+   "es": "Piensa menos en lo que te falta que en lo que tienes. Elige lo mejor de ello y piensa con cuánto anhelo lo buscarías si no lo tuvieras."
+  },
+  "original": "grc",
+  "themes": [
+   "gratitude"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"Think not so much of what thou hast not as of what thou hast: but of the things which thou hast select the best, and then reflect how eagerly they would have been sought, if thou hadst them not.\""
+ },
+ {
+  "id": "marcus_meditations_1_17",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 1.17",
+  "text": {
+   "en": "To the gods I owe good grandparents, good parents, a good sister, good teachers, good companions, kin and friends: nearly everything good.",
+   "de": "Den Göttern verdanke ich gute Großeltern, gute Eltern, eine gute Schwester, gute Lehrer, gute Gefährten, Verwandte und Freunde: fast alles Gute.",
+   "fr": "Je dois aux dieux de bons grands-parents, de bons parents, une bonne sœur, de bons maîtres, de bons compagnons, des proches et des amis : presque tout ce qui est bon.",
+   "es": "A los dioses debo buenos abuelos, buenos padres, una buena hermana, buenos maestros, buenos compañeros, parientes y amigos: casi todo lo bueno."
+  },
+  "original": "grc",
+  "themes": [
+   "gratitude",
+   "connection"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"To the gods I am indebted for having good grandfathers, good parents, a good sister, good teachers, good associates, good kinsmen and friends, nearly everything good.\""
+ },
+ {
+  "id": "marcus_meditations_5_1",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 5.1",
+  "text": {
+   "en": "In the morning, when you are reluctant to get up, keep this thought ready: I am rising to do the work of a human being.",
+   "de": "Wenn du morgens ungern aufstehst, halte dir diesen Gedanken bereit: Ich stehe auf, um das Werk eines Menschen zu tun.",
+   "fr": "Le matin, quand tu as du mal à te lever, garde cette pensée à portée de main : je me lève pour faire mon travail d’être humain.",
+   "es": "Por la mañana, cuando te cueste levantarte, ten presente este pensamiento: me levanto para hacer la obra de un ser humano."
+  },
+  "original": "grc",
+  "themes": [
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"In the morning when thou risest unwillingly, let this thought be present,--I am rising to the work of a human being.\""
+ },
+ {
+  "id": "marcus_meditations_4_24",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 4.24",
+  "text": {
+   "en": "Do few things, says the philosopher, if you want to be at peace. Better perhaps: do what is necessary.",
+   "de": "Tu wenige Dinge, sagt der Philosoph, wenn du Ruhe finden willst. Besser vielleicht: Tu das Notwendige.",
+   "fr": "Occupe-toi de peu de choses, dit le philosophe, si tu veux être serein. Mieux vaut peut-être dire : fais ce qui est nécessaire.",
+   "es": "Ocúpate de pocas cosas, dice el filósofo, si quieres estar sereno. Mejor quizá: haz lo necesario."
+  },
+  "original": "grc",
+  "themes": [
+   "work",
+   "rest",
+   "simplicity"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"Occupy thyself with few things, says the philosopher, if thou wouldst be tranquil.--But consider if it would not be better to say, Do what is necessary\""
+ },
+ {
+  "id": "marcus_meditations_3_10",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 3.10",
+  "text": {
+   "en": "Each of us lives only this present moment, a tiny point; all the rest is either past or uncertain.",
+   "de": "Jeder lebt nur diesen gegenwärtigen Augenblick, einen winzigen Punkt; alles Übrige ist vergangen oder ungewiss.",
+   "fr": "Chacun ne vit que l’instant présent, un point infime ; tout le reste est passé ou incertain.",
+   "es": "Cada uno vive solo este instante presente, un punto diminuto; todo lo demás ya pasó o es incierto."
+  },
+  "original": "grc",
+  "themes": [
+   "presence",
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"every man lives only this present time, which is an indivisible point, and that all the rest of his life is either past or it is uncertain\""
+ },
+ {
+  "id": "marcus_meditations_4_48",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 4.48",
+  "text": {
+   "en": "Pass through this little span of time in harmony with nature, and end your journey content, as a ripe olive falls, blessing the earth that bore it and thanking the tree on which it grew.",
+   "de": "Geh durch diese kurze Zeitspanne im Einklang mit der Natur und beende deine Reise zufrieden, wie eine reife Olive fällt: die Erde segnend, die sie trug, dem Baum dankend, an dem sie wuchs.",
+   "fr": "Traverse ce bref moment en accord avec la nature, et achève ton voyage en paix, comme l’olive mûre qui tombe en bénissant la terre qui l’a portée et en remerciant l’arbre qui l’a nourrie.",
+   "es": "Recorre este breve tiempo de acuerdo con la naturaleza y acaba tu viaje en paz, como cae la aceituna madura, bendiciendo a la tierra que la dio y agradeciendo al árbol en que creció."
+  },
+  "original": "grc",
+  "themes": [
+   "mortality",
+   "gratitude",
+   "aging"
+  ],
+  "stages": [
+   "harvest",
+   "wisdom"
+  ],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"Pass then through this little space of time conformably to nature, and end thy journey in content, as an olive falls off when it is ripe, blessing nature who produced it, and thanking the tree on which it grew.\""
+ },
+ {
+  "id": "marcus_meditations_5_9",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 5.9",
+  "text": {
+   "en": "Do not be disheartened if you do not always act on your principles. When you fail, come back again, and be glad if most of what you do is worthy of a human being.",
+   "de": "Sei nicht entmutigt, wenn dir nicht alles nach deinen Grundsätzen gelingt. Wenn du scheiterst, kehre zurück und freu dich, wenn das meiste, was du tust, eines Menschen würdig ist.",
+   "fr": "Ne te décourage pas si tu ne réussis pas toujours à agir selon tes principes. Quand tu échoues, reviens, et réjouis-toi si l’essentiel de ce que tu fais est digne d’un être humain.",
+   "es": "No te desanimes si no siempre logras actuar según tus principios. Cuando falles, vuelve a empezar, y alégrate si casi todo lo que haces es digno de un ser humano."
+  },
+  "original": "grc",
+  "themes": [
+   "compassion",
+   "growth"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"Be not disgusted, nor discouraged, nor dissatisfied, if thou dost not succeed in doing everything according to right principles, but when thou hast failed, return back again, and be content if the greater part of what thou doest is consistent with man's nature\""
+ },
+ {
+  "id": "marcus_meditations_6_39",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 6.39",
+  "text": {
+   "en": "Make peace with the circumstances that have fallen to you, and love the people among whom you live, truly.",
+   "de": "Füge dich in die Umstände, die dir zugefallen sind, und liebe die Menschen, mit denen du lebst, aufrichtig.",
+   "fr": "Accorde-toi aux circonstances que le sort t’a données, et aime vraiment les personnes parmi lesquelles tu vis.",
+   "es": "Adáptate a las circunstancias que te han tocado, y ama de verdad a las personas entre las que vives."
+  },
+  "original": "grc",
+  "themes": [
+   "love",
+   "connection"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"Adapt thyself to the things with which thy lot has been cast: and the men among whom thou hast received thy portion, love them, but do it truly [sincerely].\""
+ },
+ {
+  "id": "marcus_meditations_9_12",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 9.12",
+  "text": {
+   "en": "Do not work as one who is wretched, nor to be pitied or admired. Want one thing only: to act, or to pause, as the common good requires.",
+   "de": "Arbeite nicht wie ein Unglücklicher, und nicht, um bemitleidet oder bewundert zu werden. Wolle nur eines: tätig sein oder innehalten, wie es das Gemeinwohl verlangt.",
+   "fr": "Ne travaille pas comme un malheureux, ni pour être plaint ou admiré. Ne veux qu’une chose : agir ou t’arrêter, selon ce que demande le bien commun.",
+   "es": "No trabajes como un desdichado, ni para ser compadecido o admirado. Quiere solo una cosa: actuar o detenerte, según lo pida el bien común."
+  },
+  "original": "grc",
+  "themes": [
+   "work",
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"Labor not as one who is wretched, nor yet as one who would be pitied or admired; but direct thy will to one thing only--to put thyself in motion and to check thyself, as the social reason requires.\""
+ },
+ {
+  "id": "marcus_meditations_8_36",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 8.36",
+  "text": {
+   "en": "Do not trouble yourself by picturing your whole life at once. In each moment ask: what here is truly unbearable?",
+   "de": "Beunruhige dich nicht, indem du dir dein ganzes Leben auf einmal ausmalst. Frag dich in jedem Moment: Was daran ist wirklich unerträglich?",
+   "fr": "Ne te trouble pas en te représentant toute ta vie d’un coup. À chaque moment, demande-toi : qu’y a-t-il ici de vraiment insupportable ?",
+   "es": "No te inquietes imaginando toda tu vida de una vez. En cada momento pregúntate: ¿qué hay aquí de verdaderamente insoportable?"
+  },
+  "original": "grc",
+  "themes": [
+   "rest",
+   "presence",
+   "courage"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"Do not disturb thyself by thinking of the whole of thy life ... but on every occasion ask thyself, What is there in this which is intolerable and past bearing?\""
+ },
+ {
+  "id": "marcus_meditations_7_69",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 7.69",
+  "text": {
+   "en": "Perfection of character is this: to live each day as if it were the last, without agitation, without numbness, without pretense.",
+   "de": "Vollkommenheit des Charakters heißt: jeden Tag zu leben, als wäre er der letzte, ohne Aufregung, ohne Trägheit, ohne Verstellung.",
+   "fr": "La perfection du caractère consiste à vivre chaque jour comme le dernier, sans agitation, sans torpeur, sans faux-semblant.",
+   "es": "La perfección del carácter consiste en vivir cada día como si fuera el último, sin agitación, sin apatía, sin fingimiento."
+  },
+  "original": "grc",
+  "themes": [
+   "mortality",
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"The perfection of moral character consists in this, in passing every day as the last, and in being neither violently excited nor torpid nor playing the hypocrite.\""
+ },
+ {
+  "id": "marcus_meditations_6_30",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 6.30",
+  "text": {
+   "en": "Life is short. This earthly life bears only one fruit: a good heart and kind acts toward others.",
+   "de": "Das Leben ist kurz. Dieses irdische Leben trägt nur eine Frucht: ein gutes Herz und Taten für die anderen.",
+   "fr": "La vie est courte. Cette vie terrestre ne porte qu’un fruit : un cœur droit et des actes au service des autres.",
+   "es": "La vida es breve. Esta vida terrena solo da un fruto: un buen corazón y actos al servicio de los demás."
+  },
+  "original": "grc",
+  "themes": [
+   "compassion",
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"Short is life. There is only one fruit of this terrene life--a pious disposition and social acts.\""
+ },
+ {
+  "id": "marcus_meditations_11_18",
+  "author": {
+   "en": "Marcus Aurelius",
+   "de": "Marc Aurel",
+   "fr": "Marc Aurèle",
+   "es": "Marco Aurelio"
+  },
+  "source": "Meditations 11.18",
+  "text": {
+   "en": "Kindness is invincible, if it is genuine and not a forced smile or a role.",
+   "de": "Freundlichkeit ist unbesiegbar, wenn sie echt ist und kein gezwungenes Lächeln, keine Rolle.",
+   "fr": "La bienveillance est invincible, si elle est sincère et non un sourire forcé ou un rôle.",
+   "es": "La bondad es invencible, si es sincera y no una sonrisa forzada ni un papel."
+  },
+  "original": "grc",
+  "themes": [
+   "compassion"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/15877 (George Long translation) – Long: \"a good disposition is invincible if it be genuine, and not an affected smile and acting a part\""
+ },
+ {
+  "id": "epictetus_discourses_3_23_1",
+  "author": {
+   "en": "Epictetus",
+   "de": "Epiktet",
+   "fr": "Épictète",
+   "es": "Epicteto"
+  },
+  "source": "Discourses 3.23.1",
+  "text": {
+   "en": "First say to yourself who you want to be; then do what you have to do.",
+   "de": "Sag dir zuerst, wer du sein willst; dann tu, was dazu gehört.",
+   "fr": "Dis-toi d’abord qui tu veux être ; puis fais ce que tu as à faire.",
+   "es": "Dite primero quién quieres ser; luego haz lo que tengas que hacer."
+  },
+  "original": "grc",
+  "themes": [
+   "growth",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://en.wikisource.org/wiki/The_Discourses_of_Epictetus;_with_the_Encheiridion_and_Fragments/Book_3/Chapter_23 – Long: \"First say to yourself Who you wish to be: then do accordingly what you are doing\""
+ },
+ {
+  "id": "epictetus_discourses_1_15",
+  "author": {
+   "en": "Epictetus",
+   "de": "Epiktet",
+   "fr": "Épictète",
+   "es": "Epicteto"
+  },
+  "source": "Discourses 1.15.7",
+  "text": {
+   "en": "Nothing great comes into being suddenly, not even a grape or a fig. Let it first blossom, then bear fruit, then ripen.",
+   "de": "Nichts Großes entsteht plötzlich, nicht einmal eine Traube oder eine Feige. Lass sie erst blühen, dann Frucht ansetzen, dann reifen.",
+   "fr": "Rien de grand ne naît d’un coup, pas même une grappe de raisin ou une figue. Laisse d’abord venir la fleur, puis le fruit, puis la maturité.",
+   "es": "Nada grande nace de repente, ni siquiera una uva o un higo. Deja primero que florezca, luego que dé fruto, luego que madure."
+  },
+  "original": "grc",
+  "themes": [
+   "growth",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://en.wikisource.org/wiki/The_Discourses_of_Epictetus;_with_the_Encheiridion_and_Fragments/Book_1/Chapter_15 – Long: \"Nothing great ... is produced suddenly, since not even the grape or the fig is ... let it flower first, then put forth fruit, and then ripen.\""
+ },
+ {
+  "id": "epictetus_discourses_2_18_1",
+  "author": {
+   "en": "Epictetus",
+   "de": "Epiktet",
+   "fr": "Épictète",
+   "es": "Epicteto"
+  },
+  "source": "Discourses 2.18.1-2",
+  "text": {
+   "en": "Every habit and ability is kept and strengthened by the matching actions: walking by walking, running by running. If you want to be a good reader, read.",
+   "de": "Jede Gewohnheit und Fähigkeit wird durch die passenden Handlungen erhalten und gestärkt: das Gehen durch Gehen, das Laufen durch Laufen. Willst du gut lesen, so lies.",
+   "fr": "Toute habitude, toute faculté se maintient et grandit par les actes qui lui correspondent : la marche en marchant, la course en courant. Tu veux bien lire ? Lis.",
+   "es": "Todo hábito y toda facultad se mantienen y crecen con los actos que les corresponden: el caminar caminando, el correr corriendo. ¿Quieres leer bien? Lee."
+  },
+  "original": "grc",
+  "themes": [
+   "growth",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://en.wikisource.org/wiki/The_Discourses_of_Epictetus;_with_the_Encheiridion_and_Fragments/Book_2/Chapter_18 – Long: \"Every habit and faculty is maintained and increased by the corresponding actions ... If you would be a good reader, read\""
+ },
+ {
+  "id": "epictetus_discourses_1_16",
+  "author": {
+   "en": "Epictetus",
+   "de": "Epiktet",
+   "fr": "Épictète",
+   "es": "Epicteto"
+  },
+  "source": "Discourses 1.16.15-16",
+  "text": {
+   "en": "If we had understanding, what else should we do, together and alone, than give thanks and tell of the gifts we have received, even while digging, ploughing and eating?",
+   "de": "Hätten wir Verstand, was sollten wir anderes tun, gemeinsam und jeder für sich, als zu danken und von den empfangenen Gaben zu erzählen, selbst beim Graben, Pflügen und Essen?",
+   "fr": "Si nous avions de l’intelligence, que ferions-nous d’autre, ensemble ou seuls, que rendre grâce et célébrer les bienfaits reçus, même en bêchant, en labourant, en mangeant ?",
+   "es": "Si tuviéramos entendimiento, ¿qué otra cosa haríamos, juntos y a solas, sino dar gracias y celebrar los dones recibidos, incluso al cavar, al arar y al comer?"
+  },
+  "original": "grc",
+  "themes": [
+   "gratitude",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://en.wikisource.org/wiki/The_Discourses_of_Epictetus;_with_the_Encheiridion_and_Fragments/Book_1/Chapter_16 – Long: \"if we had understanding, ought we to do any thing else both jointly and severally than to sing hymns and bless the deity, and to tell of his benefits? Ought we not when we are digging and ploughing and eating ...\" (thanks to the deity generalised)"
+ },
+ {
+  "id": "epictetus_enchiridion_5",
+  "author": {
+   "en": "Epictetus",
+   "de": "Epiktet",
+   "fr": "Épictète",
+   "es": "Epicteto"
+  },
+  "source": "Enchiridion 5",
+  "text": {
+   "en": "We are disturbed not by things, but by our opinions about them.",
+   "de": "Nicht die Dinge beunruhigen uns, sondern unsere Meinungen über die Dinge.",
+   "fr": "Ce ne sont pas les choses qui nous troublent, mais l’opinion que nous en avons.",
+   "es": "No nos perturban las cosas, sino las opiniones que tenemos de ellas."
+  },
+  "original": "grc",
+  "themes": [
+   "rest",
+   "courage"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/10661 (George Long, Encheiridion) – \"Men are disturbed not by the things which happen, but by the opinions about the things\""
+ },
+ {
+  "id": "epictetus_enchiridion_8",
+  "author": {
+   "en": "Epictetus",
+   "de": "Epiktet",
+   "fr": "Épictète",
+   "es": "Epicteto"
+  },
+  "source": "Enchiridion 8",
+  "text": {
+   "en": "Do not ask that things happen as you wish; wish for them to happen as they do, and your life will flow calmly.",
+   "de": "Verlange nicht, dass alles so geschieht, wie du willst, sondern wünsche dir, dass es geschieht, wie es geschieht, und dein Leben wird ruhig fließen.",
+   "fr": "Ne demande pas que les choses arrivent comme tu le veux, mais veuille qu’elles arrivent comme elles arrivent, et ta vie s’écoulera paisiblement.",
+   "es": "No pidas que las cosas sucedan como quieres; quiere que sucedan como suceden, y tu vida fluirá serena."
+  },
+  "original": "grc",
+  "themes": [
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/10661 (George Long, Encheiridion) – \"Seek not that the things which happen should happen as you wish; but wish the things which happen to be as they are, and you will have a tranquil flow of life.\""
+ },
+ {
+  "id": "epictetus_enchiridion_11",
+  "author": {
+   "en": "Epictetus",
+   "de": "Epiktet",
+   "fr": "Épictète",
+   "es": "Epicteto"
+  },
+  "source": "Enchiridion 11",
+  "text": {
+   "en": "Never say of anything: I have lost it. Say instead: I have given it back.",
+   "de": "Sag nie von etwas: Ich habe es verloren. Sag stattdessen: Ich habe es zurückgegeben.",
+   "fr": "Ne dis jamais de rien : je l’ai perdu. Dis plutôt : je l’ai rendu.",
+   "es": "Nunca digas de nada: lo he perdido. Di más bien: lo he devuelto."
+  },
+  "original": "grc",
+  "themes": [
+   "mortality",
+   "gratitude",
+   "love"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/10661 (George Long, Encheiridion) – \"Never say about anything, I have lost it, but say I have restored it.\""
+ },
+ {
+  "id": "epictetus_enchiridion_15",
+  "author": {
+   "en": "Epictetus",
+   "de": "Epiktet",
+   "fr": "Épictète",
+   "es": "Epicteto"
+  },
+  "source": "Enchiridion 15",
+  "text": {
+   "en": "Behave in life as at a banquet. When a dish reaches you, take a modest portion. If it passes by, do not hold it back. If it has not come yet, do not reach for it; wait.",
+   "de": "Verhalte dich im Leben wie bei einem Gastmahl: Kommt eine Schüssel zu dir, nimm maßvoll. Zieht sie vorbei, halte sie nicht fest. Ist sie noch nicht da, greif nicht danach, sondern warte.",
+   "fr": "Conduis-toi dans la vie comme à un banquet : quand un plat arrive devant toi, sers-toi avec mesure. S’il passe, ne le retiens pas. S’il n’est pas encore là, ne tends pas la main : attends.",
+   "es": "Compórtate en la vida como en un banquete: cuando un plato llegue a ti, sírvete con mesura. Si pasa de largo, no lo retengas. Si aún no ha llegado, no alargues la mano: espera."
+  },
+  "original": "grc",
+  "themes": [
+   "gratitude",
+   "simplicity",
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/10661 (George Long, Encheiridion) – \"Remember that in life you ought to behave as at a banquet ... take a portion with decency ... Do not detain it ... wait till it is opposite to you.\""
+ },
+ {
+  "id": "epictetus_enchiridion_43",
+  "author": {
+   "en": "Epictetus",
+   "de": "Epiktet",
+   "fr": "Épictète",
+   "es": "Epicteto"
+  },
+  "source": "Enchiridion 43",
+  "text": {
+   "en": "Everything has two handles: one by which it can be carried, one by which it cannot. If your brother wrongs you, take it by the other handle: he is your brother, raised with you.",
+   "de": "Alles hat zwei Henkel: einen, an dem man es tragen kann, und einen, an dem nicht. Tut dein Bruder dir Unrecht, fass es am anderen an: Er ist dein Bruder, mit dir aufgewachsen.",
+   "fr": "Toute chose a deux anses : l’une par laquelle on peut la porter, l’autre non. Si ton frère te fait du tort, prends-le par l’autre anse : c’est ton frère, élevé avec toi.",
+   "es": "Todo tiene dos asas: una por la que se puede llevar y otra por la que no. Si tu hermano te hace daño, tómalo por la otra: es tu hermano, criado contigo."
+  },
+  "original": "grc",
+  "themes": [
+   "compassion",
+   "connection"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/10661 (George Long, Encheiridion) – \"Everything has two handles ... lay hold of the other, that he is your brother, that he was nurtured with you\""
+ },
+ {
+  "id": "epictetus_enchiridion_51",
+  "author": {
+   "en": "Epictetus",
+   "de": "Epiktet",
+   "fr": "Épictète",
+   "es": "Epicteto"
+  },
+  "source": "Enchiridion 51",
+  "text": {
+   "en": "How long will you wait before you think yourself worthy of the best?",
+   "de": "Wie lange willst du noch warten, bis du dich des Besten für würdig hältst?",
+   "fr": "Combien de temps attendras-tu encore avant de te juger digne du meilleur ?",
+   "es": "¿Cuánto tiempo esperarás todavía antes de considerarte digno de lo mejor?"
+  },
+  "original": "grc",
+  "themes": [
+   "time",
+   "growth"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/10661 (George Long, Encheiridion) – \"How long will you then still defer thinking yourself worthy of the best things\""
+ },
+ {
+  "id": "epictetus_fragments_114",
+  "author": {
+   "en": "Epictetus",
+   "de": "Epiktet",
+   "fr": "Épictète",
+   "es": "Epicteto"
+  },
+  "source": "Fragments 114 (attributed)",
+  "text": {
+   "en": "No one is free who is not master of himself.",
+   "de": "Niemand ist frei, der nicht Herr über sich selbst ist.",
+   "fr": "Nul n’est libre s’il n’est maître de lui-même.",
+   "es": "Nadie es libre si no es dueño de sí mismo."
+  },
+  "original": "grc",
+  "themes": [
+   "growth",
+   "courage"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://en.wikisource.org/wiki/The_Discourses_of_Epictetus;_with_the_Encheiridion_and_Fragments/Fragments – Long: \"CXIV. No man is free who is not master of himself.\" Also Crossley, Golden Sayings (https://www.gutenberg.org/ebooks/871), App. A no. XV. Stobaeus fragment; authenticity doubtful."
+ },
+ {
+  "id": "epictetus_fragments_129",
+  "author": {
+   "en": "Epictetus",
+   "de": "Epiktet",
+   "fr": "Épictète",
+   "es": "Epicteto"
+  },
+  "source": "Fragments 129 (attributed)",
+  "text": {
+   "en": "Wise is the one who does not grieve for what they lack, but rejoices in what they have.",
+   "de": "Weise ist, wer nicht dem nachtrauert, was er nicht hat, sondern sich an dem freut, was er hat.",
+   "fr": "Sage est celui qui ne s’afflige pas de ce qu’il n’a pas, mais se réjouit de ce qu’il a.",
+   "es": "Sabio es quien no se aflige por lo que no tiene, sino que se alegra por lo que tiene."
+  },
+  "original": "grc",
+  "themes": [
+   "gratitude",
+   "simplicity"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://en.wikisource.org/wiki/The_Discourses_of_Epictetus;_with_the_Encheiridion_and_Fragments/Fragments – Long: \"CXXIX. He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.\" Stobaeus fragment; authenticity doubtful."
+ },
+ {
+  "id": "cicero_de_senectute_6_17",
+  "author": {
+   "en": "Cicero",
+   "de": "Cicero",
+   "fr": "Cicéron",
+   "es": "Cicerón"
+  },
+  "source": "De Senectute 6.17",
+  "text": {
+   "en": "Great things are done not by strength or speed of body, but by counsel, character and judgment, and in these old age usually grows richer.",
+   "de": "Große Dinge vollbringt man nicht mit Kraft oder Schnelligkeit des Körpers, sondern mit Rat, Ansehen und Urteil; und darin wird das Alter meist noch reicher.",
+   "fr": "Les grandes choses ne se font pas par la force ou la vitesse du corps, mais par le conseil, l’autorité et le jugement ; et en cela la vieillesse s’enrichit d’ordinaire.",
+   "es": "Las grandes cosas no se hacen con la fuerza o la rapidez del cuerpo, sino con el consejo, la autoridad y el juicio; y en eso la vejez suele enriquecerse."
+  },
+  "original": "la",
+  "themes": [
+   "aging",
+   "work"
+  ],
+  "stages": [
+   "harvest",
+   "wisdom"
+  ],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/cicero/senectute.shtml – Latin: \"Non viribus aut velocitate aut celeritate corporum res magnae geruntur, sed consilio, auctoritate, sententia; quibus non modo non orbari, sed etiam augeri senectus solet.\""
+ },
+ {
+  "id": "cicero_de_senectute_7_24",
+  "author": {
+   "en": "Cicero",
+   "de": "Cicero",
+   "fr": "Cicéron",
+   "es": "Cicerón"
+  },
+  "source": "De Senectute 7.24",
+  "text": {
+   "en": "No one is so old that he does not think he can live one more year. And so the old farmer plants trees that will serve another generation.",
+   "de": "Niemand ist so alt, dass er nicht glaubt, noch ein Jahr leben zu können. Und so pflanzt der alte Bauer Bäume, die einer anderen Generation dienen.",
+   "fr": "Personne n’est si vieux qu’il ne pense pouvoir vivre encore un an. Ainsi le vieux paysan plante des arbres qui serviront à une autre génération.",
+   "es": "Nadie es tan viejo que no crea poder vivir un año más. Y así el viejo campesino planta árboles que servirán a otra generación."
+  },
+  "original": "la",
+  "themes": [
+   "aging",
+   "work",
+   "love"
+  ],
+  "stages": [
+   "harvest",
+   "wisdom"
+  ],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/cicero/senectute.shtml – Latin: \"nemo enim est tam senex qui se annum non putet posse vivere ... Serit arbores, quae alteri saeclo prosint\" (the last words quoted from Caecilius Statius)"
+ },
+ {
+  "id": "cicero_de_senectute_11_38",
+  "author": {
+   "en": "Cicero",
+   "de": "Cicero",
+   "fr": "Cicéron",
+   "es": "Cicerón"
+  },
+  "source": "De Senectute 11.38",
+  "text": {
+   "en": "I like a young person with something of the old in them, and an old person with something of the young. Whoever lives so may grow old in body, but never in spirit.",
+   "de": "Ich mag einen jungen Menschen, der etwas vom Alter hat, und einen alten, der etwas von der Jugend hat. Wer so lebt, mag körperlich altern, im Geist aber nie.",
+   "fr": "J’aime le jeune qui a quelque chose du vieillard, et le vieillard qui a quelque chose du jeune. Qui vit ainsi pourra vieillir de corps, jamais d’esprit.",
+   "es": "Aprecio al joven que tiene algo de viejo, y al viejo que tiene algo de joven. Quien vive así podrá envejecer en el cuerpo, pero nunca en el espíritu."
+  },
+  "original": "la",
+  "themes": [
+   "aging",
+   "growth"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/cicero/senectute.shtml – Latin: \"Ut enim adulescentem in quo est senile aliquid, sic senem in quo est aliquid adulescentis probo; quod qui sequitur, corpore senex esse poterit, animo numquam erit.\""
+ },
+ {
+  "id": "cicero_de_senectute_19_69",
+  "author": {
+   "en": "Cicero",
+   "de": "Cicero",
+   "fr": "Cicéron",
+   "es": "Cicerón"
+  },
+  "source": "De Senectute 19.69",
+  "text": {
+   "en": "Hours pass, and days, months and years; time gone by never returns, and what is to come cannot be known. With whatever time we are given to live, we should be content.",
+   "de": "Stunden vergehen, Tage, Monate und Jahre; vergangene Zeit kehrt nie zurück, und was kommt, weiß niemand. Mit der Zeit, die uns zum Leben gegeben ist, sollen wir zufrieden sein.",
+   "fr": "Les heures s’en vont, et les jours, les mois, les années ; le temps passé ne revient jamais, et l’avenir nous est inconnu. Du temps qui nous est donné pour vivre, sachons être contents.",
+   "es": "Pasan las horas, los días, los meses y los años; el tiempo pasado nunca vuelve y lo que vendrá no se puede saber. Con el tiempo que se nos da para vivir, debemos estar contentos."
+  },
+  "original": "la",
+  "themes": [
+   "time",
+   "gratitude"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/cicero/senectute.shtml – Latin: \"horae quidem cedunt et dies et menses et anni, nec praeteritum tempus umquam revertitur, nec quid sequatur sciri potest; quod cuique temporis ad vivendum datur, eo debet esse contentus.\""
+ },
+ {
+  "id": "cicero_de_amicitia_22",
+  "author": {
+   "en": "Cicero",
+   "de": "Cicero",
+   "fr": "Cicéron",
+   "es": "Cicerón"
+  },
+  "source": "De Amicitia 22",
+  "text": {
+   "en": "Friendship makes good fortune brighter, and lightens hard times by sharing them.",
+   "de": "Freundschaft macht das Glück strahlender und schwere Zeiten leichter, weil sie sie teilt.",
+   "fr": "L’amitié rend le bonheur plus éclatant et allège les épreuves en les partageant.",
+   "es": "La amistad hace más brillante la buena suerte y más ligeros los tiempos difíciles, al compartirlos."
+  },
+  "original": "la",
+  "themes": [
+   "connection",
+   "compassion"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/cicero/amic.shtml – Latin: \"Nam et secundas res splendidiores facit amicitia et adversas partiens communicansque leviores.\""
+ },
+ {
+  "id": "cicero_pro_plancio_80",
+  "author": {
+   "en": "Cicero",
+   "de": "Cicero",
+   "fr": "Cicéron",
+   "es": "Cicerón"
+  },
+  "source": "Pro Plancio 80",
+  "text": {
+   "en": "Gratitude is not only the greatest of virtues, but the mother of all the others.",
+   "de": "Dankbarkeit ist nicht nur die größte Tugend, sondern die Mutter aller anderen.",
+   "fr": "La gratitude n’est pas seulement la plus grande des vertus : elle est la mère de toutes les autres.",
+   "es": "La gratitud no es solo la mayor de las virtudes, sino la madre de todas las demás."
+  },
+  "original": "la",
+  "themes": [
+   "gratitude"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/cicero/plancio.shtml – Latin: \"nihil est quod malim quam me et esse gratum et videri. haec enim est una virtus non solum maxima sed etiam mater virtutum omnium reliquarum.\""
+ },
+ {
+  "id": "horace_odes_1_11",
+  "author": {
+   "en": "Horace",
+   "de": "Horaz",
+   "fr": "Horace",
+   "es": "Horacio"
+  },
+  "source": "Odes 1.11.7-8",
+  "text": {
+   "en": "While we speak, envious time has already fled. Seize the day, and trust as little as you can in tomorrow.",
+   "de": "Während wir reden, ist die missgünstige Zeit schon entflohen. Pflücke den Tag und vertraue so wenig wie möglich auf morgen.",
+   "fr": "Pendant que nous parlons, le temps jaloux s’est déjà enfui. Cueille le jour, et fie-toi le moins possible au lendemain.",
+   "es": "Mientras hablamos, el tiempo envidioso ya ha huido. Aprovecha el día y confía lo menos posible en el mañana."
+  },
+  "original": "la",
+  "themes": [
+   "presence",
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/horace/carm1.shtml – Latin: \"Dum loquimur, fugerit invida aetas: carpe diem, quam minimum credula postero.\""
+ },
+ {
+  "id": "horace_odes_3_29",
+  "author": {
+   "en": "Horace",
+   "de": "Horaz",
+   "fr": "Horace",
+   "es": "Horacio"
+  },
+  "source": "Odes 3.29.41-43",
+  "text": {
+   "en": "Master of himself and happy is the one who can say at the end of each day: I have lived.",
+   "de": "Herr seiner selbst und glücklich ist, wer am Ende jedes Tages sagen kann: Ich habe gelebt.",
+   "fr": "Maître de lui et heureux est celui qui peut dire chaque soir : j’ai vécu.",
+   "es": "Dueño de sí y feliz es quien puede decir al final de cada día: he vivido."
+  },
+  "original": "la",
+  "themes": [
+   "presence",
+   "gratitude"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/horace/carm3.shtml – Latin: \"Ille potens sui laetusque deget cui licet in diem dixisse: 'Vixi'\""
+ },
+ {
+  "id": "horace_epistles_1_11",
+  "author": {
+   "en": "Horace",
+   "de": "Horaz",
+   "fr": "Horace",
+   "es": "Horacio"
+  },
+  "source": "Epistles 1.11.27-30",
+  "text": {
+   "en": "Those who rush across the sea change their sky, not their soul. A busy idleness wears us out. What you seek is here, if your mind is at peace.",
+   "de": "Wer übers Meer eilt, wechselt den Himmel, nicht die Seele. Geschäftiger Müßiggang zermürbt uns. Was du suchst, ist hier, wenn dein Gemüt im Gleichgewicht ist.",
+   "fr": "Ceux qui courent au-delà des mers changent de ciel, non d’âme. Une oisiveté affairée nous épuise. Ce que tu cherches est ici, si ton esprit est en paix.",
+   "es": "Quienes cruzan el mar cambian de cielo, no de alma. Una ociosidad atareada nos agota. Lo que buscas está aquí, si tu ánimo está en calma."
+  },
+  "original": "la",
+  "themes": [
+   "work",
+   "presence",
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/horace/epist1.shtml – Latin: \"caelum, non animum mutant, qui trans mare currunt. Strenua nos exercet inertia ... Quod petis, hic est, est Ulubris, animus si te non deficit aequus.\" (site text has the typo \"non exercet\")"
+ },
+ {
+  "id": "horace_epistles_1_2",
+  "author": {
+   "en": "Horace",
+   "de": "Horaz",
+   "fr": "Horace",
+   "es": "Horacio"
+  },
+  "source": "Epistles 1.2.40-43",
+  "text": {
+   "en": "Once you have begun, half the work is done. Dare to be wise: begin. Putting off right living is like waiting for the river to run dry before you cross.",
+   "de": "Wer angefangen hat, hat schon halb getan. Wage es, weise zu sein: Fang an! Das rechte Leben aufzuschieben ist, als wartete man, bis der Fluss versiegt.",
+   "fr": "Qui a commencé a fait la moitié du chemin. Ose être sage : commence ! Remettre à plus tard la vraie vie, c’est attendre que le fleuve ait fini de couler.",
+   "es": "Quien ha empezado tiene hecha la mitad. Atrévete a ser sabio: empieza. Aplazar la vida buena es esperar a que el río deje de correr."
+  },
+  "original": "la",
+  "themes": [
+   "courage",
+   "work",
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/horace/epist1.shtml – Latin: \"Dimidium facti, qui coepit, habet; sapere aude, incipe. Vivendi qui recte prorogat horam, rusticus expectat dum defluat amnis\""
+ },
+ {
+  "id": "horace_epistles_1_4",
+  "author": {
+   "en": "Horace",
+   "de": "Horaz",
+   "fr": "Horace",
+   "es": "Horacio"
+  },
+  "source": "Epistles 1.4.12-14",
+  "text": {
+   "en": "Amid hope and worry, fear and anger, think of each day that dawns as your last: the hour you did not hope for will come as a gift.",
+   "de": "Zwischen Hoffnung und Sorge, Furcht und Zorn denk dir jeden Tag, der anbricht, als deinen letzten: Die Stunde, auf die du nicht gehofft hast, kommt dann als Geschenk.",
+   "fr": "Entre l’espoir et le souci, les craintes et les colères, vois chaque jour qui se lève comme ton dernier : l’heure que tu n’espérais pas viendra comme un cadeau.",
+   "es": "Entre la esperanza y la inquietud, los temores y las iras, piensa que cada día que amanece es el último: la hora que no esperabas llegará como un regalo."
+  },
+  "original": "la",
+  "themes": [
+   "mortality",
+   "gratitude"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.thelatinlibrary.com/horace/epist1.shtml – Latin: \"Inter spem curamque, timores inter et iras omnem crede diem tibi diluxisse supremum; grata superveniet quae non sperabitur hora.\""
+ },
+ {
+  "id": "laozi_ddj_8",
+  "author": {
+   "en": "Lao Tzu",
+   "de": "Laozi",
+   "fr": "Lao-tseu",
+   "es": "Lao-Tse"
+  },
+  "source": "Tao Te Ching 8",
+  "text": {
+   "en": "The highest good is like water. Water benefits all things and does not compete; it settles in the low places others disdain.",
+   "de": "Das höchste Gute ist wie das Wasser. Es nützt allen Dingen und streitet nicht; es fließt an die niedrigen Orte, die alle meiden.",
+   "fr": "Le bien suprême est comme l’eau. Elle profite à tous les êtres sans rivaliser ; elle se tient aux lieux bas que tous dédaignent.",
+   "es": "El bien supremo es como el agua. Beneficia a todos los seres sin competir; ocupa los lugares bajos que todos desdeñan."
+  },
+  "original": "zh",
+  "themes": [
+   "simplicity",
+   "compassion"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/216/pg216.txt (Legge, ch. 8: \"The highest excellence is like (that of) water\"); https://zh.wikisource.org/wiki/道德經_(王弼本) (Chinese: \"上善若水。水善利萬物而不爭\")"
+ },
+ {
+  "id": "laozi_ddj_9",
+  "author": {
+   "en": "Lao Tzu",
+   "de": "Laozi",
+   "fr": "Lao-tseu",
+   "es": "Lao-Tse"
+  },
+  "source": "Tao Te Ching 9",
+  "text": {
+   "en": "When the work is done, step back. That is the way of heaven.",
+   "de": "Ist das Werk getan, tritt zurück. Das ist der Weg des Himmels.",
+   "fr": "Quand l’œuvre est accomplie, retire-toi. C’est la voie du ciel.",
+   "es": "Cuando la obra esté hecha, retírate. Ese es el camino del cielo."
+  },
+  "original": "zh",
+  "themes": [
+   "work",
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/216/pg216.txt (Legge, ch. 9: \"When the work is done ... to withdraw into obscurity is the way of Heaven\"); https://zh.wikisource.org/wiki/道德經_(王弼本) (Chinese: \"功遂身退，天之道\")"
+ },
+ {
+  "id": "laozi_ddj_15",
+  "author": {
+   "en": "Lao Tzu",
+   "de": "Laozi",
+   "fr": "Lao-tseu",
+   "es": "Lao-Tse"
+  },
+  "source": "Tao Te Ching 15",
+  "text": {
+   "en": "Who can make muddy water clear? Let it be still, and little by little it will become clear.",
+   "de": "Wer kann trübes Wasser klären? Lass es ruhen, und nach und nach wird es klar.",
+   "fr": "Qui peut rendre claire l’eau trouble ? Laisse-la reposer, et peu à peu elle s’éclaircira.",
+   "es": "¿Quién puede aclarar el agua turbia? Déjala en calma, y poco a poco se aclarará."
+  },
+  "original": "zh",
+  "themes": [
+   "rest",
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/216/pg216.txt (Legge, ch. 15: \"Let it be still, and it will gradually become clear\"); https://zh.wikisource.org/wiki/道德經_(王弼本) (Chinese: \"孰能濁以靜之徐清\")"
+ },
+ {
+  "id": "laozi_ddj_16",
+  "author": {
+   "en": "Lao Tzu",
+   "de": "Laozi",
+   "fr": "Lao-tseu",
+   "es": "Lao-Tse"
+  },
+  "source": "Tao Te Ching 16",
+  "text": {
+   "en": "All things flourish, and each returns to its root. Returning to the root is called stillness.",
+   "de": "Alle Dinge blühen, und jedes kehrt zu seiner Wurzel zurück. Die Rückkehr zur Wurzel heißt Stille.",
+   "fr": "Toutes choses fleurissent, et chacune retourne à sa racine. Retourner à la racine, c’est la quiétude.",
+   "es": "Todas las cosas florecen, y cada una vuelve a su raíz. Volver a la raíz se llama quietud."
+  },
+  "original": "zh",
+  "themes": [
+   "rest",
+   "mortality"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/216/pg216.txt (Legge, ch. 16: \"This returning to their root is what we call the state of stillness\"); https://zh.wikisource.org/wiki/道德經_(王弼本) (Chinese: \"夫物芸芸，各復歸其根。歸根曰靜\")"
+ },
+ {
+  "id": "laozi_ddj_33",
+  "author": {
+   "en": "Lao Tzu",
+   "de": "Laozi",
+   "fr": "Lao-tseu",
+   "es": "Lao-Tse"
+  },
+  "source": "Tao Te Ching 33",
+  "text": {
+   "en": "Knowing others is cleverness; knowing yourself is wisdom. Whoever is content is rich.",
+   "de": "Andere zu kennen ist Klugheit, sich selbst zu kennen ist Weisheit. Wer zufrieden ist, ist reich.",
+   "fr": "Connaître les autres est habileté ; se connaître soi-même est sagesse. Qui se contente est riche.",
+   "es": "Conocer a los demás es inteligencia; conocerse a uno mismo es sabiduría. Quien se contenta es rico."
+  },
+  "original": "zh",
+  "themes": [
+   "gratitude",
+   "growth"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/216/pg216.txt (Legge, ch. 33: \"He who is satisfied with his lot is rich\"); https://zh.wikisource.org/wiki/道德經_(王弼本) (Chinese: \"知人者智，自知者明……知足者富\")"
+ },
+ {
+  "id": "laozi_ddj_46",
+  "author": {
+   "en": "Lao Tzu",
+   "de": "Laozi",
+   "fr": "Lao-tseu",
+   "es": "Lao-Tse"
+  },
+  "source": "Tao Te Ching 46",
+  "text": {
+   "en": "There is no misfortune greater than not knowing when you have enough. Whoever knows that enough is enough will always have enough.",
+   "de": "Kein Unglück ist größer, als nicht zu wissen, wann es genug ist. Wer weiß, dass genug genug ist, hat immer genug.",
+   "fr": "Il n’est pas de plus grand malheur que de ne pas savoir se contenter. Qui sait se contenter de ce qui suffit aura toujours assez.",
+   "es": "No hay desgracia mayor que no saber cuándo es suficiente. Quien sabe que lo suficiente basta, siempre tendrá suficiente."
+  },
+  "original": "zh",
+  "themes": [
+   "gratitude",
+   "simplicity"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/216/pg216.txt (Legge, ch. 46: \"no calamity greater than to be discontented with one's lot ... the sufficiency of contentment is an enduring and unchanging sufficiency\"); https://zh.wikisource.org/wiki/道德經_(王弼本) (Chinese: \"禍莫大於不知足……故知足之足，常足矣\")"
+ },
+ {
+  "id": "laozi_ddj_49",
+  "author": {
+   "en": "Lao Tzu",
+   "de": "Laozi",
+   "fr": "Lao-tseu",
+   "es": "Lao-Tse"
+  },
+  "source": "Tao Te Ching 49",
+  "text": {
+   "en": "To those who are good, I am good; to those who are not good, I am also good. And so goodness grows.",
+   "de": "Zu den Guten bin ich gut, und zu denen, die nicht gut sind, bin ich auch gut. So wächst das Gute.",
+   "fr": "Avec les bons, je suis bon ; avec ceux qui ne le sont pas, je suis bon aussi. Ainsi le bien grandit.",
+   "es": "Con los buenos soy bueno; con los que no lo son, también soy bueno. Así crece la bondad."
+  },
+  "original": "zh",
+  "themes": [
+   "compassion"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/216/pg216.txt (Legge, ch. 49: \"to those who are not good (to me), I am also good;--and thus (all) get to be good\"); https://zh.wikisource.org/wiki/道德經_(王弼本) (Chinese: \"善者，吾善之；不善者，吾亦善之，德善\")"
+ },
+ {
+  "id": "laozi_ddj_63",
+  "author": {
+   "en": "Lao Tzu",
+   "de": "Laozi",
+   "fr": "Lao-tseu",
+   "es": "Lao-Tse"
+  },
+  "source": "Tao Te Ching 63",
+  "text": {
+   "en": "Repay injury with kindness. Meet the difficult while it is still easy; do great things while they are still small.",
+   "de": "Vergilt Kränkung mit Güte. Geh das Schwere an, solange es leicht ist; tu das Große, solange es klein ist.",
+   "fr": "Rends la bonté pour l’offense. Aborde le difficile tant qu’il est facile ; accomplis le grand tant qu’il est petit.",
+   "es": "Devuelve la ofensa con bondad. Afronta lo difícil mientras es fácil; haz lo grande mientras es pequeño."
+  },
+  "original": "zh",
+  "themes": [
+   "compassion",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/216/pg216.txt (Legge, ch. 63: \"to recompense injury with kindness ... does things that would become great while they are small\"); https://zh.wikisource.org/wiki/道德經_(王弼本) (Chinese: \"報怨以德。圖難於其易，為大於其細\")"
+ },
+ {
+  "id": "laozi_ddj_64",
+  "author": {
+   "en": "Lao Tzu",
+   "de": "Laozi",
+   "fr": "Lao-tseu",
+   "es": "Lao-Tse"
+  },
+  "source": "Tao Te Ching 64",
+  "text": {
+   "en": "The tree that fills your arms grew from a tiny sprout; the journey of a thousand miles begins with a single step.",
+   "de": "Der Baum, den deine Arme kaum umfassen, wuchs aus einem winzigen Keim; die Reise von tausend Meilen beginnt mit einem einzigen Schritt.",
+   "fr": "L’arbre qui remplit tes bras est né d’une pousse minuscule ; un voyage de mille lieues commence par un seul pas.",
+   "es": "El árbol que llena tus brazos nació de un brote diminuto; un viaje de mil leguas empieza con un solo paso."
+  },
+  "original": "zh",
+  "themes": [
+   "work",
+   "growth"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/216/pg216.txt (Legge, ch. 64: \"The tree which fills the arms grew from the tiniest sprout ... the journey of a thousand li commenced with a single step\"); https://zh.wikisource.org/wiki/道德經_(王弼本) (Chinese: \"合抱之木，生於毫末……千里之行，始於足下\")"
+ },
+ {
+  "id": "laozi_ddj_67",
+  "author": {
+   "en": "Lao Tzu",
+   "de": "Laozi",
+   "fr": "Lao-tseu",
+   "es": "Lao-Tse"
+  },
+  "source": "Tao Te Ching 67",
+  "text": {
+   "en": "I have three treasures that I hold and keep: the first is gentleness, the second is frugality, the third is not presuming to be first.",
+   "de": "Ich habe drei Schätze, die ich hüte: Der erste ist Güte, der zweite Genügsamkeit, der dritte, nicht der Erste sein zu wollen.",
+   "fr": "J’ai trois trésors que je garde précieusement : le premier est la bienveillance, le deuxième la sobriété, le troisième de ne pas vouloir être le premier.",
+   "es": "Tengo tres tesoros que guardo con cuidado: el primero es la bondad, el segundo la sobriedad, el tercero no querer ser el primero."
+  },
+  "original": "zh",
+  "themes": [
+   "compassion",
+   "simplicity"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/216/pg216.txt (Legge, ch. 67: \"I have three precious things ... The first is gentleness; the second is economy; and the third is shrinking from taking precedence of others\"); https://zh.wikisource.org/wiki/道德經_(王弼本) (Chinese: \"我有三寶，持而保之。一曰慈，二曰儉，三曰不敢為天下先\")"
+ },
+ {
+  "id": "dhammapada_5",
+  "author": {
+   "en": "The Dhammapada",
+   "de": "Dhammapada",
+   "fr": "Le Dhammapada",
+   "es": "El Dhammapada"
+  },
+  "source": "Dhammapada 5",
+  "text": {
+   "en": "Hatred never ceases through hatred; hatred ceases through love. This is an ancient law.",
+   "de": "Hass hört niemals durch Hass auf; Hass hört durch Liebe auf. Das ist ein uraltes Gesetz.",
+   "fr": "La haine ne cesse jamais par la haine ; la haine cesse par l’amour. C’est une loi ancienne.",
+   "es": "El odio nunca cesa con odio; el odio cesa con amor. Esta es una ley antigua."
+  },
+  "original": "pi",
+  "themes": [
+   "compassion",
+   "love"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt (Max Müller, v. 5: \"For hatred does not cease by hatred at any time: hatred ceases by love, this is an old rule\"); Pali: \"Na hi verena verāni sammantīdha kudācanaṃ\" (averena = by non-hatred, Müller: love)"
+ },
+ {
+  "id": "dhammapada_6",
+  "author": {
+   "en": "The Dhammapada",
+   "de": "Dhammapada",
+   "fr": "Le Dhammapada",
+   "es": "El Dhammapada"
+  },
+  "source": "Dhammapada 6",
+  "text": {
+   "en": "The world does not know that we must all come to an end here; but those who know it, their quarrels cease at once.",
+   "de": "Die Welt vergisst, dass wir alle hier einmal enden müssen; wer es aber weiß, bei dem legt sich jeder Streit.",
+   "fr": "Le monde ignore que nous devons tous finir un jour ici-bas ; mais ceux qui le savent voient leurs querelles s’apaiser aussitôt.",
+   "es": "El mundo no sabe que todos hemos de llegar a nuestro fin aquí; pero quienes lo saben ven cesar enseguida sus disputas."
+  },
+  "original": "pi",
+  "themes": [
+   "mortality",
+   "compassion"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt (Max Müller, v. 6: \"The world does not know that we must all come to an end here;--but those who know it, their quarrels cease at once\")"
+ },
+ {
+  "id": "dhammapada_100",
+  "author": {
+   "en": "The Dhammapada",
+   "de": "Dhammapada",
+   "fr": "Le Dhammapada",
+   "es": "El Dhammapada"
+  },
+  "source": "Dhammapada 100",
+  "text": {
+   "en": "Better than a thousand empty words is one word of sense that brings peace to the one who hears it.",
+   "de": "Besser als tausend leere Worte ist ein einziges sinnvolles Wort, das den, der es hört, zur Ruhe bringt.",
+   "fr": "Mieux que mille paroles vides vaut une seule parole sensée, qui apaise celui qui l’entend.",
+   "es": "Mejor que mil palabras vacías es una sola palabra sensata, que trae calma a quien la escucha."
+  },
+  "original": "pi",
+  "themes": [
+   "rest",
+   "simplicity"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt (Max Müller, v. 100: \"one word of sense is better, which if a man hears, he becomes quiet\")"
+ },
+ {
+  "id": "dhammapada_122",
+  "author": {
+   "en": "The Dhammapada",
+   "de": "Dhammapada",
+   "fr": "Le Dhammapada",
+   "es": "El Dhammapada"
+  },
+  "source": "Dhammapada 122",
+  "text": {
+   "en": "Do not think lightly of good, saying it will not come to you. Drop by drop the water jar is filled; little by little the wise fill themselves with good.",
+   "de": "Denk nicht gering vom Guten und sag nicht, es werde nicht zu dir kommen. Tropfen um Tropfen füllt sich der Krug; nach und nach füllt sich der Weise mit Gutem.",
+   "fr": "Ne fais pas peu de cas du bien en te disant qu’il ne viendra pas à toi. Goutte à goutte, la jarre se remplit ; peu à peu, le sage se remplit de bien.",
+   "es": "No tengas en poco el bien diciendo que no llegará a ti. Gota a gota se llena el cántaro; poco a poco el sabio se llena de bien."
+  },
+  "original": "pi",
+  "themes": [
+   "work",
+   "growth"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt (Max Müller, v. 122: \"Let no man think lightly of good ... Even by the falling of water-drops a water-pot is filled\")"
+ },
+ {
+  "id": "dhammapada_197",
+  "author": {
+   "en": "The Dhammapada",
+   "de": "Dhammapada",
+   "fr": "Le Dhammapada",
+   "es": "El Dhammapada"
+  },
+  "source": "Dhammapada 197",
+  "text": {
+   "en": "Let us live happily, then, not hating those who hate us! Among those who hate, let us dwell free from hatred.",
+   "de": "Lasst uns glücklich leben, ohne die zu hassen, die uns hassen! Unter Hassenden lasst uns frei von Hass verweilen.",
+   "fr": "Vivons donc heureux, sans haïr ceux qui nous haïssent ! Parmi ceux qui haïssent, demeurons libres de haine.",
+   "es": "¡Vivamos, pues, felices, sin odiar a quienes nos odian! Entre los que odian, vivamos libres de odio."
+  },
+  "original": "pi",
+  "themes": [
+   "compassion"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt (Max Müller, v. 197: \"Let us live happily then, not hating those who hate us!\")"
+ },
+ {
+  "id": "dhammapada_200",
+  "author": {
+   "en": "The Dhammapada",
+   "de": "Dhammapada",
+   "fr": "Le Dhammapada",
+   "es": "El Dhammapada"
+  },
+  "source": "Dhammapada 200",
+  "text": {
+   "en": "Let us live happily, then, though we call nothing our own! We shall be like the bright gods, feeding on joy.",
+   "de": "Lasst uns glücklich leben, auch wenn wir nichts unser Eigen nennen! Wie die lichten Götter werden wir uns von Freude nähren.",
+   "fr": "Vivons donc heureux, même si nous ne possédons rien ! Comme les dieux lumineux, nous nous nourrirons de joie.",
+   "es": "¡Vivamos, pues, felices, aunque nada llamemos nuestro! Como los dioses luminosos, nos nutriremos de alegría."
+  },
+  "original": "pi",
+  "themes": [
+   "gratitude",
+   "simplicity"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt (Max Müller, v. 200: \"Let us live happily then, though we call nothing our own!\")"
+ },
+ {
+  "id": "dhammapada_204",
+  "author": {
+   "en": "The Dhammapada",
+   "de": "Dhammapada",
+   "fr": "Le Dhammapada",
+   "es": "El Dhammapada"
+  },
+  "source": "Dhammapada 204",
+  "text": {
+   "en": "Health is the greatest gift, contentment the best wealth, trust the best of bonds, nirvana the highest happiness.",
+   "de": "Gesundheit ist das größte Geschenk, Zufriedenheit der beste Reichtum, Vertrauen die beste Verbundenheit, Nirwana das höchste Glück.",
+   "fr": "La santé est le plus grand des dons, le contentement la meilleure des richesses, la confiance le meilleur des liens, le nirvana le plus haut bonheur.",
+   "es": "La salud es el mayor de los dones, el contento la mejor riqueza, la confianza el mejor vínculo, el nirvana la felicidad suprema."
+  },
+  "original": "pi",
+  "themes": [
+   "gratitude"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt (Max Müller, v. 204: \"Health is the greatest of gifts, contentedness the best riches; trust is the best of relationships\")"
+ },
+ {
+  "id": "dhammapada_223",
+  "author": {
+   "en": "The Dhammapada",
+   "de": "Dhammapada",
+   "fr": "Le Dhammapada",
+   "es": "El Dhammapada"
+  },
+  "source": "Dhammapada 223",
+  "text": {
+   "en": "Overcome anger with love, evil with good; overcome the greedy with generosity, the liar with truth.",
+   "de": "Überwinde Zorn durch Liebe, Böses durch Gutes; überwinde den Geizigen durch Großzügigkeit, den Lügner durch Wahrheit.",
+   "fr": "Vaincs la colère par l’amour, le mal par le bien ; vaincs l’avare par la générosité, le menteur par la vérité.",
+   "es": "Vence la ira con amor, el mal con el bien; vence al avaro con generosidad y al mentiroso con la verdad."
+  },
+  "original": "pi",
+  "themes": [
+   "compassion",
+   "love"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt (Max Müller, v. 223: \"Let a man overcome anger by love, let him overcome evil by good; let him overcome the greedy by liberality, the liar by truth!\")"
+ },
+ {
+  "id": "thoreau_walden_2_deliberately",
+  "author": {
+   "en": "Henry David Thoreau",
+   "de": "Henry David Thoreau",
+   "fr": "Henry David Thoreau",
+   "es": "Henry David Thoreau"
+  },
+  "source": "Walden, ch. 2 (Where I Lived, and What I Lived For)",
+  "text": {
+   "en": "I went to the woods because I wished to live deliberately, to front only the essential facts of life, and not, when I came to die, discover that I had not lived.",
+   "de": "Ich ging in die Wälder, weil ich bewusst leben wollte, um nur den wesentlichen Dingen des Lebens zu begegnen und nicht, wenn es ans Sterben ginge, zu entdecken, dass ich nicht gelebt hatte.",
+   "fr": "Je suis allé dans les bois parce que je voulais vivre délibérément, ne faire face qu’aux faits essentiels de la vie, et ne pas découvrir, à l’heure de mourir, que je n’avais pas vécu.",
+   "es": "Fui a los bosques porque quería vivir a conciencia, enfrentar solo los hechos esenciales de la vida y no descubrir, a la hora de morir, que no había vivido."
+  },
+  "original": "en",
+  "themes": [
+   "presence",
+   "mortality"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/205/pg205.txt (found verbatim)"
+ },
+ {
+  "id": "thoreau_walden_2_simplicity",
+  "author": {
+   "en": "Henry David Thoreau",
+   "de": "Henry David Thoreau",
+   "fr": "Henry David Thoreau",
+   "es": "Henry David Thoreau"
+  },
+  "source": "Walden, ch. 2 (Where I Lived, and What I Lived For)",
+  "text": {
+   "en": "Our life is frittered away by detail. Simplicity, simplicity, simplicity! I say, let your affairs be as two or three, and not a hundred or a thousand.",
+   "de": "Unser Leben wird von Kleinigkeiten zerrieben. Einfachheit, Einfachheit, Einfachheit! Lass deine Angelegenheiten zwei oder drei sein, nicht hundert oder tausend.",
+   "fr": "Notre vie s’émiette en détails. Simplicité, simplicité, simplicité ! Que tes affaires soient deux ou trois, et non cent ou mille.",
+   "es": "Nuestra vida se desmenuza en detalles. ¡Simplicidad, simplicidad, simplicidad! Que tus asuntos sean dos o tres, y no cien o mil."
+  },
+  "original": "en",
+  "themes": [
+   "simplicity",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/205/pg205.txt (found verbatim)"
+ },
+ {
+  "id": "thoreau_walden_2_stream",
+  "author": {
+   "en": "Henry David Thoreau",
+   "de": "Henry David Thoreau",
+   "fr": "Henry David Thoreau",
+   "es": "Henry David Thoreau"
+  },
+  "source": "Walden, ch. 2 (Where I Lived, and What I Lived For)",
+  "text": {
+   "en": "Time is but the stream I go a-fishing in. I drink at it; but while I drink I see the sandy bottom and detect how shallow it is. Its thin current slides away, but eternity remains.",
+   "de": "Die Zeit ist nur der Bach, in dem ich fische. Ich trinke daraus, doch beim Trinken sehe ich den sandigen Grund und merke, wie seicht er ist. Seine dünne Strömung gleitet davon, die Ewigkeit aber bleibt.",
+   "fr": "Le temps n’est que le ruisseau où je vais pêcher. J’y bois ; mais en buvant, je vois le fond de sable et mesure son peu de profondeur. Son mince courant s’écoule, mais l’éternité demeure.",
+   "es": "El tiempo no es más que el arroyo donde voy a pescar. Bebo de él; pero mientras bebo veo el fondo arenoso y descubro qué poco hondo es. Su tenue corriente se desliza, pero la eternidad permanece."
+  },
+  "original": "en",
+  "themes": [
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/205/pg205.txt (found verbatim)"
+ },
+ {
+  "id": "thoreau_walden_4_margin",
+  "author": {
+   "en": "Henry David Thoreau",
+   "de": "Henry David Thoreau",
+   "fr": "Henry David Thoreau",
+   "es": "Henry David Thoreau"
+  },
+  "source": "Walden, ch. 4 (Sounds)",
+  "text": {
+   "en": "There were times when I could not afford to sacrifice the bloom of the present moment to any work, whether of the head or hands. I love a broad margin to my life.",
+   "de": "Es gab Zeiten, in denen ich es mir nicht leisten konnte, die Blüte des Augenblicks irgendeiner Arbeit zu opfern, sei es mit dem Kopf oder mit den Händen. Ich liebe einen breiten Rand um mein Leben.",
+   "fr": "Il y avait des moments où je ne pouvais me permettre de sacrifier la fleur de l’instant présent à aucun travail, de la tête ou des mains. J’aime laisser à ma vie une large marge.",
+   "es": "Había momentos en que no podía permitirme sacrificar la flor del instante presente a ningún trabajo, ni de la cabeza ni de las manos. Amo un amplio margen en mi vida."
+  },
+  "original": "en",
+  "themes": [
+   "rest",
+   "work",
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/205/pg205.txt (found verbatim)"
+ },
+ {
+  "id": "thoreau_walden_4_corn",
+  "author": {
+   "en": "Henry David Thoreau",
+   "de": "Henry David Thoreau",
+   "fr": "Henry David Thoreau",
+   "es": "Henry David Thoreau"
+  },
+  "source": "Walden, ch. 4 (Sounds)",
+  "text": {
+   "en": "I grew in those seasons like corn in the night, and they were far better than any work of the hands would have been. They were not time subtracted from my life.",
+   "de": "Ich wuchs in jenen Zeiten wie Mais in der Nacht, und sie waren weit besser als jede Arbeit der Hände. Sie waren keine Zeit, die meinem Leben abgezogen wurde.",
+   "fr": "Je grandissais en ces heures comme le maïs dans la nuit, et elles valaient bien mieux que tout travail des mains. Ce n’était pas du temps retranché de ma vie.",
+   "es": "En aquellas horas crecía como el maíz en la noche, y valían mucho más que cualquier trabajo de las manos. No eran tiempo restado a mi vida."
+  },
+  "original": "en",
+  "themes": [
+   "rest",
+   "growth"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/205/pg205.txt (found verbatim)"
+ },
+ {
+  "id": "thoreau_walden_conclusion_drummer",
+  "author": {
+   "en": "Henry David Thoreau",
+   "de": "Henry David Thoreau",
+   "fr": "Henry David Thoreau",
+   "es": "Henry David Thoreau"
+  },
+  "source": "Walden, ch. 18 (Conclusion)",
+  "text": {
+   "en": "Why should we be in such desperate haste to succeed? If a man does not keep pace with his companions, perhaps it is because he hears a different drummer.",
+   "de": "Warum sollten wir es mit dem Erfolg so verzweifelt eilig haben? Wenn einer nicht Schritt hält mit seinen Gefährten, dann vielleicht, weil er einen anderen Trommler hört.",
+   "fr": "Pourquoi être si désespérément pressés de réussir ? Si quelqu’un ne marche pas au pas de ses compagnons, c’est peut-être qu’il entend un autre tambour.",
+   "es": "¿Por qué tener una prisa tan desesperada por triunfar? Si alguien no lleva el paso de sus compañeros, quizá sea porque oye otro tambor."
+  },
+  "original": "en",
+  "themes": [
+   "work",
+   "courage"
+  ],
+  "stages": [
+   "exploring",
+   "building"
+  ],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/205/pg205.txt (found verbatim)"
+ },
+ {
+  "id": "thoreau_walden_conclusion_love",
+  "author": {
+   "en": "Henry David Thoreau",
+   "de": "Henry David Thoreau",
+   "fr": "Henry David Thoreau",
+   "es": "Henry David Thoreau"
+  },
+  "source": "Walden, ch. 18 (Conclusion)",
+  "text": {
+   "en": "However mean your life is, meet it and live it; do not shun it and call it hard names. Love your life, poor as it is.",
+   "de": "Wie ärmlich dein Leben auch sei, stell dich ihm und lebe es; weich ihm nicht aus und beschimpfe es nicht. Liebe dein Leben, so arm es auch ist.",
+   "fr": "Si humble que soit ta vie, affronte-la et vis-la ; ne la fuis pas et ne l’accable pas de noms durs. Aime ta vie, toute pauvre qu’elle soit.",
+   "es": "Por humilde que sea tu vida, afróntala y vívela; no la rehúyas ni la insultes. Ama tu vida, por pobre que sea."
+  },
+  "original": "en",
+  "themes": [
+   "gratitude"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/205/pg205.txt (found verbatim)"
+ },
+ {
+  "id": "thoreau_walden_1_cost",
+  "author": {
+   "en": "Henry David Thoreau",
+   "de": "Henry David Thoreau",
+   "fr": "Henry David Thoreau",
+   "es": "Henry David Thoreau"
+  },
+  "source": "Walden, ch. 1 (Economy)",
+  "text": {
+   "en": "The cost of a thing is the amount of what I will call life which is required to be exchanged for it, immediately or in the long run.",
+   "de": "Der Preis einer Sache ist die Menge dessen, was ich Leben nennen will, die man dafür hergeben muss, sofort oder auf lange Sicht.",
+   "fr": "Le prix d’une chose est la quantité de ce que j’appellerai la vie qu’il faut échanger contre elle, tout de suite ou à la longue.",
+   "es": "El costo de una cosa es la cantidad de lo que llamaré vida que hay que entregar a cambio, de inmediato o a la larga."
+  },
+  "original": "en",
+  "themes": [
+   "work",
+   "simplicity",
+   "time"
+  ],
+  "stages": [
+   "building"
+  ],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/205/pg205.txt (found verbatim)"
+ },
+ {
+  "id": "thoreau_walden_2_rich",
+  "author": {
+   "en": "Henry David Thoreau",
+   "de": "Henry David Thoreau",
+   "fr": "Henry David Thoreau",
+   "es": "Henry David Thoreau"
+  },
+  "source": "Walden, ch. 2 (Where I Lived, and What I Lived For)",
+  "text": {
+   "en": "A man is rich in proportion to the number of things which he can afford to let alone.",
+   "de": "Ein Mensch ist reich im Verhältnis zur Zahl der Dinge, die er unberührt lassen kann.",
+   "fr": "Un homme est riche en proportion du nombre de choses qu’il peut se permettre de laisser de côté.",
+   "es": "Uno es rico en proporción al número de cosas que puede permitirse dejar de lado."
+  },
+  "original": "en",
+  "themes": [
+   "simplicity",
+   "gratitude"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/205/pg205.txt (found verbatim)"
+ },
+ {
+  "id": "thoreau_walden_conclusion_dawn",
+  "author": {
+   "en": "Henry David Thoreau",
+   "de": "Henry David Thoreau",
+   "fr": "Henry David Thoreau",
+   "es": "Henry David Thoreau"
+  },
+  "source": "Walden, ch. 18 (Conclusion)",
+  "text": {
+   "en": "Only that day dawns to which we are awake. There is more day to dawn. The sun is but a morning star.",
+   "de": "Nur der Tag bricht an, für den wir wach sind. Es wird noch mehr Tag anbrechen. Die Sonne ist nur ein Morgenstern.",
+   "fr": "Seul se lève le jour auquel nous sommes éveillés. Il reste encore du jour à poindre. Le soleil n’est qu’une étoile du matin.",
+   "es": "Solo amanece el día para el que estamos despiertos. Aún queda más día por amanecer. El sol no es más que un lucero del alba."
+  },
+  "original": "en",
+  "themes": [
+   "presence",
+   "growth"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/205/pg205.txt (found verbatim)"
+ },
+ {
+  "id": "thoreau_walking_present",
+  "author": {
+   "en": "Henry David Thoreau",
+   "de": "Henry David Thoreau",
+   "fr": "Henry David Thoreau",
+   "es": "Henry David Thoreau"
+  },
+  "source": "Walking (1862)",
+  "text": {
+   "en": "Above all, we cannot afford not to live in the present. He is blessed over all mortals who loses no moment of the passing life in remembering the past.",
+   "de": "Vor allem können wir es uns nicht leisten, nicht in der Gegenwart zu leben. Gesegnet vor allen Sterblichen ist, wer keinen Augenblick des vorüberziehenden Lebens im Erinnern verliert.",
+   "fr": "Avant tout, nous ne pouvons nous permettre de ne pas vivre dans le présent. Béni entre tous les mortels celui qui ne perd aucun instant de la vie qui passe à se souvenir du passé.",
+   "es": "Sobre todo, no podemos permitirnos no vivir en el presente. Bendito entre todos los mortales quien no pierde un instante de la vida que pasa recordando el pasado."
+  },
+  "original": "en",
+  "themes": [
+   "presence",
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/1022/pg1022.txt (found verbatim)"
+ },
+ {
+  "id": "thoreau_walking_sauntering",
+  "author": {
+   "en": "Henry David Thoreau",
+   "de": "Henry David Thoreau",
+   "fr": "Henry David Thoreau",
+   "es": "Henry David Thoreau"
+  },
+  "source": "Walking (1862)",
+  "text": {
+   "en": "I think that I cannot preserve my health and spirits, unless I spend four hours a day at least sauntering through the woods and over the hills and fields, absolutely free from all worldly engagements.",
+   "de": "Ich glaube, ich kann Gesundheit und Lebensmut nicht bewahren, wenn ich nicht täglich mindestens vier Stunden durch Wälder, über Hügel und Felder schlendere, völlig frei von allen weltlichen Pflichten.",
+   "fr": "Je crois que je ne peux préserver ma santé et mon moral sans flâner au moins quatre heures par jour à travers bois, collines et champs, entièrement libre de toute obligation mondaine.",
+   "es": "Creo que no puedo conservar la salud y el ánimo si no paseo al menos cuatro horas al día por bosques, colinas y campos, libre por completo de toda obligación mundana."
+  },
+  "original": "en",
+  "themes": [
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/1022/pg1022.txt (found verbatim)"
+ },
+ {
+  "id": "emerson_self_reliance_roses",
+  "author": {
+   "en": "Ralph Waldo Emerson",
+   "de": "Ralph Waldo Emerson",
+   "fr": "Ralph Waldo Emerson",
+   "es": "Ralph Waldo Emerson"
+  },
+  "source": "Self-Reliance (Essays: First Series)",
+  "text": {
+   "en": "These roses under my window make no reference to former roses or to better ones; they are for what they are; they exist with God today. There is no time to them.",
+   "de": "Diese Rosen unter meinem Fenster beziehen sich nicht auf frühere Rosen oder auf bessere; sie sind, was sie sind; sie leben heute mit Gott. Für sie gibt es keine Zeit.",
+   "fr": "Ces roses sous ma fenêtre ne se réfèrent ni aux roses d’autrefois ni à de meilleures ; elles sont ce qu’elles sont ; elles existent avec Dieu aujourd’hui. Pour elles, le temps n’existe pas.",
+   "es": "Estas rosas bajo mi ventana no hacen referencia a rosas anteriores ni a otras mejores; son lo que son; existen con Dios hoy. Para ellas no hay tiempo."
+  },
+  "original": "en",
+  "themes": [
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2944/pg2944.txt (found verbatim; original spelling 'to-day')"
+ },
+ {
+  "id": "emerson_self_reliance_peace",
+  "author": {
+   "en": "Ralph Waldo Emerson",
+   "de": "Ralph Waldo Emerson",
+   "fr": "Ralph Waldo Emerson",
+   "es": "Ralph Waldo Emerson"
+  },
+  "source": "Self-Reliance (Essays: First Series)",
+  "text": {
+   "en": "Nothing can bring you peace but yourself.",
+   "de": "Nichts kann dir Frieden bringen außer du selbst.",
+   "fr": "Rien ne peut t’apporter la paix, sinon toi-même.",
+   "es": "Nada puede traerte la paz sino tú mismo."
+  },
+  "original": "en",
+  "themes": [
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2944/pg2944.txt (found verbatim)"
+ },
+ {
+  "id": "emerson_spiritual_laws_ease",
+  "author": {
+   "en": "Ralph Waldo Emerson",
+   "de": "Ralph Waldo Emerson",
+   "fr": "Ralph Waldo Emerson",
+   "es": "Ralph Waldo Emerson"
+  },
+  "source": "Spiritual Laws (Essays: First Series)",
+  "text": {
+   "en": "Our painful labors are unnecessary and fruitless; only in our easy, simple, spontaneous action are we strong.",
+   "de": "Unsere mühsamen Plackereien sind unnötig und fruchtlos; nur in unserem leichten, einfachen, spontanen Handeln sind wir stark.",
+   "fr": "Nos labeurs pénibles sont inutiles et stériles ; ce n’est que dans notre action aisée, simple et spontanée que nous sommes forts.",
+   "es": "Nuestros penosos esfuerzos son innecesarios e infructuosos; solo en nuestra acción fácil, sencilla y espontánea somos fuertes."
+  },
+  "original": "en",
+  "themes": [
+   "work",
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2944/pg2944.txt (found verbatim)"
+ },
+ {
+  "id": "emerson_friendship_sincere",
+  "author": {
+   "en": "Ralph Waldo Emerson",
+   "de": "Ralph Waldo Emerson",
+   "fr": "Ralph Waldo Emerson",
+   "es": "Ralph Waldo Emerson"
+  },
+  "source": "Friendship (Essays: First Series)",
+  "text": {
+   "en": "A friend is a person with whom I may be sincere. Before him I may think aloud.",
+   "de": "Ein Freund ist ein Mensch, bei dem ich aufrichtig sein darf. Vor ihm darf ich laut denken.",
+   "fr": "Un ami est une personne avec qui je peux être sincère. Devant lui, je peux penser tout haut.",
+   "es": "Un amigo es una persona con quien puedo ser sincero. Ante él puedo pensar en voz alta."
+  },
+  "original": "en",
+  "themes": [
+   "connection"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2944/pg2944.txt (found verbatim)"
+ },
+ {
+  "id": "emerson_friendship_be_one",
+  "author": {
+   "en": "Ralph Waldo Emerson",
+   "de": "Ralph Waldo Emerson",
+   "fr": "Ralph Waldo Emerson",
+   "es": "Ralph Waldo Emerson"
+  },
+  "source": "Friendship (Essays: First Series)",
+  "text": {
+   "en": "The only reward of virtue is virtue; the only way to have a friend is to be one.",
+   "de": "Der einzige Lohn der Tugend ist die Tugend; der einzige Weg, einen Freund zu haben, ist, selbst einer zu sein.",
+   "fr": "La seule récompense de la vertu est la vertu ; la seule façon d’avoir un ami est d’en être un.",
+   "es": "La única recompensa de la virtud es la virtud; la única manera de tener un amigo es serlo."
+  },
+  "original": "en",
+  "themes": [
+   "connection",
+   "compassion"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2944/pg2944.txt (found verbatim)"
+ },
+ {
+  "id": "emerson_experience_fill_hour",
+  "author": {
+   "en": "Ralph Waldo Emerson",
+   "de": "Ralph Waldo Emerson",
+   "fr": "Ralph Waldo Emerson",
+   "es": "Ralph Waldo Emerson"
+  },
+  "source": "Experience (Essays: Second Series)",
+  "text": {
+   "en": "To fill the hour, that is happiness; to fill the hour and leave no crevice for a repentance or an approval.",
+   "de": "Die Stunde zu füllen, das ist Glück; die Stunde zu füllen und keinen Spalt zu lassen für Reue oder Beifall.",
+   "fr": "Remplir l’heure, voilà le bonheur ; remplir l’heure sans laisser de fissure au regret ni à l’approbation.",
+   "es": "Llenar la hora, eso es la felicidad; llenar la hora sin dejar resquicio al arrepentimiento ni a la aprobación."
+  },
+  "original": "en",
+  "themes": [
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2945/pg2945.txt (found verbatim)"
+ },
+ {
+  "id": "emerson_experience_moments",
+  "author": {
+   "en": "Ralph Waldo Emerson",
+   "de": "Ralph Waldo Emerson",
+   "fr": "Ralph Waldo Emerson",
+   "es": "Ralph Waldo Emerson"
+  },
+  "source": "Experience (Essays: Second Series)",
+  "text": {
+   "en": "Since our office is with moments, let us husband them. Let us be poised, and wise, and our own, today. Let us treat the men and women well.",
+   "de": "Da unsere Aufgabe bei den Augenblicken liegt, lasst uns sorgsam mit ihnen haushalten. Lasst uns gelassen, weise und wir selbst sein, heute. Lasst uns die Menschen gut behandeln.",
+   "fr": "Puisque notre affaire, ce sont les instants, ménageons-les. Soyons posés, sages et maîtres de nous-mêmes, aujourd’hui. Traitons bien les hommes et les femmes.",
+   "es": "Ya que nuestro oficio son los momentos, administrémoslos bien. Seamos serenos, sabios y dueños de nosotros mismos, hoy. Tratemos bien a los hombres y a las mujeres."
+  },
+  "original": "en",
+  "themes": [
+   "time",
+   "compassion"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2945/pg2945.txt (found verbatim)"
+ },
+ {
+  "id": "emerson_nature_1_stars",
+  "author": {
+   "en": "Ralph Waldo Emerson",
+   "de": "Ralph Waldo Emerson",
+   "fr": "Ralph Waldo Emerson",
+   "es": "Ralph Waldo Emerson"
+  },
+  "source": "Nature (1836), ch. 1",
+  "text": {
+   "en": "If the stars should appear one night in a thousand years, how would men believe and adore! But every night come out these envoys of beauty, and light the universe with their admonishing smile.",
+   "de": "Erschienen die Sterne nur eine Nacht in tausend Jahren, wie würden die Menschen glauben und anbeten! Doch jede Nacht kommen diese Boten der Schönheit hervor und erhellen das All mit ihrem mahnenden Lächeln.",
+   "fr": "Si les étoiles n’apparaissaient qu’une nuit tous les mille ans, comme les hommes croiraient et adoreraient ! Mais chaque nuit ces messagères de beauté sortent et éclairent l’univers de leur sourire qui nous avertit.",
+   "es": "Si las estrellas aparecieran una sola noche cada mil años, ¡cómo creerían y adorarían los hombres! Pero cada noche salen estas mensajeras de la belleza e iluminan el universo con su sonrisa que nos advierte."
+  },
+  "original": "en",
+  "themes": [
+   "gratitude",
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/29433/pg29433.txt (found verbatim; elided middle clause ending 'which had been shown')"
+ },
+ {
+  "id": "emerson_nature_3_beauty",
+  "author": {
+   "en": "Ralph Waldo Emerson",
+   "de": "Ralph Waldo Emerson",
+   "fr": "Ralph Waldo Emerson",
+   "es": "Ralph Waldo Emerson"
+  },
+  "source": "Nature (1836), ch. 3 (Beauty)",
+  "text": {
+   "en": "To the attentive eye, each moment of the year has its own beauty, and in the same field, it beholds, every hour, a picture which was never seen before, and which shall never be seen again.",
+   "de": "Für das aufmerksame Auge hat jeder Augenblick des Jahres seine eigene Schönheit; auf demselben Feld sieht es jede Stunde ein Bild, das nie zuvor gesehen wurde und nie wieder gesehen wird.",
+   "fr": "Pour l’œil attentif, chaque moment de l’année a sa propre beauté ; dans le même champ, il contemple à chaque heure un tableau jamais vu auparavant et qu’on ne reverra jamais.",
+   "es": "Para el ojo atento, cada momento del año tiene su propia belleza; en el mismo campo contempla, cada hora, un cuadro nunca visto antes y que nunca volverá a verse."
+  },
+  "original": "en",
+  "themes": [
+   "gratitude",
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/29433/pg29433.txt (found verbatim)"
+ },
+ {
+  "id": "emerson_works_and_days_best_day",
+  "author": {
+   "en": "Ralph Waldo Emerson",
+   "de": "Ralph Waldo Emerson",
+   "fr": "Ralph Waldo Emerson",
+   "es": "Ralph Waldo Emerson"
+  },
+  "source": "Works and Days (Society and Solitude)",
+  "text": {
+   "en": "One of the illusions is that the present hour is not the critical, decisive hour. Write it on your heart that every day is the best day in the year.",
+   "de": "Eine der Täuschungen ist, dass die gegenwärtige Stunde nicht die entscheidende sei. Schreib es dir ins Herz, dass jeder Tag der beste Tag des Jahres ist.",
+   "fr": "L’une des illusions est de croire que l’heure présente n’est pas l’heure critique, décisive. Écris-le dans ton cœur : chaque jour est le meilleur jour de l’année.",
+   "es": "Una de las ilusiones es creer que la hora presente no es la hora crítica y decisiva. Escribe en tu corazón que cada día es el mejor día del año."
+  },
+  "original": "en",
+  "themes": [
+   "time",
+   "gratitude",
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/69258/pg69258.txt (found verbatim)"
+ },
+ {
+  "id": "montaigne_essais_3_13_dance",
+  "author": {
+   "en": "Montaigne",
+   "de": "Montaigne",
+   "fr": "Montaigne",
+   "es": "Montaigne"
+  },
+  "source": "Essais III.13",
+  "text": {
+   "en": "When I dance, I dance; when I sleep, I sleep.",
+   "de": "Wenn ich tanze, dann tanze ich; wenn ich schlafe, dann schlafe ich.",
+   "fr": "Quand je danse, je danse ; quand je dors, je dors.",
+   "es": "Cuando bailo, bailo; cuando duermo, duermo."
+  },
+  "original": "fr",
+  "themes": [
+   "presence",
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/58801 (De l'expérience; 1595 text: \"Quand ie dance, ie dance: quand ie dors, ie dors.\")"
+ },
+ {
+  "id": "montaigne_essais_3_13_lived",
+  "author": {
+   "en": "Montaigne",
+   "de": "Montaigne",
+   "fr": "Montaigne",
+   "es": "Montaigne"
+  },
+  "source": "Essais III.13",
+  "text": {
+   "en": "We say: he spent his life idly; I got nothing done today. What? Haven’t you lived? That is not only the most basic of your occupations, but the most glorious.",
+   "de": "Wir sagen: Er hat sein Leben im Müßiggang verbracht; ich habe heute nichts getan. Wie? Hast du etwa nicht gelebt? Das ist nicht nur die grundlegendste, sondern die herrlichste deiner Beschäftigungen.",
+   "fr": "Il a passé sa vie en oisiveté, disons-nous ; je n’ai rien fait d’aujourd’hui. Quoi ? avez-vous pas vécu ? C’est non seulement la fondamentale, mais la plus illustre de vos occupations.",
+   "es": "Decimos: ha pasado su vida en la ociosidad; hoy no he hecho nada. ¿Cómo? ¿Acaso no has vivido? Esa es no solo la más fundamental, sino la más ilustre de tus ocupaciones."
+  },
+  "original": "fr",
+  "themes": [
+   "work",
+   "rest",
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/58801 (\"Il a passé sa vie en oisiueté, disons-nous: ie n'ay rien faict d'auiourd'huy. Quoy? auez-vous pas vescu?\")"
+ },
+ {
+  "id": "montaigne_essais_3_13_repose",
+  "author": {
+   "en": "Montaigne",
+   "de": "Montaigne",
+   "fr": "Montaigne",
+   "es": "Montaigne"
+  },
+  "source": "Essais III.13",
+  "text": {
+   "en": "Have you known how to rest? Then you have done more than the one who took empires and cities. Our glorious masterpiece is to live fittingly.",
+   "de": "Hast du es verstanden, zu ruhen? Dann hast du mehr getan als der, der Reiche und Städte eroberte. Das herrliche Meisterwerk des Menschen ist, recht zu leben.",
+   "fr": "Avez-vous su prendre du repos ? vous avez plus fait que celui qui a pris des empires et des villes. Le glorieux chef-d’œuvre de l’homme, c’est vivre à propos.",
+   "es": "¿Has sabido descansar? Has hecho más que quien conquistó imperios y ciudades. La gloriosa obra maestra del ser humano es vivir como es debido."
+  },
+  "original": "fr",
+  "themes": [
+   "rest",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/58801 (\"Auez-vous sceu prendre du repos: vous auez plus faict, que celuy qui a pris des Empires et des villes. Le glorieux chef-d'œuure de l'homme, c'est viure à propos.\")"
+ },
+ {
+  "id": "montaigne_essais_3_13_good_time",
+  "author": {
+   "en": "Montaigne",
+   "de": "Montaigne",
+   "fr": "Montaigne",
+   "es": "Montaigne"
+  },
+  "source": "Essais III.13",
+  "text": {
+   "en": "I pass the time when it is bad and troublesome; when it is good, I don’t want to pass it: I taste it again and again, I hold on to it.",
+   "de": "Die Zeit vertreibe ich mir, wenn sie schlecht und beschwerlich ist; ist sie gut, will ich sie nicht vertreiben: Ich koste sie wieder und wieder, ich halte mich an ihr fest.",
+   "fr": "Je passe le temps, quand il est mauvais et incommode ; quand il est bon, je ne le veux pas passer, je le retâte, je m’y tiens.",
+   "es": "Paso el tiempo cuando es malo e incómodo; cuando es bueno, no quiero pasarlo: lo vuelvo a saborear, me quedo en él."
+  },
+  "original": "fr",
+  "themes": [
+   "gratitude",
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/58801 (\"ie passe le temps, quand il est mauuais et incommode; quand il est bon, ie ne le veux pas passer, ie le retaste, ie m'y tiens\")"
+ },
+ {
+  "id": "montaigne_essais_3_13_deeper",
+  "author": {
+   "en": "Montaigne",
+   "de": "Montaigne",
+   "fr": "Montaigne",
+   "es": "Montaigne"
+  },
+  "source": "Essais III.13",
+  "text": {
+   "en": "The shorter my hold on life becomes, the deeper and fuller I must make it.",
+   "de": "Je kürzer mir das Leben noch gehört, desto tiefer und voller muss ich es machen.",
+   "fr": "À mesure que la possession du vivre est plus courte, il me la faut rendre plus profonde et plus pleine.",
+   "es": "Cuanto más breve es la posesión de la vida, más honda y más plena he de hacerla."
+  },
+  "original": "fr",
+  "themes": [
+   "aging",
+   "time"
+  ],
+  "stages": [
+   "harvest",
+   "wisdom"
+  ],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/58801 (\"A mesure que la possession du viure est plus courte, il me la faut rendre plus profonde, et plus pleine.\")"
+ },
+ {
+  "id": "montaigne_essais_3_13_savour",
+  "author": {
+   "en": "Montaigne",
+   "de": "Montaigne",
+   "fr": "Montaigne",
+   "es": "Montaigne"
+  },
+  "source": "Essais III.13",
+  "text": {
+   "en": "I feel the sweetness of contentment, but not in passing, sliding over it. It must be studied, savoured and chewed over, so as to give thanks for it.",
+   "de": "Die Süße der Zufriedenheit spüre ich, aber nicht im Vorbeigleiten. Man muss sie betrachten, auskosten und wiederkäuen, um für sie zu danken.",
+   "fr": "La douceur d’un contentement, je la sens, mais ce n’est pas en passant et glissant. Si la faut-il étudier, savourer et ruminer, pour en rendre grâces.",
+   "es": "La dulzura de un contento la siento, pero no de pasada, deslizándome. Hay que estudiarla, saborearla y rumiarla, para dar gracias por ella."
+  },
+  "original": "fr",
+  "themes": [
+   "gratitude",
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/58801 (\"la douceur d'vn contentement ... ce n'est pas en passant et glissant. Si la faut-il estudier, sauourer et ruminer, pour en rendre graces\"; lightly reordered)"
+ },
+ {
+  "id": "montaigne_essais_1_20_use",
+  "author": {
+   "en": "Montaigne",
+   "de": "Montaigne",
+   "fr": "Montaigne",
+   "es": "Montaigne"
+  },
+  "source": "Essais I.20",
+  "text": {
+   "en": "The value of life lies not in its length but in its use. Some have lived long who have lived little.",
+   "de": "Der Wert des Lebens liegt nicht in seiner Länge, sondern in seinem Gebrauch. Mancher hat lange gelebt und doch wenig gelebt.",
+   "fr": "L’utilité du vivre n’est pas en l’espace, elle est en l’usage. Tel a vécu longtemps, qui a peu vécu.",
+   "es": "El provecho de la vida no está en su duración, sino en su uso. Hay quien ha vivido mucho tiempo y ha vivido poco."
+  },
+  "original": "fr",
+  "themes": [
+   "time",
+   "mortality"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/48529 (Que philosopher c'est apprendre à mourir; ch. XIX in this 1595-based edition: \"L'vtilité du viure n'est pas en l'espace: elle est en l'vsage.\")"
+ },
+ {
+  "id": "montaigne_essais_1_20_cabbages",
+  "author": {
+   "en": "Montaigne",
+   "de": "Montaigne",
+   "fr": "Montaigne",
+   "es": "Montaigne"
+  },
+  "source": "Essais I.20",
+  "text": {
+   "en": "I want us to act, and to carry on the tasks of life as long as we can, and that death should find me planting my cabbages, unconcerned about it, and still less about my unfinished garden.",
+   "de": "Ich will, dass man tätig ist und die Aufgaben des Lebens fortführt, solange man kann, und dass der Tod mich beim Kohlpflanzen findet, unbekümmert um ihn und noch mehr um meinen unfertigen Garten.",
+   "fr": "Je veux qu’on agisse, et qu’on allonge les offices de la vie tant qu’on peut, et que la mort me trouve plantant mes choux, mais nonchalant d’elle, et encore plus de mon jardin imparfait.",
+   "es": "Quiero que obremos y alarguemos las tareas de la vida cuanto podamos, y que la muerte me encuentre plantando mis coles, despreocupado de ella y más aún de mi huerto imperfecto."
+  },
+  "original": "fr",
+  "themes": [
+   "mortality",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/48529 (ch. XIX in this edition: \"que la mort me treuue plantant mes choux; mais nonchallant d'elle, et encore plus de mon iardin imparfait\")"
+ },
+ {
+  "id": "montaigne_essais_1_28_friendship",
+  "author": {
+   "en": "Montaigne",
+   "de": "Montaigne",
+   "fr": "Montaigne",
+   "es": "Montaigne"
+  },
+  "source": "Essais I.28",
+  "text": {
+   "en": "If pressed to say why I loved him, I feel it can only be expressed by answering: because it was he, because it was I.",
+   "de": "Drängt man mich zu sagen, warum ich ihn liebte, so fühle ich, dass es sich nur so ausdrücken lässt: Weil er es war, weil ich es war.",
+   "fr": "Si on me presse de dire pourquoi je l’aimais, je sens que cela ne se peut exprimer qu’en répondant : parce que c’était lui, parce que c’était moi.",
+   "es": "Si me apremian a decir por qué lo quería, siento que solo puede expresarse respondiendo: porque era él, porque era yo."
+  },
+  "original": "fr",
+  "themes": [
+   "love",
+   "connection"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/48529 (De l'amitié, ch. XXVII in this edition: \"Par ce que c'estoit luy, par ce que c'estoit moy.\")"
+ },
+ {
+  "id": "montaigne_essais_1_39_belong",
+  "author": {
+   "en": "Montaigne",
+   "de": "Montaigne",
+   "fr": "Montaigne",
+   "es": "Montaigne"
+  },
+  "source": "Essais I.39",
+  "text": {
+   "en": "The greatest thing in the world is to know how to belong to yourself.",
+   "de": "Das Größte auf der Welt ist, zu wissen, wie man sich selbst gehört.",
+   "fr": "La plus grande chose du monde, c’est de savoir être à soi.",
+   "es": "La cosa más grande del mundo es saber ser de uno mismo."
+  },
+  "original": "fr",
+  "themes": [
+   "compassion",
+   "simplicity"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/48529 (De la solitude, ch. XXXVIII in this edition: \"La plus grande chose du monde c'est de sçauoir estre à soy.\")"
+ },
+ {
+  "id": "montaigne_essais_3_10_lend",
+  "author": {
+   "en": "Montaigne",
+   "de": "Montaigne",
+   "fr": "Montaigne",
+   "es": "Montaigne"
+  },
+  "source": "Essais III.10",
+  "text": {
+   "en": "My view is that we should lend ourselves to others, but give ourselves only to ourselves.",
+   "de": "Meine Ansicht ist, dass man sich anderen leihen, aber nur sich selbst schenken soll.",
+   "fr": "Mon opinion est qu’il se faut prêter à autrui, et ne se donner qu’à soi-même.",
+   "es": "Mi opinión es que hay que prestarse a los demás y no darse sino a uno mismo."
+  },
+  "original": "fr",
+  "themes": [
+   "work",
+   "compassion"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/58801 (De ménager sa volonté: \"Mon opinion est, qu'il se faut prester à autruy, et ne se donner qu'à soy-mesme.\")"
+ },
+ {
+  "id": "montaigne_essais_2_6_living",
+  "author": {
+   "en": "Montaigne",
+   "de": "Montaigne",
+   "fr": "Montaigne",
+   "es": "Montaigne"
+  },
+  "source": "Essais II.6",
+  "text": {
+   "en": "My trade and my art is living.",
+   "de": "Mein Handwerk und meine Kunst ist das Leben.",
+   "fr": "Mon métier et mon art, c’est vivre.",
+   "es": "Mi oficio y mi arte es vivir."
+  },
+  "original": "fr",
+  "themes": [
+   "presence",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/48529 (De l'exercitation: \"Mon mestier et mon art, c'est viure.\")"
+ },
+ {
+  "id": "pascal_pensees_139",
+  "author": {
+   "en": "Pascal",
+   "de": "Pascal",
+   "fr": "Pascal",
+   "es": "Pascal"
+  },
+  "source": "Pensées 139 (Brunschvicg)",
+  "text": {
+   "en": "All of humanity’s unhappiness comes from one thing: not knowing how to stay quietly in a room.",
+   "de": "Alles Unglück der Menschen kommt von einem Einzigen: dass sie nicht in Ruhe in einem Zimmer bleiben können.",
+   "fr": "Tout le malheur des hommes vient d’une seule chose, qui est de ne savoir pas demeurer en repos, dans une chambre.",
+   "es": "Toda la desdicha de los hombres viene de una sola cosa: no saber quedarse en reposo en una habitación."
+  },
+  "original": "fr",
+  "themes": [
+   "rest",
+   "simplicity"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://fr.wikisource.org/wiki/Pens%C3%A9es_(Pascal,_%C3%A9d._Brunschvicg)/Pens%C3%A9es/Section_II-2"
+ },
+ {
+  "id": "pascal_pensees_172",
+  "author": {
+   "en": "Pascal",
+   "de": "Pascal",
+   "fr": "Pascal",
+   "es": "Pascal"
+  },
+  "source": "Pensées 172 (Brunschvicg)",
+  "text": {
+   "en": "The present is never our goal: past and present are our means; only the future is our end. So we never live, but only hope to live.",
+   "de": "Die Gegenwart ist nie unser Ziel: Vergangenheit und Gegenwart sind unsere Mittel, allein die Zukunft ist unser Ziel. So leben wir nie, sondern hoffen nur zu leben.",
+   "fr": "Le présent n’est jamais notre fin : le passé et le présent sont nos moyens ; le seul avenir est notre fin. Ainsi nous ne vivons jamais, mais nous espérons de vivre.",
+   "es": "El presente nunca es nuestro fin: el pasado y el presente son nuestros medios; solo el futuro es nuestro fin. Así, nunca vivimos, sino que esperamos vivir."
+  },
+  "original": "fr",
+  "themes": [
+   "presence",
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://fr.wikisource.org/wiki/Pens%C3%A9es_(Pascal,_%C3%A9d._Brunschvicg)/Pens%C3%A9es/Section_II-2"
+ },
+ {
+  "id": "pascal_pensees_277",
+  "author": {
+   "en": "Pascal",
+   "de": "Pascal",
+   "fr": "Pascal",
+   "es": "Pascal"
+  },
+  "source": "Pensées 277 (Brunschvicg)",
+  "text": {
+   "en": "The heart has its reasons, which reason does not know.",
+   "de": "Das Herz hat seine Gründe, die der Verstand nicht kennt.",
+   "fr": "Le cœur a ses raisons, que la raison ne connaît point.",
+   "es": "El corazón tiene razones que la razón no conoce."
+  },
+  "original": "fr",
+  "themes": [
+   "love"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://fr.wikisource.org/wiki/Pens%C3%A9es_(Pascal,_%C3%A9d._Brunschvicg)/Pens%C3%A9es/Section_IV"
+ },
+ {
+  "id": "pascal_pensees_347",
+  "author": {
+   "en": "Pascal",
+   "de": "Pascal",
+   "fr": "Pascal",
+   "es": "Pascal"
+  },
+  "source": "Pensées 347 (Brunschvicg)",
+  "text": {
+   "en": "A human being is only a reed, the weakest in nature; but a thinking reed.",
+   "de": "Der Mensch ist nur ein Schilfrohr, das schwächste der Natur; aber er ist ein denkendes Schilfrohr.",
+   "fr": "L’homme n’est qu’un roseau, le plus faible de la nature ; mais c’est un roseau pensant.",
+   "es": "El ser humano no es más que una caña, la más débil de la naturaleza; pero es una caña que piensa."
+  },
+  "original": "fr",
+  "themes": [
+   "mortality",
+   "growth"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://fr.wikisource.org/wiki/Pens%C3%A9es_(Pascal,_%C3%A9d._Brunschvicg)/Pens%C3%A9es/Section_VI"
+ },
+ {
+  "id": "pascal_pensees_136",
+  "author": {
+   "en": "Pascal",
+   "de": "Pascal",
+   "fr": "Pascal",
+   "es": "Pascal"
+  },
+  "source": "Pensées 136 (Brunschvicg)",
+  "text": {
+   "en": "Little things comfort us, because little things distress us.",
+   "de": "Wenig tröstet uns, weil wenig uns betrübt.",
+   "fr": "Peu de chose nous console parce que peu de chose nous afflige.",
+   "es": "Poca cosa nos consuela, porque poca cosa nos aflige."
+  },
+  "original": "fr",
+  "themes": [
+   "compassion",
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://fr.wikisource.org/wiki/Pens%C3%A9es_(Pascal,_%C3%A9d._Brunschvicg)/Pens%C3%A9es/Section_II-2"
+ },
+ {
+  "id": "pascal_pensees_122",
+  "author": {
+   "en": "Pascal",
+   "de": "Pascal",
+   "fr": "Pascal",
+   "es": "Pascal"
+  },
+  "source": "Pensées 122 (Brunschvicg)",
+  "text": {
+   "en": "Time heals sorrows and quarrels, because we change: we are no longer the same person.",
+   "de": "Die Zeit heilt Schmerzen und Streit, weil man sich verändert: Man ist nicht mehr derselbe Mensch.",
+   "fr": "Le temps guérit les douleurs et les querelles, parce qu’on change : on n’est plus la même personne.",
+   "es": "El tiempo cura los dolores y las disputas, porque uno cambia: ya no es la misma persona."
+  },
+  "original": "fr",
+  "themes": [
+   "compassion",
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://fr.wikisource.org/wiki/Pens%C3%A9es_(Pascal,_%C3%A9d._Brunschvicg)/Pens%C3%A9es/Section_II-2"
+ },
+ {
+  "id": "larochefoucauld_maximes_26",
+  "author": {
+   "en": "La Rochefoucauld",
+   "de": "La Rochefoucauld",
+   "fr": "La Rochefoucauld",
+   "es": "La Rochefoucauld"
+  },
+  "source": "Maximes 26",
+  "text": {
+   "en": "Neither the sun nor death can be looked at steadily.",
+   "de": "Weder die Sonne noch den Tod kann man fest ins Auge fassen.",
+   "fr": "Le soleil ni la mort ne se peuvent regarder fixement.",
+   "es": "Ni el sol ni la muerte pueden mirarse fijamente."
+  },
+  "original": "fr",
+  "themes": [
+   "mortality"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/14913"
+ },
+ {
+  "id": "larochefoucauld_maximes_48",
+  "author": {
+   "en": "La Rochefoucauld",
+   "de": "La Rochefoucauld",
+   "fr": "La Rochefoucauld",
+   "es": "La Rochefoucauld"
+  },
+  "source": "Maximes 48",
+  "text": {
+   "en": "Happiness lies in our taste, not in things; we are happy by having what we love, not what others find lovable.",
+   "de": "Das Glück liegt im Geschmack und nicht in den Dingen; glücklich ist man, wenn man hat, was man liebt, nicht was andere liebenswert finden.",
+   "fr": "La félicité est dans le goût et non pas dans les choses ; et c’est par avoir ce qu’on aime qu’on est heureux, et non par avoir ce que les autres trouvent aimable.",
+   "es": "La felicidad está en el gusto y no en las cosas; somos felices por tener lo que amamos, no lo que los demás encuentran amable."
+  },
+  "original": "fr",
+  "themes": [
+   "gratitude",
+   "simplicity"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/14913"
+ },
+ {
+  "id": "larochefoucauld_maximes_49",
+  "author": {
+   "en": "La Rochefoucauld",
+   "de": "La Rochefoucauld",
+   "fr": "La Rochefoucauld",
+   "es": "La Rochefoucauld"
+  },
+  "source": "Maximes 49",
+  "text": {
+   "en": "We are never as happy or as unhappy as we imagine.",
+   "de": "Man ist nie so glücklich oder so unglücklich, wie man sich einbildet.",
+   "fr": "On n’est jamais si heureux ni si malheureux qu’on s’imagine.",
+   "es": "Nunca somos tan felices ni tan desdichados como imaginamos."
+  },
+  "original": "fr",
+  "themes": [
+   "rest",
+   "compassion"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/14913"
+ },
+ {
+  "id": "larochefoucauld_maximes_330",
+  "author": {
+   "en": "La Rochefoucauld",
+   "de": "La Rochefoucauld",
+   "fr": "La Rochefoucauld",
+   "es": "La Rochefoucauld"
+  },
+  "source": "Maximes 330",
+  "text": {
+   "en": "We forgive as long as we love.",
+   "de": "Man verzeiht, solange man liebt.",
+   "fr": "On pardonne tant que l’on aime.",
+   "es": "Perdonamos mientras amamos."
+  },
+  "original": "fr",
+  "themes": [
+   "compassion",
+   "love"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/14913"
+ },
+ {
+  "id": "larochefoucauld_maximes_405",
+  "author": {
+   "en": "La Rochefoucauld",
+   "de": "La Rochefoucauld",
+   "fr": "La Rochefoucauld",
+   "es": "La Rochefoucauld"
+  },
+  "source": "Maximes 405",
+  "text": {
+   "en": "We arrive quite new at each age of life, and often lack experience there despite our years.",
+   "de": "Wir kommen in jedem Lebensalter ganz neu an, und trotz all unserer Jahre fehlt uns dort oft die Erfahrung.",
+   "fr": "Nous arrivons tout nouveaux aux divers âges de la vie, et nous y manquons souvent d’expérience malgré le nombre des années.",
+   "es": "Llegamos del todo nuevos a cada edad de la vida, y a menudo nos falta experiencia en ella pese a los años."
+  },
+  "original": "fr",
+  "themes": [
+   "aging",
+   "compassion"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/14913"
+ },
+ {
+  "id": "larochefoucauld_maximes_392",
+  "author": {
+   "en": "La Rochefoucauld",
+   "de": "La Rochefoucauld",
+   "fr": "La Rochefoucauld",
+   "es": "La Rochefoucauld"
+  },
+  "source": "Maximes 392",
+  "text": {
+   "en": "Treat fortune like health: enjoy it when it is good, be patient when it is bad, and never take drastic remedies without great need.",
+   "de": "Mit dem Glück soll man umgehen wie mit der Gesundheit: es genießen, wenn es gut ist, Geduld haben, wenn es schlecht ist, und nie ohne äußerste Not zu starken Mitteln greifen.",
+   "fr": "Il faut gouverner la fortune comme la santé : en jouir quand elle est bonne, prendre patience quand elle est mauvaise, et ne faire jamais de grands remèdes sans un extrême besoin.",
+   "es": "Hay que gobernar la fortuna como la salud: disfrutarla cuando es buena, tener paciencia cuando es mala y no hacer nunca grandes remedios sin extrema necesidad."
+  },
+  "original": "fr",
+  "themes": [
+   "gratitude",
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/14913"
+ },
+ {
+  "id": "cervantes_quijote_2_68_sleep",
+  "author": {
+   "en": "Cervantes",
+   "de": "Cervantes",
+   "fr": "Cervantes",
+   "es": "Cervantes"
+  },
+  "source": "Don Quijote II.68",
+  "text": {
+   "en": "While I sleep I have neither fear nor hope, neither toil nor glory; and blessed be whoever invented sleep, the cloak that covers all human thoughts.",
+   "de": "Solange ich schlafe, habe ich weder Furcht noch Hoffnung, weder Mühe noch Ruhm; gesegnet sei, wer den Schlaf erfand, den Mantel, der alle menschlichen Gedanken zudeckt.",
+   "fr": "Tant que je dors, je n’ai ni crainte, ni espoir, ni peine, ni gloire ; et béni soit celui qui inventa le sommeil, manteau qui couvre toutes les pensées humaines.",
+   "es": "En tanto que duermo, ni tengo temor, ni esperanza, ni trabajo ni gloria; y bien haya el que inventó el sueño, capa que cubre todos los humanos pensamientos."
+  },
+  "original": "es",
+  "themes": [
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/2000 (Sancho speaking)"
+ },
+ {
+  "id": "cervantes_quijote_1_18_storms",
+  "author": {
+   "en": "Cervantes",
+   "de": "Cervantes",
+   "fr": "Cervantes",
+   "es": "Cervantes"
+  },
+  "source": "Don Quijote I.18",
+  "text": {
+   "en": "All these storms that befall us are signs that the weather will soon clear and things will go well for us; for neither the bad nor the good can last forever.",
+   "de": "All diese Stürme, die uns treffen, sind Zeichen, dass das Wetter bald aufklart und es uns wieder gut gehen wird; denn weder das Schlechte noch das Gute kann ewig dauern.",
+   "fr": "Toutes ces tempêtes qui nous arrivent sont signe que le temps va bientôt s’éclaircir et que tout ira bien pour nous ; car ni le mal ni le bien ne peuvent durer.",
+   "es": "Todas estas borrascas que nos suceden son señales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables."
+  },
+  "original": "es",
+  "themes": [
+   "compassion",
+   "courage"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/2000"
+ },
+ {
+  "id": "cervantes_quijote_1_18_does_more",
+  "author": {
+   "en": "Cervantes",
+   "de": "Cervantes",
+   "fr": "Cervantes",
+   "es": "Cervantes"
+  },
+  "source": "Don Quijote I.18",
+  "text": {
+   "en": "Know, Sancho, that no one is worth more than another unless they do more than another.",
+   "de": "Wisse, Sancho, dass kein Mensch mehr ist als ein anderer, wenn er nicht mehr tut als der andere.",
+   "fr": "Sache, Sancho, qu’un homme ne vaut pas plus qu’un autre s’il ne fait pas plus qu’un autre.",
+   "es": "Sábete, Sancho, que no es un hombre más que otro si no hace más que otro."
+  },
+  "original": "es",
+  "themes": [
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/2000"
+ },
+ {
+  "id": "cervantes_quijote_2_58_bread",
+  "author": {
+   "en": "Cervantes",
+   "de": "Cervantes",
+   "fr": "Cervantes",
+   "es": "Cervantes"
+  },
+  "source": "Don Quijote II.58",
+  "text": {
+   "en": "Happy the one to whom heaven has given a piece of bread, with no one to thank for it but heaven itself!",
+   "de": "Glücklich, wem der Himmel ein Stück Brot gab, ohne dass er dafür einem anderen danken muss als dem Himmel selbst!",
+   "fr": "Heureux celui à qui le ciel a donné un morceau de pain, sans devoir en remercier nul autre que le ciel lui-même !",
+   "es": "¡Venturoso aquel a quien el cielo dio un pedazo de pan, sin que le quede obligación de agradecerlo a otro que al mismo cielo!"
+  },
+  "original": "es",
+  "themes": [
+   "gratitude",
+   "simplicity"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/2000"
+ },
+ {
+  "id": "cervantes_quijote_2_42_mercy",
+  "author": {
+   "en": "Cervantes",
+   "de": "Cervantes",
+   "fr": "Cervantes",
+   "es": "Cervantes"
+  },
+  "source": "Don Quijote II.42",
+  "text": {
+   "en": "The name of a harsh judge is no better than that of a compassionate one. If you must bend the rod of justice, let it be under the weight of mercy, never of a bribe.",
+   "de": "Der Ruf des strengen Richters ist nicht besser als der des mitfühlenden. Wenn du den Stab der Gerechtigkeit beugst, dann nicht unter dem Gewicht eines Geschenks, sondern unter dem der Barmherzigkeit.",
+   "fr": "La renommée du juge rigoureux ne vaut pas mieux que celle du juge compatissant. Si tu plies la verge de la justice, que ce ne soit pas sous le poids du présent, mais sous celui de la miséricorde.",
+   "es": "No es mejor la fama del juez riguroso que la del compasivo. Si acaso doblares la vara de la justicia, no sea con el peso de la dádiva, sino con el de la misericordia."
+  },
+  "original": "es",
+  "themes": [
+   "compassion"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/2000 (Don Quijote's advice to Sancho)"
+ },
+ {
+  "id": "cervantes_quijote_2_74_nests",
+  "author": {
+   "en": "Cervantes",
+   "de": "Cervantes",
+   "fr": "Cervantes",
+   "es": "Cervantes"
+  },
+  "source": "Don Quijote II.74",
+  "text": {
+   "en": "Let us go gently, for in last year’s nests there are no birds this year.",
+   "de": "Gehen wir es langsam an, denn in den Nestern vom letzten Jahr sind heuer keine Vögel mehr.",
+   "fr": "Allons doucement, car dans les nids d’antan il n’y a plus d’oiseaux cette année.",
+   "es": "Vámonos poco a poco, pues ya en los nidos de antaño no hay pájaros hogaño."
+  },
+  "original": "es",
+  "themes": [
+   "aging",
+   "mortality"
+  ],
+  "stages": [
+   "wisdom"
+  ],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/ebooks/2000 (Don Quijote on his deathbed)"
+ },
+ {
+  "id": "machado_campos_proverbios_29",
+  "author": {
+   "en": "Antonio Machado",
+   "de": "Antonio Machado",
+   "fr": "Antonio Machado",
+   "es": "Antonio Machado"
+  },
+  "source": "Campos de Castilla, Proverbios y cantares XXIX",
+  "text": {
+   "en": "Traveller, your footprints are the path, and nothing more; traveller, there is no path: the path is made by walking.",
+   "de": "Wanderer, deine Spuren sind der Weg, und nichts weiter; Wanderer, es gibt keinen Weg: Der Weg entsteht im Gehen.",
+   "fr": "Voyageur, ce sont tes traces qui sont le chemin, et rien de plus ; voyageur, il n’y a pas de chemin : le chemin se fait en marchant.",
+   "es": "Caminante, son tus huellas el camino, y nada más; caminante, no hay camino: se hace camino al andar."
+  },
+  "original": "es",
+  "themes": [
+   "growth",
+   "courage"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://es.wikisource.org/wiki/Proverbios_y_cantares_(Campos_de_Castilla)"
+ },
+ {
+  "id": "machado_campos_proverbios_44",
+  "author": {
+   "en": "Antonio Machado",
+   "de": "Antonio Machado",
+   "fr": "Antonio Machado",
+   "es": "Antonio Machado"
+  },
+  "source": "Campos de Castilla, Proverbios y cantares XLIV",
+  "text": {
+   "en": "Everything passes and everything remains; but ours is to pass, to pass making paths, paths across the sea.",
+   "de": "Alles vergeht und alles bleibt; doch unser ist das Vorübergehen, Wege bahnend im Vorübergehen, Wege über das Meer.",
+   "fr": "Tout passe et tout demeure ; mais le nôtre est de passer, passer en traçant des chemins, des chemins sur la mer.",
+   "es": "Todo pasa y todo queda; pero lo nuestro es pasar, pasar haciendo caminos, caminos sobre la mar."
+  },
+  "original": "es",
+  "themes": [
+   "mortality",
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://es.wikisource.org/wiki/Proverbios_y_cantares_(Campos_de_Castilla)"
+ },
+ {
+  "id": "machado_campos_proverbios_37",
+  "author": {
+   "en": "Antonio Machado",
+   "de": "Antonio Machado",
+   "fr": "Antonio Machado",
+   "es": "Antonio Machado"
+  },
+  "source": "Campos de Castilla, Proverbios y cantares XXXVII",
+  "text": {
+   "en": "You say nothing is created? Never mind; with the clay of the earth, make a cup for your brother to drink from.",
+   "de": "Du sagst, nichts wird erschaffen? Lass das; mach aus dem Lehm der Erde einen Becher, damit dein Bruder trinken kann.",
+   "fr": "Tu dis que rien ne se crée ? Peu importe ; avec l’argile de la terre, fais une coupe pour que ton frère y boive.",
+   "es": "¿Dices que nada se crea? No te importe; con el barro de la tierra, haz una copa para que beba tu hermano."
+  },
+  "original": "es",
+  "themes": [
+   "compassion",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://es.wikisource.org/wiki/Proverbios_y_cantares_(Campos_de_Castilla)"
+ },
+ {
+  "id": "machado_campos_proverbios_38",
+  "author": {
+   "en": "Antonio Machado",
+   "de": "Antonio Machado",
+   "fr": "Antonio Machado",
+   "es": "Antonio Machado"
+  },
+  "source": "Campos de Castilla, Proverbios y cantares XXXVIII",
+  "text": {
+   "en": "You say nothing is created? Potter, to your pots. Make your cup, and never mind if you cannot make clay.",
+   "de": "Du sagst, nichts wird erschaffen? Töpfer, an deine Töpfe. Mach deinen Becher und sorg dich nicht, dass du keinen Lehm machen kannst.",
+   "fr": "Tu dis que rien ne se crée ? Potier, à tes pots. Fais ta coupe, et peu importe si tu ne peux pas faire l’argile.",
+   "es": "¿Dices que nada se crea? Alfarero, a tus cacharros. Haz tu copa, y no te importe si no puedes hacer barro."
+  },
+  "original": "es",
+  "themes": [
+   "work",
+   "simplicity"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://es.wikisource.org/wiki/Proverbios_y_cantares_(Campos_de_Castilla)"
+ },
+ {
+  "id": "machado_campos_retrato",
+  "author": {
+   "en": "Antonio Machado",
+   "de": "Antonio Machado",
+   "fr": "Antonio Machado",
+   "es": "Antonio Machado"
+  },
+  "source": "Campos de Castilla, Retrato",
+  "text": {
+   "en": "And when the day of the last voyage comes, and the ship that never returns is about to sail, you will find me on board, travelling light, almost naked, like the children of the sea.",
+   "de": "Und wenn der Tag der letzten Reise kommt und das Schiff, das nie zurückkehrt, ablegen will, findet ihr mich an Bord, mit leichtem Gepäck, fast nackt, wie die Kinder des Meeres.",
+   "fr": "Et quand viendra le jour du dernier voyage, quand partira le navire qui ne doit jamais revenir, vous me trouverez à bord, léger de bagages, presque nu, comme les enfants de la mer.",
+   "es": "Y cuando llegue el día del último viaje y esté a partir la nave que nunca ha de tornar, me encontraréis a bordo ligero de equipaje, casi desnudo, como los hijos de la mar."
+  },
+  "original": "es",
+  "themes": [
+   "mortality",
+   "simplicity"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://es.wikisource.org/wiki/Retrato_(Machado)"
+ },
+ {
+  "id": "machado_consejos_2",
+  "author": {
+   "en": "Antonio Machado",
+   "de": "Antonio Machado",
+   "fr": "Antonio Machado",
+   "es": "Antonio Machado"
+  },
+  "source": "Consejos II",
+  "text": {
+   "en": "A coin in your hand perhaps should be saved; the little coin of the soul is lost if it is not given.",
+   "de": "Die Münze in der Hand sollte man vielleicht sparen; die kleine Münze der Seele geht verloren, wenn man sie nicht hergibt.",
+   "fr": "La pièce qu’on tient dans la main, peut-être faut-il la garder ; la petite pièce de l’âme se perd si on ne la donne pas.",
+   "es": "Moneda que está en la mano quizá se deba guardar; la monedita del alma se pierde si no se da."
+  },
+  "original": "es",
+  "themes": [
+   "compassion",
+   "love"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://es.wikisource.org/wiki/Consejos_(Machado)"
+ },
+ {
+  "id": "gracian_oraculo_174_hurry",
+  "author": {
+   "en": "Baltasar Gracián",
+   "de": "Baltasar Gracián",
+   "fr": "Baltasar Gracián",
+   "es": "Baltasar Gracián"
+  },
+  "source": "Oráculo manual 174",
+  "text": {
+   "en": "Don’t live in a hurry. Knowing how to pace things is knowing how to enjoy them. Many have life left over when their happiness has run out.",
+   "de": "Lebe nicht in Eile. Die Dinge einteilen zu können heißt, sie genießen zu können. Vielen bleibt noch Leben übrig, wenn ihr Glück schon aufgebraucht ist.",
+   "fr": "Ne pas vivre à la hâte. Savoir répartir les choses, c’est savoir en jouir. Beaucoup ont encore de la vie de reste quand leur bonheur est déjà épuisé.",
+   "es": "No vivir a prisa. El saber repartir las cosas es saberlas gozar. A muchos les sobra la vida y se les acaba la felicidad."
+  },
+  "original": "es",
+  "themes": [
+   "rest",
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://es.wikisource.org/wiki/Or%C3%A1culo_manual_y_arte_de_prudencia/Aforismos_(151-175)"
+ },
+ {
+  "id": "gracian_oraculo_174_days",
+  "author": {
+   "en": "Baltasar Gracián",
+   "de": "Baltasar Gracián",
+   "fr": "Baltasar Gracián",
+   "es": "Baltasar Gracián"
+  },
+  "source": "Oráculo manual 174",
+  "text": {
+   "en": "There are more days than joys: enjoy slowly, act quickly.",
+   "de": "Es gibt mehr Tage als Freuden: Genieße langsam, handle rasch.",
+   "fr": "Il y a plus de jours que de bonheurs : jouir lentement, agir vite.",
+   "es": "Son más los días que las dichas: en el gozar, a espacio; en el obrar, a prisa."
+  },
+  "original": "es",
+  "themes": [
+   "gratitude",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://es.wikisource.org/wiki/Or%C3%A1culo_manual_y_arte_de_prudencia/Aforismos_(151-175)"
+ },
+ {
+  "id": "gracian_oraculo_247",
+  "author": {
+   "en": "Baltasar Gracián",
+   "de": "Baltasar Gracián",
+   "fr": "Baltasar Gracián",
+   "es": "Baltasar Gracián"
+  },
+  "source": "Oráculo manual 247",
+  "text": {
+   "en": "Good leisure is worth more than business. Nothing is ours but time. Where does someone live who never has a moment?",
+   "de": "Gute Muße ist mehr wert als Geschäftigkeit. Nichts gehört uns außer der Zeit. Wo lebt, wer nie Zeit hat?",
+   "fr": "Mieux vaut un bon loisir que les affaires. Nous n’avons rien à nous que le temps. Où vit celui qui n’a jamais le temps ?",
+   "es": "Más vale el buen ocio que el negocio. No tenemos cosa nuestra sino el tiempo. ¿Dónde vive quien no tiene lugar?"
+  },
+  "original": "es",
+  "themes": [
+   "work",
+   "time",
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://es.wikisource.org/wiki/Or%C3%A1culo_manual_y_arte_de_prudencia/Aforismos_(226-250) (source shows \")Dónde\", an OCR slip for \"¿Dónde\")"
+ },
+ {
+  "id": "gracian_oraculo_121",
+  "author": {
+   "en": "Baltasar Gracián",
+   "de": "Baltasar Gracián",
+   "fr": "Baltasar Gracián",
+   "es": "Baltasar Gracián"
+  },
+  "source": "Oráculo manual 121",
+  "text": {
+   "en": "Don’t make a big deal of what is no big deal. Many things that were something became nothing when left alone; others that were nothing became much because we paid them heed.",
+   "de": "Mach keine große Sache aus dem, was keine ist. Vieles, das etwas war, wurde zu nichts, weil man es ließ; anderes, das nichts war, wurde viel, weil man es beachtete.",
+   "fr": "Ne pas faire une affaire de ce qui n’en est pas une. Bien des choses qui étaient quelque chose ne furent rien, quand on les laissa ; d’autres, qui n’étaient rien, devinrent beaucoup, pour en avoir fait cas.",
+   "es": "No hacer negocio del no negocio. Muchas cosas que eran algo, dejándolas, fueron nada; y otras que eran nada, por haber hecho caso de ellas, fueron mucho."
+  },
+  "original": "es",
+  "themes": [
+   "rest",
+   "simplicity"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://es.wikisource.org/wiki/Or%C3%A1culo_manual_y_arte_de_prudencia/Aforismos_(101-125)"
+ },
+ {
+  "id": "gracian_oraculo_111",
+  "author": {
+   "en": "Baltasar Gracián",
+   "de": "Baltasar Gracián",
+   "fr": "Baltasar Gracián",
+   "es": "Baltasar Gracián"
+  },
+  "source": "Oráculo manual 111",
+  "text": {
+   "en": "Have friends. A friend is a second life. Every friend is good, and wise, to their friend.",
+   "de": "Habe Freunde. Ein Freund ist ein zweites Leben. Jeder Freund ist gut, und weise für den Freund.",
+   "fr": "Avoir des amis. C’est une seconde existence. Tout ami est bon, et sage pour son ami.",
+   "es": "Tener amigos. Es el segundo ser. Todo amigo es bueno, y sabio para el amigo."
+  },
+  "original": "es",
+  "themes": [
+   "connection"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://es.wikisource.org/wiki/Or%C3%A1culo_manual_y_arte_de_prudencia/Aforismos_(101-125)"
+ },
+ {
+  "id": "gracian_oraculo_55",
+  "author": {
+   "en": "Baltasar Gracián",
+   "de": "Baltasar Gracián",
+   "fr": "Baltasar Gracián",
+   "es": "Baltasar Gracián"
+  },
+  "source": "Oráculo manual 55",
+  "text": {
+   "en": "Be someone who can wait. It shows a great heart, with room for patience. Never rush, never get carried away.",
+   "de": "Sei ein Mensch, der warten kann. Das zeugt von einem großen Herzen voller Geduld. Nie hasten, nie sich hinreißen lassen.",
+   "fr": "Être homme à savoir attendre. Cela révèle un grand cœur, large de patience. Ne jamais se presser ni s’emporter.",
+   "es": "Hombre de espera. Arguye gran corazón, con ensanches de sufrimiento. Nunca apresurarse ni apasionarse."
+  },
+  "original": "es",
+  "themes": [
+   "rest",
+   "growth"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://es.wikisource.org/wiki/Or%C3%A1culo_manual_y_arte_de_prudencia/Aforismos_(51-75)"
+ },
+ {
+  "id": "goethe_faust2_bergschluchten",
+  "author": {
+   "en": "Johann Wolfgang von Goethe",
+   "de": "Johann Wolfgang von Goethe",
+   "fr": "Johann Wolfgang von Goethe",
+   "es": "Johann Wolfgang von Goethe"
+  },
+  "source": "Faust II, Act 5, Bergschluchten (vv. 11936–11937)",
+  "text": {
+   "en": "Whoever keeps striving and making the effort, we can set free.",
+   "de": "Wer immer strebend sich bemüht, den können wir erlösen.",
+   "fr": "Celui qui toujours s’efforce et cherche, nous pouvons le délivrer.",
+   "es": "A quien siempre se esfuerza buscando, a ese podemos salvarlo."
+  },
+  "original": "de",
+  "themes": [
+   "growth",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2230/pg2230.txt (Engel: \"Wer immer strebend sich bemüht, / Den können wir erlösen.\")"
+ },
+ {
+  "id": "goethe_lehrjahre_5_1",
+  "author": {
+   "en": "Johann Wolfgang von Goethe",
+   "de": "Johann Wolfgang von Goethe",
+   "fr": "Johann Wolfgang von Goethe",
+   "es": "Johann Wolfgang von Goethe"
+  },
+  "source": "Wilhelm Meisters Lehrjahre V.1",
+  "text": {
+   "en": "Every day we should at least hear a little song, read a good poem, see a fine painting and, if at all possible, speak a few sensible words.",
+   "de": "Man sollte alle Tage wenigstens ein kleines Lied hören, ein gutes Gedicht lesen, ein treffliches Gemälde sehen und, wenn es möglich zu machen wäre, einige vernünftige Worte sprechen.",
+   "fr": "Chaque jour, on devrait au moins écouter une petite chanson, lire un bon poème, voir un beau tableau et, si possible, dire quelques paroles sensées.",
+   "es": "Cada día deberíamos al menos escuchar una pequeña canción, leer un buen poema, ver un hermoso cuadro y, si es posible, decir unas palabras sensatas."
+  },
+  "original": "de",
+  "themes": [
+   "presence",
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "http://www.zeno.org/Literatur/M/Goethe,+Johann+Wolfgang/Romane/Wilhelm+Meisters+Lehrjahre/F%C3%BCnftes+Buch/Erstes+Kapitel (Serlo speaking)"
+ },
+ {
+  "id": "goethe_lehrjahre_8_5",
+  "author": {
+   "en": "Johann Wolfgang von Goethe",
+   "de": "Johann Wolfgang von Goethe",
+   "fr": "Johann Wolfgang von Goethe",
+   "es": "Johann Wolfgang von Goethe"
+  },
+  "source": "Wilhelm Meisters Lehrjahre VIII.5",
+  "text": {
+   "en": "Remember to live.",
+   "de": "Gedenke zu leben.",
+   "fr": "Souviens-toi de vivre.",
+   "es": "Acuérdate de vivir."
+  },
+  "original": "de",
+  "themes": [
+   "mortality",
+   "time"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "http://www.zeno.org/Literatur/M/Goethe,+Johann+Wolfgang/Romane/Wilhelm+Meisters+Lehrjahre/Achtes+Buch/F%C3%BCnftes+Kapitel (inscription in the Hall of the Past)"
+ },
+ {
+  "id": "goethe_wanderjahre_2_betrachtungen_pflicht",
+  "author": {
+   "en": "Johann Wolfgang von Goethe",
+   "de": "Johann Wolfgang von Goethe",
+   "fr": "Johann Wolfgang von Goethe",
+   "es": "Johann Wolfgang von Goethe"
+  },
+  "source": "Wilhelm Meisters Wanderjahre II, Betrachtungen im Sinne der Wanderer",
+  "text": {
+   "en": "How can you get to know yourself? Never by brooding, only by doing. Try to do your duty and you’ll soon know what you are. And what is your duty? What the day asks of you.",
+   "de": "Wie kann man sich selbst kennen lernen? Durch Betrachten niemals, wohl aber durch Handeln. Versuche deine Pflicht zu tun, und du weißt gleich, was an dir ist. Was aber ist deine Pflicht? Die Forderung des Tages.",
+   "fr": "Comment apprendre à se connaître ? Jamais en se contemplant, mais en agissant. Essaie de faire ton devoir et tu sauras aussitôt ce que tu vaux. Et quel est ton devoir ? Ce que le jour te demande.",
+   "es": "¿Cómo puedes conocerte a ti mismo? Nunca contemplándote, sino actuando. Intenta cumplir con tu deber y sabrás enseguida lo que hay en ti. ¿Y cuál es tu deber? Lo que el día te pide."
+  },
+  "original": "de",
+  "themes": [
+   "work",
+   "growth"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2410/pg2410.txt (also in Maximen und Reflexionen)"
+ },
+ {
+  "id": "goethe_wanderjahre_makarie_tun",
+  "author": {
+   "en": "Johann Wolfgang von Goethe",
+   "de": "Johann Wolfgang von Goethe",
+   "fr": "Johann Wolfgang von Goethe",
+   "es": "Johann Wolfgang von Goethe"
+  },
+  "source": "Wilhelm Meisters Wanderjahre III, Aus Makariens Archiv",
+  "text": {
+   "en": "It isn’t enough to know; you must also apply. It isn’t enough to want; you must also do.",
+   "de": "Es ist nicht genug, zu wissen, man muß auch anwenden; es ist nicht genug, zu wollen, man muß auch tun.",
+   "fr": "Il ne suffit pas de savoir, il faut aussi appliquer ; il ne suffit pas de vouloir, il faut aussi agir.",
+   "es": "No basta con saber, también hay que aplicar; no basta con querer, también hay que hacer."
+  },
+  "original": "de",
+  "themes": [
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2411/pg2411.txt (also in Maximen und Reflexionen)"
+ },
+ {
+  "id": "goethe_divan_selige_sehnsucht",
+  "author": {
+   "en": "Johann Wolfgang von Goethe",
+   "de": "Johann Wolfgang von Goethe",
+   "fr": "Johann Wolfgang von Goethe",
+   "es": "Johann Wolfgang von Goethe"
+  },
+  "source": "West-östlicher Divan, Selige Sehnsucht",
+  "text": {
+   "en": "And as long as you don’t have this, this: Die and become! you are only a gloomy guest on the dark earth.",
+   "de": "Und so lang du das nicht hast, dieses: Stirb und werde! bist du nur ein trüber Gast auf der dunklen Erde.",
+   "fr": "Et tant que tu n’as pas compris ceci : Meurs et deviens ! tu n’es qu’un hôte morne sur la terre obscure.",
+   "es": "Y mientras no tengas esto, esto: ¡Muere y transfórmate! no eres más que un huésped sombrío en la oscura tierra."
+  },
+  "original": "de",
+  "themes": [
+   "growth",
+   "mortality"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/2319/pg2319.txt"
+ },
+ {
+  "id": "goethe_wandrers_nachtlied",
+  "author": {
+   "en": "Johann Wolfgang von Goethe",
+   "de": "Johann Wolfgang von Goethe",
+   "fr": "Johann Wolfgang von Goethe",
+   "es": "Johann Wolfgang von Goethe"
+  },
+  "source": "Wandrers Nachtlied (Der du von dem Himmel bist)",
+  "text": {
+   "en": "Oh, I am weary of all the striving! What is all this pain and pleasure for? Sweet peace, come, oh come into my heart!",
+   "de": "Ach ich bin des Treibens müde! Was soll all der Schmerz und Lust? Süßer Friede, komm, ach komm in meine Brust!",
+   "fr": "Ah, je suis las de toute cette agitation ! À quoi bon tant de peine et de plaisir ? Douce paix, viens, ah viens dans mon cœur !",
+   "es": "¡Ay, estoy cansado de tanto ajetreo! ¿Para qué tanto dolor y placer? ¡Dulce paz, ven, ay, ven a mi pecho!"
+  },
+  "original": "de",
+  "themes": [
+   "rest",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://de.wikisource.org/wiki/Wandrers_Nachtlied (Werke, Ausgabe letzter Hand, Bd. 1, S. 99)"
+ },
+ {
+  "id": "goethe_ein_gleiches",
+  "author": {
+   "en": "Johann Wolfgang von Goethe",
+   "de": "Johann Wolfgang von Goethe",
+   "fr": "Johann Wolfgang von Goethe",
+   "es": "Johann Wolfgang von Goethe"
+  },
+  "source": "Ein Gleiches (Wandrers Nachtlied II), 1780",
+  "text": {
+   "en": "Over all the hilltops is rest; in all the treetops you feel hardly a breath. The little birds fall silent in the forest. Just wait, soon you too will rest.",
+   "de": "Über allen Gipfeln ist Ruh, in allen Wipfeln spürest du kaum einen Hauch; die Vögelein schweigen im Walde. Warte nur, balde ruhest du auch.",
+   "fr": "Sur tous les sommets règne le calme ; dans toutes les cimes tu sens à peine un souffle. Les oiseaux se taisent dans la forêt. Attends, bientôt toi aussi tu reposeras.",
+   "es": "Sobre todas las cumbres hay calma; en todas las copas apenas sientes un soplo. Los pajarillos callan en el bosque. Espera, pronto descansarás tú también."
+  },
+  "original": "de",
+  "themes": [
+   "rest",
+   "mortality"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://de.wikisource.org/wiki/Ein_Gleiches (Werke, Ausgabe letzter Hand, Bd. 1, S. 99)"
+ },
+ {
+  "id": "goethe_das_goettliche",
+  "author": {
+   "en": "Johann Wolfgang von Goethe",
+   "de": "Johann Wolfgang von Goethe",
+   "fr": "Johann Wolfgang von Goethe",
+   "es": "Johann Wolfgang von Goethe"
+  },
+  "source": "Das Göttliche, 1783",
+  "text": {
+   "en": "Let us be noble, helpful and good! For that alone sets us apart from all the beings we know.",
+   "de": "Edel sei der Mensch, hilfreich und gut! Denn das allein unterscheidet ihn von allen Wesen, die wir kennen.",
+   "fr": "Que l’être humain soit noble, secourable et bon ! Car cela seul le distingue de tous les êtres que nous connaissons.",
+   "es": "¡Que el ser humano sea noble, servicial y bueno! Porque solo eso lo distingue de todos los seres que conocemos."
+  },
+  "original": "de",
+  "themes": [
+   "compassion",
+   "connection"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://de.wikisource.org/wiki/Das_G%C3%B6ttliche (Goethes Schriften Bd. 8, 1789, S. 215: \"Edel sey der Mensch, / Hülfreich und gut!\")"
+ },
+ {
+  "id": "goethe_tasso_5_1",
+  "author": {
+   "en": "Johann Wolfgang von Goethe",
+   "de": "Johann Wolfgang von Goethe",
+   "fr": "Johann Wolfgang von Goethe",
+   "es": "Johann Wolfgang von Goethe"
+  },
+  "source": "Torquato Tasso V.1 (Antonio)",
+  "text": {
+   "en": "Only life’s toil teaches us to treasure life’s gifts.",
+   "de": "Des Lebens Mühe lehrt uns allein des Lebens Güter schätzen.",
+   "fr": "Seule la peine de la vie nous apprend à apprécier les biens de la vie.",
+   "es": "Solo el esfuerzo de la vida nos enseña a apreciar los bienes de la vida."
+  },
+  "original": "de",
+  "themes": [
+   "gratitude",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/10425/pg10425.txt"
+ },
+ {
+  "id": "rilke_stundenbuch_wachsende_ringe",
+  "author": {
+   "en": "Rainer Maria Rilke",
+   "de": "Rainer Maria Rilke",
+   "fr": "Rainer Maria Rilke",
+   "es": "Rainer Maria Rilke"
+  },
+  "source": "Das Stunden-Buch I (Das Buch vom mönchischen Leben)",
+  "text": {
+   "en": "I live my life in widening rings that spread out over all things. I may not complete the last one, but I mean to try.",
+   "de": "Ich lebe mein Leben in wachsenden Ringen, die sich über die Dinge ziehn. Ich werde den letzten vielleicht nicht vollbringen, aber versuchen will ich ihn.",
+   "fr": "Je vis ma vie en cercles grandissants qui s’étendent sur toutes choses. Je n’achèverai peut-être pas le dernier, mais je veux le tenter.",
+   "es": "Vivo mi vida en anillos crecientes que se extienden sobre las cosas. Quizá no complete el último, pero quiero intentarlo."
+  },
+  "original": "de",
+  "themes": [
+   "growth",
+   "aging"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/24288/pg24288.txt"
+ },
+ {
+  "id": "rilke_stundenbuch_alles_geschehn",
+  "author": {
+   "en": "Rainer Maria Rilke",
+   "de": "Rainer Maria Rilke",
+   "fr": "Rainer Maria Rilke",
+   "es": "Rainer Maria Rilke"
+  },
+  "source": "Das Stunden-Buch I (Gott spricht zu jedem nur, eh er ihn macht)",
+  "text": {
+   "en": "Let everything happen to you: beauty and terror. Just keep going: no feeling is final.",
+   "de": "Laß dir alles geschehn: Schönheit und Schrecken. Man muß nur gehn: Kein Gefühl ist das fernste.",
+   "fr": "Laisse tout t’arriver : la beauté et l’effroi. Il suffit d’avancer : aucun sentiment n’est le plus lointain.",
+   "es": "Deja que todo te suceda: la belleza y el espanto. Solo hay que seguir andando: ningún sentimiento es el más lejano."
+  },
+  "original": "de",
+  "themes": [
+   "courage"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/24288/pg24288.txt"
+ },
+ {
+  "id": "rilke_briefe_4",
+  "author": {
+   "en": "Rainer Maria Rilke",
+   "de": "Rainer Maria Rilke",
+   "fr": "Rainer Maria Rilke",
+   "es": "Rainer Maria Rilke"
+  },
+  "source": "Briefe an einen jungen Dichter, 4 (16 July 1903)",
+  "text": {
+   "en": "Be patient toward all that is unresolved in your heart and try to love the questions themselves. Live the questions now.",
+   "de": "Ich möchte Sie bitten, Geduld zu haben gegen alles Ungelöste in Ihrem Herzen und zu versuchen, die Fragen selbst liebzuhaben. … Leben Sie jetzt die Fragen.",
+   "fr": "Aie de la patience envers tout ce qui reste irrésolu dans ton cœur et essaie d’aimer les questions elles-mêmes. Vis maintenant les questions.",
+   "es": "Ten paciencia con todo lo que está sin resolver en tu corazón e intenta amar las preguntas mismas. Vive ahora las preguntas."
+  },
+  "original": "de",
+  "themes": [
+   "growth",
+   "compassion"
+  ],
+  "stages": [
+   "exploring"
+  ],
+  "verified": true,
+  "verification": "https://www.rilke.de/briefe/160703.htm"
+ },
+ {
+  "id": "rilke_briefe_3",
+  "author": {
+   "en": "Rainer Maria Rilke",
+   "de": "Rainer Maria Rilke",
+   "fr": "Rainer Maria Rilke",
+   "es": "Rainer Maria Rilke"
+  },
+  "source": "Briefe an einen jungen Dichter, 3 (23 April 1903)",
+  "text": {
+   "en": "There is no measuring with time; a year doesn’t count, and ten years are nothing. Ripen like the tree that doesn’t force its sap. Patience is everything!",
+   "de": "Da gibt es kein Messen mit der Zeit, da gilt kein Jahr, und zehn Jahre sind nichts. … reifen wie der Baum, der seine Säfte nicht drängt. … Geduld ist alles!",
+   "fr": "On ne mesure pas avec le temps, une année ne compte pas, et dix ans ne sont rien. Mûris comme l’arbre qui ne presse pas sa sève. La patience est tout !",
+   "es": "Aquí no se mide con el tiempo, un año no cuenta y diez años no son nada. Madura como el árbol que no apremia su savia. ¡La paciencia lo es todo!"
+  },
+  "original": "de",
+  "themes": [
+   "growth",
+   "time",
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.rilke.de/briefe/230403.htm"
+ },
+ {
+  "id": "rilke_briefe_7",
+  "author": {
+   "en": "Rainer Maria Rilke",
+   "de": "Rainer Maria Rilke",
+   "fr": "Rainer Maria Rilke",
+   "es": "Rainer Maria Rilke"
+  },
+  "source": "Briefe an einen jungen Dichter, 7 (14 May 1904)",
+  "text": {
+   "en": "To love is good, too, for love is hard. For one person to love another: that is perhaps the hardest task we have been given.",
+   "de": "Auch zu lieben ist gut: denn Liebe ist schwer. Liebhaben von Mensch zu Mensch: das ist vielleicht das Schwerste, was uns aufgegeben ist.",
+   "fr": "Aimer aussi est bon, car l’amour est difficile. Qu’un être humain aime un autre être humain : c’est peut-être la tâche la plus difficile qui nous soit confiée.",
+   "es": "También amar es bueno, porque el amor es difícil. Que una persona ame a otra: quizá sea lo más difícil que se nos ha encomendado."
+  },
+  "original": "de",
+  "themes": [
+   "love",
+   "connection"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.rilke.de/briefe/140504.htm"
+ },
+ {
+  "id": "rilke_buch_der_bilder_herbsttag",
+  "author": {
+   "en": "Rainer Maria Rilke",
+   "de": "Rainer Maria Rilke",
+   "fr": "Rainer Maria Rilke",
+   "es": "Rainer Maria Rilke"
+  },
+  "source": "Das Buch der Bilder, Herbsttag",
+  "text": {
+   "en": "Lord, it is time. The summer was immense. … Command the last fruits to be full; give them two more southern days.",
+   "de": "Herr: es ist Zeit. Der Sommer war sehr groß. … Befiehl den letzten Früchten voll zu sein; gib ihnen noch zwei südlichere Tage.",
+   "fr": "Seigneur, il est temps. L’été fut très grand. … Ordonne aux derniers fruits d’être pleins ; donne-leur encore deux jours plus méridionaux.",
+   "es": "Señor, es hora. El verano fue inmenso. … Ordena a los últimos frutos que maduren; dales aún dos días más del sur."
+  },
+  "original": "de",
+  "themes": [
+   "aging",
+   "gratitude"
+  ],
+  "stages": [
+   "harvest"
+  ],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/34521/pg34521.txt"
+ },
+ {
+  "id": "nietzsche_fw_276",
+  "author": {
+   "en": "Friedrich Nietzsche",
+   "de": "Friedrich Nietzsche",
+   "fr": "Friedrich Nietzsche",
+   "es": "Friedrich Nietzsche"
+  },
+  "source": "Die fröhliche Wissenschaft 276",
+  "text": {
+   "en": "I want to learn more and more to see what is necessary in things as beautiful; then I shall be one of those who make things beautiful. Amor fati: let that be my love from now on!",
+   "de": "Ich will immer mehr lernen, das Notwendige an den Dingen als das Schöne sehen – so werde ich einer von denen sein, welche die Dinge schön machen. Amor fati: das sei von nun an meine Liebe!",
+   "fr": "Je veux apprendre de plus en plus à voir le nécessaire dans les choses comme le beau ; ainsi je serai de ceux qui rendent les choses belles. Amor fati : que ce soit désormais mon amour !",
+   "es": "Quiero aprender cada vez más a ver lo necesario de las cosas como lo bello; así seré de los que hacen bellas las cosas. Amor fati: ¡que ese sea desde ahora mi amor!"
+  },
+  "original": "de",
+  "themes": [
+   "gratitude",
+   "growth"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "http://www.zeno.org/Philosophie/M/Nietzsche,+Friedrich/Die+fr%C3%B6hliche+Wissenschaft/Viertes+Buch.+Sanctus+Januarius/276.+Zum+neuen+Jahre"
+ },
+ {
+  "id": "nietzsche_fw_329",
+  "author": {
+   "en": "Friedrich Nietzsche",
+   "de": "Friedrich Nietzsche",
+   "fr": "Friedrich Nietzsche",
+   "es": "Friedrich Nietzsche"
+  },
+  "source": "Die fröhliche Wissenschaft 329 (Muße und Müßiggang)",
+  "text": {
+   "en": "We are already ashamed of resting; long reflection almost gives us a bad conscience. We think with a watch in our hand.",
+   "de": "Man schämt sich jetzt schon der Ruhe; das lange Nachsinnen macht beinahe Gewissensbisse. Man denkt mit der Uhr in der Hand.",
+   "fr": "On a déjà honte du repos ; la longue réflexion donne presque mauvaise conscience. On pense la montre à la main.",
+   "es": "Ya nos avergonzamos del descanso; la reflexión pausada casi nos da remordimientos. Pensamos con el reloj en la mano."
+  },
+  "original": "de",
+  "themes": [
+   "rest",
+   "work"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "http://www.zeno.org/Philosophie/M/Nietzsche,+Friedrich/Die+fr%C3%B6hliche+Wissenschaft/Viertes+Buch.+Sanctus+Januarius/329.+Mu%C3%9Fe+und+M%C3%BC%C3%9Figgang"
+ },
+ {
+  "id": "nietzsche_fw_334",
+  "author": {
+   "en": "Friedrich Nietzsche",
+   "de": "Friedrich Nietzsche",
+   "fr": "Friedrich Nietzsche",
+   "es": "Friedrich Nietzsche"
+  },
+  "source": "Die fröhliche Wissenschaft 334 (Man muß lieben lernen)",
+  "text": {
+   "en": "In the end we are always rewarded for our goodwill, our patience, fairness and gentleness toward what is strange to us. Love, too, has to be learned.",
+   "de": "Wir werden schließlich immer für unsern guten Willen, unsere Geduld, Billigkeit, Sanftmütigkeit gegen das Fremde belohnt. … Auch die Liebe muß man lernen.",
+   "fr": "Nous sommes toujours récompensés, à la fin, de notre bonne volonté, de notre patience, de notre équité et de notre douceur envers l’étranger. L’amour aussi, il faut l’apprendre.",
+   "es": "Al final siempre se nos recompensa nuestra buena voluntad, nuestra paciencia, equidad y mansedumbre hacia lo extraño. También el amor hay que aprenderlo."
+  },
+  "original": "de",
+  "themes": [
+   "compassion",
+   "love"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "http://www.zeno.org/Philosophie/M/Nietzsche,+Friedrich/Die+fr%C3%B6hliche+Wissenschaft/Viertes+Buch.+Sanctus+Januarius/334.+Man+mu%C3%9F+lieben+lernen"
+ },
+ {
+  "id": "nietzsche_ma_499",
+  "author": {
+   "en": "Friedrich Nietzsche",
+   "de": "Friedrich Nietzsche",
+   "fr": "Friedrich Nietzsche",
+   "es": "Friedrich Nietzsche"
+  },
+  "source": "Menschliches, Allzumenschliches I, 499",
+  "text": {
+   "en": "Shared joy, not shared suffering, makes the friend.",
+   "de": "Mitfreude, nicht Mitleiden, macht den Freund.",
+   "fr": "C’est la joie partagée, et non la souffrance partagée, qui fait l’ami.",
+   "es": "La alegría compartida, no el sufrimiento compartido, hace al amigo."
+  },
+  "original": "de",
+  "themes": [
+   "connection",
+   "compassion"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "http://www.zeno.org/Philosophie/M/Nietzsche,+Friedrich/Menschliches,+Allzumenschliches/Erster+Band/Neuntes+Hauptst%C3%BCck.+Der+Mensch+mit+sich+allein/499 (Gutenberg #7207 has the OCR typo 'Mit Freude')"
+ },
+ {
+  "id": "nietzsche_zarathustra_tafeln_23",
+  "author": {
+   "en": "Friedrich Nietzsche",
+   "de": "Friedrich Nietzsche",
+   "fr": "Friedrich Nietzsche",
+   "es": "Friedrich Nietzsche"
+  },
+  "source": "Also sprach Zarathustra III, Von alten und neuen Tafeln 23",
+  "text": {
+   "en": "And let every day be lost to us on which we did not dance at least once!",
+   "de": "Und verloren sei uns der Tag, wo nicht Ein Mal getanzt wurde!",
+   "fr": "Et que soit perdu pour nous le jour où l’on n’a pas dansé une seule fois !",
+   "es": "¡Y que se dé por perdido el día en que no se bailó ni una sola vez!"
+  },
+  "original": "de",
+  "themes": [
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/7205/pg7205.txt"
+ },
+ {
+  "id": "schopenhauer_aphorismen_2_heiterkeit",
+  "author": {
+   "en": "Arthur Schopenhauer",
+   "de": "Arthur Schopenhauer",
+   "fr": "Arthur Schopenhauer",
+   "es": "Arthur Schopenhauer"
+  },
+  "source": "Aphorismen zur Lebensweisheit, Kap. II",
+  "text": {
+   "en": "Cheerfulness is an immediate gain. It alone is, so to speak, the hard cash of happiness and not, like everything else, a mere banknote.",
+   "de": "Heiterkeit ist unmittelbarer Gewinn. Sie allein ist gleichsam die bare Münze des Glückes und nicht, wie alles andere, bloß der Bankzettel.",
+   "fr": "La sérénité est un gain immédiat. Elle seule est pour ainsi dire la monnaie sonnante du bonheur, et non, comme tout le reste, un simple billet.",
+   "es": "La alegría serena es una ganancia inmediata. Solo ella es, por así decirlo, la moneda contante de la felicidad y no, como todo lo demás, un simple billete."
+  },
+  "original": "de",
+  "themes": [
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/47406/pg47406.txt"
+ },
+ {
+  "id": "schopenhauer_aphorismen_5_5_gegenwart",
+  "author": {
+   "en": "Arthur Schopenhauer",
+   "de": "Arthur Schopenhauer",
+   "fr": "Arthur Schopenhauer",
+   "es": "Arthur Schopenhauer"
+  },
+  "source": "Aphorismen zur Lebensweisheit, Kap. V, 5",
+  "text": {
+   "en": "The present alone is true and real: it is time actually filled, and our existence lies in it alone. So we should always give it a cheerful welcome.",
+   "de": "Die Gegenwart allein ist wahr und wirklich: sie ist die real erfüllte Zeit, und ausschließlich in ihr liegt unser Dasein. Daher sollten wir sie stets einer heitern Aufnahme würdigen.",
+   "fr": "Le présent seul est vrai et réel : c’est le temps réellement rempli, et c’est en lui seul que se trouve notre existence. Accueillons-le donc toujours avec sérénité.",
+   "es": "Solo el presente es verdadero y real: es el tiempo realmente lleno, y únicamente en él está nuestra existencia. Por eso deberíamos recibirlo siempre con alegría."
+  },
+  "original": "de",
+  "themes": [
+   "presence",
+   "time",
+   "rest"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/47406/pg47406.txt"
+ },
+ {
+  "id": "schopenhauer_aphorismen_5_14",
+  "author": {
+   "en": "Arthur Schopenhauer",
+   "de": "Arthur Schopenhauer",
+   "fr": "Arthur Schopenhauer",
+   "es": "Arthur Schopenhauer"
+  },
+  "source": "Aphorismen zur Lebensweisheit, Kap. V, 14",
+  "text": {
+   "en": "Instead, we should more often ask: what if this were not mine? For usually it is only loss that teaches us the worth of things.",
+   "de": "Statt dessen sollten wir öfter fragen: wie, wenn das nicht mein wäre? … denn meistens belehrt erst der Verlust uns über den Wert der Dinge.",
+   "fr": "Au lieu de cela, nous devrions plus souvent nous demander : et si cela n’était pas à moi ? Car le plus souvent, seule la perte nous apprend la valeur des choses.",
+   "es": "En cambio, deberíamos preguntarnos más a menudo: ¿y si esto no fuera mío? Porque casi siempre es la pérdida la que nos enseña el valor de las cosas."
+  },
+  "original": "de",
+  "themes": [
+   "gratitude"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/47406/pg47406.txt"
+ },
+ {
+  "id": "schopenhauer_aphorismen_6_text_kommentar",
+  "author": {
+   "en": "Arthur Schopenhauer",
+   "de": "Arthur Schopenhauer",
+   "fr": "Arthur Schopenhauer",
+   "es": "Arthur Schopenhauer"
+  },
+  "source": "Aphorismen zur Lebensweisheit, Kap. VI",
+  "text": {
+   "en": "The first forty years of our life provide the text; the following thirty, the commentary on it.",
+   "de": "Die ersten vierzig Jahre unsers Lebens liefern den Text, die folgenden dreißig den Kommentar dazu.",
+   "fr": "Les quarante premières années de notre vie fournissent le texte, les trente suivantes le commentaire.",
+   "es": "Los primeros cuarenta años de nuestra vida nos dan el texto; los treinta siguientes, el comentario."
+  },
+  "original": "de",
+  "themes": [
+   "aging",
+   "growth"
+  ],
+  "stages": [
+   "midlife"
+  ],
+  "verified": true,
+  "verification": "https://www.gutenberg.org/cache/epub/47406/pg47406.txt"
+ },
+ {
+  "id": "kierkegaard_journal_jj_167",
+  "author": {
+   "en": "Søren Kierkegaard",
+   "de": "Søren Kierkegaard",
+   "fr": "Søren Kierkegaard",
+   "es": "Søren Kierkegaard"
+  },
+  "source": "Journal JJ:167 (1843; Papirer IV A 164)",
+  "text": {
+   "en": "Philosophy is quite right that life must be understood backwards. But then we forget the other principle: it must be lived forwards.",
+   "de": "Es ist ganz wahr, was die Philosophie sagt: dass das Leben rückwärts verstanden werden muss. Aber darüber vergisst man den anderen Satz: dass es vorwärts gelebt werden muss.",
+   "fr": "La philosophie a bien raison de dire que la vie doit être comprise à rebours. Mais on oublie alors l’autre principe : elle doit être vécue en avant.",
+   "es": "La filosofía tiene toda la razón: la vida debe comprenderse hacia atrás. Pero se olvida la otra frase: que debe vivirse hacia delante."
+  },
+  "original": "da",
+  "themes": [
+   "time",
+   "presence"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://tekster.kb.dk/text/sks-jj-txt-shoot-n167 (SKS; Danish: \"at Livet maa forstaaes baglænds. Men derover glemmer man den anden Sætning, at det maa leves forlænds\")"
+ },
+ {
+  "id": "kierkegaard_letter_henriette_1847",
+  "author": {
+   "en": "Søren Kierkegaard",
+   "de": "Søren Kierkegaard",
+   "fr": "Søren Kierkegaard",
+   "es": "Søren Kierkegaard"
+  },
+  "source": "Letter to Henriette Kierkegaard, Oct. 1847",
+  "text": {
+   "en": "Above all, don’t lose your desire to walk. Every day I walk myself into well-being and walk away from every illness; I have walked myself into my best thoughts.",
+   "de": "Verlier vor allem nicht die Lust zu gehen: Jeden Tag erwandere ich mir mein Wohlbefinden und gehe jeder Krankheit davon; meine besten Gedanken habe ich mir ergangen.",
+   "fr": "Surtout, ne perds pas l’envie de marcher : chaque jour, je marche jusqu’au bien-être et je m’éloigne de toute maladie ; c’est en marchant que j’ai trouvé mes meilleures pensées.",
+   "es": "Sobre todo, no pierdas las ganas de caminar: cada día camino hasta encontrar el bienestar y me alejo de toda enfermedad; caminando he llegado a mis mejores pensamientos."
+  },
+  "original": "da",
+  "themes": [
+   "rest",
+   "simplicity"
+  ],
+  "stages": [],
+  "verified": true,
+  "verification": "https://tekster.kb.dk/text/sks-b1-txt-shoot-n36 (SKS Breve; Danish: \"Tab for Alt ikke Lysten til at gaae: jeg gaaer mig hver Dag det daglige Velbefindende til og gaaer fra enhver Sygdom; jeg har gaaet mig mine bedste Tanker til\")"
+ },
+ {
+  "id": "app_01",
+  "author": null,
+  "source": null,
+  "text": {
+   "en": "Live as if you were to die tomorrow.",
+   "de": "Lebe, als ob du morgen sterben würdest.",
+   "fr": "Vis comme si tu devais mourir demain.",
+   "es": "Vive como si fueras a morir mañana."
+  },
+  "original": "de",
+  "themes": [
+   "mortality",
+   "presence"
+  ],
+  "stages": [],
+  "verified": false,
+  "verification": "anonymous app quote"
+ },
+ {
+  "id": "app_02",
+  "author": null,
+  "source": null,
+  "text": {
+   "en": "Time is the most precious thing we have.",
+   "de": "Zeit ist das Wertvollste, was wir haben.",
+   "fr": "Le temps est ce que nous avons de plus précieux.",
+   "es": "El tiempo es lo más valioso que tenemos."
+  },
+  "original": "de",
+  "themes": [
+   "time"
+  ],
+  "stages": [],
+  "verified": false,
+  "verification": "anonymous app quote"
+ },
+ {
+  "id": "app_03",
+  "author": null,
+  "source": null,
+  "text": {
+   "en": "A life without dreams is like a garden without flowers.",
+   "de": "Ein Leben ohne Träume ist wie ein Garten ohne Blumen.",
+   "fr": "Une vie sans rêves est comme un jardin sans fleurs.",
+   "es": "Una vida sin sueños es como un jardín sin flores."
+  },
+  "original": "de",
+  "themes": [
+   "growth",
+   "courage"
+  ],
+  "stages": [
+   "young",
+   "exploring"
+  ],
+  "verified": false,
+  "verification": "anonymous app quote"
+ },
+ {
+  "id": "app_04",
+  "author": null,
+  "source": null,
+  "text": {
+   "en": "Your days are limited, so make the most of them.",
+   "de": "Deine Tage sind begrenzt, also mache das Beste daraus.",
+   "fr": "Tes jours sont comptés, alors fais-en le meilleur usage.",
+   "es": "Tus días son limitados, así que aprovéchalos al máximo."
+  },
+  "original": "de",
+  "themes": [
+   "time",
+   "mortality"
+  ],
+  "stages": [],
+  "verified": false,
+  "verification": "anonymous app quote"
+ },
+ {
+  "id": "app_05",
+  "author": null,
+  "source": null,
+  "text": {
+   "en": "The best moments in life are the ones you share with others.",
+   "de": "Die besten Momente im Leben sind die, die man mit anderen teilt.",
+   "fr": "Les plus beaux moments de la vie sont ceux qu’on partage avec les autres.",
+   "es": "Los mejores momentos de la vida son los que compartes con otros."
+  },
+  "original": "de",
+  "themes": [
+   "connection",
+   "love"
+  ],
+  "stages": [],
+  "verified": false,
+  "verification": "anonymous app quote"
+ },
+ {
+  "id": "app_06",
+  "author": null,
+  "source": null,
+  "text": {
+   "en": "One step after another leads to the goal.",
+   "de": "Ein Schritt nach dem anderen führt zum Ziel.",
+   "fr": "Un pas après l’autre mène au but.",
+   "es": "Un paso tras otro lleva a la meta."
+  },
+  "original": "de",
+  "themes": [
+   "work",
+   "growth"
+  ],
+  "stages": [],
+  "verified": false,
+  "verification": "anonymous app quote"
+ },
+ {
+  "id": "app_07",
+  "author": null,
+  "source": null,
+  "text": {
+   "en": "Life is a journey, not the destination.",
+   "de": "Das Leben ist eine Reise, nicht das Ziel.",
+   "fr": "La vie est un voyage, pas une destination.",
+   "es": "La vida es un viaje, no el destino."
+  },
+  "original": "de",
+  "themes": [
+   "presence",
+   "growth"
+  ],
+  "stages": [],
+  "verified": false,
+  "verification": "anonymous app quote"
+ },
+ {
+  "id": "app_08",
+  "author": null,
+  "source": null,
+  "text": {
+   "en": "What you do today shapes your future.",
+   "de": "Was du heute tust, bestimmt deine Zukunft.",
+   "fr": "Ce que tu fais aujourd’hui façonne ton avenir.",
+   "es": "Lo que haces hoy determina tu futuro."
+  },
+  "original": "de",
+  "themes": [
+   "work",
+   "time"
+  ],
+  "stages": [],
+  "verified": false,
+  "verification": "anonymous app quote"
+ },
+ {
+  "id": "app_09",
+  "author": null,
+  "source": null,
+  "text": {
+   "en": "Be grateful for every day you live.",
+   "de": "Sei dankbar für jeden Tag, den du lebst.",
+   "fr": "Sois reconnaissant pour chaque jour que tu vis.",
+   "es": "Agradece cada día que vives."
+  },
+  "original": "de",
+  "themes": [
+   "gratitude"
+  ],
+  "stages": [],
+  "verified": false,
+  "verification": "anonymous app quote"
+ },
+ {
+  "id": "app_10",
+  "author": null,
+  "source": null,
+  "text": {
+   "en": "A small spark of hope can light a fire.",
+   "de": "Ein kleiner Funke Hoffnung kann ein Feuer entzünden.",
+   "fr": "Une petite étincelle d’espoir peut allumer un feu.",
+   "es": "Una pequeña chispa de esperanza puede encender un fuego."
+  },
+  "original": "de",
+  "themes": [
+   "courage"
+  ],
+  "stages": [],
+  "verified": false,
+  "verification": "anonymous app quote"
+ }
+]

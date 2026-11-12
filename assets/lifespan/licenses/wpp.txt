@@ -1,0 +1,10 @@
+World Population Prospects 2024 - life tables
+
+Source: United Nations, Department of Economic and Social Affairs, Population Division (2024).
+World Population Prospects 2024. Modified: compressed log-linear fits by the app author.
+No endorsement by the UN implied.
+
+Licensed under the Creative Commons Attribution 3.0 IGO licence (CC BY 3.0 IGO):
+https://creativecommons.org/licenses/by/3.0/igo/
+
+Data: https://population.un.org/wpp/

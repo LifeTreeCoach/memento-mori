@@ -1,0 +1,46 @@
+// Shared release signing for :app (phone) and :wear (watch), applied with
+// `apply from: "../signing.gradle"` after the Android plugin. Both apps must be signed with the
+// same key: they share one applicationId and the Wearable Data Layer only connects apps whose
+// package name and signature match.
+//
+// android/key.properties (gitignored) points at the upload keystore:
+//   storePassword=...  keyPassword=...  keyAlias=...  storeFile=...
+// A relative storeFile is resolved against android/app for both modules (where Flutter's
+// documentation puts it). Without the file, release builds fall back to the debug keys so local
+// and CI builds keep working.
+def keystorePropertiesFile = rootProject.file("key.properties")
+def hasReleaseKeystore = keystorePropertiesFile.exists()
+def keystoreProperties = new Properties()
+if (hasReleaseKeystore) {
+    keystorePropertiesFile.withReader("UTF-8") { reader -> keystoreProperties.load(reader) }
+}
+
+def releaseStoreFile = { String path ->
+    def storeFile = new File(path)
+    return storeFile.absolute ? storeFile : new File(rootProject.file("app"), path)
+}
+
+android {
+    signingConfigs {
+        if (hasReleaseKeystore) {
+            release {
+                keyAlias = keystoreProperties["keyAlias"]
+                keyPassword = keystoreProperties["keyPassword"]
+                storeFile = releaseStoreFile(keystoreProperties["storeFile"])
+                storePassword = keystoreProperties["storePassword"]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig = hasReleaseKeystore ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+}
+
+// Warn only when a release task was requested (e.g. assembleRelease, bundlePlayRelease).
+def requestsReleaseBuild = gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
+if (!hasReleaseKeystore && requestsReleaseBuild) {
+    logger.warn("${project.path}: android/key.properties not found: release build is signed with the debug keys")
+}

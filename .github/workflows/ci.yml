@@ -1,0 +1,98 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FLUTTER_VERSION: 3.47.9
+
+jobs:
+  flutter:
+    name: Flutter analyze + test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          cache: true
+      - run: flutter pub get
+      - run: flutter analyze --fatal-infos
+      - run: flutter test
+
+  android:
+    name: Android (Gradle tests, Wear OS, debug APK)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          cache: true
+      # Writes android/local.properties (flutter.sdk, sdk.dir), which android/settings.gradle
+      # needs to load the Flutter Gradle plugin, and generates the plugin registrants.
+      - run: flutter pub get
+      # :wear compiles against Android 37 (Compose for Wear OS 1.7), not preinstalled on the runner.
+      - name: Install Android 37 SDK platform
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37.0" "build-tools;37.0.0"
+      - name: Gradle unit tests + Wear OS build
+        working-directory: android
+        run: ./gradlew :lifecore:test :app:testPlayDebugUnitTest :app:testFossDebugUnitTest :wear:testDebugUnitTest :wear:assembleDebug
+      # foss (F-Droid, direct APK, other stores) must not depend on Google Play Services.
+      - name: foss has no Play services
+        working-directory: android
+        run: |
+          if ./gradlew -q :app:dependencies --configuration fossReleaseRuntimeClasspath | grep -i gms; then
+            echo "foss pulls in Google Play Services"; exit 1
+          fi
+          # Plugins can declare gms components in their manifests without a gms dependency
+          # (image_picker_android's ModuleDependencies service; removed in src/foss).
+          ./gradlew -q :app:processFossReleaseManifest
+          manifest=../build/app/intermediates/merged_manifests/fossRelease/processFossReleaseManifest/AndroidManifest.xml
+          test -f "$manifest"
+          if grep -i gms "$manifest"; then
+            echo "foss merged manifest references Google Play Services"; exit 1
+          fi
+      - run: flutter build apk --debug --flavor play
+      - run: flutter build apk --debug --flavor foss
+      - name: Upload test reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-test-reports
+          path: |
+            build/app/reports/tests/
+            build/wear/reports/tests/
+            build/lifecore/reports/tests/
+          if-no-files-found: ignore
+
+  ios:
+    name: iOS (Swift LifeCore tests, watch build)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swift LifeCore tests
+        working-directory: ios/LifeCore
+        run: swift test
+      # The watch targets are developed with Xcode 27 (watchOS 26 SDK); the hosted runner's
+      # Xcode may be older, so a failure here does not fail the workflow. MementoWatch does not
+      # depend on Flutter or CocoaPods, so no flutter pub get / pod install is needed.
+      - name: Build MementoWatch (watchOS Simulator)
+        continue-on-error: true
+        run: >
+          xcodebuild -project ios/Runner.xcodeproj -scheme MementoWatch
+          -destination 'generic/platform=watchOS Simulator'
+          build CODE_SIGNING_ALLOWED=NO

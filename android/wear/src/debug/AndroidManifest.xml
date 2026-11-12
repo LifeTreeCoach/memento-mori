@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!-- Debug builds only: inject inputs as if received from the phone (see CLAUDE.md) -->
+        <receiver
+            android:name=".DebugInputsReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="lifetree.coach.memento_mori_life_in_weeks.wear.DEBUG_INPUTS" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

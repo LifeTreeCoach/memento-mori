@@ -1,0 +1,8 @@
+Erste Version.
+• Dein Leben als Raster aus Wochen, Monaten oder Jahren
+• Eine Schätzung deiner Lebensjahre aus UN-Daten, mit optionalen Fragen zum Lebensstil
+• Kompass: Lebensphasen, eine Frage pro Woche, bis zu drei Vorhaben, Momente in deinem Raster
+• Menschen: Geburtstagserinnerungen, Import aus Kontakten oder vCard und die Ansicht „Gemeinsam“
+• Tägliche Zitate, Widgets und eine Wear-OS-App
+• Deutsch, Englisch, Französisch und Spanisch
+Alles bleibt auf deinem Gerät.

@@ -1,0 +1,48 @@
+Memento Mori zeigt dein Leben als Raster aus Wochen. Jedes gefüllte Kästchen ist eine Woche, die du gelebt hast, jedes leere eine, die noch vor dir liegt. Das soll dir keine Angst machen. Es ist eine stille Erinnerung daran, dass deine Zeit begrenzt ist, damit du sie für das nutzt, was dir wichtig ist.
+
+Dein Leben auf einen Blick
+• Sieh dein Leben in Wochen, Monaten oder Jahren, zoome hinein und tippe auf ein Kästchen, um zu sehen, wann es war
+• Andere Darstellungen, wenn du magst: Spirale, Flüssigkeitsanzeige oder Baumringe
+• Jeden Tag ein kurzes Zitat und der nächste Geburtstag
+
+Mit wie vielen Jahren planen?
+• Die Schätzung beruht auf den Sterbetafeln der UN World Population Prospects 2024 für dein Land, dein Alter und dein Geschlecht
+• Fünf optionale Fragen zum Lebensstil (Rauchen, Bewegung, Alkohol, Gewicht, Verbundenheit) machen sie persönlicher
+• Sie wird auf deinem Gerät berechnet. Sie ist ein statistischer Durchschnitt, keine Vorhersage, und du kannst deine Zahl jederzeit selbst festlegen
+
+Kompass
+• Eine sanfte Frage für jede Woche
+• Lebensphasen: Sieh, in welcher Phase du gerade bist und wie viel deiner Lebensspanne sie einnimmt; frühere Phasen kannst du nachtragen
+• Vorhaben für diese Phase, zum Erledigen oder zum Genießen: höchstens drei für „Jetzt“, alles andere darf unter „Irgendwann“ warten
+• Schließe eine Phase bewusst ab und entscheide, was du mitnimmst und was du loslässt
+• Nach dem Erledigen ein ruhiger Moment zum Innehalten: wie lange es gedauert hat, wo es in deinem Leben steht und wie viel Zeit noch vor dir liegt, dazu eine optionale Notiz, wofür du dankbar bist
+• Halte gelebte Momente fest und sieh sie in deinem Lebensraster
+• Dein Lebensraster in den Farben deiner Phasen, auch in den anderen Darstellungen
+• Ein Rückblick auf das, was du gelebt hast
+• Keine Serien, keine Punkte, kein Druck
+
+Menschen
+• Behalte die Geburtstage von Freunden und Familie im Blick, mit Gruppen, Avataren, Suche und Sortierung
+• Übernimm Geburtstage mit wenigen Tipps aus deinen Kontakten oder einer vCard-Datei, auch ohne Jahr; das passiert auf deinem Gerät und nur die Personen, die du auswählst, werden gespeichert
+• Geburtstagserinnerungen am Tag selbst und, wenn du möchtest, am Tag davor
+• Optional jährliche Geburtstagstermine in deinem Gerätekalender
+• Gemeinsam: beide Leben auf einer Zeitachse und eine grobe Zahl, wie oft ihr euch in eurem üblichen Rhythmus noch sehen könntet, mit der Möglichkeit, gemeinsame Zeit zu planen
+
+Auf dem Startbildschirm und am Handgelenk
+• Widgets in drei Größen; das große zeigt dein Wochenraster
+• Eine Wear-OS-App mit Kachel und Komplikation fürs Zifferblatt (die Verbindung zur Uhr braucht die Version aus Google Play)
+
+Außerdem
+• Eine optionale Erinnerung am Sonntagabend: wöchentlich mit der Frage der Woche oder alle 4 Wochen mit einem Blick auf deine Phase
+• Zwei ruhige Stile, Stoisch und Warm, hell und dunkel, dazu optionale Rasterfarben
+• Sicherung und Wiederherstellung als JSON-Datei, inklusive Avataren
+• Deutsch, Englisch, Französisch und Spanisch
+
+Deine Daten bleiben bei dir
+• Alles wird auf deinem Gerät gespeichert
+• Deine Kontakte werden nur gelesen, wenn du Geburtstage importierst, und nur die Personen, die du auswählst, bleiben gespeichert
+• Kein Konto, keine Werbung, kein Tracking
+• Die App hat keine Internetberechtigung und kann deine Daten daher nirgendwohin senden
+
+Open Source
+Memento Mori ist freie, quelloffene Software unter der Lizenz GPL-3.0.

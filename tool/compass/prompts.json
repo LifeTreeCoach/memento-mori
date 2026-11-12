@@ -1,0 +1,1990 @@
+[
+  {
+    "id": "courage_busy_work",
+    "kind": "courage",
+    "stages": [
+      "exploring",
+      "building",
+      "midlife"
+    ],
+    "suggestion": "intention",
+    "text": {
+      "en": "What might you be avoiding by staying busy with work?",
+      "de": "Wovor weichst du vielleicht aus, indem du dich mit Arbeit beschäftigt hältst?",
+      "fr": "Qu’est-ce que le travail t’aide peut-être à éviter ?",
+      "es": "¿Qué evitas quizá cuando el trabajo te llena todo el día?"
+    }
+  },
+  {
+    "id": "courage_work_life",
+    "kind": "courage",
+    "stages": [
+      "exploring",
+      "building",
+      "midlife"
+    ],
+    "suggestion": "intention",
+    "text": {
+      "en": "Is there work that keeps you from the life you want to live?",
+      "de": "Gibt es Arbeit, die dich von dem Leben abhält, das du leben möchtest?",
+      "fr": "Y a-t-il un travail qui t’éloigne de la vie que tu veux vivre ?",
+      "es": "¿Hay algún trabajo que te aleje de la vida que quieres vivir?"
+    }
+  },
+  {
+    "id": "courage_work_enough",
+    "kind": "courage",
+    "stages": [
+      "exploring",
+      "building",
+      "midlife"
+    ],
+    "suggestion": null,
+    "text": {
+      "en": "How much work would be enough? And who decided on the amount you do now?",
+      "de": "Wie viel Arbeit wäre genug? Und wer hat eigentlich das jetzige Maß festgelegt?",
+      "fr": "Combien de travail serait suffisant ? Et qui a fixé la quantité actuelle ?",
+      "es": "¿Cuánto trabajo sería suficiente? ¿Y quién decidió la cantidad actual?"
+    }
+  },
+  {
+    "id": "courage_busy_avoid",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "When you keep your days full, what are you not making room for?",
+      "de": "Wenn du deine Tage vollpackst – wofür bleibt dann kein Platz?",
+      "fr": "Quand tu remplis tes journées, à quoi ne laisses-tu pas de place ?",
+      "es": "Cuando llenas tus días, ¿a qué no le estás dejando espacio?"
+    }
+  },
+  {
+    "id": "courage_regret_untried",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What would you regret not having tried?",
+      "de": "Was würdest du bereuen, nie ausprobiert zu haben?",
+      "fr": "Qu’est-ce que tu regretterais de ne jamais avoir essayé ?",
+      "es": "¿Qué lamentarías no haber intentado nunca?"
+    }
+  },
+  {
+    "id": "courage_regret_small",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Is there something small you'd love to try, just once, this year?",
+      "de": "Gibt es etwas Kleines, das du dieses Jahr gern einmal ausprobieren würdest?",
+      "fr": "Y a-t-il une petite chose que tu aimerais essayer, juste une fois, cette année ?",
+      "es": "¿Hay algo pequeño que te gustaría probar, solo una vez, este año?"
+    }
+  },
+  {
+    "id": "courage_whose_life",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Whose life are you living – your own, or someone else's expectations?",
+      "de": "Wessen Leben lebst du gerade – deins oder die Erwartungen anderer?",
+      "fr": "Quelle vie vis-tu : la tienne, ou celle qu’on attend de toi ?",
+      "es": "¿Qué vida estás viviendo: la tuya o la que otros esperan de ti?"
+    }
+  },
+  {
+    "id": "courage_own_choice",
+    "kind": "courage",
+    "stages": [
+      "young",
+      "exploring",
+      "building"
+    ],
+    "suggestion": null,
+    "text": {
+      "en": "Which of your plans did you choose yourself, and which were chosen for you?",
+      "de": "Welche deiner Pläne hast du selbst gewählt – und welche wurden für dich gewählt?",
+      "fr": "Lesquels de tes projets as-tu choisis toi-même, et lesquels ont été choisis pour toi ?",
+      "es": "¿Qué planes elegiste tú y cuáles eligieron otros por ti?"
+    }
+  },
+  {
+    "id": "courage_someday",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What have you been postponing until \"someday\"?",
+      "de": "Was schiebst du schon lange auf „irgendwann“ auf?",
+      "fr": "Qu’est-ce que tu repousses à « un jour » ?",
+      "es": "¿Qué estás dejando para «algún día»?"
+    }
+  },
+  {
+    "id": "courage_someday_step",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What's one tiny step toward something you keep saying you'll do someday?",
+      "de": "Was wäre ein winziger Schritt zu etwas, das du „irgendwann“ tun willst?",
+      "fr": "Quel serait un tout petit pas vers ce que tu dis vouloir faire « un jour » ?",
+      "es": "¿Cuál sería un paso diminuto hacia eso que dices que harás «algún día»?"
+    }
+  },
+  {
+    "id": "courage_avoided_task",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Which task have you been circling around? What if you began with five minutes?",
+      "de": "Um welche Aufgabe schleichst du schon länger herum? Wie wären fünf Minuten zum Anfangen?",
+      "fr": "Autour de quelle tâche tournes-tu depuis un moment ? Et si tu commençais par cinq minutes ?",
+      "es": "¿Alrededor de qué tarea llevas tiempo dando vueltas? ¿Y si empiezas con cinco minutos?"
+    }
+  },
+  {
+    "id": "courage_true_self",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "When do you feel most like yourself? How could there be a little more of that?",
+      "de": "Wann fühlst du dich am meisten wie du selbst? Wie könnte es davon etwas mehr geben?",
+      "fr": "Quand te sens-tu le plus toi-même ? Comment en avoir un peu plus ?",
+      "es": "¿Cuándo te sientes más tú? ¿Cómo podría haber un poco más de eso?"
+    }
+  },
+  {
+    "id": "courage_others_think",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What would you do if you weren't worried about what others think?",
+      "de": "Was würdest du tun, wenn dir egal wäre, was andere denken?",
+      "fr": "Que ferais-tu si l’avis des autres ne t’inquiétait pas ?",
+      "es": "¿Qué harías si no te preocupara lo que piensan los demás?"
+    }
+  },
+  {
+    "id": "courage_unspoken_wish",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Is there a wish you've never said out loud?",
+      "de": "Gibt es einen Wunsch, den du noch nie laut ausgesprochen hast?",
+      "fr": "Y a-t-il un souhait que tu n’as jamais dit à voix haute ?",
+      "es": "¿Hay algún deseo que nunca hayas dicho en voz alta?"
+    }
+  },
+  {
+    "id": "courage_put_down_should",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Which \"should\" could you quietly put down?",
+      "de": "Welches „Ich müsste eigentlich“ könntest du in Ruhe ablegen?",
+      "fr": "Quel « je devrais » pourrais-tu poser tranquillement ?",
+      "es": "¿Qué «debería» podrías soltar con calma?"
+    }
+  },
+  {
+    "id": "courage_matters_anyway",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "You can't do everything. What matters enough to do anyway?",
+      "de": "Du kannst nicht alles schaffen. Was ist dir wichtig genug, es trotzdem zu tun?",
+      "fr": "Tu ne peux pas tout faire. Qu’est-ce qui compte assez pour le faire quand même ?",
+      "es": "No puedes hacerlo todo. ¿Qué te importa tanto como para hacerlo igual?"
+    }
+  },
+  {
+    "id": "courage_say_no",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What could you say no to, so you can say yes to what matters?",
+      "de": "Wozu könntest du Nein sagen, um Ja zu dem zu sagen, was dir wichtig ist?",
+      "fr": "À quoi pourrais-tu dire non, pour dire oui à ce qui compte ?",
+      "es": "¿A qué podrías decir que no para decir que sí a lo que importa?"
+    }
+  },
+  {
+    "id": "courage_honest_talk",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Is there an honest conversation that's been waiting for the right moment?",
+      "de": "Gibt es ein ehrliches Gespräch, das noch auf den richtigen Moment wartet?",
+      "fr": "Y a-t-il une conversation sincère qui attend encore le bon moment ?",
+      "es": "¿Hay alguna conversación sincera que aún espera el momento adecuado?"
+    }
+  },
+  {
+    "id": "courage_beyond_grades",
+    "kind": "courage",
+    "stages": [
+      "young"
+    ],
+    "suggestion": "intention",
+    "text": {
+      "en": "What do you enjoy that has nothing to do with grades or approval?",
+      "de": "Was macht dir Freude, ganz egal, ob es Noten oder Beifall dafür gibt?",
+      "fr": "Qu’aimes-tu faire, sans penser aux notes ni à l’approbation des autres ?",
+      "es": "¿Qué disfrutas que no tenga nada que ver con notas ni con la aprobación de otros?"
+    }
+  },
+  {
+    "id": "courage_try_not_good_yet",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What would you like to try, even if you're not good at it yet?",
+      "de": "Was würdest du gern ausprobieren, auch wenn du es noch nicht kannst?",
+      "fr": "Qu’aimerais-tu essayer, même si tu ne sais pas encore bien le faire ?",
+      "es": "¿Qué te gustaría probar, aunque todavía no se te dé bien?"
+    }
+  },
+  {
+    "id": "courage_no_one_watching",
+    "kind": "courage",
+    "stages": [
+      "young",
+      "exploring",
+      "building"
+    ],
+    "suggestion": "intention",
+    "text": {
+      "en": "If no one were watching, which direction would you take next?",
+      "de": "Wenn niemand zuschauen würde – welche Richtung würdest du als Nächstes einschlagen?",
+      "fr": "Si personne ne regardait, quelle direction prendrais-tu ensuite ?",
+      "es": "Si nadie te mirara, ¿qué camino tomarías ahora?"
+    }
+  },
+  {
+    "id": "courage_still_yours",
+    "kind": "courage",
+    "stages": [
+      "building",
+      "midlife"
+    ],
+    "suggestion": null,
+    "text": {
+      "en": "Does what you're working toward still feel like yours?",
+      "de": "Fühlt sich das, worauf du hinarbeitest, noch nach dir an?",
+      "fr": "Ce vers quoi tu avances te ressemble-t-il encore ?",
+      "es": "¿Aquello por lo que trabajas sigue sintiéndose tuyo?"
+    }
+  },
+  {
+    "id": "courage_next_chapter",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What would you like the next chapter of your life to be about?",
+      "de": "Worum soll es im nächsten Kapitel deines Lebens gehen?",
+      "fr": "De quoi aimerais-tu que parle le prochain chapitre de ta vie ?",
+      "es": "¿De qué te gustaría que tratara el próximo capítulo de tu vida?"
+    }
+  },
+  {
+    "id": "courage_learn_now",
+    "kind": "courage",
+    "stages": [
+      "midlife",
+      "harvest",
+      "wisdom"
+    ],
+    "suggestion": "intention",
+    "text": {
+      "en": "Is there something you've always wanted to learn? Beginning is always possible.",
+      "de": "Gibt es etwas, das du schon immer lernen wolltest? Anfangen geht immer.",
+      "fr": "Y a-t-il une chose que tu as toujours voulu apprendre ? On peut toujours commencer.",
+      "es": "¿Hay algo que siempre quisiste aprender? Siempre se puede empezar."
+    }
+  },
+  {
+    "id": "courage_essential_week",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "If only what truly matters counted, what could you leave out this week?",
+      "de": "Wenn nur zählte, was dir wirklich wichtig ist – was könntest du diese Woche weglassen?",
+      "fr": "Si seul comptait l’essentiel, que pourrais-tu laisser de côté cette semaine ?",
+      "es": "Si solo contara lo esencial, ¿qué podrías dejar de lado esta semana?"
+    }
+  },
+  {
+    "id": "courage_playing_safe",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Where has playing it safe started to feel too small?",
+      "de": "Wo fühlt sich das Auf-Nummer-sicher-Gehen inzwischen zu eng an?",
+      "fr": "Où la prudence commence-t-elle à te sembler trop étroite ?",
+      "es": "¿Dónde empieza a quedarse pequeño eso de ir siempre a lo seguro?"
+    }
+  },
+  {
+    "id": "courage_permission",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What are you waiting for permission to do? You might already have it.",
+      "de": "Wofür wartest du noch auf Erlaubnis? Vielleicht hast du sie längst.",
+      "fr": "Pour quoi attends-tu encore une permission ? Tu l’as peut-être déjà.",
+      "es": "¿Para qué sigues esperando permiso? Quizá ya lo tienes."
+    }
+  },
+  {
+    "id": "courage_imperfect_start",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What could you start imperfectly, instead of waiting for the perfect moment?",
+      "de": "Was könntest du unperfekt beginnen, statt auf den perfekten Moment zu warten?",
+      "fr": "Que pourrais-tu commencer imparfaitement, au lieu d’attendre le moment parfait ?",
+      "es": "¿Qué podrías empezar de forma imperfecta en vez de esperar el momento perfecto?"
+    }
+  },
+  {
+    "id": "courage_care_more",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "What do you care about more than you let show?",
+      "de": "Was ist dir wichtiger, als du es zeigst?",
+      "fr": "Qu’est-ce qui compte pour toi plus que tu ne le montres ?",
+      "es": "¿Qué te importa más de lo que dejas ver?"
+    }
+  },
+  {
+    "id": "courage_old_dream",
+    "kind": "courage",
+    "stages": [
+      "building",
+      "midlife",
+      "harvest",
+      "wisdom"
+    ],
+    "suggestion": "intention",
+    "text": {
+      "en": "Is there an old dream that could still fit, perhaps in a smaller form?",
+      "de": "Gibt es einen alten Traum, der vielleicht in kleinerer Form noch passt?",
+      "fr": "Y a-t-il un vieux rêve qui pourrait encore trouver sa place, peut-être en plus petit ?",
+      "es": "¿Hay algún sueño antiguo que aún podría caber, quizá en versión más pequeña?"
+    }
+  },
+  {
+    "id": "courage_old_obligations",
+    "kind": "courage",
+    "stages": [
+      "midlife",
+      "harvest",
+      "wisdom"
+    ],
+    "suggestion": "intention",
+    "text": {
+      "en": "Which obligations still fill your days that you no longer need to carry?",
+      "de": "Welche Verpflichtungen füllen noch deine Tage, obwohl du sie nicht mehr tragen musst?",
+      "fr": "Quelles obligations remplissent encore tes journées alors que tu pourrais les poser ?",
+      "es": "¿Qué obligaciones siguen llenando tus días aunque ya no necesites cargarlas?"
+    }
+  },
+  {
+    "id": "connection_thinking_of",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Who have you been thinking of lately? Maybe they'd love to hear from you.",
+      "de": "An wen denkst du in letzter Zeit? Vielleicht freut sich dieser Mensch, von dir zu hören.",
+      "fr": "À qui as-tu pensé ces derniers temps ? Cette personne serait peut-être heureuse d’avoir de tes nouvelles.",
+      "es": "¿En quién has pensado últimamente? Quizá le alegraría saber de ti."
+    }
+  },
+  {
+    "id": "connection_unsaid",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What have you never told someone who matters to you?",
+      "de": "Was hast du einem Menschen, der dir wichtig ist, noch nie gesagt?",
+      "fr": "Qu’est-ce que tu n’as jamais dit à quelqu’un qui compte pour toi ?",
+      "es": "¿Qué nunca le has dicho a alguien que te importa?"
+    }
+  },
+  {
+    "id": "connection_thank_you",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Who deserves a thank-you you've never quite said?",
+      "de": "Wer hätte ein Danke verdient, das du nie ganz ausgesprochen hast?",
+      "fr": "Qui mériterait un merci que tu ne lui as jamais vraiment dit ?",
+      "es": "¿Quién merece un gracias que nunca llegaste a decirle?"
+    }
+  },
+  {
+    "id": "connection_faded_friendship",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Is there a friendship that has gone quiet? A short message can be enough.",
+      "de": "Gibt es eine Freundschaft, die eingeschlafen ist? Eine kurze Nachricht kann genügen.",
+      "fr": "Y a-t-il une amitié qui s’est endormie ? Un petit message peut suffire.",
+      "es": "¿Hay alguna amistad que se haya enfriado? Un mensaje corto puede bastar."
+    }
+  },
+  {
+    "id": "connection_forgive",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Is there someone you could forgive, even just a little?",
+      "de": "Gibt es jemanden, dem du verzeihen könntest – vielleicht nur ein kleines Stück?",
+      "fr": "Y a-t-il quelqu’un à qui tu pourrais pardonner, même un tout petit peu ?",
+      "es": "¿Hay alguien a quien podrías perdonar, aunque sea un poco?"
+    }
+  },
+  {
+    "id": "connection_say_sorry",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Is there someone you'd like to say sorry to?",
+      "de": "Gibt es jemanden, bei dem du dich gern entschuldigen würdest?",
+      "fr": "Y a-t-il quelqu’un à qui tu aimerais dire pardon ?",
+      "es": "¿Hay alguien a quien te gustaría pedir perdón?"
+    }
+  },
+  {
+    "id": "connection_laughed_with",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Who did you laugh with recently?",
+      "de": "Mit wem hast du zuletzt richtig gelacht?",
+      "fr": "Avec qui as-tu ri récemment ?",
+      "es": "¿Con quién te has reído hace poco?"
+    }
+  },
+  {
+    "id": "connection_fully_yourself",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Who lets you be fully yourself?",
+      "de": "Bei wem kannst du ganz du selbst sein?",
+      "fr": "Avec qui peux-tu être pleinement toi-même ?",
+      "es": "¿Con quién puedes ser plenamente tú?"
+    }
+  },
+  {
+    "id": "connection_more_time",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Who would you like to spend more time with, if you made a little room?",
+      "de": "Mit wem würdest du gern mehr Zeit verbringen, wenn du ein wenig Platz dafür schaffst?",
+      "fr": "Avec qui aimerais-tu passer plus de temps, si tu lui faisais un peu de place ?",
+      "es": "¿Con quién te gustaría pasar más tiempo si le hicieras un hueco?"
+    }
+  },
+  {
+    "id": "connection_kept_feeling",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Which feeling have you been keeping to yourself?",
+      "de": "Welches Gefühl behältst du schon länger für dich?",
+      "fr": "Quel sentiment gardes-tu pour toi depuis un moment ?",
+      "es": "¿Qué sentimiento llevas tiempo guardándote?"
+    }
+  },
+  {
+    "id": "connection_listen",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Who could use someone to really listen this week?",
+      "de": "Wer könnte diese Woche jemanden brauchen, der wirklich zuhört?",
+      "fr": "Qui aurait besoin cette semaine qu’on l’écoute vraiment ?",
+      "es": "¿Quién necesitaría esta semana que alguien le escuche de verdad?"
+    }
+  },
+  {
+    "id": "connection_shaped_you",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Who helped shape the person you are today?",
+      "de": "Wer hat dich zu dem Menschen gemacht, der du heute bist?",
+      "fr": "Qui a façonné la personne que tu es devenue ?",
+      "es": "¿Quién ha dado forma a la persona que eres hoy?"
+    }
+  },
+  {
+    "id": "connection_know_better",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Is there someone you'd like to get to know better?",
+      "de": "Gibt es jemanden, den du gern besser kennenlernen würdest?",
+      "fr": "Y a-t-il quelqu’un que tu aimerais mieux connaître ?",
+      "es": "¿Hay alguien a quien te gustaría conocer mejor?"
+    }
+  },
+  {
+    "id": "connection_let_them_feel",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "How could you let someone you love feel it today?",
+      "de": "Wie könntest du einen lieben Menschen heute spüren lassen, was er dir bedeutet?",
+      "fr": "Comment pourrais-tu montrer ton affection à quelqu’un aujourd’hui, d’une façon qui le touche ?",
+      "es": "¿Cómo podrías hacerle sentir hoy a alguien querido cuánto le quieres?"
+    }
+  },
+  {
+    "id": "connection_stranger_kindness",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "What small kindness from a stranger do you still remember?",
+      "de": "An welche kleine Freundlichkeit eines fremden Menschen erinnerst du dich noch?",
+      "fr": "De quelle petite gentillesse d’un inconnu te souviens-tu encore ?",
+      "es": "¿Qué pequeño gesto amable de un desconocido aún recuerdas?"
+    }
+  },
+  {
+    "id": "connection_help_younger",
+    "kind": "connection",
+    "stages": [
+      "exploring",
+      "building",
+      "midlife",
+      "harvest",
+      "wisdom"
+    ],
+    "suggestion": "intention",
+    "text": {
+      "en": "What do you know that might help someone younger?",
+      "de": "Was weißt du, das einem jüngeren Menschen helfen könnte?",
+      "fr": "Que sais-tu qui pourrait aider quelqu’un de plus jeune ?",
+      "es": "¿Qué sabes que podría ayudar a alguien más joven?"
+    }
+  },
+  {
+    "id": "connection_older_story",
+    "kind": "connection",
+    "stages": [
+      "young",
+      "exploring",
+      "building"
+    ],
+    "suggestion": "intention",
+    "text": {
+      "en": "Is there an older person whose story you'd like to hear?",
+      "de": "Gibt es einen älteren Menschen, dessen Geschichte du gern hören würdest?",
+      "fr": "Y a-t-il une personne plus âgée dont tu aimerais entendre l’histoire ?",
+      "es": "¿Hay alguna persona mayor cuya historia te gustaría escuchar?"
+    }
+  },
+  {
+    "id": "connection_tell_story",
+    "kind": "connection",
+    "stages": [
+      "midlife",
+      "harvest",
+      "wisdom"
+    ],
+    "suggestion": "intention",
+    "text": {
+      "en": "Is there a story from your life you'd like someone to hear?",
+      "de": "Gibt es eine Geschichte aus deinem Leben, die du gern jemandem erzählen würdest?",
+      "fr": "Y a-t-il une histoire de ta vie que tu aimerais raconter à quelqu’un ?",
+      "es": "¿Hay alguna historia de tu vida que te gustaría contarle a alguien?"
+    }
+  },
+  {
+    "id": "connection_lighter_days",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Who makes hard days a little lighter for you?",
+      "de": "Welcher Mensch macht dir schwere Tage ein bisschen leichter?",
+      "fr": "Quelle personne rend tes jours difficiles un peu plus légers ?",
+      "es": "¿Qué persona hace que tus días difíciles sean un poco más ligeros?"
+    }
+  },
+  {
+    "id": "connection_adults_understand",
+    "kind": "connection",
+    "stages": [
+      "young"
+    ],
+    "suggestion": null,
+    "text": {
+      "en": "What would you like the adults around you to understand about you?",
+      "de": "Was sollen die Erwachsenen um dich herum über dich verstehen?",
+      "fr": "Qu’aimerais-tu que les adultes autour de toi comprennent de toi ?",
+      "es": "¿Qué te gustaría que los adultos a tu alrededor entendieran de ti?"
+    }
+  },
+  {
+    "id": "connection_belong",
+    "kind": "connection",
+    "stages": [
+      "young",
+      "exploring"
+    ],
+    "suggestion": null,
+    "text": {
+      "en": "Where do you feel you belong – or where would you like to?",
+      "de": "Wo fühlst du dich zugehörig – oder wo würdest du es gern?",
+      "fr": "Où te sens-tu à ta place, ou où aimerais-tu l’être ?",
+      "es": "¿Dónde sientes que perteneces, o dónde te gustaría?"
+    }
+  },
+  {
+    "id": "connection_gift_time",
+    "kind": "connection",
+    "stages": [
+      "exploring",
+      "building",
+      "midlife"
+    ],
+    "suggestion": "intention",
+    "text": {
+      "en": "Amid everything, who would you love to make a little time for?",
+      "de": "Wem würdest du zwischen all dem gern ein bisschen Zeit schenken?",
+      "fr": "Au milieu de tout ça, à qui aimerais-tu offrir un peu de ton temps ?",
+      "es": "Entre tanto ajetreo, ¿a quién te gustaría regalarle un poco de tu tiempo?"
+    }
+  },
+  {
+    "id": "connection_old_rift",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Is there an old rift you'd like to make peace with – even if only in your heart?",
+      "de": "Gibt es einen alten Streit, mit dem du Frieden schließen möchtest – und sei es nur im Herzen?",
+      "fr": "Y a-t-il une vieille brouille avec laquelle tu aimerais faire la paix, ne serait-ce que dans ton cœur ?",
+      "es": "¿Hay alguna vieja ruptura con la que te gustaría hacer las paces, aunque sea en tu corazón?"
+    }
+  },
+  {
+    "id": "connection_glad_known",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Who are you glad to have known, even if they're no longer in your life?",
+      "de": "Für welche Begegnung bist du dankbar, auch wenn dieser Mensch nicht mehr in deinem Leben ist?",
+      "fr": "Pour quelle rencontre éprouves-tu de la gratitude, même si cette personne n’est plus dans ta vie ?",
+      "es": "¿Qué persona te alegra haber conocido, aunque ya no esté en tu vida?"
+    }
+  },
+  {
+    "id": "connection_kind_word",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Who could you send a kind word to today, just because?",
+      "de": "Wem könntest du heute einfach so ein liebes Wort schicken?",
+      "fr": "À qui pourrais-tu envoyer un mot gentil aujourd’hui, juste comme ça ?",
+      "es": "¿A quién podrías mandarle hoy unas palabras bonitas, sin más?"
+    }
+  },
+  {
+    "id": "connection_let_help",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Who could you let help you, instead of carrying it all yourself?",
+      "de": "Von wem könntest du dir helfen lassen, statt alles allein zu tragen?",
+      "fr": "Qui pourrait t’épauler, si tu acceptais de ne pas tout porter toi-même ?",
+      "es": "¿A quién podrías dejar que te ayude en vez de cargar con todo tú?"
+    }
+  },
+  {
+    "id": "connection_shared_moment",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Which moment shared with someone this year would you like to keep?",
+      "de": "Welchen gemeinsamen Moment aus diesem Jahr möchtest du festhalten?",
+      "fr": "Quel moment partagé cette année aimerais-tu garder ?",
+      "es": "¿Qué momento compartido este año te gustaría guardar?"
+    }
+  },
+  {
+    "id": "connection_present",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "With the people who matter to you, how could you be a little more present?",
+      "de": "Wie könntest du bei Menschen, die dir wichtig sind, ein wenig mehr da sein?",
+      "fr": "Avec les personnes qui comptent pour toi, comment leur offrir un peu plus de présence ?",
+      "es": "Con las personas que te importan, ¿cómo podrías estar un poco más presente?"
+    }
+  },
+  {
+    "id": "connection_ritual",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Which small ritual with someone dear to you would you like to start or keep?",
+      "de": "Welches kleine Ritual mit einem lieben Menschen möchtest du beginnen oder pflegen?",
+      "fr": "Quel petit rituel avec une personne chère aimerais-tu commencer ou garder ?",
+      "es": "¿Qué pequeño ritual con alguien querido te gustaría empezar o mantener?"
+    }
+  },
+  {
+    "id": "connection_noticed_effort",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Who could you tell that you've noticed their quiet effort?",
+      "de": "Wem könntest du sagen, dass du die stille Mühe bemerkt hast?",
+      "fr": "À qui pourrais-tu dire que tu as remarqué ses efforts discrets ?",
+      "es": "¿A quién podrías decirle que has notado su esfuerzo silencioso?"
+    }
+  },
+  {
+    "id": "connection_words_to_keep",
+    "kind": "connection",
+    "stages": [
+      "midlife",
+      "harvest",
+      "wisdom"
+    ],
+    "suggestion": "intention",
+    "text": {
+      "en": "Which words would you like the people who matter to you to keep?",
+      "de": "Welche Worte möchtest du den Menschen, die dir wichtig sind, mitgeben?",
+      "fr": "Quels mots aimerais-tu laisser aux personnes qui comptent pour toi ?",
+      "es": "¿Qué palabras te gustaría dejar a las personas que te importan?"
+    }
+  },
+  {
+    "id": "rest_friend_wasted",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "What would you say to a friend who felt they'd wasted years?",
+      "de": "Was würdest du einem lieben Menschen sagen, der glaubt, Jahre vergeudet zu haben?",
+      "fr": "Que dirais-tu à quelqu’un de cher qui croit avoir gâché des années ?",
+      "es": "¿Qué le dirías a alguien querido que siente que ha perdido años?"
+    }
+  },
+  {
+    "id": "rest_speak_kindly",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Could you speak to yourself this week the way you'd speak to a good friend?",
+      "de": "Kannst du diese Woche so mit dir reden wie mit einem Menschen, den du gernhast?",
+      "fr": "Peux-tu te parler cette semaine comme tu parlerais à quelqu’un que tu aimes ?",
+      "es": "¿Puedes hablarte esta semana como le hablarías a alguien a quien quieres?"
+    }
+  },
+  {
+    "id": "rest_for_its_own_sake",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What restful thing could you do this week, purely for its own sake?",
+      "de": "Was Erholsames könntest du diese Woche tun, einfach um seiner selbst willen?",
+      "fr": "Quelle chose reposante pourrais-tu faire cette semaine, juste pour le plaisir ?",
+      "es": "¿Qué cosa tranquila podrías hacer esta semana solo por el gusto de hacerla?"
+    }
+  },
+  {
+    "id": "rest_today_enough",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "What if what you did today was enough?",
+      "de": "Was, wenn das, was du heute geschafft hast, genug war?",
+      "fr": "Et si ce que tu as fait aujourd’hui suffisait ?",
+      "es": "¿Y si lo que hiciste hoy fuera suficiente?"
+    }
+  },
+  {
+    "id": "rest_doing_nothing",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "When did you last enjoy doing nothing at all?",
+      "de": "Wann hast du zuletzt das Nichtstun so richtig genossen?",
+      "fr": "Quand as-tu savouré pour la dernière fois le fait de ne rien faire ?",
+      "es": "¿Cuándo fue la última vez que disfrutaste de no hacer nada?"
+    }
+  },
+  {
+    "id": "rest_let_go_week",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What could you let go of this week without anything bad happening?",
+      "de": "Was könntest du diese Woche loslassen, ohne dass etwas Schlimmes passiert?",
+      "fr": "Que pourrais-tu lâcher cette semaine sans que rien de grave n’arrive ?",
+      "es": "¿Qué podrías soltar esta semana sin que pase nada grave?"
+    }
+  },
+  {
+    "id": "rest_unfinished",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Some things will stay unfinished. Which one could you make peace with?",
+      "de": "Manches bleibt unvollendet. Womit davon könntest du deinen Frieden machen?",
+      "fr": "Certaines choses resteront inachevées. Avec laquelle pourrais-tu faire la paix ?",
+      "es": "Algunas cosas quedarán sin terminar. ¿Con cuál podrías hacer las paces?"
+    }
+  },
+  {
+    "id": "rest_from_the_stars",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Seen from the stars, your to-do list is tiny. What feels lighter from up there?",
+      "de": "Von den Sternen aus ist deine Liste winzig. Was wird von dort oben leichter?",
+      "fr": "Vue des étoiles, ta liste de choses à faire est minuscule. Qu’est-ce qui paraît plus léger de là-haut ?",
+      "es": "Vista desde las estrellas, tu lista de pendientes es diminuta. ¿Qué parece más ligero desde allí?"
+    }
+  },
+  {
+    "id": "rest_gentle_body",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "How could you treat your body a little more gently this week?",
+      "de": "Wie könntest du diese Woche etwas sanfter mit deinem Körper umgehen?",
+      "fr": "Comment pourrais-tu traiter ton corps avec un peu plus de douceur cette semaine ?",
+      "es": "¿Cómo podrías tratar tu cuerpo con un poco más de cariño esta semana?"
+    }
+  },
+  {
+    "id": "rest_old_mistake",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Which old mistake are you still carrying? What would it be like to set it down?",
+      "de": "Welchen alten Fehler trägst du noch mit dir herum? Wie wäre es, ihn abzulegen?",
+      "fr": "Quelle vieille erreur portes-tu encore ? Qu’est-ce que ça ferait de la poser ?",
+      "es": "¿Qué viejo error sigues cargando? ¿Cómo sería soltarlo?"
+    }
+  },
+  {
+    "id": "rest_not_alone",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Who else might be feeling exactly what you're feeling right now?",
+      "de": "Wer fühlt vielleicht gerade genau das, was du fühlst?",
+      "fr": "Qui ressent peut-être en ce moment exactement ce que tu ressens ?",
+      "es": "¿Quién podría estar sintiendo ahora mismo justo lo que sientes tú?"
+    }
+  },
+  {
+    "id": "rest_slowing_down",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Where did you notice something beautiful this week, simply by slowing down?",
+      "de": "Wo hast du diese Woche etwas Schönes bemerkt, einfach weil du langsamer warst?",
+      "fr": "Où as-tu remarqué quelque chose de beau cette semaine, simplement en ralentissant ?",
+      "es": "¿Dónde notaste algo bonito esta semana, solo por ir más despacio?"
+    }
+  },
+  {
+    "id": "rest_let_it_be",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "What are you feeling right now – and can you let it be there?",
+      "de": "Was fühlst du gerade – und darf es einfach da sein?",
+      "fr": "Que ressens-tu en ce moment, et peux-tu le laisser être là ?",
+      "es": "¿Qué sientes ahora mismo? ¿Puedes dejar que esté ahí?"
+    }
+  },
+  {
+    "id": "rest_small_joy",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What small joy could you allow yourself this week?",
+      "de": "Welche kleine Freude könntest du dir diese Woche erlauben?",
+      "fr": "Quelle petite joie pourrais-tu t’autoriser cette semaine ?",
+      "es": "¿Qué pequeña alegría podrías permitirte esta semana?"
+    }
+  },
+  {
+    "id": "rest_do_less",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What could you do less of, so everything else feels lighter?",
+      "de": "Wovon könntest du weniger tun, damit sich alles andere leichter anfühlt?",
+      "fr": "De quoi pourrais-tu faire moins, pour que le reste paraisse plus léger ?",
+      "es": "¿De qué podrías hacer menos para que todo lo demás pese menos?"
+    }
+  },
+  {
+    "id": "rest_good_enough",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Where could \"good enough\" be truly good enough?",
+      "de": "Wo dürfte „gut genug“ wirklich gut genug sein?",
+      "fr": "Où « assez bien » pourrait-il vraiment suffire ?",
+      "es": "¿Dónde podría «suficientemente bueno» ser de verdad suficiente?"
+    }
+  },
+  {
+    "id": "rest_own_pace",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Whose pace are you comparing yourself to? Your life has its own rhythm.",
+      "de": "Mit wessen Tempo vergleichst du dich? Dein Leben hat seinen eigenen Takt.",
+      "fr": "À quel rythme te compares-tu ? Ta vie a sa propre cadence.",
+      "es": "¿Con el ritmo de quién te comparas? Tu vida tiene su propio compás."
+    }
+  },
+  {
+    "id": "rest_stay_open",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "You don't need to have it all figured out. What can stay open for now?",
+      "de": "Du musst nicht alles wissen. Was darf vorerst offen bleiben?",
+      "fr": "Tu n’as pas besoin d’avoir tout compris. Qu’est-ce qui peut rester ouvert pour l’instant ?",
+      "es": "No necesitas tenerlo todo claro. ¿Qué puede quedar abierto por ahora?"
+    }
+  },
+  {
+    "id": "rest_ten_minutes",
+    "kind": "rest",
+    "stages": [
+      "exploring",
+      "building",
+      "midlife"
+    ],
+    "suggestion": "intention",
+    "text": {
+      "en": "In a full season of life, where could you find ten quiet minutes for yourself?",
+      "de": "In einer vollen Lebensphase: Wo findest du zehn ruhige Minuten nur für dich?",
+      "fr": "Dans une période bien remplie, où trouver dix minutes calmes rien que pour toi ?",
+      "es": "En una etapa tan llena, ¿dónde podrías encontrar diez minutos tranquilos solo para ti?"
+    }
+  },
+  {
+    "id": "rest_take_your_time",
+    "kind": "rest",
+    "stages": [
+      "harvest",
+      "wisdom"
+    ],
+    "suggestion": "moment",
+    "text": {
+      "en": "What do you enjoy more now that you can take your time?",
+      "de": "Was genießt du heute mehr, weil du dir Zeit lassen kannst?",
+      "fr": "Qu’apprécies-tu davantage maintenant que tu peux prendre ton temps ?",
+      "es": "¿Qué disfrutas más ahora que puedes tomarte tu tiempo?"
+    }
+  },
+  {
+    "id": "rest_at_peace_now",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "What are you at peace with now that once troubled you?",
+      "de": "Womit hast du heute Frieden, was dich früher beunruhigt hat?",
+      "fr": "Avec quoi es-tu en paix aujourd’hui, qui te troublait autrefois ?",
+      "es": "¿Con qué estás en paz hoy que antes te inquietaba?"
+    }
+  },
+  {
+    "id": "rest_loosen_grip",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What's outside your control this week? Could you loosen your grip a little?",
+      "de": "Was liegt diese Woche nicht in deiner Hand? Könntest du es etwas lockerer lassen?",
+      "fr": "Qu’est-ce qui ne dépend pas de toi cette semaine ? Pourrais-tu lâcher un peu prise ?",
+      "es": "¿Qué no depende de ti esta semana? ¿Podrías aflojar un poco?"
+    }
+  },
+  {
+    "id": "rest_calm_evenings",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What would make your evenings a little calmer?",
+      "de": "Was würde deine Abende ein wenig ruhiger machen?",
+      "fr": "Qu’est-ce qui rendrait tes soirées un peu plus calmes ?",
+      "es": "¿Qué haría tus noches un poco más tranquilas?"
+    }
+  },
+  {
+    "id": "rest_open_window",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "Where could you enjoy a quiet moment outdoors – or simply at an open window?",
+      "de": "Wo könntest du einen stillen Moment draußen genießen – oder einfach am offenen Fenster?",
+      "fr": "Où pourrais-tu savourer un moment calme dehors, ou simplement à une fenêtre ouverte ?",
+      "es": "¿Dónde podrías disfrutar un rato tranquilo al aire libre, o junto a una ventana abierta?"
+    }
+  },
+  {
+    "id": "rest_inner_critic",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "What is your inner critic saying lately? How would a kind voice answer?",
+      "de": "Was sagt deine innere Kritikerstimme gerade? Wie würde eine freundliche Stimme antworten?",
+      "fr": "Que te dit ta petite voix critique ces temps-ci ? Que répondrait une voix bienveillante ?",
+      "es": "¿Qué te dice últimamente tu voz crítica? ¿Qué le respondería una voz amable?"
+    }
+  },
+  {
+    "id": "rest_play",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "When did you last play, just for fun?",
+      "de": "Wann hast du zuletzt einfach nur zum Spaß gespielt?",
+      "fr": "Quand as-tu joué pour la dernière fois, juste pour t’amuser ?",
+      "es": "¿Cuándo fue la última vez que jugaste solo por diversión?"
+    }
+  },
+  {
+    "id": "rest_detour",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Which \"detour\" in your life turned out to matter after all?",
+      "de": "Welcher „Umweg“ in deinem Leben war am Ende doch wichtig?",
+      "fr": "Quel « détour » de ta vie a finalement compté ?",
+      "es": "¿Qué «desvío» de tu vida resultó importar al final?"
+    }
+  },
+  {
+    "id": "rest_no_rush",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "What doesn't need to happen this week after all?",
+      "de": "Was muss diese Woche eigentlich gar nicht passieren?",
+      "fr": "Qu’est-ce qui, finalement, n’a pas besoin d’arriver cette semaine ?",
+      "es": "¿Qué no hace falta que ocurra esta semana, después de todo?"
+    }
+  },
+  {
+    "id": "rest_hard_season",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "If this is a hard season, what would being kind to yourself look like?",
+      "de": "Wenn gerade eine schwere Zeit ist: Wie sähe Freundlichkeit dir selbst gegenüber aus?",
+      "fr": "Si tu traverses une période difficile, à quoi ressemblerait la douceur envers toi-même ?",
+      "es": "Si estás pasando una etapa difícil, ¿cómo sería tratarte con amabilidad?"
+    }
+  },
+  {
+    "id": "rest_small_pause",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "intention",
+    "text": {
+      "en": "What could be your small pause in the day – a breath, a cup of tea, a look outside?",
+      "de": "Was könnte deine kleine Pause am Tag sein – ein Atemzug, ein Tee, ein Blick nach draußen?",
+      "fr": "Quelle pourrait être ta petite pause de la journée : une respiration, un thé, un regard dehors ?",
+      "es": "¿Cuál podría ser tu pequeña pausa del día: respirar, un té, mirar por la ventana?"
+    }
+  },
+  {
+    "id": "rest_younger_self_lost",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "What would you tell your younger self about the years you think you lost?",
+      "de": "Was würdest du deinem jüngeren Ich über die Jahre sagen, die du für verloren hältst?",
+      "fr": "Que dirais-tu à la personne que tu étais, au sujet des années que tu crois perdues ?",
+      "es": "¿Qué le dirías a tu yo más joven sobre los años que crees perdidos?"
+    }
+  },
+  {
+    "id": "pride_hard_week",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Which hard week are you proud you got through?",
+      "de": "Auf welche schwere Woche bist du stolz, weil du sie durchgestanden hast?",
+      "fr": "Quelle semaine difficile as-tu traversée avec plus de force que tu ne le pensais ?",
+      "es": "¿De qué semana difícil te enorgullece haber salido adelante?"
+    }
+  },
+  {
+    "id": "pride_built",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "What did you build that you take for granted now?",
+      "de": "Was hast du aufgebaut, das dir heute selbstverständlich vorkommt?",
+      "fr": "Qu’as-tu construit qui te semble aujourd’hui aller de soi ?",
+      "es": "¿Qué has construido que hoy te parece lo más normal?"
+    }
+  },
+  {
+    "id": "pride_can_do_now",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "What can you do today that you couldn't do a few years ago?",
+      "de": "Was kannst du heute, was du vor ein paar Jahren noch nicht konntest?",
+      "fr": "Que sais-tu faire aujourd’hui que tu ne savais pas faire il y a quelques années ?",
+      "es": "¿Qué sabes hacer hoy que hace unos años no sabías?"
+    }
+  },
+  {
+    "id": "pride_kindness_given",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Which kindness you gave someone still makes you smile?",
+      "de": "Welche Freundlichkeit, die du jemandem geschenkt hast, lässt dich heute noch lächeln?",
+      "fr": "Quel geste de bonté de ta part te fait encore sourire ?",
+      "es": "¿Qué gesto amable tuyo todavía te hace sonreír?"
+    }
+  },
+  {
+    "id": "pride_thank_you_week",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "What from this week, however small, deserves a thank-you?",
+      "de": "Was aus dieser Woche – und sei es noch so klein – verdient ein Danke?",
+      "fr": "Quelle petite chose de cette semaine mérite un merci ?",
+      "es": "¿Qué cosa de esta semana, por pequeña que sea, merece un gracias?"
+    }
+  },
+  {
+    "id": "pride_seemed_impossible",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "What did you get through that once seemed impossible?",
+      "de": "Was hast du durchgestanden, das dir einmal unmöglich vorkam?",
+      "fr": "Qu’as-tu traversé qui te semblait autrefois impossible ?",
+      "es": "¿Qué has superado que una vez te pareció imposible?"
+    }
+  },
+  {
+    "id": "pride_braver",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "When were you braver than you expected?",
+      "de": "Wann warst du mutiger, als du es dir zugetraut hättest?",
+      "fr": "Quand as-tu eu plus de courage que tu ne l’imaginais ?",
+      "es": "¿Cuándo tuviste más valor del que esperabas?"
+    }
+  },
+  {
+    "id": "pride_change_in_you",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Which change in yourself are you glad about?",
+      "de": "Über welche Veränderung an dir freust du dich?",
+      "fr": "Quel changement en toi te fait plaisir ?",
+      "es": "¿Qué cambio en ti te alegra?"
+    }
+  },
+  {
+    "id": "pride_ordinary_day",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Which ordinary day turned out to be one of your favorites?",
+      "de": "Welcher ganz gewöhnliche Tag wurde zu einem deiner liebsten?",
+      "fr": "Quelle journée ordinaire est devenue l’une de tes préférées ?",
+      "es": "¿Qué día corriente acabó siendo uno de tus favoritos?"
+    }
+  },
+  {
+    "id": "pride_better_off",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Who is better off because you were there?",
+      "de": "Wem geht es besser, weil du da warst?",
+      "fr": "Qui va mieux parce que tu étais là ?",
+      "es": "¿A quién le va mejor porque tú estuviste ahí?"
+    }
+  },
+  {
+    "id": "pride_stayed_true",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "When did you stay true to yourself, even though it was hard?",
+      "de": "Wann bist du dir treu geblieben, obwohl es schwer war?",
+      "fr": "Quand as-tu suivi tes valeurs, même quand c’était difficile ?",
+      "es": "¿Cuándo fuiste fiel a ti, aunque costara?"
+    }
+  },
+  {
+    "id": "pride_younger_amazed",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "What about your life today would amaze your younger self?",
+      "de": "Was an deinem heutigen Leben würde dein jüngeres Ich staunen lassen?",
+      "fr": "Qu’est-ce qui, dans ta vie d’aujourd’hui, émerveillerait l’enfant que tu étais ?",
+      "es": "¿Qué de tu vida de hoy le asombraría a tu yo más joven?"
+    }
+  },
+  {
+    "id": "pride_treasured_place",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Which place holds a memory you treasure?",
+      "de": "Welcher Ort birgt eine Erinnerung, die dir kostbar ist?",
+      "fr": "Quel lieu garde un souvenir qui t’est précieux ?",
+      "es": "¿Qué lugar guarda un recuerdo que atesoras?"
+    }
+  },
+  {
+    "id": "pride_laughed_out_loud",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "What made you laugh out loud this year?",
+      "de": "Was hat dich dieses Jahr laut lachen lassen?",
+      "fr": "Qu’est-ce qui t’a fait rire aux éclats cette année ?",
+      "es": "¿Qué te hizo reír a carcajadas este año?"
+    }
+  },
+  {
+    "id": "pride_quiet_win",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "What quiet win from this week might no one else notice?",
+      "de": "Welchen leisen Erfolg dieser Woche würde sonst vielleicht niemand bemerken?",
+      "fr": "Quelle petite victoire de cette semaine passerait inaperçue aux yeux des autres ?",
+      "es": "¿Qué pequeña victoria de esta semana quizá nadie más note?"
+    }
+  },
+  {
+    "id": "pride_unseen_good",
+    "kind": "pride",
+    "stages": [
+      "young",
+      "exploring"
+    ],
+    "suggestion": "moment",
+    "text": {
+      "en": "What did you do this year that you feel good about, even if nobody saw it?",
+      "de": "Was hast du dieses Jahr getan, worauf du stolz bist, auch wenn es keiner gesehen hat?",
+      "fr": "Qu’as-tu fait cette année qui te fait plaisir quand tu y repenses, même sans témoin ?",
+      "es": "¿Qué hiciste este año que te hace sentir bien, aunque nadie lo viera?"
+    }
+  },
+  {
+    "id": "pride_first_time",
+    "kind": "pride",
+    "stages": [
+      "young",
+      "exploring"
+    ],
+    "suggestion": "moment",
+    "text": {
+      "en": "Which \"first time\" from these years would you never want to forget?",
+      "de": "Welches „erste Mal“ aus diesen Jahren möchtest du nie vergessen?",
+      "fr": "Quelle « première fois » de ces années ne voudrais-tu jamais oublier ?",
+      "es": "¿Qué «primera vez» de estos años no querrías olvidar nunca?"
+    }
+  },
+  {
+    "id": "pride_carried_well",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Which responsibility have you carried well, without anyone saying thank you?",
+      "de": "Welche Verantwortung hast du gut getragen, ohne dass jemand Danke gesagt hat?",
+      "fr": "Quelle responsabilité as-tu bien portée, sans que personne ne te dise merci ?",
+      "es": "¿Qué responsabilidad has llevado bien sin que nadie te diera las gracias?"
+    }
+  },
+  {
+    "id": "pride_took_decades",
+    "kind": "pride",
+    "stages": [
+      "midlife",
+      "harvest",
+      "wisdom"
+    ],
+    "suggestion": "moment",
+    "text": {
+      "en": "What do you understand now that took you decades to learn?",
+      "de": "Was verstehst du heute, wofür du Jahrzehnte gebraucht hast?",
+      "fr": "Que comprends-tu aujourd’hui qu’il t’a fallu des décennies pour apprendre ?",
+      "es": "¿Qué entiendes hoy que te llevó décadas aprender?"
+    }
+  },
+  {
+    "id": "pride_lives_on",
+    "kind": "pride",
+    "stages": [
+      "midlife",
+      "harvest",
+      "wisdom"
+    ],
+    "suggestion": "moment",
+    "text": {
+      "en": "What of you lives on in the people whose lives you've touched?",
+      "de": "Was von dir lebt in den Menschen weiter, denen du begegnet bist?",
+      "fr": "Quelle part de toi vit chez les personnes que tu as touchées ?",
+      "es": "¿Qué parte de ti sigue viva en las personas que se han cruzado en tu camino?"
+    }
+  },
+  {
+    "id": "pride_favorite_chapter",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Looking at your life so far, which chapter makes you smile most?",
+      "de": "Wenn du auf dein bisheriges Leben blickst: Welches Kapitel lässt dich am meisten lächeln?",
+      "fr": "En regardant ta vie jusqu’ici, quel chapitre te fait le plus sourire ?",
+      "es": "Mirando tu vida hasta ahora, ¿qué capítulo te hace sonreír más?"
+    }
+  },
+  {
+    "id": "pride_learned_from_you",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "What has someone learned from you?",
+      "de": "Was hat jemand von dir gelernt?",
+      "fr": "Qu’est-ce que quelqu’un a appris de toi ?",
+      "es": "¿Qué ha aprendido alguien de ti?"
+    }
+  },
+  {
+    "id": "pride_started_over",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "When did you start over – and what came of it?",
+      "de": "Wann hast du neu angefangen – und was ist daraus geworden?",
+      "fr": "Quand as-tu recommencé à zéro, et qu’en est-il sorti ?",
+      "es": "¿Cuándo volviste a empezar, y qué salió de ello?"
+    }
+  },
+  {
+    "id": "pride_recurring_joy",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Which small joy keeps coming back in your life?",
+      "de": "Welche kleine Freude kehrt in deinem Leben immer wieder?",
+      "fr": "Quelle petite joie revient sans cesse dans ta vie ?",
+      "es": "¿Qué pequeña alegría vuelve una y otra vez a tu vida?"
+    }
+  },
+  {
+    "id": "pride_thank_your_body",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Your body has been with you every week so far. What would you thank it for?",
+      "de": "Dein Körper war jede Woche bis heute bei dir. Wofür möchtest du ihm danken?",
+      "fr": "Ton corps t’accompagne depuis ta toute première semaine. De quoi aimerais-tu le remercier ?",
+      "es": "Tu cuerpo te ha acompañado cada semana hasta hoy. ¿Por qué te gustaría darle las gracias?"
+    }
+  },
+  {
+    "id": "pride_beautiful_seen",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "What beautiful thing have you seen that you'll always remember?",
+      "de": "Was Schönes hast du gesehen, das du nie vergessen wirst?",
+      "fr": "Quelle belle chose as-tu vue que tu n’oublieras jamais ?",
+      "es": "¿Qué cosa bonita has visto que siempre recordarás?"
+    }
+  },
+  {
+    "id": "pride_kept_going",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "On a day you wanted to give up, what kept you going?",
+      "de": "An einem Tag, an dem du aufgeben wolltest: Was hat dich weitermachen lassen?",
+      "fr": "Un jour où tu voulais abandonner, qu’est-ce qui t’a fait continuer ?",
+      "es": "Un día en que querías rendirte, ¿qué te hizo seguir?"
+    }
+  },
+  {
+    "id": "pride_glad_decision",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "Which decision are you glad you made?",
+      "de": "Über welche Entscheidung bist du froh?",
+      "fr": "Quelle décision te réjouis-tu d’avoir prise ?",
+      "es": "¿Qué decisión te alegra haber tomado?"
+    }
+  },
+  {
+    "id": "pride_everyday_care",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "topic": {
+      "en": "Small gestures",
+      "de": "Kleine Gesten",
+      "fr": "Petits gestes",
+      "es": "Pequeños gestos"
+    },
+    "text": {
+      "en": "Which small gesture feels like nothing to you, but means a lot to someone else?",
+      "de": "Welche kleine Geste ist für dich selbstverständlich, bedeutet jemand anderem aber viel?",
+      "fr": "Quel petit geste va de soi pour toi, mais compte beaucoup pour quelqu’un d’autre ?",
+      "es": "¿Qué pequeño gesto te sale sin pensarlo, pero significa mucho para otra persona?"
+    }
+  },
+  {
+    "id": "pride_good_in_hard_week",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "What was good about this week, even if it was a hard one?",
+      "de": "Was war gut an dieser Woche, auch wenn sie schwer war?",
+      "fr": "Qu’est-ce qui a été bon cette semaine, même si elle était difficile ?",
+      "es": "¿Qué hubo de bueno esta semana, aunque fuera dura?"
+    }
+  },
+  {
+    "id": "pride_came_to_love",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "text": {
+      "en": "What have you discovered or come to love in recent years?",
+      "de": "Was hast du in den letzten Jahren entdeckt oder lieben gelernt?",
+      "fr": "Qu’as-tu découvert ou appris à aimer ces dernières années ?",
+      "es": "¿Qué has descubierto o aprendido a querer en los últimos años?"
+    }
+  },
+  {
+    "id": "courage_phase_lived",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "phase": true,
+    "text": {
+      "en": "What do you still want to have lived during your “{phase}” phase?",
+      "de": "Was willst du in deiner Phase „{phase}“ unbedingt noch erlebt haben?",
+      "fr": "Qu’est-ce que tu veux absolument avoir vécu pendant ta phase « {phase} » ?",
+      "es": "¿Qué quieres haber vivido sin falta en tu etapa «{phase}»?"
+    }
+  },
+  {
+    "id": "courage_phase_step",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "phase": true,
+    "text": {
+      "en": "Which step have you been putting off in your “{phase}” phase – and how small could it be?",
+      "de": "Welchen Schritt schiebst du in deiner Phase „{phase}“ vor dir her – und wie klein dürfte er sein?",
+      "fr": "Quel pas repousses-tu dans ta phase « {phase} » – et à quel point pourrait-il être petit ?",
+      "es": "¿Qué paso vas aplazando en tu etapa «{phase}», y qué tan pequeño podría ser?"
+    }
+  },
+  {
+    "id": "courage_phase_tried",
+    "kind": "courage",
+    "stages": [],
+    "suggestion": "intention",
+    "phase": true,
+    "text": {
+      "en": "What would you regret not having at least tried during your “{phase}” phase?",
+      "de": "Was würdest du bereuen, in deiner Phase „{phase}“ nicht wenigstens versucht zu haben?",
+      "fr": "Qu’est-ce que tu regretterais de ne pas avoir au moins essayé pendant ta phase « {phase} » ?",
+      "es": "¿Qué lamentarías no haber intentado al menos en tu etapa «{phase}»?"
+    }
+  },
+  {
+    "id": "connection_phase_by_side",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "phase": true,
+    "text": {
+      "en": "Who would you like by your side during your “{phase}” phase?",
+      "de": "Wen möchtest du in deiner Phase „{phase}“ an deiner Seite haben?",
+      "fr": "Qui aimerais-tu avoir à tes côtés pendant ta phase « {phase} » ?",
+      "es": "¿A quién te gustaría tener a tu lado en tu etapa «{phase}»?"
+    }
+  },
+  {
+    "id": "connection_phase_share",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "phase": true,
+    "text": {
+      "en": "Who would you like to tell what's moving you in your “{phase}” phase right now?",
+      "de": "Mit wem möchtest du teilen, was dich in deiner Phase „{phase}“ gerade bewegt?",
+      "fr": "Avec qui aimerais-tu partager ce qui te touche en ce moment dans ta phase « {phase} » ?",
+      "es": "¿Con quién te gustaría compartir lo que te mueve ahora en tu etapa «{phase}»?"
+    }
+  },
+  {
+    "id": "connection_phase_thanks",
+    "kind": "connection",
+    "stages": [],
+    "suggestion": "intention",
+    "phase": true,
+    "text": {
+      "en": "Who has been there for you during your “{phase}” phase – and would you like to thank them?",
+      "de": "Wer war in deiner Phase „{phase}“ für dich da – und möchtest du dich dafür bedanken?",
+      "fr": "Qui a été là pour toi pendant ta phase « {phase} », et aimerais-tu lui dire merci ?",
+      "es": "¿Quién te ha acompañado en tu etapa «{phase}», y te gustaría darle las gracias?"
+    }
+  },
+  {
+    "id": "rest_phase_enough",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": null,
+    "phase": true,
+    "text": {
+      "en": "What can simply be enough in your “{phase}” phase?",
+      "de": "Was darf in deiner Phase „{phase}“ auch einfach genug sein?",
+      "fr": "Qu’est-ce qui peut simplement suffire dans ta phase « {phase} » ?",
+      "es": "¿Qué puede ser simplemente suficiente en tu etapa «{phase}»?"
+    }
+  },
+  {
+    "id": "rest_phase_let_go",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "intention",
+    "phase": true,
+    "text": {
+      "en": "What could you let go of in your “{phase}” phase, so it feels lighter?",
+      "de": "Was könntest du in deiner Phase „{phase}“ loslassen, damit sie leichter wird?",
+      "fr": "Qu’est-ce que tu pourrais lâcher dans ta phase « {phase} » pour qu’elle soit plus légère ?",
+      "es": "¿Qué podrías soltar en tu etapa «{phase}» para que sea más ligera?"
+    }
+  },
+  {
+    "id": "rest_phase_breathe",
+    "kind": "rest",
+    "stages": [],
+    "suggestion": "moment",
+    "phase": true,
+    "text": {
+      "en": "Where do you find room to breathe in your “{phase}” phase?",
+      "de": "Wo findest du in deiner Phase „{phase}“ Momente zum Durchatmen?",
+      "fr": "Où trouves-tu des moments pour respirer dans ta phase « {phase} » ?",
+      "es": "¿Dónde encuentras momentos para respirar en tu etapa «{phase}»?"
+    }
+  },
+  {
+    "id": "pride_phase_grown",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "phase": true,
+    "text": {
+      "en": "How can you tell you've grown during your “{phase}” phase?",
+      "de": "Woran merkst du, dass du in deiner Phase „{phase}“ gewachsen bist?",
+      "fr": "À quoi remarques-tu que tu as grandi pendant ta phase « {phase} » ?",
+      "es": "¿En qué notas que has crecido en tu etapa «{phase}»?"
+    }
+  },
+  {
+    "id": "pride_phase_went_well",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "phase": true,
+    "text": {
+      "en": "What has gone well for you so far in your “{phase}” phase?",
+      "de": "Was ist dir in deiner Phase „{phase}“ bisher gut gelungen?",
+      "fr": "Qu’est-ce que tu as bien réussi jusqu’ici dans ta phase « {phase} » ?",
+      "es": "¿Qué te ha salido bien hasta ahora en tu etapa «{phase}»?"
+    }
+  },
+  {
+    "id": "pride_phase_keep",
+    "kind": "pride",
+    "stages": [],
+    "suggestion": "moment",
+    "phase": true,
+    "text": {
+      "en": "Which moment from your “{phase}” phase would you like to keep?",
+      "de": "Welchen Moment aus deiner Phase „{phase}“ möchtest du festhalten?",
+      "fr": "Quel moment de ta phase « {phase} » aimerais-tu garder ?",
+      "es": "¿Qué momento de tu etapa «{phase}» te gustaría guardar?"
+    }
+  },
+  {
+    "id": "note_got_through",
+    "kind": "note",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "You've already lived {weeks} weeks. Some were hard – and you got through them.",
+      "de": "Du hast schon {weeks} Wochen gelebt. Manche waren schwer – und du bist durchgekommen.",
+      "fr": "Tu as déjà vécu {weeks} semaines. Certaines étaient dures, et tu les as traversées.",
+      "es": "Ya has vivido {weeks} semanas. Algunas fueron duras, y saliste adelante."
+    }
+  },
+  {
+    "id": "note_filled_square",
+    "kind": "note",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Every week you’ve lived (a filled square) counts – even the ones you barely remember.",
+      "de": "Jede Woche, die du gelebt hast (gefülltes Kästchen), zählt – auch die, an die du dich kaum erinnerst.",
+      "fr": "Chaque semaine que tu as vécue (une case remplie) compte, même celles dont tu te souviens à peine.",
+      "es": "Cada semana que has vivido (una casilla llena) cuenta, incluso las que apenas recuerdas."
+    }
+  },
+  {
+    "id": "note_resting_weeks",
+    "kind": "note",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Not every week has to be meaningful. Some are simply for resting.",
+      "de": "Nicht jede Woche muss bedeutsam sein. Manche sind einfach zum Ausruhen da.",
+      "fr": "Chaque semaine n’a pas à être importante. Certaines servent juste à se reposer.",
+      "es": "No todas las semanas tienen que ser importantes. Algunas son solo para descansar."
+    }
+  },
+  {
+    "id": "note_lot_of_life",
+    "kind": "note",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "{weeks} weeks of learning, loving and trying again. That's a lot of life.",
+      "de": "{weeks} Wochen voller Lernen, Lieben und Neuanfangen. Das ist viel Leben.",
+      "fr": "{weeks} semaines à apprendre, aimer, recommencer. C’est beaucoup de vie.",
+      "es": "{weeks} semanas de aprender, querer y volver a intentarlo. Eso es mucha vida."
+    }
+  },
+  {
+    "id": "note_quiet_weeks",
+    "kind": "note",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "The quiet weeks counted too.",
+      "de": "Auch die stillen Wochen haben gezählt.",
+      "fr": "Les semaines tranquilles comptaient aussi.",
+      "es": "Las semanas tranquilas también contaron."
+    }
+  },
+  {
+    "id": "note_no_catch_up",
+    "kind": "note",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "You don't have to make up for lost time. Just live the next week.",
+      "de": "Du musst keine verlorene Zeit nachholen. Nur die nächste Woche leben.",
+      "fr": "Tu n’as pas à rattraper le temps perdu. Juste à vivre la semaine qui vient.",
+      "es": "No tienes que recuperar el tiempo perdido. Solo vivir la próxima semana."
+    }
+  },
+  {
+    "id": "note_hard_rows",
+    "kind": "note",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Some weeks are hard. You don’t have to make the most of every one.",
+      "de": "Manche Wochen sind schwer. Du musst nicht aus jeder das Beste machen.",
+      "fr": "Certaines semaines sont dures. Tu n’as pas à tirer le meilleur de chacune.",
+      "es": "Algunas semanas son duras. No tienes que sacar lo mejor de cada una."
+    }
+  },
+  {
+    "id": "note_how_far",
+    "kind": "note",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Look how far you've come: {weeks} weeks, one at a time.",
+      "de": "Schau, wie weit du gekommen bist: {weeks} Wochen, eine nach der anderen.",
+      "fr": "Regarde le chemin parcouru : {weeks} semaines, une à la fois.",
+      "es": "Mira cuánto has avanzado: {weeks} semanas, una a una."
+    }
+  },
+  {
+    "id": "note_rest_not_wasted",
+    "kind": "note",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Rest was never wasted time.",
+      "de": "Ruhe war nie verschwendete Zeit.",
+      "fr": "Le repos n’a jamais été du temps perdu.",
+      "es": "Descansar nunca fue tiempo perdido."
+    }
+  },
+  {
+    "id": "note_past_is_safe",
+    "kind": "note",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "The weeks behind you are safe. Nothing can undo what you've lived.",
+      "de": "Die vergangenen Wochen sind sicher. Nichts kann ungeschehen machen, was du gelebt hast.",
+      "fr": "Les semaines passées sont à l’abri. Rien ne peut effacer ce que tu as vécu.",
+      "es": "Las semanas pasadas están a salvo. Nada puede borrar lo que has vivido."
+    }
+  },
+  {
+    "id": "note_best_moments",
+    "kind": "note",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Some of your best moments probably didn't look like much at the time.",
+      "de": "Manche deiner schönsten Momente sahen damals vermutlich nach wenig aus.",
+      "fr": "Certains de tes plus beaux moments n’avaient sans doute l’air de rien sur le coup.",
+      "es": "Algunos de tus mejores momentos seguramente no parecían gran cosa entonces."
+    }
+  },
+  {
+    "id": "note_kept_going",
+    "kind": "note",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Simply having kept going is something to be proud of.",
+      "de": "Du darfst stolz darauf sein, einfach weitergemacht zu haben.",
+      "fr": "Avoir continué, tout simplement : c’est déjà une fierté.",
+      "es": "Haber seguido adelante, sin más, ya es motivo de orgullo."
+    }
+  },
+  {
+    "id": "note_did_your_best",
+    "kind": "note",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "In every one of these {weeks} weeks, you did what you could with what you knew.",
+      "de": "In jeder dieser {weeks} Wochen hast du getan, was du mit deinem damaligen Wissen konntest.",
+      "fr": "Chacune de ces {weeks} semaines, tu as fait de ton mieux avec ce que tu savais.",
+      "es": "En cada una de estas {weeks} semanas hiciste lo que pudiste con lo que sabías."
+    }
+  },
+  {
+    "id": "limit_three_plenty",
+    "kind": "limit",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Three is plenty. What could wait in Someday?",
+      "de": "Drei sind genug. Was darf in „Irgendwann“ warten?",
+      "fr": "Trois, c’est déjà beaucoup. Qu’est-ce qui peut attendre dans « Un jour » ?",
+      "es": "Tres ya es mucho. ¿Qué puede esperar en «Algún día»?"
+    }
+  },
+  {
+    "id": "limit_dont_have_to",
+    "kind": "limit",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "You can't hold everything at once – and you don't have to. Which one could rest for now?",
+      "de": "Du kannst nicht alles gleichzeitig halten – und musst es auch nicht. Was darf vorerst ruhen?",
+      "fr": "Tu ne peux pas tout porter à la fois, et tu n’as pas à le faire. Quelle intention peut attendre ?",
+      "es": "No puedes sostenerlo todo a la vez, y no hace falta. ¿Cuál puede esperar por ahora?"
+    }
+  },
+  {
+    "id": "limit_more_heart",
+    "kind": "limit",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Fewer things, done with more heart. Which one could you finish or let go first?",
+      "de": "Weniger, dafür mit mehr Herz. Welches Vorhaben könntest du zuerst abschließen oder loslassen?",
+      "fr": "Moins de choses, mais avec plus de cœur. Laquelle pourrais-tu d’abord terminer ou laisser partir ?",
+      "es": "Menos cosas, con más corazón. ¿Cuál podrías terminar o soltar primero?"
+    }
+  },
+  {
+    "id": "limit_full_hands",
+    "kind": "limit",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Full hands can't pick anything up. Which intention could you set down?",
+      "de": "Volle Hände können nichts Neues greifen. Welches Vorhaben könntest du ablegen?",
+      "fr": "Des mains pleines ne peuvent rien saisir. Quelle intention pourrais-tu poser ?",
+      "es": "Con las manos llenas no se puede tomar nada nuevo. ¿Qué intención podrías dejar?"
+    }
+  },
+  {
+    "id": "limit_wait_its_turn",
+    "kind": "limit",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Three at a time keeps things light. Anything more can wait its turn in Someday.",
+      "de": "Drei auf einmal halten es leicht. Alles Weitere darf in „Irgendwann“ warten, bis es dran ist.",
+      "fr": "Trois à la fois, ça reste léger. Le reste peut attendre son tour dans « Un jour ».",
+      "es": "Tres a la vez, todo más ligero. Lo demás puede esperar su turno en «Algún día»."
+    }
+  },
+  {
+    "id": "limit_nothing_lost",
+    "kind": "limit",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Nothing is lost by waiting. What waits in Someday is still there when Now has room.",
+      "de": "Durch Warten geht nichts verloren. Was in „Irgendwann“ wartet, ist noch da, wenn in „Jetzt“ Platz ist.",
+      "fr": "Rien n’est perdu en attendant. Ce qui attend dans « Un jour » sera encore là quand « Maintenant » aura de la place.",
+      "es": "Nada se pierde por esperar. Lo que espera en «Algún día» seguirá ahí cuando haya sitio en «Ahora»."
+    }
+  },
+  {
+    "id": "limit_already_done",
+    "kind": "limit",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Is one of your three already done – or no longer as important?",
+      "de": "Ist eins deiner drei Vorhaben schon erledigt – oder nicht mehr so wichtig?",
+      "fr": "L’une de tes trois intentions est-elle déjà faite, ou moins importante qu’avant ?",
+      "es": "¿Alguna de tus tres intenciones ya está hecha, o ha dejado de importar tanto?"
+    }
+  },
+  {
+    "id": "limit_few_things_well",
+    "kind": "limit",
+    "stages": [],
+    "suggestion": null,
+    "text": {
+      "en": "Doing a few things well is enough. Which three matter most right now?",
+      "de": "Wenige Dinge gut zu tun, ist genug. Welche drei sind dir gerade am wichtigsten?",
+      "fr": "Bien faire peu de choses, c’est suffisant. Lesquelles comptent le plus en ce moment ?",
+      "es": "Hacer pocas cosas bien es suficiente. ¿Cuáles son las tres que más importan ahora?"
+    }
+  }
+]

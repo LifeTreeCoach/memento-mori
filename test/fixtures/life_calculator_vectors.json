@@ -1,0 +1,203 @@
+{
+  "description": "Shared test vectors for LifeCalculator (Dart lib/core/life_calculator.dart, Kotlin android/lifecore LifeCalculator.kt, Swift ios/LifeCore LifeCalculator.swift). Generated independently by a Python reference implementation; see docs/widget-data-contract.md.",
+  "cases": [
+    {
+      "name": "typical adult",
+      "birth_date": "1990-11-17",
+      "today": "2026-11-02",
+      "life_expectancy_years": 80,
+      "expected": {
+        "age_years": 35,
+        "days_lived": 13134,
+        "weeks_lived": 1876,
+        "total_weeks": 4160,
+        "weeks_remaining": 2284,
+        "current_week_number": 1877,
+        "months_lived": 431,
+        "total_months": 960,
+        "months_remaining": 529,
+        "years_lived": 35,
+        "total_years": 80,
+        "years_remaining": 45,
+        "days_remaining": 16086,
+        "percent_lived": 45.096154
+      }
+    },
+    {
+      "name": "birthday today",
+      "birth_date": "1990-11-02",
+      "today": "2026-11-02",
+      "life_expectancy_years": 80,
+      "expected": {
+        "age_years": 36,
+        "days_lived": 13149,
+        "weeks_lived": 1878,
+        "total_weeks": 4160,
+        "weeks_remaining": 2282,
+        "current_week_number": 1879,
+        "months_lived": 432,
+        "total_months": 960,
+        "months_remaining": 528,
+        "years_lived": 36,
+        "total_years": 80,
+        "years_remaining": 44,
+        "days_remaining": 16071,
+        "percent_lived": 45.144231
+      }
+    },
+    {
+      "name": "day before birthday",
+      "birth_date": "1990-11-03",
+      "today": "2026-11-02",
+      "life_expectancy_years": 80,
+      "expected": {
+        "age_years": 35,
+        "days_lived": 13148,
+        "weeks_lived": 1878,
+        "total_weeks": 4160,
+        "weeks_remaining": 2282,
+        "current_week_number": 1879,
+        "months_lived": 431,
+        "total_months": 960,
+        "months_remaining": 529,
+        "years_lived": 35,
+        "total_years": 80,
+        "years_remaining": 45,
+        "days_remaining": 16072,
+        "percent_lived": 45.144231
+      }
+    },
+    {
+      "name": "feb 29 birth, feb 28 non-leap year (birthday not reached)",
+      "birth_date": "2000-02-29",
+      "today": "2025-02-28",
+      "life_expectancy_years": 80,
+      "expected": {
+        "age_years": 24,
+        "days_lived": 9131,
+        "weeks_lived": 1304,
+        "total_weeks": 4160,
+        "weeks_remaining": 2856,
+        "current_week_number": 1305,
+        "months_lived": 299,
+        "total_months": 960,
+        "months_remaining": 661,
+        "years_lived": 24,
+        "total_years": 80,
+        "years_remaining": 56,
+        "days_remaining": 20089,
+        "percent_lived": 31.346154
+      }
+    },
+    {
+      "name": "feb 29 birth, mar 1 non-leap year (birthday reached)",
+      "birth_date": "2000-02-29",
+      "today": "2025-03-01",
+      "life_expectancy_years": 81,
+      "expected": {
+        "age_years": 25,
+        "days_lived": 9132,
+        "weeks_lived": 1304,
+        "total_weeks": 4212,
+        "weeks_remaining": 2908,
+        "current_week_number": 1305,
+        "months_lived": 300,
+        "total_months": 972,
+        "months_remaining": 672,
+        "years_lived": 25,
+        "total_years": 81,
+        "years_remaining": 56,
+        "days_remaining": 20454,
+        "percent_lived": 30.959164
+      }
+    },
+    {
+      "name": "newborn (born today)",
+      "birth_date": "2026-11-02",
+      "today": "2026-11-02",
+      "life_expectancy_years": 80,
+      "expected": {
+        "age_years": 0,
+        "days_lived": 0,
+        "weeks_lived": 0,
+        "total_weeks": 4160,
+        "weeks_remaining": 4160,
+        "current_week_number": 1,
+        "months_lived": 0,
+        "total_months": 960,
+        "months_remaining": 960,
+        "years_lived": 0,
+        "total_years": 80,
+        "years_remaining": 80,
+        "days_remaining": 29219,
+        "percent_lived": 0.0
+      }
+    },
+    {
+      "name": "age beyond life expectancy",
+      "birth_date": "1930-01-15",
+      "today": "2026-11-02",
+      "life_expectancy_years": 80,
+      "expected": {
+        "age_years": 96,
+        "days_lived": 35355,
+        "weeks_lived": 5050,
+        "total_weeks": 4160,
+        "weeks_remaining": 0,
+        "current_week_number": 5051,
+        "months_lived": 1161,
+        "total_months": 960,
+        "months_remaining": 0,
+        "years_lived": 96,
+        "total_years": 80,
+        "years_remaining": 0,
+        "days_remaining": 0,
+        "percent_lived": 100.0
+      }
+    },
+    {
+      "name": "custom expectancy 90, month-end birth",
+      "birth_date": "1985-06-30",
+      "today": "2026-07-31",
+      "life_expectancy_years": 90,
+      "expected": {
+        "age_years": 41,
+        "days_lived": 15006,
+        "weeks_lived": 2143,
+        "total_weeks": 4680,
+        "weeks_remaining": 2537,
+        "current_week_number": 2144,
+        "months_lived": 493,
+        "total_months": 1080,
+        "months_remaining": 587,
+        "years_lived": 41,
+        "total_years": 90,
+        "years_remaining": 49,
+        "days_remaining": 17866,
+        "percent_lived": 45.790598
+      }
+    },
+    {
+      "name": "born on 31st, short month (month not completed)",
+      "birth_date": "1999-01-31",
+      "today": "2026-02-28",
+      "life_expectancy_years": 80,
+      "expected": {
+        "age_years": 27,
+        "days_lived": 9890,
+        "weeks_lived": 1412,
+        "total_weeks": 4160,
+        "weeks_remaining": 2748,
+        "current_week_number": 1413,
+        "months_lived": 324,
+        "total_months": 960,
+        "months_remaining": 636,
+        "years_lived": 27,
+        "total_years": 80,
+        "years_remaining": 53,
+        "days_remaining": 19330,
+        "percent_lived": 33.942308
+      }
+    }
+  ]
+}

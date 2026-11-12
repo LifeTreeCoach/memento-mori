@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_name">Memento Mori</string>
+    <string name="widget_description">Your life in weeks: the current week and the time you have left</string>
+    <string name="widget_week_label">Week</string>
+    <string name="widget_week_number">Week %1$s</string>
+    <string name="widget_of_total">of %1$s</string>
+    <string name="widget_percent">%1$d%%</string>
+    <string name="widget_percent_lived">%1$d%% lived</string>
+    <string name="widget_setup_message">Open the app to set your birth date</string>
+    <!-- Static sample values for the widget picker preview -->
+    <string name="widget_preview_week_label">WEEK</string>
+    <string name="widget_preview_week_number">1,912</string>
+    <string name="widget_preview_remaining">2,249 weeks left</string>
+    <string name="widget_preview_percent" formatted="false">45% lived</string>
+    <string name="widget_grid_description">Your life in weeks</string>
+    <plurals name="widget_weeks_left">
+        <item quantity="one">%1$s week left</item>
+        <item quantity="other">%1$s weeks left</item>
+    </plurals>
+    <plurals name="widget_months_left">
+        <item quantity="one">%1$s month left</item>
+        <item quantity="other">%1$s months left</item>
+    </plurals>
+    <plurals name="widget_years_left">
+        <item quantity="one">%1$s year left</item>
+        <item quantity="other">%1$s years left</item>
+    </plurals>
+    <plurals name="widget_days_left">
+        <item quantity="one">%1$s day left</item>
+        <item quantity="other">%1$s days left</item>
+    </plurals>
+</resources>

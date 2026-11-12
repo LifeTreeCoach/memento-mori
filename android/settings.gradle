@@ -1,0 +1,37 @@
+pluginManagement {
+    def flutterSdkPath = {
+        def properties = new Properties()
+        file("local.properties").withInputStream { properties.load(it) }
+        def flutterSdkPath = properties.getProperty("flutter.sdk")
+        assert flutterSdkPath != null, "flutter.sdk not set in local.properties"
+        return flutterSdkPath
+    }()
+
+    includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
+
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id "dev.flutter.flutter-plugin-loader" version "1.0.0"
+    id "com.android.application" version "9.4.1" apply false
+    id "org.jetbrains.kotlin.android" version "2.4.0" apply false
+    // Pure JVM :lifecore module (shared life calculation); same Kotlin version.
+    id "org.jetbrains.kotlin.jvm" version "2.4.0" apply false
+    // Compose compiler for the Jetpack Glance home-screen widget; must match the Kotlin version.
+    id "org.jetbrains.kotlin.plugin.compose" version "2.4.0" apply false
+}
+
+include ":app"
+include ":lifecore"
+
+// Native Wear OS app (Compose, Tile, complication). The Flutter tool runs an unqualified
+// `assemble<Variant>` and always passes -Ptarget, so :wear is left out of Flutter-driven builds
+// (flutter build/run only build :app). Build the watch with `./gradlew :wear:assembleDebug`.
+if (!startParameter.projectProperties.containsKey("target")) {
+    include ":wear"
+}

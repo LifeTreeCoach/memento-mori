@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Widget picker preview, stoic dark -->
+    <color name="widget_preview_background">#0F0F10</color>
+    <color name="widget_preview_primary">#F4F1EA</color>
+    <color name="widget_preview_secondary">#A9A49B</color>
+    <color name="widget_preview_track">#2A2A2D</color>
+    <color name="widget_preview_accent">#E0A84F</color>
+</resources>

@@ -1,0 +1,86 @@
+plugins {
+    id "com.android.application"
+    id "org.jetbrains.kotlin.plugin.compose"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+// Release signing (key.properties or debug keys) is shared with :wear: see ../signing.gradle.
+apply from: "../signing.gradle"
+
+android {
+    namespace = "lifetree.coach.memento_mori_life_in_weeks"
+    // flutter_local_notifications 23 requires compileSdk 37 (Flutter's default is still 36).
+    compileSdk = Math.max(flutter.compileSdkVersion, 37)
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+        coreLibraryDesugaringEnabled = true
+    }
+
+    defaultConfig {
+        applicationId = "lifetree.coach.memento_mori_life_in_weeks"
+        minSdk = flutter.minSdkVersion
+        // Android 17 (API 37); Flutter's default target is still 36. Behaviour changes
+        // checked for M0 (widget bitmap budget, large-screen orientation, BAL, contact picker).
+        targetSdk = Math.max(flutter.targetSdkVersion, 37)
+        // Uses the version code/name from pubspec.yaml.
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildFeatures {
+        compose = true
+    }
+
+    // Where the APK is distributed (CLAUDE.md, "Distribution"). Same applicationId for both;
+    // Flutter passes the flavor to Dart as `appFlavor` (lib/support/support_channel.dart).
+    flavorDimensions = ["distribution"]
+    productFlavors {
+        // Google Play: Wear OS watch sync via Play services (src/play/.../WearSync.kt).
+        play {
+            dimension = "distribution"
+        }
+        // F-Droid, direct APK and other stores: no Google Play Services at all
+        // (src/foss/.../WearSync.kt is a no-op).
+        foss {
+            dimension = "distribution"
+        }
+    }
+
+    buildTypes {
+        release {
+            // Applies to both flavors (play, foss); signingConfig comes from ../signing.gradle.
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.5'
+
+    // Shared life calculation + widget input model (pure Kotlin/JVM)
+    implementation project(':lifecore')
+
+    // Native home-screen widget (Jetpack Glance)
+    implementation 'androidx.glance:glance-appwidget:1.2.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2'
+
+    // Forwards widget inputs to Wear OS watches (Wearable Data Layer), see
+    // src/play/.../widget/WearSync.kt. Play flavor only: foss builds carry no Play services.
+    playImplementation 'com.google.android.gms:play-services-wearable:20.0.1'
+
+    testImplementation 'junit:junit:4.13.2'
+}

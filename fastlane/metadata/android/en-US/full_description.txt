@@ -1,0 +1,48 @@
+Memento Mori shows your life as a grid of weeks. Every filled cell is a week you have lived, every empty one a week still ahead of you. It is not meant to frighten you. It is a quiet reminder that your time is limited, so you can spend it on what matters to you.
+
+Your life at a glance
+• See your life in weeks, months or years, zoom in and tap any cell to see when it was
+• Other layouts if you like: spiral, liquid progress or tree rings
+• A short quote every day and the next birthday coming up
+
+How many years to plan with?
+• The estimate starts from the UN World Population Prospects 2024 life tables for your country, age and sex
+• Five optional lifestyle questions (smoking, activity, alcohol, weight, feeling connected) make it more personal
+• It is calculated on your device. It is a statistical average, not a prediction, and you can set your own number at any time
+
+Compass
+• A gentle question for each week
+• Life phases: see which phase you are in and how much of your lifespan it takes; add earlier phases if you like
+• Intentions for this phase, to get done or to enjoy: at most three for "Now"; everything else can wait under "Someday"
+• Close a phase consciously and decide what to take along and what to let go
+• After you complete something, a quiet moment to take it in: how long it took, where it sits in your life and the time still ahead of you, with an optional note of gratitude
+• Keep the moments you have lived and see them marked on your life grid
+• Your life grid in the colours of your phases, in the other layouts too
+• A look back at what you have lived
+• No streaks, no scores, no pressure
+
+People
+• Keep the birthdays of friends and family, with groups, avatars, search and sorting
+• Import birthdays from your contacts or a vCard file in a few taps, also without a year; it happens on your device and only the people you choose are saved
+• Birthday reminders on the day and, if you like, the day before
+• Optional yearly birthday events in your device calendar
+• Together: both lives on one timeline and a rough count of how often you might still meet at your usual pace, with a way to plan time together
+
+On your home screen and your wrist
+• Home-screen widgets in three sizes; the large one shows your week grid
+• A Wear OS app with a tile and a watch face complication (syncing with the watch needs the Google Play version)
+
+And also
+• An optional Sunday evening reminder: weekly with the week's question, or every 4 weeks with a look at your phase
+• Two calm styles, Stoic and Warm, in light and dark, plus optional grid colours
+• Backup and restore as a JSON file, including avatars
+• English, German, French and Spanish
+
+Your data stays with you
+• Everything is stored on your device
+• Your contacts are only read when you import birthdays, and only the people you choose are kept
+• No account, no ads, no tracking
+• The app has no internet permission, so it cannot send your data anywhere
+
+Open source
+Memento Mori is free and open source software, licensed under the GPL-3.0.

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_name">Memento Mori</string>
+    <string name="widget_description">Ta vie en semaines\u00A0: la semaine en cours et le temps qu’il te reste</string>
+    <string name="widget_week_label">Semaine</string>
+    <string name="widget_week_number">Semaine %1$s</string>
+    <string name="widget_of_total">sur %1$s</string>
+    <string name="widget_percent">%1$d\u00A0%%</string>
+    <string name="widget_percent_lived">%1$d\u00A0%% vécu</string>
+    <string name="widget_setup_message">Ouvre l’app pour saisir ta date de naissance</string>
+    <!-- Valeurs d’exemple statiques pour l’aperçu du widget -->
+    <string name="widget_preview_week_label">SEMAINE</string>
+    <string name="widget_preview_week_number">1\u202F912</string>
+    <string name="widget_preview_remaining">encore 2\u202F249 semaines</string>
+    <string name="widget_preview_percent" formatted="false">45\u00A0% vécu</string>
+    <string name="widget_grid_description">Ta vie en semaines</string>
+    <plurals name="widget_weeks_left">
+        <item quantity="one">encore %1$s semaine</item>
+        <item quantity="many">encore %1$s semaines</item>
+        <item quantity="other">encore %1$s semaines</item>
+    </plurals>
+    <plurals name="widget_months_left">
+        <item quantity="one">encore %1$s mois</item>
+        <item quantity="many">encore %1$s mois</item>
+        <item quantity="other">encore %1$s mois</item>
+    </plurals>
+    <plurals name="widget_years_left">
+        <item quantity="one">encore %1$s an</item>
+        <item quantity="many">encore %1$s ans</item>
+        <item quantity="other">encore %1$s ans</item>
+    </plurals>
+    <plurals name="widget_days_left">
+        <item quantity="one">encore %1$s jour</item>
+        <item quantity="many">encore %1$s jours</item>
+        <item quantity="other">encore %1$s jours</item>
+    </plurals>
+</resources>

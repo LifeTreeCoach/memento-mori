@@ -1,0 +1,7 @@
+/* Home-screen name and permission prompts (English). */
+"CFBundleDisplayName" = "Memento Mori";
+"NSPhotoLibraryUsageDescription" = "Choose a photo for a person in your list.";
+"NSCameraUsageDescription" = "Take a photo for a person in your list.";
+"NSCalendarsUsageDescription" = "Sync the birthdays of people in your list to your calendar.";
+"NSCalendarsFullAccessUsageDescription" = "Sync the birthdays of people in your list to your calendar.";
+"NSContactsUsageDescription" = "Import birthdays: Memento Mori reads names, birthdays and, if you like, photos of your contacts. Only on this device, and only the people you choose are saved.";

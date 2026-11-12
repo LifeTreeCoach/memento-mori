@@ -1,0 +1,97 @@
+WPP 2024 cohort life-table asset - validation report (tool/build_lifetables.py)
+
+Locations: 238 (Country/Area with ISO2 + World as WLD)
+Dropped (no ISO2 code): none
+
+Asset: assets/lifespan/wpp2024_lt.bin 240192 bytes, sha256 65f4ed2903e3f28cc65248fdd817bfca3291f32aac853c85bd0ed6049c668d88
+Country names: CLDR 48.0.0; WPP-name fallbacks: none
+
+a) Period check (2026 rates only, slopes = 0) vs WPP ex(2026), tolerance 0.1 y
+   loc  sex      e0 model   e0 WPP e65 model  e65 WPP
+   DE   Both       81.860   81.863    20.218   20.221
+   DE   Female     84.109   84.112    21.662   21.666
+   DE   Male       79.619   79.621    18.649   18.652
+   JP   Both       85.144   85.147    22.814   22.817
+   JP   Female     88.180   88.182    25.144   25.147
+   JP   Male       82.127   82.129    20.344   20.347
+   NG   Both       54.901   54.953    12.201   12.203
+   NG   Female     55.260   55.305    12.348   12.351
+   NG   Male       54.539   54.599    12.041   12.043
+   US   Both       79.756   79.758    20.182   20.185
+   US   Female     82.229   82.231    21.388   21.391
+   US   Male       77.387   77.388    18.876   18.879
+   WLD  Both       73.757   73.768    17.942   17.945
+   WLD  Female     76.430   76.440    19.292   19.295
+   WLD  Male       71.167   71.178    16.443   16.446
+   10 worst locations (max |diff| of e0, e65):
+   GN   Male    diff 0.064  e0 59.885/59.949  e65 13.288/13.291
+   SL   Male    diff 0.063  e0 60.509/60.572  e65 11.976/11.979
+   NG   Male    diff 0.060  e0 54.539/54.599  e65 12.041/12.043
+   SO   Male    diff 0.060  e0 56.712/56.772  e65 12.912/12.915
+   SL   Both    diff 0.060  e0 62.269/62.329  e65 12.659/12.662
+   NE   Male    diff 0.057  e0 60.841/60.898  e65 12.577/12.580
+   GN   Both    diff 0.056  e0 61.171/61.227  e65 13.673/13.676
+   SO   Both    diff 0.055  e0 59.208/59.263  e65 13.512/13.515
+   NE   Both    diff 0.054  e0 61.827/61.882  e65 13.010/13.014
+   SS   Male    diff 0.054  e0 54.932/54.986  e65 12.073/12.077
+
+b) Cohort compression check: model vs year-by-year WPP cohort e(a) from 2026.0, H = 1,
+   all locations x sexes, a in {0, 30, 50, 70, 90}, tolerance 0.3 y
+   gated cases 3455: max |diff| 0.241 y, mean |diff| 0.0442 y
+   Both    max |diff| 0.239 y (MV, a=30)
+   Female  max |diff| 0.183 y (GI, a=30)
+   Male    max |diff| 0.241 y (WLD, a=0)
+   10 worst gated:
+   WLD  Male    a=0   model  76.644 true  76.403 diff 0.241
+   MV   Both    a=30  model  59.105 true  58.866 diff 0.239
+   VU   Both    a=50  model  28.216 true  27.977 diff 0.238
+   YT   Both    a=50  model  32.200 true  31.974 diff 0.226
+   MW   Both    a=50  model  26.122 true  25.918 diff 0.204
+   WLD  Both    a=0   model  78.659 true  78.460 diff 0.199
+   GI   Female  a=30  model  62.939 true  62.755 diff 0.183
+   GI   Both    a=30  model  60.340 true  60.162 diff 0.178
+   PW   Both    a=30  model  45.052 true  44.877 diff 0.175
+   JP   Female  a=30  model  64.948 true  64.774 diff 0.174
+   Not gated: 23 irregular WPP "Both" tables (jagged year-to-year ln mx > 0.02, or Both cohort e(a) outside the Female..Male range;
+   WPP aggregates Both from the sexes, so shifting sex ratios in small or migrant-heavy
+   populations make the Both series non-log-linear). Worst |diff| per location:
+   MF   Both    max diff 1.955  roughness 0.536
+   MH   Both    max diff 1.933  roughness 0.290
+   CK   Both    max diff 0.808  roughness 0.137
+   TK   Both    max diff 0.680  roughness 0.079
+   TO   Both    max diff 0.630  roughness 0.026
+   SH   Both    max diff 0.471  roughness 0.119
+   NU   Both    max diff 0.369  roughness 0.091
+   AE   Both    max diff 0.365  roughness 0.052
+   MS   Both    max diff 0.334  roughness 0.085
+   QA   Both    max diff 0.283  roughness 0.040
+   FK   Both    max diff 0.225  roughness 0.113
+   BL   Both    max diff 0.181  roughness 0.025
+   PM   Both    max diff 0.178  roughness 0.060
+   MQ   Both    max diff 0.176  roughness 0.031
+   FO   Both    max diff 0.149  roughness 0.022
+   SM   Both    max diff 0.141  roughness 0.028
+   LI   Both    max diff 0.140  roughness 0.022
+   MO   Both    max diff 0.134  roughness 0.028
+   NR   Both    max diff 0.128  roughness 0.043
+   GF   Both    max diff 0.127  roughness 0.021
+   TV   Both    max diff 0.102  roughness 0.035
+   GP   Both    max diff 0.089  roughness 0.022
+   UA   Both    max diff 0.059  roughness 0.026
+
+c) Sanity: age 36 at 2026.0, H = 1 (cohort, years are ages)
+   loc  sex       mean    p25 median    p75  reach80  reach90
+   DE   female   88.98  85.45  91.73  96.17    0.847    0.587
+   DE   male     85.54  80.36  89.08  94.23    0.756    0.459
+   DE   both     87.21  83.02  90.43  95.26    0.800    0.521
+   JP   female   94.24  90.85  96.47 100.46    0.920    0.776
+   JP   male     87.68  82.68  90.55  96.01    0.798    0.524
+   JP   both     90.90  86.52  93.61  98.70    0.858    0.648
+   US   female   87.27  82.57  90.81  95.83    0.793    0.536
+   US   male     84.22  77.95  88.54  94.14    0.718    0.442
+   US   both     85.69  80.23  89.68  95.01    0.754    0.487
+   NG   female   70.19  61.32  72.67  80.85    0.276    0.047
+   NG   male     69.21  59.95  71.48  79.86    0.246    0.035
+   NG   both     69.69  60.59  72.08  80.34    0.261    0.041
+
+RESULT: all checks passed

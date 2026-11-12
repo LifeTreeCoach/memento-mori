@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#ffffff</color>
+    <!-- Widget picker preview (stoic light; values-night has stoic dark) -->
+    <color name="widget_preview_background">#F4F1EA</color>
+    <color name="widget_preview_primary">#1C1B1A</color>
+    <color name="widget_preview_secondary">#5E5A53</color>
+    <color name="widget_preview_track">#E3DED3</color>
+    <color name="widget_preview_accent">#D4973A</color>
+</resources>
