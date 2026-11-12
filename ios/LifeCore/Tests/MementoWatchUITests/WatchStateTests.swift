@@ -29,7 +29,8 @@ struct WatchStateTests {
     }
 
     @Test func missingBirthDateNeedsPhone() {
-        let state = WatchState(inputs: WidgetInputs(values: [:]), today: Self.today)
+        // No inputs yet: the device language decides (fixed here, CI runs in English).
+        let state = WatchState(inputs: WidgetInputs(values: [:], preferredLanguages: ["de-DE"]), today: Self.today)
         #expect(state.life == nil)
         #expect(state.text.needsPhone == "Öffne Memento Mori auf deinem iPhone")
         let english = WatchState(inputs: Self.inputs(["birth_date": ""]), today: Self.today)
