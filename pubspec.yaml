@@ -56,14 +56,30 @@ dev_dependencies:
   plugin_platform_interface: ^2.1.8
 
 flutter_launcher_icons:
+  # Brand icon from branding/ (see branding/BRAND.md); regenerate with
+  # `flutter pub run flutter_launcher_icons:main`.
   android: true
   ios: true
-  image_path: "assets/icon/icon.png"
-  adaptive_icon_background: "#ffffff"
-  adaptive_icon_foreground: "assets/icon/icon.png"
-  min_sdk_android: 21
+  image_path: "branding/exports/app/app-icon-1024.png"
   remove_alpha_ios: true
-  generate_rounded_icons: true 
+  min_sdk_android: 21
+  adaptive_icon_foreground: "branding/exports/android/adaptive-foreground-1024.png"
+  adaptive_icon_background: "branding/exports/android/adaptive-background-1024.png"
+  adaptive_icon_monochrome: "branding/exports/android/adaptive-monochrome-1024.png"
+  # The foreground already keeps the hourglass inside the 66/108 safe zone.
+  adaptive_icon_foreground_inset: 0
+  web:
+    generate: true
+    image_path: "branding/exports/web/icon-512.png"
+    background_color: "#121212"
+    theme_color: "#121212"
+  macos:
+    generate: true
+    image_path: "branding/exports/app/app-icon-1024.png"
+  windows:
+    generate: true
+    image_path: "branding/exports/app/app-icon-1024.png"
+    icon_size: 256
 
 
 
@@ -89,6 +105,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/icon/icon_in_app.png
+    - branding/exports/web/icon-192.png
     - assets/fonts/licenses/
     - assets/lifespan/
     - assets/lifespan/licenses/

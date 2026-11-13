@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="branding/logo.svg" width="220" alt="Memento Mori – Life in Weeks logo">
+</p>
+
 # Memento Mori - Life in Weeks
 
 A Flutter app that shows your life as a grid: one cell per week (or month, or year), filled for

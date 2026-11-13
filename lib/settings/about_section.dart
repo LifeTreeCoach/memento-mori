@@ -87,7 +87,11 @@ class _AboutSectionState extends State<AboutSection> {
       applicationVersion: _version,
       applicationIcon: Padding(
         padding: const EdgeInsets.all(12),
-        child: Image.asset('assets/icon/icon_in_app.png', width: 48),
+        // Brand app icon (branding/BRAND.md: small sizes use the icon, not the badge).
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Image.asset('branding/exports/web/icon-192.png', width: 48),
+        ),
       ),
     );
   }

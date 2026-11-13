@@ -6,4 +6,6 @@
     <color name="widget_preview_secondary">#A9A49B</color>
     <color name="widget_preview_track">#2A2A2D</color>
     <color name="widget_preview_accent">#E0A84F</color>
+    <!-- Launch screen background (ink) -->
+    <color name="splash_background">#0F0F10</color>
 </resources>

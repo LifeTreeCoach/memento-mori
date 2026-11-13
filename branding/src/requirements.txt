@@ -1,0 +1,5 @@
+fonttools>=4.40
+shapely>=2.0
+pillow>=10.0
+# PNG export: uses the `rsvg-convert` CLI (librsvg) if installed, otherwise this:
+cairosvg>=2.7

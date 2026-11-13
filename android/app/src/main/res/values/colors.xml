@@ -7,4 +7,6 @@
     <color name="widget_preview_secondary">#5E5A53</color>
     <color name="widget_preview_track">#E3DED3</color>
     <color name="widget_preview_accent">#D4973A</color>
+    <!-- Launch screen background (paper; values-night has ink) -->
+    <color name="splash_background">#F4F1EA</color>
 </resources>
