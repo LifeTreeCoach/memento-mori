@@ -46,11 +46,23 @@ dependencies:
   timezone: ^0.11.2
   flutter_timezone: ^5.1.1
   intl: ^0.20.2
+  # Encryption at rest: pure-Dart AES-GCM (not cryptography_flutter, whose
+  # Android build applies kotlin-android via a legacy buildscript).
+  cryptography: ^2.9.0
+  # Pinned exactly: android/app/.../backup/VaultKeyStorage.kt calls the
+  # plugin's Java class without Flutter and hard-codes its option map
+  # (AndroidOptions.toMap()) and prefs file names. Another version may change
+  # either and the backup agent would read/write another entry. Before
+  # bumping: update VaultKeyStorage.OPTIONS / PLUGIN_PREFS and the backup
+  # rules; test/security/vault_key_storage_options_test.dart and
+  # test/backup_rules_test.dart check them against the resolved plugin.
+  flutter_secure_storage: 11.2.0
 
 dev_dependencies:
   device_calendar_plus_platform_interface: ^0.10.0
   flutter_launcher_icons: ^0.14.2
   flutter_lints: ^6.0.0
+  flutter_secure_storage_platform_interface: ^2.1.1
   flutter_test:
     sdk: flutter
   plugin_platform_interface: ^2.1.8
@@ -106,6 +118,7 @@ flutter:
   assets:
     - assets/icon/icon_in_app.png
     - branding/exports/web/icon-192.png
+    - branding/exports/logo/logo-512.png
     - assets/fonts/licenses/
     - assets/lifespan/
     - assets/lifespan/licenses/

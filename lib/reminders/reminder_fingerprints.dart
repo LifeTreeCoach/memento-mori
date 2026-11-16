@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:memento_mori_life_in_weeks/security/personal_store.dart';
 import 'package:timezone/timezone.dart' as tz;
 
 /// A notification the scheduler wants pending: id, fire time and text.
@@ -65,15 +65,18 @@ class ReminderDiff {
 
 /// Persists the fingerprint (see [DesiredNotification.fingerprint]) of every
 /// scheduled birthday notification, because the plugin's pending requests
-/// don't expose the fire time.
+/// don't expose the fire time. Kept in the [PersonalStore] (the texts hold
+/// names).
 class ReminderFingerprints {
-  static const String key = 'birthday_scheduled_fingerprints';
+  static const String key = PersonalKeys.birthdayScheduledFingerprints;
 
   /// The stored fingerprints, or null when missing or unreadable.
   Future<Map<int, String>?> load() async {
-    final json = (await SharedPreferences.getInstance()).getString(key);
-    if (json == null) return null;
     try {
+      final store = PersonalStore.instance;
+      await store.reload();
+      final json = store.getString(key);
+      if (json == null) return null;
       return (jsonDecode(json) as Map<String, dynamic>)
           .map((id, fingerprint) => MapEntry(int.parse(id), fingerprint as String));
     } catch (_) {
@@ -83,13 +86,13 @@ class ReminderFingerprints {
 
   Future<void> save(Iterable<DesiredNotification> scheduled) async {
     final encoded = jsonEncode({for (final n in scheduled) '${n.id}': n.fingerprint});
-    await (await SharedPreferences.getInstance()).setString(key, encoded);
+    await PersonalStore.instance.setString(key, encoded);
   }
 
   /// Forgets every fingerprint, so the next pass is a full reschedule
   /// (see [ReminderDiff.compute]).
   Future<void> clear() async {
-    await (await SharedPreferences.getInstance()).remove(key);
+    await PersonalStore.instance.remove(key);
   }
 
   /// 32-bit FNV-1a of [text] (UTF-8) as hex: stable across app runs,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:memento_mori_life_in_weeks/lifespan/lifespan_profile_store.dart';
+import 'package:memento_mori_life_in_weeks/lifespan/lifespan_result_store.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/condition_model.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/lifespan_estimator.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/lifestyle_model.dart';
@@ -176,6 +176,17 @@ void main() {
       expect(_checked(tester, 'lifespan_condition_none'), isFalse);
     });
 
+    testWidgets('says the answers are never saved', (tester) async {
+      await _pumpPage(tester);
+      final hint = find.byKey(const ValueKey('lifespan_conditions_privacy'));
+      expect(hint, findsOneWidget);
+      expect(
+        tester.widget<Text>(hint).data,
+        'These answers are never saved – they’re only used to calculate '
+        'your number.',
+      );
+    });
+
     testWidgets('skip answers null', (tester) async {
       var skipped = false;
       final answers = await _pumpPage(
@@ -273,11 +284,11 @@ void main() {
       <ChronicCondition>{},
       null,
     ]) {
-      test('conditions $conditions round-trip via the profile', () async {
+      test('conditions $conditions are never stored', () async {
         final estimate = LifespanEstimator(
           lifespanTestData.tables,
         ).estimate(country: 'DE', sex: Sex.male, birthDate: _birth, now: _now);
-        await const SettingsLifespanProfileStore().save(
+        await const SettingsLifespanResultStore().save(
           LifespanProfile.applied(
             estimate: estimate,
             answers: LifestyleAnswers(
@@ -287,9 +298,17 @@ void main() {
             years: 84,
           ),
         );
-        final stored = const SettingsLifespanProfileStore().load().answers;
-        expect(stored.conditions, conditions);
-        expect(stored.activity, Activity.some);
+        final prefs = await SharedPreferences.getInstance();
+        expect(
+          prefs.getKeys().where((key) => key.startsWith('lifespan')),
+          [SettingsService.lifespanResultKey],
+        );
+        final stored = prefs.getString(SettingsService.lifespanResultKey)!;
+        expect(stored, isNot(contains('conditions')));
+        for (final condition in ChronicCondition.values) {
+          expect(stored, isNot(contains(condition.name)));
+        }
+        expect(const SettingsLifespanResultStore().load()!.years, 84);
       });
     }
   });

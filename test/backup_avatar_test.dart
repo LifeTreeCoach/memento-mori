@@ -98,7 +98,7 @@ void main() {
       expect(friends.first, isNot(contains('avatarPath')));
       expect(friends.first['avatar']['mime'], 'image/jpeg');
       expect(friends.last, isNot(contains('avatar')));
-      expect((jsonDecode(backup) as Map)['version'], '1.5');
+      expect((jsonDecode(backup) as Map)['version'], '2.0');
 
       final (added, _) = await FriendsService.importBackupEntries(
         FriendsService.decodeBackupEntries(backup),

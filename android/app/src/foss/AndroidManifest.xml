@@ -3,9 +3,13 @@
     <application>
         <!-- image_picker_android declares this (disabled) service so Play
              services can backport the system photo picker. foss builds have
-             no Play services, so drop it here; play builds keep it. -->
+             no Play services, so drop it here; play builds keep it.
+             tools:ignore="MissingClass": lint still sees this element and
+             reports the gms class as missing, which is exactly the point in
+             foss (the class must not exist here). -->
         <service
             android:name="com.google.android.gms.metadata.ModuleDependencies"
+            tools:ignore="MissingClass"
             tools:node="remove" />
     </application>
 </manifest>

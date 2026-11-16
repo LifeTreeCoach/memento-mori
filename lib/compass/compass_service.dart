@@ -6,6 +6,7 @@ import 'package:memento_mori_life_in_weeks/compass/life_phase.dart';
 import 'package:memento_mori_life_in_weeks/compass/phase_timeline.dart';
 import 'package:memento_mori_life_in_weeks/compass/weekly_question.dart';
 import 'package:memento_mori_life_in_weeks/life/life_period.dart';
+import 'package:memento_mori_life_in_weeks/security/personal_store.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// New entries per kind from [CompassService.importDataCounts].
@@ -51,10 +52,10 @@ class CompassWeekState {
   }
 }
 
-/// Stores Compass intentions, moments, life phases and settings in
-/// SharedPreferences.
+/// Stores Compass intentions, moments and life phases ([dataKey]) in the
+/// [PersonalStore]; settings and the week state stay in SharedPreferences.
 class CompassService {
-  static const String dataKey = 'compass_data';
+  static const String dataKey = PersonalKeys.compassData;
   static const String gentleOnlyKey = 'compass_gentle_only';
   static const String showGridMarksKey = 'compass_grid_marks';
   static const String weekStateKey = 'compass_week_state';
@@ -70,14 +71,21 @@ class CompassService {
   static bool _isInitialized = false;
   static int _idCounter = 0;
 
+  /// True when the stored [dataKey] could not be read this session: saves
+  /// are refused so the unreadable data is never replaced by empty data.
+  static bool _readOnly = false;
+
+  /// Whether saving is disabled because the stored data was unreadable.
+  static bool get isReadOnly => _readOnly;
+
   /// Bumped after every change (data or settings), so screens can reload.
   static final ValueNotifier<int> revision = ValueNotifier<int>(0);
 
   /// Loads the stored data once.
   static Future<void> initialize() async {
     if (_isInitialized) return;
+    await _loadData();
     final prefs = await SharedPreferences.getInstance();
-    _data = _decode(prefs.getString(dataKey), CompassData.fromJson) ?? CompassData.empty;
     _gentleOnly = prefs.getBool(gentleOnlyKey) ?? false;
     _showGridMarks = prefs.getBool(showGridMarksKey) ?? true;
     _showLifeCard = prefs.getBool(showLifeCardKey) ?? true;
@@ -95,7 +103,27 @@ class CompassService {
     _showLifeCard = true;
     _showReflection = true;
     _weekStateJson = null;
+    _readOnly = false;
     _isInitialized = false;
+  }
+
+  /// Reads [dataKey] from the [PersonalStore] (re-read first). On any
+  /// failure the data is empty and the session read-only (see [isReadOnly]).
+  static Future<void> _loadData() async {
+    _readOnly = false;
+    try {
+      final store = PersonalStore.instance;
+      await store.reload();
+      final source = store.getString(dataKey);
+      _data = source == null
+          ? CompassData.empty
+          : CompassData.fromJson(jsonDecode(source));
+    } catch (e) {
+      debugPrint(
+          'Error loading Compass data (${e.runtimeType}); saving disabled this session');
+      _data = CompassData.empty;
+      _readOnly = true;
+    }
   }
 
   static T? _decode<T>(String? source, T Function(Object? json) parse) {
@@ -103,7 +131,7 @@ class CompassService {
     try {
       return parse(jsonDecode(source));
     } on FormatException catch (e) {
-      debugPrint('Error loading Compass data: $e');
+      debugPrint('Error loading Compass week state (${e.runtimeType})');
       return null;
     }
   }
@@ -116,10 +144,14 @@ class CompassService {
     return _data;
   }
 
+  /// Saves [data]; refused (nothing changes) while [isReadOnly].
   static Future<void> _save(CompassData data) async {
+    if (_readOnly) {
+      debugPrint('CompassService: stored data unreadable, change not saved');
+      return;
+    }
     _data = data;
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(dataKey, jsonEncode(data.toJson()));
+    await PersonalStore.instance.setString(dataKey, jsonEncode(data.toJson()));
     revision.value++;
   }
 
@@ -471,21 +503,32 @@ class CompassService {
   /// Adds the intentions, moments and phases of [imported] whose ids are not
   /// stored yet; imported "Now" intentions beyond [nowLimit] go to "Someday".
   /// Returns the number added.
-  static Future<int> importData(CompassData imported) async {
-    final added = await importDataCounts(imported);
+  ///
+  /// [friendIds] (from `FriendsService.importBackup`) maps the backup's
+  /// friend ids to the people in this app; when given, each added
+  /// intention's `friendId` is rewritten through it, and a link to nobody
+  /// in it is dropped. Null keeps the links as they are (e.g. undo).
+  static Future<int> importData(
+    CompassData imported, {
+    Map<String, String>? friendIds,
+  }) async {
+    final added = await importDataCounts(imported, friendIds: friendIds);
     return added.intentions + added.moments + added.phases;
   }
 
   /// Like [importData], but reports the new entries per kind.
   static Future<CompassImportCounts> importDataCounts(
-      CompassData imported) async {
+    CompassData imported, {
+    Map<String, String>? friendIds,
+  }) async {
     await initialize();
     final intentionIds = _data.intentions.map((i) => i.id).toSet();
     final momentIds = _data.moments.map((m) => m.id).toSet();
     final intentions = [..._data.intentions];
     var nowCount = _data.nowCount;
-    for (final intention in imported.intentions) {
-      if (!intentionIds.add(intention.id)) continue;
+    for (final original in imported.intentions) {
+      if (!intentionIds.add(original.id)) continue;
+      final intention = _relinked(original, friendIds);
       final isNow = intention.status == IntentionStatus.now;
       if (isNow && nowCount >= nowLimit) {
         intentions.add(
@@ -510,6 +553,16 @@ class CompassService {
       phases: [..._data.phases, ...newPhases],
     ));
     return added;
+  }
+
+  /// [intention] linked to its person's id in this app (see [importData]).
+  /// Intention ids are kept on import, so moments' `fromIntentionId` stay
+  /// valid without mapping.
+  static Intention _relinked(
+      Intention intention, Map<String, String>? friendIds) {
+    final linked = intention.friendId;
+    if (friendIds == null || linked == null) return intention;
+    return intention.withFriend(friendIds[linked]);
   }
 
   static List<LifePhase> _newPhases(List<LifePhase> imported) {

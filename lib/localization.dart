@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:memento_mori_life_in_weeks/l10n/compass_strings.dart';
 import 'package:memento_mori_life_in_weeks/l10n/core_strings.dart';
+import 'package:memento_mori_life_in_weeks/l10n/data_protection_strings.dart';
 import 'package:memento_mori_life_in_weeks/l10n/friend_data_strings.dart';
 import 'package:memento_mori_life_in_weeks/l10n/friend_estimate_strings.dart';
 import 'package:memento_mori_life_in_weeks/l10n/friend_form_strings.dart';
@@ -19,6 +21,7 @@ import 'package:memento_mori_life_in_weeks/l10n/settings_strings.dart';
 import 'package:memento_mori_life_in_weeks/l10n/support_strings.dart';
 import 'package:memento_mori_life_in_weeks/l10n/together_strings.dart';
 import 'package:memento_mori_life_in_weeks/l10n/tour_strings.dart';
+import 'package:memento_mori_life_in_weeks/l10n/vault_strings.dart';
 import 'package:memento_mori_life_in_weeks/l10n/week_moment_strings.dart';
 
 class AppLocalizations {
@@ -33,6 +36,19 @@ class AppLocalizations {
   /// 'fr' and 'es' get added here once their string tables exist (see
   /// [_localizedValues]); [languageNames] already knows their names.
   static const List<String> supportedLanguages = ['en', 'de', 'fr', 'es'];
+
+  /// Delegates of every app root (the app's strings plus Flutter's own).
+  static const List<LocalizationsDelegate<dynamic>> delegates = [
+    AppLocalizationsDelegate(),
+    GlobalMaterialLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+  ];
+
+  /// [supportedLanguages] as locales, for `MaterialApp.supportedLocales`.
+  static List<Locale> get supportedLocales => [
+        for (final code in supportedLanguages) Locale(code),
+      ];
 
   /// Endonyms shown in the language pickers (never translated).
   static const Map<String, String> languageNames = {
@@ -94,6 +110,8 @@ class AppLocalizations {
       ...importStringsEn,
       ...tourStringsEn,
       ...weekMomentStringsEn,
+      ...vaultStringsEn,
+      ...dataProtectionStringsEn,
     },
     'de': {
       ...coreStringsDe,
@@ -116,6 +134,8 @@ class AppLocalizations {
       ...importStringsDe,
       ...tourStringsDe,
       ...weekMomentStringsDe,
+      ...vaultStringsDe,
+      ...dataProtectionStringsDe,
     },
     'fr': {
       ...coreStringsFr,
@@ -138,6 +158,8 @@ class AppLocalizations {
       ...importStringsFr,
       ...tourStringsFr,
       ...weekMomentStringsFr,
+      ...vaultStringsFr,
+      ...dataProtectionStringsFr,
     },
     'es': {
       ...coreStringsEs,
@@ -160,6 +182,8 @@ class AppLocalizations {
       ...importStringsEs,
       ...tourStringsEs,
       ...weekMomentStringsEs,
+      ...vaultStringsEs,
+      ...dataProtectionStringsEs,
     },
   };
 

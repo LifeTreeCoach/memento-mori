@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:memento_mori_life_in_weeks/data/avatar_store.dart';
+import 'package:memento_mori_life_in_weeks/people/encrypted_file_image.dart';
 import 'package:memento_mori_life_in_weeks/people/friend_avatar.dart';
 
 /// Stored avatar paths are absolute; on iOS the app container moves on
@@ -78,7 +78,7 @@ void main() {
     });
 
     test('FriendAvatar loads the resolved file', () {
-      final photo = FriendAvatar.photoAt(oldPath)! as FileImage;
+      final photo = FriendAvatar.photoAt(oldPath)! as EncryptedFileImage;
       expect(photo.file.path, '${temp.path}/avatars/avatar_1_0.jpg');
     });
   });

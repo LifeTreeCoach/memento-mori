@@ -176,7 +176,7 @@ class CompassSetupStore {
     try {
       return CompassSetupProgress.fromJson(jsonDecode(source));
     } on FormatException catch (e) {
-      debugPrint('Error loading Compass setup progress: $e');
+      debugPrint('Error loading Compass setup progress (${e.runtimeType})');
       return CompassSetupProgress.empty;
     }
   }

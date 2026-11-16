@@ -66,6 +66,10 @@ jobs:
           if grep -i gms "$manifest"; then
             echo "foss merged manifest references Google Play Services"; exit 1
           fi
+      # Android lint fails on errors only (warnings are reported, not fatal).
+      - name: Android lint (release, both flavors)
+        working-directory: android
+        run: ./gradlew :app:lintFossRelease :app:lintPlayRelease
       - run: flutter build apk --debug --flavor play
       - run: flutter build apk --debug --flavor foss
       - name: Upload test reports

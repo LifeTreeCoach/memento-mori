@@ -14,9 +14,9 @@ import 'package:memento_mori_life_in_weeks/friend_form/lifespan_slider.dart';
 import 'package:memento_mori_life_in_weeks/friend_form/person_form_tour.dart';
 import 'package:memento_mori_life_in_weeks/friends_service.dart';
 import 'package:memento_mori_life_in_weeks/localization.dart';
-import 'package:memento_mori_life_in_weeks/people/friend_lifespan_estimate.dart';
 import 'package:memento_mori_life_in_weeks/people/group_names.dart';
 import 'package:memento_mori_life_in_weeks/data/avatar_store.dart';
+import 'package:memento_mori_life_in_weeks/data/picked_files.dart';
 import 'package:memento_mori_life_in_weeks/theme/motion.dart';
 import 'package:memento_mori_life_in_weeks/tour/tour_anchor.dart';
 import 'package:memento_mori_life_in_weeks/tour/tour_anchors.dart';
@@ -75,8 +75,9 @@ class _AddFriendScreenState extends State<AddFriendScreen> {
   bool _yearUnknown = false;
   int _customLifespan = LifeCalculator.defaultLifeExpectancyYears;
 
-  /// The person's estimate answers; kept (unused) while the year is unknown.
-  FriendLifespanEstimate? _lifespanEstimate;
+  /// The years the person's estimate applied (never its answers); kept
+  /// (unused) while the year is unknown.
+  int? _estimatedYears;
   bool _isLoading = false;
   String? _avatarPath;
 
@@ -105,7 +106,7 @@ class _AddFriendScreenState extends State<AddFriendScreen> {
       _selectedBirthDate = widget.friend!.birthDate;
       _yearUnknown = !widget.friend!.hasBirthYear;
       _customLifespan = widget.friend!.customLifespan;
-      _lifespanEstimate = widget.friend!.lifespanEstimate;
+      _estimatedYears = widget.friend!.estimatedYears;
       _avatarPath = widget.friend!.avatarPath;
     }
     _initialValues = _currentValues();
@@ -146,7 +147,7 @@ class _AddFriendScreenState extends State<AddFriendScreen> {
         name: _nameController.text,
         birthDate: _selectedBirthDate,
         yearUnknown: _yearUnknown,
-        hasEstimate: _lifespanEstimate != null,
+        hasEstimate: _estimatedYears != null,
       );
 
   /// Shows the estimate tip once, when the form is ready for it and
@@ -203,7 +204,7 @@ class _AddFriendScreenState extends State<AddFriendScreen> {
         birthDate: _selectedBirthDate,
         yearUnknown: _yearUnknown,
         lifespan: _customLifespan,
-        estimate: _lifespanEstimate,
+        estimatedYears: _estimatedYears,
         avatarPath: _avatarPath,
       );
 
@@ -318,7 +319,7 @@ class _AddFriendScreenState extends State<AddFriendScreen> {
   }
 
   /// Opens the estimate about this person (needs a name and a birth
-  /// date); applying it sets the slider and keeps the answers.
+  /// date); applying it sets the slider and keeps only the years.
   Future<void> _openEstimate() async {
     _dismissKeyboard();
     final name = _nameController.text.trim();
@@ -337,22 +338,22 @@ class _AddFriendScreenState extends State<AddFriendScreen> {
       FriendEstimateRequest(
         name: name,
         birthDate: birthDate,
-        initial: FriendEstimateRequest.initialProfile(_lifespanEstimate),
+        initial: FriendEstimateRequest.initialProfile(),
         currentYears: _customLifespan,
       ),
     );
     final years = profile?.applied?.appliedYears;
     if (!mounted || profile == null || years == null) return;
     setState(() {
-      _lifespanEstimate = FriendLifespanEstimate(profile);
       _customLifespan = years
           .clamp(LifespanSlider.minYears, LifespanSlider.maxYears)
           .toInt();
+      _estimatedYears = _customLifespan;
     });
   }
 
-  /// "Forget the answers, keep the number".
-  void _forgetEstimate() => setState(() => _lifespanEstimate = null);
+  /// Forgets that the number came from an estimate; keeps the number.
+  void _forgetEstimate() => setState(() => _estimatedYears = null);
 
   /// Picks a photo from [source] and copies it into the app's avatars folder.
   Future<void> _pickAvatar(ImageSource source) async {
@@ -378,8 +379,14 @@ class _AddFriendScreenState extends State<AddFriendScreen> {
     }
   }
 
-  Future<String> _saveAvatar(XFile image) async =>
-      const AvatarStore().save(await image.readAsBytes());
+  /// Stores [image] as an avatar and removes the picker's temp copy.
+  Future<String> _saveAvatar(XFile image) async {
+    try {
+      return await const AvatarStore().save(await image.readAsBytes());
+    } finally {
+      await deletePickedImageCopy(image.path);
+    }
+  }
 
   void _showAvatarOptions() {
     _dismissKeyboard();
@@ -424,8 +431,8 @@ class _AddFriendScreenState extends State<AddFriendScreen> {
         groupName: _groupName,
         clearGroupName: _groupName == null,
         customLifespan: _customLifespan,
-        lifespanEstimate: _lifespanEstimate,
-        clearLifespanEstimate: _lifespanEstimate == null,
+        estimatedYears: _estimatedYears,
+        clearEstimatedYears: _estimatedYears == null,
         lastUpdated: now,
       );
     }
@@ -439,7 +446,7 @@ class _AddFriendScreenState extends State<AddFriendScreen> {
       customNotificationMessage: _trimmedOrNull(_customNotificationController),
       groupName: _groupName,
       customLifespan: _customLifespan,
-      lifespanEstimate: _lifespanEstimate,
+      estimatedYears: _estimatedYears,
       createdDate: now,
       lastUpdated: now,
     );
@@ -602,7 +609,7 @@ class _AddFriendScreenState extends State<AddFriendScreen> {
       TourAnchor(
         id: PersonFormTour.estimateAnchor,
         child: LifespanEstimateTile(
-          estimate: _lifespanEstimate,
+          estimatedYears: _estimatedYears,
           lifespan: _customLifespan,
           onOpen: _openEstimate,
           onForget: _forgetEstimate,
@@ -697,6 +704,6 @@ typedef _FormValues = ({
   DateTime? birthDate,
   bool yearUnknown,
   int lifespan,
-  FriendLifespanEstimate? estimate,
+  int? estimatedYears,
   String? avatarPath,
 });

@@ -9,6 +9,7 @@ import 'package:memento_mori_life_in_weeks/data/backup_avatar.dart';
 import 'package:memento_mori_life_in_weeks/friend.dart';
 import 'package:memento_mori_life_in_weeks/people/group_migration.dart';
 import 'package:memento_mori_life_in_weeks/people/group_names.dart';
+import 'package:memento_mori_life_in_weeks/security/personal_store.dart';
 
 /// A friend read from a backup, with the photo embedded there (if any).
 @immutable
@@ -30,6 +31,27 @@ class BackupContents {
   final CompassData? compass;
 }
 
+/// Outcome of [FriendsService.importBackup].
+@immutable
+class FriendsImportResult {
+  const FriendsImportResult({
+    required this.added,
+    required this.skipped,
+    required this.friendIds,
+  });
+
+  final int added;
+
+  /// Entries already present (or repeated within the backup).
+  final int skipped;
+
+  /// Friend id in the backup -> id of that person in this app: the new id
+  /// of an added friend, the existing friend's id for a skipped duplicate.
+  /// Every friend already stored maps to itself, so a backup made on this
+  /// device keeps its links.
+  final Map<String, String> friendIds;
+}
+
 /// Invalid friends backup; [messageKey] is a localization key.
 class FriendsBackupException implements Exception {
   const FriendsBackupException(this.messageKey);
@@ -40,7 +62,8 @@ class FriendsBackupException implements Exception {
 }
 
 class FriendsService {
-  static const String _friendsKey = 'friends_data';
+  /// In the [PersonalStore]; every other key stays in SharedPreferences.
+  static const String _friendsKey = PersonalKeys.friendsData;
   /// Legacy store of per-friend notification state; removed on load.
   static const String _legacyBirthdayNotificationsKey = 'birthday_notifications';
   static const String _birthdayNotificationsEnabledKey = 'birthday_notifications_enabled';
@@ -51,16 +74,28 @@ class FriendsService {
   /// let-go intention as "Someday"); 1.4 adds birthdays without a year
   /// (`birthDate` `--MM-dd`, skipped by older apps as unreadable entries)
   /// and the optional `importSource` / `importSourceId` per friend; 1.5
-  /// adds the optional per-person `lifespanEstimate` (answers incl. health
-  /// conditions and the applied result), ignored by older apps.
-  /// Readers accept every 1.x backup.
-  static const String backupVersion = '1.5';
+  /// added a per-person `lifespanEstimate` with its answers. 2.0 stores
+  /// that estimate as the plain number `estimatedYears` only: health and
+  /// lifestyle answers are never exported (a 1.5 `lifespanEstimate` is
+  /// ignored on import). Readers accept every 1.x and 2.x backup.
+  static const String backupVersion = '2.0';
+
+  /// Newest backup major version this app reads.
+  static const int _maxBackupMajorVersion = 2;
 
   /// Key of the Compass section in a backup.
   static const String backupCompassKey = 'compass';
 
   static List<Friend> _cachedFriends = [];
   static bool _isInitialized = false;
+
+  /// True when the stored friends could not be read this session: saves
+  /// are refused so the unreadable data is never replaced by an empty or
+  /// partial list.
+  static bool _readOnly = false;
+
+  /// Whether saving is disabled because the stored friends were unreadable.
+  static bool get isReadOnly => _readOnly;
   static bool _birthdayNotificationsEnabled = true;
 
   /// Photos of people deleted in this session: kept on disk until the next
@@ -97,6 +132,7 @@ class FriendsService {
     _cachedFriends = [];
     _avatarsDeletedThisSession.clear();
     _birthdayNotificationsEnabled = true;
+    _readOnly = false;
     _isInitialized = false;
   }
 
@@ -114,6 +150,7 @@ class FriendsService {
 
   /// Once: typed "Family"/"Friends" groups become the predefined ids.
   static Future<void> _migrateGroupNames() async {
+    if (_readOnly) return; // retried once the friends can be read
     final prefs = await SharedPreferences.getInstance();
     if (prefs.getBool(GroupMigration.doneKey) ?? false) return;
     final migrated = GroupMigration.migrate(_cachedFriends);
@@ -157,7 +194,7 @@ class FriendsService {
     try {
       await callback(friendIds);
     } catch (e) {
-      debugPrint('Error in friends removal callback: $e');
+      debugPrint('Error in friends removal callback (${e.runtimeType})');
     }
   }
 
@@ -168,15 +205,18 @@ class FriendsService {
     try {
       await callback();
     } catch (e) {
-      debugPrint('Error in friends change callback: $e');
+      debugPrint('Error in friends change callback (${e.runtimeType})');
     }
   }
 
-  /// Load friends from SharedPreferences
+  /// Load friends from the [PersonalStore] (re-read first). On any failure
+  /// the session becomes read-only (see [isReadOnly]).
   static Future<void> _loadFriends() async {
+    _readOnly = false;
     try {
-      final prefs = await SharedPreferences.getInstance();
-      final friendsJson = prefs.getString(_friendsKey);
+      final store = PersonalStore.instance;
+      await store.reload();
+      final friendsJson = store.getString(_friendsKey);
 
       if (friendsJson != null) {
         final List<dynamic> friendsList = json.decode(friendsJson);
@@ -188,19 +228,28 @@ class FriendsService {
         _cachedFriends = [];
       }
     } catch (e) {
-      debugPrint('Error loading friends: $e');
+      debugPrint(
+          'Error loading friends (${e.runtimeType}); saving disabled this session');
       _cachedFriends = [];
+      _readOnly = true;
     }
   }
 
-  /// Save friends to SharedPreferences
+  /// Logs (without personal data) and returns true while [isReadOnly].
+  static bool _refuseWriteWhenReadOnly() {
+    if (!_readOnly) return false;
+    debugPrint('FriendsService: stored friends unreadable, change not saved');
+    return true;
+  }
+
+  /// Save friends to the [PersonalStore]; refused while [isReadOnly].
   static Future<void> _saveFriends() async {
+    if (_refuseWriteWhenReadOnly()) return;
     try {
-      final prefs = await SharedPreferences.getInstance();
       final friendsJson = json.encode(_cachedFriends.map((f) => f.toMap()).toList());
-      await prefs.setString(_friendsKey, friendsJson);
+      await PersonalStore.instance.setString(_friendsKey, friendsJson);
     } catch (e) {
-      debugPrint('Error saving friends: $e');
+      debugPrint('Error saving friends (${e.runtimeType})');
     }
   }
 
@@ -235,6 +284,7 @@ class FriendsService {
   }) async {
     await initialize();
     if (add.isEmpty && update.isEmpty && remove.isEmpty) return;
+    if (_refuseWriteWhenReadOnly()) return;
     final indexById = {
       for (var i = 0; i < _cachedFriends.length; i++) _cachedFriends[i].id: i,
     };
@@ -397,7 +447,7 @@ class FriendsService {
   static List<BackupEntry> decodeBackupEntries(String jsonString) =>
       decodeBackupContents(jsonString).entries;
 
-  /// Friends (with embedded photos) and Compass data of a 1.x backup;
+  /// Friends (with embedded photos) and Compass data of a 1.x or 2.x backup;
   /// friend entries may be maps or (legacy) JSON strings, unreadable entries
   /// are skipped, corrupt photos ignored. Throws [FriendsBackupException]
   /// for invalid files and for files with neither friends nor Compass data.
@@ -410,7 +460,8 @@ class FriendsService {
     }
     if (importData is! Map<String, dynamic> ||
         importData['friends'] is! List ||
-        !importData.containsKey('version')) {
+        !importData.containsKey('version') ||
+        _isNewerMajorVersion(importData['version'])) {
       throw const FriendsBackupException('import_export_error_invalid_format');
     }
     final friends = _parseBackupEntries(importData['friends'] as List);
@@ -419,6 +470,13 @@ class FriendsService {
       throw const FriendsBackupException('import_export_error_no_valid_friends');
     }
     return BackupContents(friends, compass: compass.isEmpty ? null : compass);
+  }
+
+  /// Whether [version] (`"2.0"`, or a number in old files) comes from a
+  /// newer app whose format this one cannot read.
+  static bool _isNewerMajorVersion(Object? version) {
+    final major = int.tryParse('$version'.split('.').first);
+    return major != null && major > _maxBackupMajorVersion;
   }
 
   static List<BackupEntry> _parseBackupEntries(List<dynamic> entries) {
@@ -433,7 +491,7 @@ class FriendsService {
           avatar: BackupAvatar.fromJson(map[BackupAvatar.key]),
         ));
       } catch (e) {
-        debugPrint('Error parsing friend data: $e');
+        debugPrint('Skipped an unreadable backup entry (${e.runtimeType})');
       }
     }
     return friends;
@@ -450,23 +508,44 @@ class FriendsService {
     List<BackupEntry> imported, {
     AvatarStore avatarStore = const AvatarStore(),
   }) async {
-    final knownPeople = {
-      for (final friend in await getAllFriends()) friend.identityKey,
-    };
+    final result = await importBackup(imported, avatarStore: avatarStore);
+    return (result.added, result.skipped);
+  }
+
+  /// As [importBackupEntries], and also reports which friend in this app
+  /// each backup id now stands for ([FriendsImportResult.friendIds]).
+  static Future<FriendsImportResult> importBackup(
+    List<BackupEntry> imported, {
+    AvatarStore avatarStore = const AvatarStore(),
+  }) async {
+    final existing = await getAllFriends();
+    // identityKey -> id in this app; map lookups stay linear for large
+    // backups and also catch repeats within the backup itself.
+    final idByIdentity = {for (final f in existing) f.identityKey: f.id};
+    final friendIds = {for (final f in existing) f.id: f.id};
     final now = DateTime.now();
     final newFriends = <Friend>[];
     for (final entry in imported) {
-      // Set lookup (linear for large backups); also skips repeats within
-      // the backup itself.
-      if (!knownPeople.add(entry.friend.identityKey)) continue;
+      final known = idByIdentity[entry.friend.identityKey];
+      if (known != null) {
+        friendIds[entry.friend.id] = known;
+        continue;
+      }
       final avatarPath = await avatarStore.restore(entry.avatar);
-      newFriends.add(
-          _asNewFriend(entry.friend, now, newFriends.length, avatarPath));
+      final added =
+          _asNewFriend(entry.friend, now, newFriends.length, avatarPath);
+      newFriends.add(added);
+      idByIdentity[added.identityKey] = added.id;
+      friendIds[entry.friend.id] = added.id;
     }
     await addFriends(newFriends);
     // In the background: the import result doesn't wait for file cleanup.
     unawaited(lastAvatarCleanup = removeOrphanedAvatars(avatarStore: avatarStore));
-    return (newFriends.length, imported.length - newFriends.length);
+    return FriendsImportResult(
+      added: newFriends.length,
+      skipped: imported.length - newFriends.length,
+      friendIds: friendIds,
+    );
   }
 
   /// The cleanup started by the last import; awaited by tests.
@@ -496,8 +575,9 @@ class FriendsService {
   /// when the stored list cannot be read, so nothing is deleted by mistake.
   static Future<List<String?>?> _storedAvatarPaths() async {
     try {
-      final prefs = await SharedPreferences.getInstance();
-      final friendsJson = prefs.getString(_friendsKey);
+      final store = PersonalStore.instance;
+      await store.reload();
+      final friendsJson = store.getString(_friendsKey);
       if (friendsJson == null) return const [];
       final entries = json.decode(friendsJson) as List<dynamic>;
       return [
@@ -505,7 +585,7 @@ class FriendsService {
           if ((entry as Map)['avatarPath'] case final String path) path,
       ];
     } catch (e) {
-      debugPrint('Avatar cleanup skipped, friends unreadable: $e');
+      debugPrint('Avatar cleanup skipped, friends unreadable (${e.runtimeType})');
       return null;
     }
   }
@@ -533,6 +613,7 @@ class FriendsService {
       hasBirthYear: friend.hasBirthYear,
       importSource: friend.importSource,
       importSourceId: friend.importSourceId,
+      estimatedYears: friend.estimatedYears,
       createdDate: now,
       lastUpdated: now,
     );
@@ -541,12 +622,12 @@ class FriendsService {
   /// Removes all friends (reminder settings are kept).
   static Future<void> clearAllData() async {
     await initialize();
+    if (_refuseWriteWhenReadOnly()) return;
     final removedIds = _cachedFriends.map((f) => f.id).toList();
     _cachedFriends.forEach(_rememberDeletedAvatar);
     _cachedFriends.clear();
 
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.remove(_friendsKey);
+    await PersonalStore.instance.remove(_friendsKey);
     await _notifyRemoved(removedIds);
     await _notifyChanged();
   }

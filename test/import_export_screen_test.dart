@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:typed_data';
 
@@ -9,6 +10,7 @@ import 'package:memento_mori_life_in_weeks/compass/compass_models.dart';
 import 'package:memento_mori_life_in_weeks/compass/compass_service.dart';
 import 'package:memento_mori_life_in_weeks/compass/life_phase.dart';
 import 'package:memento_mori_life_in_weeks/friend.dart';
+import 'package:memento_mori_life_in_weeks/data/encrypted_backup.dart';
 import 'package:memento_mori_life_in_weeks/data/friends_import_export_screen.dart';
 import 'package:memento_mori_life_in_weeks/friends_service.dart';
 import 'package:memento_mori_life_in_weeks/localization.dart';
@@ -19,6 +21,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 class _FakeFilePicker extends FilePickerPlatform {
   Uri? savedTo;
   String? pickedJson;
+
+  /// Size the picker reports for [pickedJson] (null = its real length).
+  int? pickedLength;
+
+  /// Whether the picked file's bytes were read at all.
+  bool pickedRead = false;
   String? savedName;
   String? savedMime;
   Uint8List? savedBytes;
@@ -60,14 +68,15 @@ class _FakeFilePicker extends FilePickerPlatform {
     WebOptions webOptions = const WebOptions(),
   }) async {
     final json = pickedJson;
-    return json == null ? null : _JsonFile(json);
+    return json == null ? null : _JsonFile(json, this);
   }
 }
 
 final class _JsonFile extends PlatformFile {
-  _JsonFile(this.json);
+  _JsonFile(this.json, this.picker);
 
   final String json;
+  final _FakeFilePicker picker;
 
   @override
   String get name => 'backup.json';
@@ -79,16 +88,22 @@ final class _JsonFile extends PlatformFile {
   XFile get xFile => throw UnimplementedError();
 
   @override
-  int? lengthSync() => json.length;
+  int? lengthSync() => picker.pickedLength ?? json.length;
 
   @override
-  Future<int?> length() async => json.length;
+  Future<int?> length() async => lengthSync();
 
   @override
-  Future<Uint8List> readAsBytes() async => utf8.encode(json);
+  Future<Uint8List> readAsBytes() async {
+    picker.pickedRead = true;
+    return utf8.encode(json);
+  }
 
   @override
-  Stream<Uint8List> readAsByteStream() => Stream.value(utf8.encode(json));
+  Stream<Uint8List> readAsByteStream() {
+    picker.pickedRead = true;
+    return Stream.value(utf8.encode(json));
+  }
 }
 
 Friend _anna() => Friend(
@@ -99,6 +114,16 @@ Friend _anna() => Friend(
       lastUpdated: DateTime(2026),
     );
 
+Future<R> _inPlace<R>(FutureOr<R> Function() computation) async =>
+    computation();
+
+/// Fast key derivation, run in the test's zone (no isolate).
+const _fastCipher = EncryptedBackup(
+  iterations: 1000,
+  minIterations: 1000,
+  runInBackground: _inPlace,
+);
+
 Future<void> _pump(WidgetTester tester, {String lang = 'en'}) async {
   await tester.pumpWidget(MaterialApp(
     locale: Locale(lang),
@@ -107,7 +132,7 @@ Future<void> _pump(WidgetTester tester, {String lang = 'en'}) async {
       AppLocalizationsDelegate(),
       ...GlobalMaterialLocalizations.delegates,
     ],
-    home: const FriendsImportExportScreen(),
+    home: const FriendsImportExportScreen(encryptedBackup: _fastCipher),
   ));
   await tester.pump();
 }
@@ -125,6 +150,8 @@ void main() {
 
   test('backup file name carries the date', () {
     expect(backupFileName(DateTime(2026, 3, 7, 22)), 'memento_backup_2026-03-07.json');
+    expect(backupFileName(DateTime(2026, 3, 7), protected: true),
+        'memento_backup_2026-03-07_protected.json');
   });
 
   testWidgets('save to device writes the backup and reports it', (tester) async {
@@ -163,6 +190,22 @@ void main() {
     expect(find.textContaining('Import completed: 1 added'), findsOneWidget);
     expect(find.byType(SnackBar), findsNothing);
     expect(picker.cleared, 1, reason: 'picked backup copy removed');
+  });
+
+  testWidgets('a file over the size cap is refused before it is read',
+      (tester) async {
+    picker
+      ..pickedJson = FriendsService.encodeBackup([_anna()])
+      ..pickedLength = EncryptedBackup.maxFileLength + 1;
+    await _pump(tester);
+    await tester.tap(find.text('Import people'));
+    await tester.pumpAndSettle();
+
+    expect(picker.pickedRead, isFalse);
+    expect(find.textContaining('This file is too large for a backup.'),
+        findsOneWidget);
+    expect(find.text('Import'), findsNothing);
+    expect(picker.cleared, 1, reason: 'picked copy removed');
   });
 
   testWidgets('a cancelled backup pick also clears the picker cache',
@@ -279,6 +322,159 @@ void main() {
       await tester.tap(find.widgetWithText(FilledButton, 'Import'));
       await tester.pumpAndSettle();
       expect(find.text('Compass: 0 new entries added'), findsOneWidget);
+    });
+  });
+
+  group('password protection', () {
+    Finder dialogField(int index) => find
+        .descendant(of: find.byType(AlertDialog), matching: find.byType(TextField))
+        .at(index);
+
+    Future<void> enterNewPassword(
+        WidgetTester tester, String password, String repeat) async {
+      await tester.enterText(dialogField(0), password);
+      await tester.enterText(dialogField(1), repeat);
+      await tester.tap(find.widgetWithText(FilledButton, 'Protect'));
+      await tester.pump();
+    }
+
+    testWidgets('the switch is off by default and exports stay plain',
+        (tester) async {
+      await FriendsService.addFriend(_anna());
+      picker.savedTo = Uri.parse('content://downloads/1');
+      await _pump(tester);
+      final toggle =
+          tester.widget<SwitchListTile>(find.byType(SwitchListTile));
+      expect(toggle.value, isFalse);
+      await tester.tap(find.text('Save to device'));
+      await tester.pumpAndSettle();
+      expect(find.byType(AlertDialog), findsNothing);
+      expect(EncryptedBackup.isEncryptedBackup(utf8.decode(picker.savedBytes!)),
+          isFalse);
+    });
+
+    testWidgets('a protected export checks the password and encrypts',
+        (tester) async {
+      await FriendsService.addFriend(_anna());
+      picker.savedTo = Uri.parse('content://downloads/1');
+      await _pump(tester);
+      await tester.tap(find.text('Protect with a password'));
+      await tester.pump();
+      await tester.tap(find.text('Save to device'));
+      await tester.pumpAndSettle();
+      expect(find.text('Choose a password'), findsOneWidget);
+      expect(find.textContaining('nobody can recover the password'),
+          findsOneWidget);
+
+      await enterNewPassword(tester, 'short', 'short');
+      expect(find.text('Use at least 8 characters'), findsOneWidget);
+
+      await enterNewPassword(tester, 'long enough', 'long enougH');
+      expect(find.text('The passwords don’t match'), findsOneWidget);
+      expect(picker.savedBytes, isNull);
+
+      await enterNewPassword(tester, 'long enough', 'long enough');
+      await tester.pumpAndSettle();
+      expect(find.byType(AlertDialog), findsNothing);
+      expect(picker.savedName, endsWith('_protected.json'));
+      final saved = utf8.decode(picker.savedBytes!);
+      expect(EncryptedBackup.isEncryptedBackup(saved), isTrue);
+      expect(saved, isNot(contains('Anna')));
+      final plain = await _fastCipher.decrypt(saved, 'long enough');
+      expect(FriendsService.decodeBackup(plain).single.name, 'Anna');
+      expect(find.text('Exported 1 person'), findsOneWidget);
+    });
+
+    testWidgets('the password can be shown', (tester) async {
+      await FriendsService.addFriend(_anna());
+      await _pump(tester);
+      await tester.tap(find.text('Protect with a password'));
+      await tester.pump();
+      await tester.tap(find.text('Save to device'));
+      await tester.pumpAndSettle();
+      bool obscured() =>
+          tester.widget<EditableText>(find.descendant(
+              of: dialogField(0), matching: find.byType(EditableText))).obscureText;
+      expect(obscured(), isTrue);
+      await tester.tap(find.byTooltip('Show password').first);
+      await tester.pump();
+      expect(obscured(), isFalse);
+      expect(find.byTooltip('Hide password'), findsOneWidget);
+    });
+
+    testWidgets('cancelling the password dialog exports nothing',
+        (tester) async {
+      await FriendsService.addFriend(_anna());
+      picker.savedTo = Uri.parse('content://downloads/1');
+      await _pump(tester);
+      await tester.tap(find.text('Protect with a password'));
+      await tester.pump();
+      await tester.tap(find.text('Save to device'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Cancel'));
+      await tester.pumpAndSettle();
+      expect(picker.savedBytes, isNull);
+      expect(find.text('Export cancelled'), findsOneWidget);
+    });
+
+    testWidgets('a protected import asks again after a wrong password',
+        (tester) async {
+      picker.pickedJson = await _fastCipher.encrypt(
+          FriendsService.encodeBackup([_anna()]), 'right password');
+      await _pump(tester);
+      await tester.tap(find.text('Import people'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
+      expect(find.text('Protected backup'), findsOneWidget);
+
+      await tester.enterText(dialogField(0), 'wrong password');
+      await tester.tap(find.widgetWithText(FilledButton, 'Unlock'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
+      expect(find.text('Protected backup'), findsOneWidget);
+      expect(find.text('Wrong password, or the file was changed. Try again.'),
+          findsOneWidget);
+
+      await tester.enterText(dialogField(0), 'right password');
+      await tester.tap(find.widgetWithText(FilledButton, 'Unlock'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
+      expect(find.text('Found 1 person to import.'), findsOneWidget);
+      await tester.tap(find.widgetWithText(FilledButton, 'Import'));
+      await tester.pumpAndSettle();
+      expect(find.textContaining('Import completed: 1 added'), findsOneWidget);
+      expect((await FriendsService.getAllFriends()).single.name, 'Anna');
+    });
+
+    testWidgets('cancelling the password cancels the import', (tester) async {
+      picker.pickedJson = await _fastCipher.encrypt(
+          FriendsService.encodeBackup([_anna()]), 'right password');
+      await _pump(tester);
+      await tester.tap(find.text('Import people'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
+      await tester.tap(find.text('Cancel'));
+      await tester.pumpAndSettle();
+      expect(find.text('Import cancelled'), findsOneWidget);
+      expect(await FriendsService.getAllFriends(), isEmpty);
+    });
+
+    testWidgets('a damaged protected file reports it', (tester) async {
+      final sealed = jsonDecode(await _fastCipher.encrypt(
+          FriendsService.encodeBackup([_anna()]), 'right password')) as Map;
+      sealed['kdf']['iterations'] = 1;
+      picker.pickedJson = jsonEncode(sealed);
+      await _pump(tester);
+      await tester.tap(find.text('Import people'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
+      await tester.enterText(dialogField(0), 'right password');
+      await tester.tap(find.widgetWithText(FilledButton, 'Unlock'));
+      await tester.pumpAndSettle();
+      expect(
+          find.text('Import failed: '
+              'This protected backup is damaged or incomplete'),
+          findsOneWidget);
     });
   });
 }

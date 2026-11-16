@@ -3,16 +3,23 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:memento_mori_life_in_weeks/app_shell.dart';
 import 'package:memento_mori_life_in_weeks/compass/compass_service.dart';
 import 'package:memento_mori_life_in_weeks/compass/compass_setup_progress.dart';
 import 'package:memento_mori_life_in_weeks/data/avatar_store.dart';
+import 'package:memento_mori_life_in_weeks/data/export_temp_files.dart';
 import 'package:memento_mori_life_in_weeks/settings_service.dart';
 import 'package:memento_mori_life_in_weeks/localization.dart';
 import 'package:memento_mori_life_in_weeks/reminders/notification_service.dart';
+import 'package:memento_mori_life_in_weeks/onboarding/first_launch_logo.dart';
 import 'package:memento_mori_life_in_weeks/onboarding/onboarding_screen.dart';
 import 'package:memento_mori_life_in_weeks/reminders/reminder_service.dart';
+import 'package:memento_mori_life_in_weeks/security/ui/locked_data_app.dart';
+import 'package:memento_mori_life_in_weeks/security/personal_store.dart';
+import 'package:memento_mori_life_in_weeks/security/ui/locked_data_screen.dart';
+import 'package:memento_mori_life_in_weeks/security/ui/unsaved_changes_notice.dart';
+import 'package:memento_mori_life_in_weeks/security/vault_bootstrap.dart';
+import 'package:memento_mori_life_in_weeks/security/vault_personal_store.dart';
 import 'package:memento_mori_life_in_weeks/support/support_scope.dart';
 import 'package:memento_mori_life_in_weeks/support/support_service.dart';
 import 'package:memento_mori_life_in_weeks/week_moment/week_moment_store.dart';
@@ -66,22 +73,83 @@ void registerFontLicenses() {
   });
 }
 
+/// The encrypted personal data (birth date, people, Compass, ...).
+final VaultBootstrap _vault = VaultBootstrap.production();
+
 void main() async {
+  _silenceLogsInRelease();
   WidgetsFlutterBinding.ensureInitialized();
   registerFontLicenses();
+  // Every service reads personal data through the vault, so it opens first.
+  final vault = await _vault.open();
+  if (vault.isReady) {
+    await _startApp();
+  } else {
+    await _showLockedData(_lockedReason(vault));
+  }
+}
+
+/// Transient issues offer only "Try again"; "Start fresh" only when the data
+/// can't be opened with this device's key ([VaultOpenResult.mayStartFresh]).
+LockedDataReason _lockedReason(VaultOpenResult result) => result.mayStartFresh
+    ? LockedDataReason.locked
+    : LockedDataReason.unavailable;
+
+/// While the personal data is locked only theme and language load: nothing
+/// else starts, so no reminder, calendar event, photo or widget input is
+/// rewritten or deleted from the (unreadable) data.
+Future<void> _showLockedData(LockedDataReason reason) async {
+  await SettingsService.initialize();
+  runApp(LockedDataApp(
+    reason: reason,
+    onTryAgain: _tryUnlocking,
+    onStartFresh: _startFresh,
+  ));
+}
+
+/// "Try again" on the locked screen: starts the app if the data opens now,
+/// else returns why it is still locked.
+Future<LockedDataReason?> _tryUnlocking() async {
+  final result = await _vault.open();
+  if (!result.isReady) return _lockedReason(result);
+  await _startApp();
+  return null;
+}
+
+/// "Start fresh" on the locked screen: deletes the locked data and photos,
+/// then starts the app with onboarding.
+Future<void> _startFresh() async {
+  await _vault.startFresh();
+  await SettingsService.initialize();
+  SettingsService.setOnboardingCompleted(false);
+  await _startApp();
+}
+
+/// Starts the app; only with readable personal data.
+Future<void> _startApp() async {
   // Only settings are needed for the first frame (theme, language, routing).
   await SettingsService.initialize();
-  // Records the first use (support prompt schedule) on the first launch.
-  await _guarded('Support service', SupportService.initialize);
-  // Compass state is read by the Life tab's question card on the first frame.
-  await _guarded('Compass service', CompassService.initialize);
-  await _guarded('Compass setup', CompassSetupStore.initialize);
-  // Records the day the weekly moment arrived (no catch-up before it).
-  await _guarded('Week moment', WeekMomentStore.initialize);
-  // Friend photos are resolved against this run's documents directory.
-  await _guarded('Avatar store', AvatarStore.init);
+  // Independent of each other (own keys, personal data already open), so
+  // they load in parallel; each is guarded on its own.
+  await Future.wait([
+    // Records the first use (support prompt schedule) on the first launch.
+    _guarded('Support service', SupportService.initialize),
+    // Compass state is read by the Life tab's question card on the first frame.
+    _guarded('Compass service', CompassService.initialize),
+    _guarded('Compass setup', CompassSetupStore.initialize),
+    // Records the day the weekly moment arrived (no catch-up before it).
+    _guarded('Week moment', WeekMomentStore.initialize),
+    // Friend photos are resolved against this run's documents directory.
+    _guarded('Avatar store', AvatarStore.init),
+  ]);
   runApp(MementoMoriApp());
   unawaited(_startBackgroundServices());
+}
+
+/// `debugPrint` is not stripped from release builds (it reaches logcat and the
+/// iOS console), so release builds log nothing at all.
+void _silenceLogsInRelease() {
+  if (kReleaseMode) debugPrint = (String? message, {int? wrapWidth}) {};
 }
 
 /// Notifications, widget inputs and reminders, started after the first frame
@@ -107,6 +175,8 @@ Future<void> _startBackgroundServices() async {
   unawaited(CalendarService.requestSync());
   // Photos of people deleted in an earlier session (after their undo).
   await _guarded('Avatar cleanup', FriendsService.removeOrphanedAvatars);
+  // Backups shared as files in an earlier session (plain JSON).
+  unawaited(const ExportTempFiles().purge());
   // Notification permission is requested later, when the user opts into reminders.
   await _guarded('Reminder service', ReminderService.initialize);
   // Onboarding schedules everything when it finishes (with the chosen
@@ -126,7 +196,7 @@ Future<void> _guarded(String step, Future<void> Function() action) async {
   try {
     await action();
   } catch (e) {
-    debugPrint('$step initialization failed: $e');
+    debugPrint('$step initialization failed (${e.runtimeType})');
   }
 }
 
@@ -144,10 +214,14 @@ class _MementoMoriAppState extends State<MementoMoriApp> {
   final SupportSetup _support = SupportSetup.fromEnvironment();
   bool hasCompletedOnboarding = false;
 
+  /// The badge before the onboarding, on the very first launch only.
+  bool _showFirstLaunchLogo = false;
+
   @override
   void initState() {
     super.initState();
     hasCompletedOnboarding = SettingsService.hasCompletedOnboarding();
+    _showFirstLaunchLogo = FirstLaunchLogo.claimFirstLaunch();
   }
 
   @override
@@ -173,9 +247,15 @@ class _MementoMoriAppState extends State<MementoMoriApp> {
     );
   }
 
-  Widget _home() => hasCompletedOnboarding
-      ? const AppShell()
-      : OnboardingScreen(onLanguageChange: _onSettingsChanged);
+  Widget _home() {
+    if (hasCompletedOnboarding) return const AppShell();
+    if (_showFirstLaunchLogo) {
+      return FirstLaunchLogo(next: (_) => _onboarding());
+    }
+    return _onboarding();
+  }
+
+  Widget _onboarding() => OnboardingScreen(onLanguageChange: _onSettingsChanged);
 
   Route<void> _homeRoute() => MaterialPageRoute<void>(
         settings: const RouteSettings(name: Navigator.defaultRouteName),
@@ -193,15 +273,13 @@ class _MementoMoriAppState extends State<MementoMoriApp> {
       onGenerateInitialRoutes: (_) => [_homeRoute()],
       onUnknownRoute: (settings) => _UnknownRouteFallback.route(settings),
       locale: _settings.locale,
-      localizationsDelegates: [
-        const AppLocalizationsDelegate(),
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate
-      ],
-      supportedLocales: [
-        for (final code in AppLocalizations.supportedLanguages) Locale(code),
-      ],
+      localizationsDelegates: AppLocalizations.delegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      // Below the app's ScaffoldMessenger: a failed save shows on any screen.
+      builder: (context, child) => UnsavedChangesNotice(
+        store: PersonalStore.instance,
+        child: child ?? const SizedBox.shrink(),
+      ),
     );
   }
 }

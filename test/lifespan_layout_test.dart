@@ -284,7 +284,7 @@ void main() {
       await tester.pumpAndSettle();
       await _tapKey(tester, 'lifespan_apply');
       expect(find.byType(LifespanEstimateScreen), findsNothing);
-      expect(SettingsService.getLifespanEstimate()!.appliedYears, 80);
+      expect(SettingsService.getLifespanResult()!.years, 80);
       expect(SettingsService.getLifeExpectancyYears(), 80);
     });
 

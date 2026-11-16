@@ -3,7 +3,6 @@ import 'package:memento_mori_life_in_weeks/lifespan/lifespan_estimator.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/lifestyle_model.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/sex.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/ui/lifespan_profile.dart';
-import 'package:memento_mori_life_in_weeks/people/friend_lifespan_estimate.dart';
 
 /// An applied profile for a person (Germany, female, two answers incl. a
 /// health condition) whose result is [years].
@@ -30,6 +29,3 @@ LifespanProfile appliedFriendProfile({int years = 86}) =>
       ),
       years: years,
     );
-
-FriendLifespanEstimate friendEstimate({int years = 86}) =>
-    FriendLifespanEstimate(appliedFriendProfile(years: years));

@@ -139,10 +139,10 @@ void main() {
     });
   });
 
-  group('backup 1.4', () {
-    test('writes 1.4 and round-trips a friend without a year', () {
+  group('backup without a year', () {
+    test('round-trips a friend without a year', () {
       final backup = FriendsService.encodeBackup([_noYear()]);
-      expect(jsonDecode(backup)['version'], '1.5');
+      expect(jsonDecode(backup)['version'], FriendsService.backupVersion);
       final friend = FriendsService.decodeBackup(backup).single;
       expect(friend.hasBirthYear, isFalse);
       expect(friend.birthDate, DateTime(2000, 5, 20));

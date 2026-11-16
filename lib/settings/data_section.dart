@@ -2,11 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:memento_mori_life_in_weeks/data/friends_import_export_screen.dart';
 import 'package:memento_mori_life_in_weeks/localization.dart';
 import 'package:memento_mori_life_in_weeks/people_import/ui/import_flow.dart';
+import 'package:memento_mori_life_in_weeks/settings/data_protection_screen.dart';
+import 'package:memento_mori_life_in_weeks/settings/external_link.dart';
 import 'package:memento_mori_life_in_weeks/settings/settings_section.dart';
 
-/// Import and export of people.
+/// Import and export of people, and how the data is protected.
 class DataSection extends StatelessWidget {
-  const DataSection({super.key});
+  const DataSection({super.key, this.openLink = openExternalLink});
+
+  /// Opens the privacy policy from the data protection screen; injectable
+  /// for tests.
+  final ExternalLinkOpener openLink;
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +35,16 @@ class DataSection extends StatelessWidget {
           trailing: const Icon(Icons.chevron_right),
           onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(
             builder: (_) => const FriendsImportExportScreen(),
+          )),
+        ),
+        ListTile(
+          key: const ValueKey('settings-data-protection'),
+          leading: const Icon(Icons.lock_outline),
+          title: Text(l10n.translate('data_protection_title')),
+          subtitle: Text(l10n.translate('data_protection_tile_sub')),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(
+            builder: (_) => DataProtectionScreen(openLink: openLink),
           )),
         ),
       ],

@@ -4,7 +4,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:memento_mori_life_in_weeks/app_settings_controller.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/condition_model.dart';
-import 'package:memento_mori_life_in_weeks/lifespan/lifespan_profile_store.dart';
+import 'package:memento_mori_life_in_weeks/lifespan/lifespan_result.dart';
+import 'package:memento_mori_life_in_weeks/lifespan/lifespan_result_store.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/lifestyle_model.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/sex.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/ui/estimate_subject.dart';
@@ -27,20 +28,20 @@ const double _dpr = 2.75;
 const Size _pixel5Size = Size(1080 / _dpr, 2340 / _dpr);
 const Size _narrowSize = Size(320, 568);
 
-/// Keeps the profile in memory and counts the saves.
-class _FakeStore implements LifespanProfileStore {
-  _FakeStore([this.stored = const LifespanProfile()]);
+/// Keeps the result in memory and counts the saves.
+class _FakeStore implements LifespanResultStore {
+  _FakeStore([this.stored]);
 
-  LifespanProfile stored;
+  LifespanResult? stored;
   int saves = 0;
 
   @override
-  LifespanProfile load() => stored;
+  LifespanResult? load() => stored;
 
   @override
   Future<void> save(LifespanProfile profile) async {
     saves++;
-    stored = profile;
+    stored = LifespanResult.of(profile.applied!);
   }
 }
 
@@ -126,7 +127,7 @@ String _named(Map<String, String> values, String key) =>
     values[key]!.replaceAll('{name}', 'Ana');
 
 LifespanEstimateScreen _otherScreen({
-  LifespanProfileStore? store,
+  LifespanResultStore? store,
   LifespanProfile? initial,
 }) => LifespanEstimateScreen(
   birthDate: _birth,
@@ -238,6 +239,10 @@ void main() {
         find.text(_named(values, 'estimate_question_conditions_someone')),
         findsOneWidget,
       );
+      expect(
+        find.text(_named(values, 'estimate_conditions_privacy_someone')),
+        findsOneWidget,
+      );
       await _tapKey(tester, 'lifespan_condition_stroke');
       await _tapKey(tester, 'lifespan_next');
 
@@ -262,8 +267,7 @@ void main() {
       expect(profile.answers.smoking, Smoking.quitBefore40);
       expect(profile.answers.conditions, {ChronicCondition.stroke});
       // Nothing about Ana lands in the user's own profile or settings.
-      expect(SettingsService.getLifespanEstimate(), isNull);
-      expect(SettingsService.getLifespanAnswers().isEmpty, isTrue);
+      expect(SettingsService.getLifespanResult(), isNull);
       expect(SettingsService.getLifeExpectancyYears(), 80);
     });
 
@@ -328,13 +332,13 @@ void main() {
   }
 
   group('store injection', () {
-    testWidgets('self: prefilled from the store and saved to it', (
+    testWidgets('self: starts without answers and saves the result', (
       tester,
     ) async {
       final controller = AppSettingsController();
       addTearDown(controller.dispose);
       final store = _FakeStore(
-        const LifespanProfile(country: 'FR', sex: Sex.female),
+        const LifespanResult(years: 85, mean: 85, p25: 79, p75: 91),
       );
       final host = await _pumpHost(
         tester,
@@ -346,11 +350,10 @@ void main() {
           now: _now,
         ),
       );
-      expect(find.text('France'), findsOneWidget);
       final female = tester.widget<ChoiceChip>(
         find.byKey(const ValueKey('lifespan_sex_female')),
       );
-      expect(female.selected, isTrue);
+      expect(female.selected, isFalse);
 
       await _tapKey(tester, 'lifespan_show_estimate');
       tester
@@ -361,12 +364,11 @@ void main() {
 
       expect(find.byType(LifespanEstimateScreen), findsNothing);
       expect(store.saves, 1);
-      expect(store.stored.country, 'FR');
-      expect(store.stored.applied!.appliedYears, 93);
+      expect(store.stored!.years, 93);
       expect(host.result!.applied!.appliedYears, 93);
       expect(controller.lifeExpectancyYears, 93);
       // The fake replaced the settings store.
-      expect(SettingsService.getLifespanEstimate(), isNull);
+      expect(SettingsService.getLifespanResult(), isNull);
     });
 
     testWidgets('other: saved to the given store, settings untouched', (
@@ -384,10 +386,9 @@ void main() {
       await _tapKey(tester, 'lifespan_show_estimate');
       await _tapKey(tester, 'lifespan_apply');
       expect(store.saves, 1);
-      expect(store.stored.country, 'DE');
-      expect(store.stored.sex, Sex.male);
-      expect(host.result, isNotNull);
-      expect(SettingsService.getLifespanEstimate(), isNull);
+      expect(store.stored, isNotNull);
+      expect(host.result!.sex, Sex.male);
+      expect(SettingsService.getLifespanResult(), isNull);
       expect(SettingsService.getLifeExpectancyYears(), 80);
     });
 

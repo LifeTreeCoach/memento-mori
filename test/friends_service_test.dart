@@ -79,6 +79,52 @@ void main() {
     expect(prefs.containsKey('birthday_notifications'), isFalse);
   });
 
+  group('unreadable stored friends', () {
+    const corrupt = '{not json';
+
+    setUp(() async {
+      SharedPreferences.setMockInitialValues({
+        'friends_data': corrupt,
+        'groups_migrated_v1': false,
+      });
+      await FriendsService.initialize();
+    });
+
+    Future<String?> storedRaw() async =>
+        (await SharedPreferences.getInstance()).getString('friends_data');
+
+    test('make the session read-only', () async {
+      expect(FriendsService.isReadOnly, isTrue);
+      expect(await FriendsService.getAllFriends(), isEmpty);
+    });
+
+    test('are never overwritten by adding a friend', () async {
+      await FriendsService.addFriend(_friend('a'));
+
+      expect(await storedRaw(), corrupt);
+      expect(changes, 0);
+    });
+
+    test('are never removed by clearAllData', () async {
+      await FriendsService.clearAllData();
+      expect(await storedRaw(), corrupt);
+    });
+
+    test('keep the group migration pending', () async {
+      final prefs = await SharedPreferences.getInstance();
+      expect(prefs.getBool('groups_migrated_v1'), isFalse);
+    });
+
+    test('a later readable session can save again', () async {
+      SharedPreferences.setMockInitialValues({});
+      await FriendsService.clearCacheForTesting();
+      await FriendsService.addFriend(_friend('a'));
+
+      expect(FriendsService.isReadOnly, isFalse);
+      expect(await _storedFriends(), hasLength(1));
+    });
+  });
+
   group('backup', () {
     test('encode/decode round-trips friends', () {
       final backup = FriendsService.encodeBackup([_friend('a')]);

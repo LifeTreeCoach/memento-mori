@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:memento_mori_life_in_weeks/localization.dart';
-import 'package:memento_mori_life_in_weeks/people/friend_lifespan_estimate.dart';
 
 /// Where the person's lifespan number stands relative to an estimate.
 enum FriendEstimateStatus {
@@ -13,29 +12,26 @@ enum FriendEstimateStatus {
   /// An estimate exists, but the slider was moved since.
   adjusted;
 
-  static FriendEstimateStatus of(
-    FriendLifespanEstimate? estimate,
-    int lifespan,
-  ) {
-    final applied = estimate?.appliedYears;
-    if (applied == null) return none;
-    return applied == lifespan ? fromEstimate : adjusted;
+  static FriendEstimateStatus of(int? estimatedYears, int lifespan) {
+    if (estimatedYears == null) return none;
+    return estimatedYears == lifespan ? fromEstimate : adjusted;
   }
 }
 
 /// Tile under the lifespan slider of the friend form: starts (or reopens)
-/// the estimate for this person and offers to forget its answers while
-/// keeping the number. A privacy line sits below it.
+/// the estimate for this person and offers to forget that the number came
+/// from it while keeping the number. A privacy line sits below it.
 class LifespanEstimateTile extends StatelessWidget {
   const LifespanEstimateTile({
     super.key,
-    required this.estimate,
+    required this.estimatedYears,
     required this.lifespan,
     required this.onOpen,
     required this.onForget,
   });
 
-  final FriendLifespanEstimate? estimate;
+  /// The years the estimate applied; null without one.
+  final int? estimatedYears;
   final int lifespan;
   final VoidCallback onOpen;
   final VoidCallback onForget;
@@ -47,7 +43,7 @@ class LifespanEstimateTile extends StatelessWidget {
     final muted = theme.textTheme.bodySmall?.copyWith(
       color: theme.colorScheme.onSurfaceVariant,
     );
-    final status = FriendEstimateStatus.of(estimate, lifespan);
+    final status = FriendEstimateStatus.of(estimatedYears, lifespan);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -56,7 +52,7 @@ class LifespanEstimateTile extends StatelessWidget {
           leading: const Icon(Icons.insights_outlined),
           title: Text(_title(l10n, status)),
           subtitle: Text(_subtitle(l10n, status)),
-          trailing: estimate == null ? null : _menu(l10n),
+          trailing: estimatedYears == null ? null : _menu(l10n),
           onTap: onOpen,
         ),
         Text(l10n.translate('form_estimate_privacy'), style: muted),
@@ -64,7 +60,7 @@ class LifespanEstimateTile extends StatelessWidget {
     );
   }
 
-  String _years() => '${estimate?.appliedYears ?? lifespan}';
+  String _years() => '${estimatedYears ?? lifespan}';
 
   String _title(AppLocalizations l10n, FriendEstimateStatus status) =>
       switch (status) {

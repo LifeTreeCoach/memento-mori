@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Modify this file to customize your launch splash screen -->
-<!-- The round badge on the app surface colour (paper light, ink dark).
+<!-- Plain app surface colour (paper light, ink dark), no logo: the badge is
+     shown once, in the app, on the very first launch (FirstLaunchLogo).
      Android 12+ uses windowSplashScreen* in values-v31 instead. -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/splash_background" />
-    <item
-        android:drawable="@drawable/splash_logo"
-        android:gravity="center"
-        android:width="192dp"
-        android:height="192dp" />
 </layer-list>

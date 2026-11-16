@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:memento_mori_life_in_weeks/friend.dart';
+import 'package:memento_mori_life_in_weeks/people/encrypted_file_image.dart';
 import 'package:memento_mori_life_in_weeks/people/friend_avatar.dart';
 
 void main() {
@@ -12,7 +13,7 @@ void main() {
     expect(resized.width, 121);
     expect(resized.height, isNull);
     expect(resized.policy, ResizeImagePolicy.fit);
-    expect(resized.imageProvider, isA<FileImage>());
+    expect(resized.imageProvider, isA<EncryptedFileImage>());
   });
 
   test('photoSizedAt and photoAt return null without a photo', () {
@@ -20,7 +21,7 @@ void main() {
         isNull);
     expect(FriendAvatar.photoSizedAt('', diameter: 44, devicePixelRatio: 3),
         isNull);
-    expect(FriendAvatar.photoAt('/tmp/a.jpg'), isA<FileImage>());
+    expect(FriendAvatar.photoAt('/tmp/a.jpg'), isA<EncryptedFileImage>());
   });
 
   testWidgets('avatar uses the resized photo for its radius', (tester) async {

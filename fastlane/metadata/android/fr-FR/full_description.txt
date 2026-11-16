@@ -40,6 +40,7 @@ Et aussi
 
 Tes données restent chez toi
 • Tout est enregistré sur ton appareil
+• Les données personnelles sont chiffrées sur ton appareil ; les réponses de santé ne sont jamais enregistrées
 • Tes contacts ne sont lus que lorsque tu importes des anniversaires, et seules les personnes que tu choisis sont gardées
 • Pas de compte, pas de publicité, pas de pistage
 • L’appli n’a pas l’autorisation d’accéder à Internet : elle ne peut envoyer tes données nulle part

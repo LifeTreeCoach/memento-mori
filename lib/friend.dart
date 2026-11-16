@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:memento_mori_life_in_weeks/core/life_calculator.dart';
-import 'package:memento_mori_life_in_weeks/people/friend_lifespan_estimate.dart';
 import 'package:memento_mori_life_in_weeks/people/meeting_frequency.dart';
 
 class Friend {
@@ -36,16 +35,17 @@ class Friend {
   /// on a later import.
   final String? importSourceId;
 
-  /// Answers and result of the lifespan estimate for this person; null
-  /// when [customLifespan] was set by hand only. Kept (unused) while the
-  /// birth year is unknown.
-  final FriendLifespanEstimate? lifespanEstimate;
+  /// The years the lifespan estimate for this person applied; null when
+  /// [customLifespan] was set by hand only. Only this result is kept,
+  /// never the estimate's answers. Kept (unused) while the birth year is
+  /// unknown.
+  final int? estimatedYears;
 
   /// Leap year that stores day and month of a birthday without a year.
   static const int noYearStorageYear = 2000;
   static const String importSourceContacts = 'contacts';
   static const String importSourceVcard = 'vcard';
-  static const String lifespanEstimateKey = 'lifespanEstimate';
+  static const String estimatedYearsKey = 'estimatedYears';
 
   const Friend({
     required this.id,
@@ -64,7 +64,7 @@ class Friend {
     this.hasBirthYear = true,
     this.importSource,
     this.importSourceId,
-    this.lifespanEstimate,
+    this.estimatedYears,
   });
 
   Friend copyWith({
@@ -84,10 +84,10 @@ class Friend {
     bool? hasBirthYear,
     String? importSource,
     String? importSourceId,
-    FriendLifespanEstimate? lifespanEstimate,
+    int? estimatedYears,
     bool clearGroupName = false,
     bool clearMeetingFrequency = false,
-    bool clearLifespanEstimate = false,
+    bool clearEstimatedYears = false,
   }) {
     return Friend(
       id: id ?? this.id,
@@ -108,9 +108,9 @@ class Friend {
       hasBirthYear: hasBirthYear ?? this.hasBirthYear,
       importSource: importSource ?? this.importSource,
       importSourceId: importSourceId ?? this.importSourceId,
-      lifespanEstimate: clearLifespanEstimate
+      estimatedYears: clearEstimatedYears
           ? null
-          : (lifespanEstimate ?? this.lifespanEstimate),
+          : (estimatedYears ?? this.estimatedYears),
     );
   }
 
@@ -131,8 +131,7 @@ class Friend {
       if (meetingFrequency != null) 'meetingFrequency': meetingFrequency!.name,
       if (importSource != null) 'importSource': importSource,
       if (importSourceId != null) 'importSourceId': importSourceId,
-      if (lifespanEstimate != null)
-        lifespanEstimateKey: lifespanEstimate!.toJson(),
+      if (estimatedYears != null) estimatedYearsKey: estimatedYears,
     };
   }
 
@@ -155,9 +154,7 @@ class Friend {
       hasBirthYear: encodedHasBirthYear(map['birthDate']),
       importSource: map['importSource'] as String?,
       importSourceId: map['importSourceId'] as String?,
-      lifespanEstimate: FriendLifespanEstimate.fromJson(
-        map[lifespanEstimateKey],
-      ),
+      estimatedYears: _intOrNull(map[estimatedYearsKey]),
     );
   }
 
@@ -204,13 +201,15 @@ class Friend {
     return date;
   }
 
+  static int? _intOrNull(Object? value) => value is num ? value.toInt() : null;
+
   String toJson() => json.encode(toMap());
 
   factory Friend.fromJson(String source) => Friend.fromMap(json.decode(source));
 
   @override
   String toString() {
-    return 'Friend(id: $id, name: $name, birthDate: $birthDate, avatarPath: $avatarPath, notes: $notes, customNotificationMessage: $customNotificationMessage, groupName: $groupName, customLifespan: $customLifespan, createdDate: $createdDate, lastUpdated: $lastUpdated, isActive: $isActive, notificationId: $notificationId, meetingFrequency: $meetingFrequency, hasBirthYear: $hasBirthYear, importSource: $importSource, importSourceId: $importSourceId, lifespanEstimate: $lifespanEstimate)';
+    return 'Friend(id: $id, name: $name, birthDate: $birthDate, avatarPath: $avatarPath, notes: $notes, customNotificationMessage: $customNotificationMessage, groupName: $groupName, customLifespan: $customLifespan, createdDate: $createdDate, lastUpdated: $lastUpdated, isActive: $isActive, notificationId: $notificationId, meetingFrequency: $meetingFrequency, hasBirthYear: $hasBirthYear, importSource: $importSource, importSourceId: $importSourceId, estimatedYears: $estimatedYears)';
   }
 
   @override
@@ -234,7 +233,7 @@ class Friend {
       other.hasBirthYear == hasBirthYear &&
       other.importSource == importSource &&
       other.importSourceId == importSourceId &&
-      other.lifespanEstimate == lifespanEstimate;
+      other.estimatedYears == estimatedYears;
   }
 
   @override
@@ -255,13 +254,12 @@ class Friend {
       hasBirthYear.hashCode ^
       importSource.hashCode ^
       importSourceId.hashCode ^
-      lifespanEstimate.hashCode;
+      estimatedYears.hashCode;
   }
 
-  /// True when [customLifespan] is the number the stored estimate applied
-  /// (not moved by hand since).
-  bool get lifespanFromEstimate =>
-      lifespanEstimate?.appliedYears == customLifespan;
+  /// True when [customLifespan] is the number the estimate applied (not
+  /// moved by hand since).
+  bool get lifespanFromEstimate => estimatedYears == customLifespan;
 
   /// Identity that survives a delete + re-import (which assigns a new [id]):
   /// trimmed, lower-case name plus birth date (yyyy-MM-dd, or --MM-dd

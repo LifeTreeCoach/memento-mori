@@ -93,6 +93,7 @@ class _CalendarSettingsScreenState extends State<CalendarSettingsScreen> {
     });
 
     final success = await CalendarService.selectCalendar(calendarId);
+    final syncStats = await CalendarService.getSyncStats();
     if (!mounted) return;
 
     setState(() {
@@ -100,6 +101,7 @@ class _CalendarSettingsScreenState extends State<CalendarSettingsScreen> {
         _selectedCalendarId = calendarId;
         _syncStatus = CalendarService.syncStatus;
       }
+      _syncStats = syncStats;
       _isLoading = false;
     });
 

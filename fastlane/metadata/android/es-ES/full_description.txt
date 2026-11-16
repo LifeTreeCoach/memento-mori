@@ -40,6 +40,7 @@ Y además
 
 Tus datos se quedan contigo
 • Todo se guarda en tu dispositivo
+• Los datos personales se guardan cifrados en tu dispositivo; las respuestas de salud nunca se guardan
 • Tus contactos solo se leen cuando importas cumpleaños, y solo se guardan las personas que elijas
 • Sin cuenta, sin anuncios, sin rastreo
 • La app no tiene permiso de acceso a internet, así que no puede enviar tus datos a ninguna parte

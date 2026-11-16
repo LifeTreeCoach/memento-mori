@@ -2,9 +2,11 @@
 library;
 
 import 'dart:io';
+import 'dart:typed_data';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
+import 'package:path_provider/path_provider.dart';
 
 /// Deletes the file picker's copies of picked files. Never throws: a failed
 /// cleanup must not fail the import that read the file.
@@ -50,6 +52,24 @@ Future<void> deletePickedCopy(
     await deletePickedCopyAt(path, temporaryDirectory ?? Directory.systemTemp);
   } catch (e) {
     debugPrint('Picked file copy not deleted: $e');
+  }
+}
+
+/// Deletes image_picker's copy of a picked photo at [filePath] once it was
+/// stored: the plugin leaves it in the cache (Android) / temp (iOS)
+/// directory, which [temporaryDirectory] (default: path_provider's) names.
+/// Only a file inside that directory is deleted. Never throws.
+Future<void> deletePickedImageCopy(
+  String filePath, {
+  Directory? temporaryDirectory,
+}) async {
+  try {
+    await deletePickedCopyAt(
+      filePath,
+      temporaryDirectory ?? await getTemporaryDirectory(),
+    );
+  } catch (e) {
+    debugPrint('Picked photo copy not deleted (${e.runtimeType})');
   }
 }
 
@@ -110,4 +130,33 @@ Future<T?> readPickedFile<T>(
   } finally {
     await clearPickedFileCopies(file: file);
   }
+}
+
+/// A picked file above the size a reader accepts.
+class PickedFileTooLargeException implements Exception {
+  const PickedFileTooLargeException(this.maxBytes);
+
+  final int maxBytes;
+
+  @override
+  String toString() => 'PickedFileTooLargeException(max $maxBytes bytes)';
+}
+
+/// The bytes of [file], refused with a [PickedFileTooLargeException] when it
+/// is larger than [maxBytes]: checked against the size the picker reports
+/// before anything is read, and again while streaming (a size it doesn't
+/// know, or one that is wrong), so a huge file is never read fully.
+Future<Uint8List> readPickedBytes(PlatformFile file, {required int maxBytes}) async {
+  final knownLength = file.lengthSync() ?? await file.length();
+  if (knownLength != null && knownLength > maxBytes) {
+    throw PickedFileTooLargeException(maxBytes);
+  }
+  final bytes = BytesBuilder(copy: false);
+  await for (final chunk in file.readAsByteStream()) {
+    if (bytes.length + chunk.length > maxBytes) {
+      throw PickedFileTooLargeException(maxBytes);
+    }
+    bytes.add(chunk);
+  }
+  return bytes.takeBytes();
 }

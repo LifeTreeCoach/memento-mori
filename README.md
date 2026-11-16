@@ -93,10 +93,11 @@ request.
 ## Release
 
 ```bash
-flutter build apk --release --flavor foss                   # build/app/outputs/flutter-apk/app-foss-release.apk
-flutter build apk --release --flavor foss --split-per-abi   # one APK per ABI (~22-26 MB each)
-flutter build appbundle --release --flavor play             # build/app/outputs/bundle/playRelease/app-play-release.aab
-flutter build ios --release
+# Dart code is obfuscated; symbols land in build/symbols/<platform> (git-ignored, keep them per release)
+flutter build apk --release --flavor foss --obfuscate --split-debug-info=build/symbols/android                   # build/app/outputs/flutter-apk/app-foss-release.apk
+flutter build apk --release --flavor foss --split-per-abi --obfuscate --split-debug-info=build/symbols/android   # one APK per ABI (~22-26 MB each)
+flutter build appbundle --release --flavor play --obfuscate --split-debug-info=build/symbols/android             # build/app/outputs/bundle/playRelease/app-play-release.aab
+flutter build ios --release --obfuscate --split-debug-info=build/symbols/ios
 ```
 
 - Flavors (same application id): `play` (Google Play: Wear OS watch sync via Play services;

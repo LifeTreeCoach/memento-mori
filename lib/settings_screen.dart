@@ -30,7 +30,8 @@ class SettingsScreen extends StatelessWidget {
   /// Shows the diagnostics entry without the 7-tap unlock.
   final bool alwaysShowDiagnostics;
 
-  /// Opens the project links in About; injectable for tests.
+  /// Opens the project links (About, privacy policy from Data);
+  /// injectable for tests.
   final ExternalLinkOpener openProjectLink;
 
   @override
@@ -58,7 +59,7 @@ class SettingsScreen extends StatelessWidget {
                 RemindersSection(),
                 const CompassSection(),
                 WidgetSection(),
-                const DataSection(),
+                DataSection(openLink: openProjectLink),
                 // Coffee link outside the stores, rate + recommend in them.
                 if (SupportScope.of(context).showsLink)
                   const SupportSection()

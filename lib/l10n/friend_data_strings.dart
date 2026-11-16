@@ -37,6 +37,7 @@ const Map<String, String> friendDataStringsEn = {
   'import_export_status_no_file': 'No file selected',
   'import_export_status_processing': 'Processing import data…',
   'import_export_error_invalid_format': 'Invalid backup file format',
+  'import_export_error_file_too_large': 'This file is too large for a backup.',
   'import_export_error_no_valid_friends': 'No valid people found in backup file',
   'import_export_dialog_title': 'Import people',
   'import_export_dialog_found_one': 'Found {n} person to import.',
@@ -59,6 +60,33 @@ const Map<String, String> friendDataStringsEn = {
   'import_export_status_clearing': 'Deleting all people…',
   'import_export_cleared': 'All people have been deleted',
   'import_export_clear_failed': 'Deleting failed: {error}',
+
+  // Password-protected backups
+  'import_export_protect_title': 'Protect with a password',
+  'import_export_protect_subtitle':
+      'The backup file is encrypted. Only someone who knows the password can open it.',
+  'import_export_password_new_title': 'Choose a password',
+  'import_export_password_warning':
+      'Keep this password somewhere safe. Without it, this backup can’t be restored, and nobody can recover the password for you.',
+  'import_export_password_label': 'Password',
+  'import_export_password_confirm_label': 'Repeat password',
+  'import_export_password_too_short': 'Use at least {n} characters',
+  'import_export_password_mismatch': 'The passwords don’t match',
+  'import_export_password_show': 'Show password',
+  'import_export_password_hide': 'Hide password',
+  'import_export_password_protect_button': 'Protect',
+  'import_export_status_encrypting': 'Encrypting backup…',
+  'import_export_password_unlock_title': 'Protected backup',
+  'import_export_password_unlock_body':
+      'This backup is protected with a password. Enter it to import the backup.',
+  'import_export_password_unlock_button': 'Unlock',
+  'import_export_password_wrong':
+      'Wrong password, or the file was changed. Try again.',
+  'import_export_status_decrypting': 'Unlocking backup…',
+  'import_export_error_encrypted_unsupported':
+      'This protected backup comes from a newer version of the app. Update the app to import it.',
+  'import_export_error_encrypted_invalid':
+      'This protected backup is damaged or incomplete',
 
   // Calendar integration
   'calendar_title': 'Calendar integration',
@@ -156,6 +184,8 @@ const Map<String, String> friendDataStringsDe = {
   'import_export_status_no_file': 'Keine Datei ausgewählt',
   'import_export_status_processing': 'Importdaten werden verarbeitet …',
   'import_export_error_invalid_format': 'Ungültiges Format der Sicherungsdatei',
+  'import_export_error_file_too_large':
+      'Diese Datei ist zu groß für eine Sicherung.',
   'import_export_error_no_valid_friends':
       'Keine gültigen Personen in der Sicherungsdatei gefunden',
   'import_export_dialog_title': 'Personen importieren',
@@ -179,6 +209,33 @@ const Map<String, String> friendDataStringsDe = {
   'import_export_status_clearing': 'Alle Personen werden gelöscht …',
   'import_export_cleared': 'Alle Personen wurden gelöscht',
   'import_export_clear_failed': 'Löschen fehlgeschlagen: {error}',
+
+  // Password-protected backups
+  'import_export_protect_title': 'Mit Passwort schützen',
+  'import_export_protect_subtitle':
+      'Die Sicherungsdatei wird verschlüsselt. Nur wer das Passwort kennt, kann sie öffnen.',
+  'import_export_password_new_title': 'Passwort wählen',
+  'import_export_password_warning':
+      'Bewahre dieses Passwort sicher auf. Ohne es lässt sich die Sicherung nicht wiederherstellen, und niemand kann das Passwort für dich zurückholen.',
+  'import_export_password_label': 'Passwort',
+  'import_export_password_confirm_label': 'Passwort wiederholen',
+  'import_export_password_too_short': 'Mindestens {n} Zeichen',
+  'import_export_password_mismatch': 'Die Passwörter stimmen nicht überein',
+  'import_export_password_show': 'Passwort anzeigen',
+  'import_export_password_hide': 'Passwort verbergen',
+  'import_export_password_protect_button': 'Schützen',
+  'import_export_status_encrypting': 'Sicherung wird verschlüsselt …',
+  'import_export_password_unlock_title': 'Geschützte Sicherung',
+  'import_export_password_unlock_body':
+      'Diese Sicherung ist mit einem Passwort geschützt. Gib es ein, um sie zu importieren.',
+  'import_export_password_unlock_button': 'Entsperren',
+  'import_export_password_wrong':
+      'Falsches Passwort, oder die Datei wurde verändert. Versuch es noch einmal.',
+  'import_export_status_decrypting': 'Sicherung wird entsperrt …',
+  'import_export_error_encrypted_unsupported':
+      'Diese geschützte Sicherung stammt aus einer neueren App-Version. Aktualisiere die App, um sie zu importieren.',
+  'import_export_error_encrypted_invalid':
+      'Diese geschützte Sicherung ist beschädigt oder unvollständig',
 
   // Kalender-Integration
   'calendar_title': 'Kalender-Integration',
@@ -277,6 +334,8 @@ const Map<String, String> friendDataStringsEs = {
   'import_export_status_no_file': 'No se eligió ningún archivo',
   'import_export_status_processing': 'Procesando los datos…',
   'import_export_error_invalid_format': 'Formato de copia no válido',
+  'import_export_error_file_too_large':
+      'Este archivo es demasiado grande para ser una copia.',
   'import_export_error_no_valid_friends': 'La copia no contiene personas válidas',
   'import_export_dialog_title': 'Importar personas',
   'import_export_dialog_found_one': 'Se encontró {n} persona para importar.',
@@ -299,6 +358,33 @@ const Map<String, String> friendDataStringsEs = {
   'import_export_status_clearing': 'Eliminando a todas las personas…',
   'import_export_cleared': 'Se eliminaron todas las personas',
   'import_export_clear_failed': 'Error al eliminar: {error}',
+
+  // Password-protected backups
+  'import_export_protect_title': 'Proteger con contraseña',
+  'import_export_protect_subtitle':
+      'El archivo de copia se cifra. Solo quien conozca la contraseña podrá abrirlo.',
+  'import_export_password_new_title': 'Elige una contraseña',
+  'import_export_password_warning':
+      'Guarda esta contraseña en un lugar seguro. Sin ella, esta copia no se puede restaurar y nadie podrá recuperar la contraseña por ti.',
+  'import_export_password_label': 'Contraseña',
+  'import_export_password_confirm_label': 'Repite la contraseña',
+  'import_export_password_too_short': 'Usa al menos {n} caracteres',
+  'import_export_password_mismatch': 'Las contraseñas no coinciden',
+  'import_export_password_show': 'Mostrar contraseña',
+  'import_export_password_hide': 'Ocultar contraseña',
+  'import_export_password_protect_button': 'Proteger',
+  'import_export_status_encrypting': 'Cifrando la copia…',
+  'import_export_password_unlock_title': 'Copia protegida',
+  'import_export_password_unlock_body':
+      'Esta copia está protegida con una contraseña. Introdúcela para importarla.',
+  'import_export_password_unlock_button': 'Desbloquear',
+  'import_export_password_wrong':
+      'Contraseña incorrecta, o el archivo ha sido modificado. Inténtalo de nuevo.',
+  'import_export_status_decrypting': 'Desbloqueando la copia…',
+  'import_export_error_encrypted_unsupported':
+      'Esta copia protegida es de una versión más reciente de la app. Actualiza la app para importarla.',
+  'import_export_error_encrypted_invalid':
+      'Esta copia protegida está dañada o incompleta',
 
   // Calendar integration
   'calendar_title': 'Integración con el calendario',
@@ -396,6 +482,8 @@ const Map<String, String> friendDataStringsFr = {
   'import_export_status_no_file': 'Aucun fichier sélectionné',
   'import_export_status_processing': 'Traitement des données…',
   'import_export_error_invalid_format': 'Format de sauvegarde non valide',
+  'import_export_error_file_too_large':
+      'Ce fichier est trop volumineux pour une sauvegarde.',
   'import_export_error_no_valid_friends':
       'Aucune personne valide dans la sauvegarde',
   'import_export_dialog_title': 'Importer des proches',
@@ -419,6 +507,33 @@ const Map<String, String> friendDataStringsFr = {
   'import_export_status_clearing': 'Suppression en cours…',
   'import_export_cleared': 'Tous les proches ont été supprimés',
   'import_export_clear_failed': 'Échec de la suppression : {error}',
+
+  // Password-protected backups
+  'import_export_protect_title': 'Protéger par un mot de passe',
+  'import_export_protect_subtitle':
+      'Le fichier de sauvegarde est chiffré. Seule une personne qui connaît le mot de passe peut l’ouvrir.',
+  'import_export_password_new_title': 'Choisis un mot de passe',
+  'import_export_password_warning':
+      'Garde ce mot de passe en lieu sûr. Sans lui, cette sauvegarde ne peut pas être restaurée, et personne ne pourra retrouver le mot de passe pour toi.',
+  'import_export_password_label': 'Mot de passe',
+  'import_export_password_confirm_label': 'Répète le mot de passe',
+  'import_export_password_too_short': 'Au moins {n} caractères',
+  'import_export_password_mismatch': 'Les mots de passe ne correspondent pas',
+  'import_export_password_show': 'Afficher le mot de passe',
+  'import_export_password_hide': 'Masquer le mot de passe',
+  'import_export_password_protect_button': 'Protéger',
+  'import_export_status_encrypting': 'Chiffrement de la sauvegarde…',
+  'import_export_password_unlock_title': 'Sauvegarde protégée',
+  'import_export_password_unlock_body':
+      'Cette sauvegarde est protégée par un mot de passe. Saisis-le pour l’importer.',
+  'import_export_password_unlock_button': 'Déverrouiller',
+  'import_export_password_wrong':
+      'Mot de passe incorrect, ou le fichier a été modifié. Réessaie.',
+  'import_export_status_decrypting': 'Déverrouillage de la sauvegarde…',
+  'import_export_error_encrypted_unsupported':
+      'Cette sauvegarde protégée vient d’une version plus récente de l’app. Mets l’app à jour pour l’importer.',
+  'import_export_error_encrypted_invalid':
+      'Cette sauvegarde protégée est endommagée ou incomplète',
 
   // Calendar integration
   'calendar_title': 'Intégration agenda',

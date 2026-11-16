@@ -3,19 +3,26 @@ import 'package:memento_mori_life_in_weeks/compass/compass_models.dart';
 import 'package:memento_mori_life_in_weeks/compass/compass_service.dart';
 import 'package:memento_mori_life_in_weeks/friends_service.dart';
 import 'package:memento_mori_life_in_weeks/localization.dart';
+import 'package:memento_mori_life_in_weeks/data/backup_password_dialog.dart';
+import 'package:memento_mori_life_in_weeks/data/encrypted_backup.dart';
+import 'package:memento_mori_life_in_weeks/data/export_temp_files.dart';
 import 'package:memento_mori_life_in_weeks/data/picked_files.dart';
 import 'package:memento_mori_life_in_weeks/widgets/section_label.dart';
 import 'package:memento_mori_life_in_weeks/widgets/scroll_thread.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:intl/intl.dart';
-import 'package:path_provider/path_provider.dart';
-import 'dart:io';
 import 'dart:convert';
 import 'dart:typed_data';
 
 class FriendsImportExportScreen extends StatefulWidget {
-  const FriendsImportExportScreen({super.key});
+  const FriendsImportExportScreen({
+    super.key,
+    this.encryptedBackup = const EncryptedBackup(),
+  });
+
+  /// Encrypts and decrypts password-protected backups.
+  final EncryptedBackup encryptedBackup;
 
   @override
   State<FriendsImportExportScreen> createState() => _FriendsImportExportScreenState();
@@ -24,6 +31,9 @@ class FriendsImportExportScreen extends StatefulWidget {
 class _FriendsImportExportScreenState extends State<FriendsImportExportScreen> {
   bool isLoading = false;
   String statusMessage = '';
+
+  /// Whether exports are encrypted with a password (asked on each export).
+  bool _protectWithPassword = false;
 
   AppLocalizations get _l10n => AppLocalizations.of(context);
 
@@ -34,12 +44,26 @@ class _FriendsImportExportScreenState extends State<FriendsImportExportScreen> {
     });
   }
 
-  String _errorText(Object error) =>
-      error is FriendsBackupException ? _l10n.translate(error.messageKey) : '$error';
+  String _errorText(Object error) => switch (error) {
+        FriendsBackupException(:final messageKey) ||
+        EncryptedBackupException(:final messageKey) =>
+          _l10n.translate(messageKey),
+        PickedFileTooLargeException() =>
+          _l10n.translate('import_export_error_file_too_large'),
+        _ => '$error',
+      };
 
   /// Encodes all friends and Compass data and hands them to [deliver];
   /// reports an empty backup and failures in the status banner.
+  /// With [_protectWithPassword], asks for a password first and encrypts.
   Future<void> _export(Future<void> Function(_Backup backup) deliver) async {
+    final password =
+        _protectWithPassword ? await showNewBackupPasswordDialog(context) : null;
+    if (!mounted) return;
+    if (_protectWithPassword && password == null) {
+      _setStatus(_l10n.translate('import_export_status_export_cancelled'));
+      return;
+    }
     _setStatus(_l10n.translate('import_export_status_preparing_export'), loading: true);
     try {
       final friends = await FriendsService.getAllFriends();
@@ -49,17 +73,23 @@ class _FriendsImportExportScreenState extends State<FriendsImportExportScreen> {
         _setStatus(_l10n.translate('import_export_status_nothing_to_export'), loading: false);
         return;
       }
+      final json = await FriendsService.exportBackup(friends, compass: compass);
       await deliver(_Backup(
-        json: await FriendsService.exportBackup(friends, compass: compass),
+        json: password == null ? json : await _encrypt(json, password),
         count: friends.length,
         compass: compass,
-        fileName: backupFileName(DateTime.now()),
+        fileName: backupFileName(DateTime.now(), protected: password != null),
       ));
     } catch (e) {
       if (!mounted) return;
       _setStatus(_l10n.translate('import_export_export_failed', replacements: {'error': '$e'}),
           loading: false);
     }
+  }
+
+  Future<String> _encrypt(String json, String password) {
+    _setStatus(_l10n.translate('import_export_status_encrypting'));
+    return widget.encryptedBackup.encrypt(json, password);
   }
 
   Future<void> _saveToDevice() => _export(_saveBackup);
@@ -84,8 +114,7 @@ class _FriendsImportExportScreenState extends State<FriendsImportExportScreen> {
   }
 
   Future<void> _shareBackupFile(_Backup backup) async {
-    final directory = await getTemporaryDirectory();
-    final file = File('${directory.path}/${backup.fileName}');
+    final file = await const ExportTempFiles().fileFor(backup.fileName);
     await file.writeAsString(backup.json);
     if (!mounted) return;
     final result = await SharePlus.instance.share(
@@ -156,17 +185,27 @@ class _FriendsImportExportScreenState extends State<FriendsImportExportScreen> {
     _setStatus(_l10n.translate('import_export_status_selecting_file'), loading: true);
 
     try {
-      final jsonString = await readPickedFile(
+      final fileContents = await readPickedFile(
         () => FilePicker.pickFile(
           type: FileType.custom,
           allowedExtensions: ['json'],
         ),
-        (file) async => utf8.decode(await file.readAsBytes()),
+        (file) async => utf8.decode(await readPickedBytes(
+          file,
+          maxBytes: EncryptedBackup.maxFileLength,
+        )),
       );
       if (!mounted) return;
 
-      if (jsonString == null) {
+      if (fileContents == null) {
         _setStatus(_l10n.translate('import_export_status_no_file'), loading: false);
+        return;
+      }
+
+      final jsonString = await _unlockIfProtected(fileContents);
+      if (!mounted) return;
+      if (jsonString == null) {
+        _setStatus(_l10n.translate('import_export_status_cancelled'), loading: false);
         return;
       }
 
@@ -184,12 +223,14 @@ class _FriendsImportExportScreenState extends State<FriendsImportExportScreen> {
       }
 
       _setStatus(_l10n.translate('import_export_status_importing'));
-      final (added, skipped) =
-          await FriendsService.importBackupEntries(importedFriends);
+      final friendsResult =
+          await FriendsService.importBackup(importedFriends);
+      final (added, skipped) = (friendsResult.added, friendsResult.skipped);
       final compass = contents.compass;
       final compassAdded = compass == null
           ? null
-          : await CompassService.importDataCounts(compass);
+          : await CompassService.importDataCounts(compass,
+              friendIds: friendsResult.friendIds);
       if (!mounted) return;
 
       final result = [
@@ -206,6 +247,25 @@ class _FriendsImportExportScreenState extends State<FriendsImportExportScreen> {
       _setStatus(
           _l10n.translate('import_export_import_failed', replacements: {'error': _errorText(e)}),
           loading: false);
+    }
+  }
+
+  /// The backup JSON of [contents]: as is, or decrypted with a password the
+  /// user enters (asked again after a wrong one). Null when cancelled.
+  Future<String?> _unlockIfProtected(String contents) async {
+    if (!EncryptedBackup.isEncryptedBackup(contents)) return contents;
+    var wrongPassword = false;
+    while (true) {
+      final password =
+          await showBackupPasswordDialog(context, wrongPassword: wrongPassword);
+      if (password == null || !mounted) return null;
+      _setStatus(_l10n.translate('import_export_status_decrypting'));
+      try {
+        return await widget.encryptedBackup.decrypt(contents, password);
+      } on WrongBackupPasswordException {
+        if (!mounted) return null;
+        wrongPassword = true;
+      }
     }
   }
 
@@ -315,9 +375,21 @@ class _FriendsImportExportScreenState extends State<FriendsImportExportScreen> {
             _ActionSection(
               header: l10n.translate('import_export_export_header'),
               description: l10n.translate('import_export_export_description'),
-              button: _ExportButtons(
-                onSave: isLoading ? null : _saveToDevice,
-                onShare: isLoading ? null : _shareBackup,
+              button: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _ProtectSwitch(
+                    value: _protectWithPassword,
+                    onChanged: isLoading
+                        ? null
+                        : (on) => setState(() => _protectWithPassword = on),
+                  ),
+                  const SizedBox(height: 12),
+                  _ExportButtons(
+                    onSave: isLoading ? null : _saveToDevice,
+                    onShare: isLoading ? null : _shareBackup,
+                  ),
+                ],
               ),
             ),
             const SizedBox(height: 16),
@@ -352,9 +424,13 @@ class _FriendsImportExportScreenState extends State<FriendsImportExportScreen> {
   }
 }
 
-/// Default backup file name, e.g. `memento_backup_2026-11-04.json`.
-String backupFileName(DateTime now) =>
-    'memento_backup_${DateFormat('yyyy-MM-dd').format(now)}.json';
+/// Default backup file name, e.g. `memento_backup_2026-11-04.json`, or
+/// `memento_backup_2026-11-04_protected.json` when [protected]. Protected
+/// files keep `.json` (they are JSON): the import picker filters by it, and
+/// Android's picker cannot filter by an extension without a MIME type.
+String backupFileName(DateTime now, {bool protected = false}) =>
+    'memento_backup_${DateFormat('yyyy-MM-dd').format(now)}'
+    '${protected ? '_protected' : ''}.json';
 
 /// An encoded backup ready to be saved or shared.
 class _Backup {
@@ -371,6 +447,27 @@ class _Backup {
   final int count;
   final CompassData compass;
   final String fileName;
+}
+
+/// "Protect with a password" switch of the export section.
+class _ProtectSwitch extends StatelessWidget {
+  const _ProtectSwitch({required this.value, required this.onChanged});
+
+  final bool value;
+  final ValueChanged<bool>? onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    return SwitchListTile(
+      contentPadding: EdgeInsets.zero,
+      secondary: const Icon(Icons.lock_outline),
+      title: Text(l10n.translate('import_export_protect_title')),
+      subtitle: Text(l10n.translate('import_export_protect_subtitle')),
+      value: value,
+      onChanged: onChanged,
+    );
+  }
 }
 
 /// "Save to device" (primary) and "Share" side by side.

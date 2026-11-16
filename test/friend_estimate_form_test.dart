@@ -12,7 +12,6 @@ import 'package:memento_mori_life_in_weeks/friends_service.dart';
 import 'package:memento_mori_life_in_weeks/l10n/friend_estimate_strings.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/ui/lifespan_profile.dart';
 import 'package:memento_mori_life_in_weeks/localization.dart';
-import 'package:memento_mori_life_in_weeks/people/friend_lifespan_estimate.dart';
 import 'package:memento_mori_life_in_weeks/settings_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -20,7 +19,7 @@ import 'support/friend_estimate_fixtures.dart';
 
 Friend _anna({
   bool hasYear = true,
-  FriendLifespanEstimate? estimate,
+  int? estimatedYears,
   int lifespan = 80,
 }) => Friend(
   id: 'a',
@@ -30,7 +29,7 @@ Friend _anna({
   customLifespan: lifespan,
   createdDate: DateTime(2025),
   lastUpdated: DateTime(2025),
-  lifespanEstimate: estimate,
+  estimatedYears: estimatedYears,
 );
 
 /// Records requests and answers with [result].
@@ -114,7 +113,6 @@ void main() {
     SharedPreferences.setMockInitialValues({
       'birth_date': DateTime(1990, 11, 17).toIso8601String(),
       'lifespan_visualization_enabled': false,
-      'lifespan_country': 'AUT',
     });
     await SettingsService.initialize();
     await FriendsService.clearCacheForTesting();
@@ -124,23 +122,22 @@ void main() {
     test('follows the estimate and the slider', () {
       expect(FriendEstimateStatus.of(null, 80), FriendEstimateStatus.none);
       expect(
-        FriendEstimateStatus.of(friendEstimate(years: 86), 86),
+        FriendEstimateStatus.of(86, 86),
         FriendEstimateStatus.fromEstimate,
       );
       expect(
-        FriendEstimateStatus.of(friendEstimate(years: 86), 90),
+        FriendEstimateStatus.of(86, 90),
         FriendEstimateStatus.adjusted,
       );
     });
   });
 
-  test('a new estimate starts from the user\'s own country', () {
-    final initial = FriendEstimateRequest.initialProfile(null);
-    expect(initial.country, 'AUT');
+  test('an estimate always starts without answers', () {
+    final initial = FriendEstimateRequest.initialProfile();
+    expect(initial.country, isNull);
     expect(initial.sex, isNull);
+    expect(initial.answers.isEmpty, isTrue);
     expect(initial.applied, isNull);
-    final stored = friendEstimate();
-    expect(FriendEstimateRequest.initialProfile(stored), stored.profile);
   });
 
   testWidgets('hidden without a birth year', (tester) async {
@@ -163,7 +160,8 @@ void main() {
     final request = launcher.requests.single;
     expect(request.name, 'Anna');
     expect(request.currentYears, 80);
-    expect(request.initial.country, 'AUT');
+    expect(request.initial.country, isNull);
+    expect(request.initial.answers.isEmpty, isTrue);
     expect(find.text(_from(86)), findsOneWidget);
     expect(_sliderValue(tester), 86);
 
@@ -176,10 +174,10 @@ void main() {
     expect(find.text(_adjusted), findsOneWidget);
   });
 
-  testWidgets('forget clears the answers and keeps the number', (tester) async {
+  testWidgets('forget clears the estimated years and keeps the number', (tester) async {
     await _openForm(
       tester,
-      _anna(estimate: friendEstimate(years: 86), lifespan: 86),
+      _anna(estimatedYears: 86, lifespan: 86),
       _FakeLauncher(null),
     );
     expect(find.text(_from(86)), findsOneWidget);
@@ -228,7 +226,7 @@ void main() {
     await tester.pumpAndSettle();
     final saved = (await FriendsService.getAllFriends()).single;
     expect(saved.customLifespan, 86);
-    expect(saved.lifespanEstimate, friendEstimate());
+    expect(saved.estimatedYears, 86);
     expect(saved.lifespanFromEstimate, isTrue);
   });
 
@@ -257,7 +255,7 @@ void main() {
     ) async {
       await pumpSection(
         tester,
-        _anna(estimate: friendEstimate(years: 86), lifespan: 86),
+        _anna(estimatedYears: 86, lifespan: 86),
       );
       expect(find.text(caption), findsOneWidget);
     });
@@ -267,7 +265,7 @@ void main() {
     ) async {
       await pumpSection(
         tester,
-        _anna(estimate: friendEstimate(years: 86), lifespan: 90),
+        _anna(estimatedYears: 86, lifespan: 90),
       );
       expect(find.text(caption), findsNothing);
       await pumpSection(tester, _anna());

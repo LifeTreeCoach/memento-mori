@@ -2,14 +2,66 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:memento_mori_life_in_weeks/data/backup_avatar.dart';
+import 'package:memento_mori_life_in_weeks/security/vault_cipher.dart';
 import 'package:path_provider/path_provider.dart';
 
 /// Friend photos in the app's `avatars` folder (inside the documents
 /// directory, which [baseDirectory] provides; injectable for tests).
+///
+/// Photos are sealed with [cipher] (record [recordName], bound to the file
+/// name) before they reach the disk. Without a cipher (vault not configured)
+/// release builds refuse to write a photo; debug builds and tests
+/// ([allowPlainPhotos]) write plain image files. Plain files written by older
+/// versions are always read as they are.
 class AvatarStore {
-  const AvatarStore({this.baseDirectory = getApplicationDocumentsDirectory});
+  const AvatarStore({
+    this.baseDirectory = getApplicationDocumentsDirectory,
+    this._cipher,
+    this.allowPlainPhotos = !kReleaseMode,
+  });
 
   final Future<Directory> Function() baseDirectory;
+
+  /// Whether [save] may write an unsealed photo when there is no cipher:
+  /// never in release builds, so a photo never reaches the disk in plain
+  /// text there.
+  final bool allowPlainPhotos;
+  final RecordCipher? _cipher;
+
+  /// The cipher of the opened vault, set by [configureCipher].
+  static RecordCipher? _configuredCipher;
+
+  /// Sets the cipher used by every store without its own (the vault's,
+  /// once it is ready; null while it is not).
+  static void configureCipher(RecordCipher? cipher) =>
+      _configuredCipher = cipher;
+
+  /// The cipher used for photos when none is passed explicitly.
+  static RecordCipher? get configuredCipher => _configuredCipher;
+
+  /// The cipher this store seals and opens photos with.
+  RecordCipher? get cipher => _cipher ?? _configuredCipher;
+
+  /// Record name (AAD) a photo is sealed under: the file name only, so a
+  /// moved app container (new absolute path) still opens it.
+  static String recordName(String path) => 'avatar/${_fileName(path)}';
+
+  /// Room for the envelope around a photo of [BackupAvatar.maxBytes].
+  static const int _envelopeAllowance = 64;
+
+  /// The image bytes of the photo file at [path] whose content is [bytes]:
+  /// opened with [cipher] when sealed, else returned as they are (plain
+  /// files from older versions). Throws a [VaultException] if a sealed photo
+  /// cannot be opened, and a [StateError] if there is no cipher for it.
+  static Future<Uint8List> openPhoto(
+    String path,
+    Uint8List bytes,
+    RecordCipher? cipher,
+  ) async {
+    if (!VaultCipher.looksSealed(bytes)) return bytes;
+    if (cipher == null) throw StateError('no cipher for a sealed photo');
+    return cipher.open(recordName(path), bytes);
+  }
 
   static int _counter = 0;
 
@@ -70,26 +122,39 @@ class AvatarStore {
     return directory;
   }
 
-  /// Writes [bytes] to a new, unique file and returns its path.
+  /// Writes [bytes] (sealed with [cipher]) to a new, unique file and returns
+  /// its path. Without a cipher it throws a [StateError] and writes nothing,
+  /// unless [allowPlainPhotos] (debug builds, tests).
   Future<String> save(List<int> bytes, {String extension = 'jpg'}) async {
+    final cipher = this.cipher;
+    if (cipher == null && !allowPlainPhotos) {
+      debugPrint('AvatarStore: photo not saved, encryption is not ready');
+      throw StateError('Photo not saved: encryption is not ready');
+    }
     final directory = await _avatarsDirectory();
     final stamp = DateTime.now().millisecondsSinceEpoch;
     final file = File('${directory.path}/avatar_${stamp}_${_counter++}.$extension');
-    await file.writeAsBytes(bytes, flush: true);
+    final content = cipher == null
+        ? bytes
+        : await cipher.seal(recordName(file.path), bytes);
+    await file.writeAsBytes(content, flush: true);
     return file.path;
   }
 
-  /// The photo at the stored [path] (see [resolvePath]) for a backup; null
-  /// when there is none or it cannot be read.
+  /// The photo at the stored [path] (see [resolvePath]) for a backup, as
+  /// plain image bytes; null when there is none or it cannot be read or
+  /// opened.
   Future<BackupAvatar?> readForBackup(String? path) async {
     if (path == null || path.isEmpty) return null;
     try {
       final documentsPath = (await baseDirectory()).path;
       final file = File(resolvePath(path, documentsPath: documentsPath)!);
-      if (!await file.exists() || await file.length() > BackupAvatar.maxBytes) {
+      if (!await file.exists() ||
+          await file.length() > BackupAvatar.maxBytes + _envelopeAllowance) {
         return null;
       }
-      return BackupAvatar.fromBytes(await file.readAsBytes());
+      final bytes = await file.readAsBytes();
+      return BackupAvatar.fromBytes(await openPhoto(file.path, bytes, cipher));
     } catch (e) {
       debugPrint('Avatar not exported ($path): $e');
       return null;
@@ -124,6 +189,13 @@ class AvatarStore {
       debugPrint('Avatar cleanup skipped: $e');
     }
     return removed;
+  }
+
+  /// Deletes the whole avatars folder (e.g. when the locked personal data is
+  /// replaced by a fresh start). Missing folders are fine.
+  Future<void> deleteAll() async {
+    final directory = Directory('${(await baseDirectory()).path}/avatars');
+    if (await directory.exists()) await directory.delete(recursive: true);
   }
 
   static String _fileName(String path) =>

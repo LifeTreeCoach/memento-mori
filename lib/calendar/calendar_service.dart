@@ -8,6 +8,7 @@ import 'package:memento_mori_life_in_weeks/reminders/birthday_reminder_scheduler
 import 'package:memento_mori_life_in_weeks/friend.dart';
 import 'package:memento_mori_life_in_weeks/friends_service.dart';
 import 'package:memento_mori_life_in_weeks/localization.dart';
+import 'package:memento_mori_life_in_weeks/security/personal_store.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum CalendarSyncStatus {
@@ -92,7 +93,14 @@ class CalendarService {
   static final SerialDebouncer _serial = SerialDebouncer(_syncChangesLocked);
 
   static const String _calendarIdKey = 'calendar_sync_calendar_id';
-  static const String _syncedEventsKey = 'calendar_synced_events';
+  /// In the [PersonalStore]; the other calendar keys stay in
+  /// SharedPreferences.
+  static const String _syncedEventsKey = PersonalKeys.calendarSyncedEvents;
+
+  /// True when the stored synced events could not be read this session:
+  /// they are never overwritten then (see [_saveSyncSettings]) and nothing
+  /// is synced (see [_syncFriends]), which would duplicate every event.
+  static bool _syncedEventsUnreadable = false;
 
   /// Whether people imported from the device contacts are left out of the
   /// sync (default on: they usually already appear in the calendar through
@@ -140,6 +148,7 @@ class CalendarService {
     _syncedEvents = [];
     _eventsChanged();
     _skipImportedContacts = true;
+    _syncedEventsUnreadable = false;
     _settingsLoaded = false;
   }
 
@@ -219,7 +228,7 @@ class CalendarService {
     try {
       final prefs = await SharedPreferences.getInstance();
       _selectedCalendarId = prefs.getString(_calendarIdKey);
-      _syncedEvents = decodeSyncedEvents(prefs.getString(_syncedEventsKey));
+      _syncedEvents = await _loadSyncedEvents();
       _eventsChanged();
       _skipImportedContacts = prefs.getBool(skipImportedContactsKey) ?? true;
       _syncStatus = _selectedCalendarId != null && _syncedEvents.isNotEmpty
@@ -227,8 +236,27 @@ class CalendarService {
           : CalendarSyncStatus.notConfigured;
       _settingsLoaded = true;
     } catch (e) {
-      debugPrint('CalendarService: Error loading sync settings: $e');
+      debugPrint('CalendarService: Error loading sync settings (${e.runtimeType})');
     }
+  }
+
+  /// The synced events from the [PersonalStore] (re-read first); none, and
+  /// [_syncedEventsUnreadable] set, when they cannot be read.
+  static Future<List<CalendarEvent>> _loadSyncedEvents() async {
+    _syncedEventsUnreadable = false;
+    try {
+      final store = PersonalStore.instance;
+      await store.reload();
+      final source = store.getString(_syncedEventsKey);
+      if (source == null) return [];
+      final events = _tryDecodeSyncedEvents(source);
+      if (events != null) return events;
+    } catch (e) {
+      debugPrint('CalendarService: synced events unreadable (${e.runtimeType})');
+    }
+    debugPrint('CalendarService: synced events will not be saved this session');
+    _syncedEventsUnreadable = true;
+    return [];
   }
 
   // Save sync settings to storage
@@ -241,9 +269,12 @@ class CalendarService {
       } else {
         await prefs.setString(_calendarIdKey, calendarId);
       }
-      await prefs.setString(_syncedEventsKey, encodeSyncedEvents(_syncedEvents));
+      if (_settingsLoaded && !_syncedEventsUnreadable) {
+        await PersonalStore.instance
+            .setString(_syncedEventsKey, encodeSyncedEvents(_syncedEvents));
+      }
     } catch (e) {
-      debugPrint('CalendarService: Error saving sync settings: $e');
+      debugPrint('CalendarService: Error saving sync settings (${e.runtimeType})');
     }
   }
 
@@ -256,13 +287,18 @@ class CalendarService {
   @visibleForTesting
   static List<CalendarEvent> decodeSyncedEvents(String? source) {
     if (source == null) return [];
+    return _tryDecodeSyncedEvents(source) ?? [];
+  }
+
+  /// Events persisted by [encodeSyncedEvents]; null when unreadable.
+  static List<CalendarEvent>? _tryDecodeSyncedEvents(String source) {
     try {
       return (jsonDecode(source) as List)
           .map((e) => CalendarEvent.fromMap(e as Map<String, dynamic>))
           .toList();
     } catch (e) {
-      debugPrint('CalendarService: Ignoring unreadable synced events: $e');
-      return [];
+      debugPrint('CalendarService: Ignoring unreadable synced events (${e.runtimeType})');
+      return null;
     }
   }
 
@@ -320,21 +356,24 @@ class CalendarService {
   static bool isSkippedBySetting(Friend friend, {required bool skipImportedContacts}) =>
       skipImportedContacts && friend.importSource == Friend.importSourceContacts;
 
-  // Select calendar for birthday sync
+  /// Selects the calendar for the birthday sync and syncs right away (when
+  /// access is granted): creates the missing events and moves those in a
+  /// previously selected calendar into this one.
   static Future<bool> selectCalendar(String calendarId) =>
       _serial.run(() => _selectCalendarLocked(calendarId));
 
   static Future<bool> _selectCalendarLocked(String calendarId) async {
     try {
-      final calendar = _availableCalendars.firstWhere(
-        (cal) => cal.id == calendarId,
-        orElse: () => throw Exception('Calendar not found'),
-      );
+      if (!_availableCalendars.any((cal) => cal.id == calendarId)) {
+        throw Exception('Calendar not found');
+      }
 
       _selectedCalendarId = calendarId;
       await _saveSyncSettings();
+      revision.value++;
+      debugPrint('CalendarService: Calendar selected');
 
-      debugPrint('CalendarService: Selected calendar: ${calendar.name}');
+      await _syncChangesLocked();
       return true;
     } catch (e) {
       debugPrint('CalendarService: Error selecting calendar: $e');
@@ -386,6 +425,13 @@ class CalendarService {
   /// not skipped [friends] (or only of those whose event is missing or out
   /// of date, with [onlyPending]).
   static Future<bool> _syncFriends(List<Friend> friends, {required bool onlyPending}) async {
+    if (_syncedEventsUnreadable) {
+      // Without the stored events every friend would look unsynced and get
+      // a second event, every session.
+      debugPrint('CalendarService: synced events unreadable, sync skipped');
+      _setStatus(CalendarSyncStatus.error);
+      return false;
+    }
     try {
       _setStatus(CalendarSyncStatus.syncing);
       final kept = friends.where((f) => !isSkippedFriend(f));
@@ -486,10 +532,10 @@ class CalendarService {
       ));
       _eventsChanged();
       await _saveSyncSettings();
-      debugPrint('CalendarService: Created birthday event for ${friend.name}');
+      debugPrint('CalendarService: Created birthday event');
       return true;
     } catch (e) {
-      debugPrint('CalendarService: Error creating birthday event for ${friend.name}: $e');
+      debugPrint('CalendarService: Error creating birthday event (${e.runtimeType})');
       return false;
     }
   }
@@ -536,10 +582,10 @@ class CalendarService {
         _eventsChanged();
         await _saveSyncSettings();
       }
-      debugPrint('CalendarService: Updated birthday event for ${friend.name}');
+      debugPrint('CalendarService: Updated birthday event');
       return true;
     } catch (e) {
-      debugPrint('CalendarService: Error updating birthday event for ${friend.name}: $e');
+      debugPrint('CalendarService: Error updating birthday event (${e.runtimeType})');
       return false;
     }
   }

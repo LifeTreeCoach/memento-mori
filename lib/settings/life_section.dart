@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:memento_mori_life_in_weeks/app_settings_controller.dart';
-import 'package:memento_mori_life_in_weeks/lifespan/lifespan_profile_store.dart';
+import 'package:memento_mori_life_in_weeks/lifespan/lifespan_result_store.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/ui/lifespan_estimate_screen.dart';
 import 'package:memento_mori_life_in_weeks/localization.dart';
 import 'package:memento_mori_life_in_weeks/reminders/reminder_service.dart';
@@ -15,13 +15,13 @@ class LifeSection extends StatelessWidget {
   const LifeSection({
     super.key,
     required this.settings,
-    this.lifespanStore = const SettingsLifespanProfileStore(),
+    this.lifespanStore = const SettingsLifespanResultStore(),
   });
 
   final AppSettingsController settings;
 
   /// The user's own lifespan estimate (summary + where applying saves).
-  final LifespanProfileStore lifespanStore;
+  final LifespanResultStore lifespanStore;
 
   Future<void> _pickBirthDate(BuildContext context) async {
     final picked = await showDatePicker(
@@ -97,15 +97,14 @@ class LifeSection extends StatelessWidget {
     if (settings.birthDate == null) {
       return l10n.translate('estimate_settings_needs_birth_date');
     }
-    final applied = lifespanStore.load().applied;
-    if (applied == null) return l10n.translate('estimate_settings_sub');
-    final estimate = applied.estimate;
+    final result = lifespanStore.load();
+    if (result == null) return l10n.translate('estimate_settings_sub');
     final summary = l10n.translate('estimate_settings_summary', replacements: {
-      'mean': '${estimate.mean.round()}',
-      'p25': '${estimate.p25.round()}',
-      'p75': '${estimate.p75.round()}',
+      'mean': '${result.mean.round()}',
+      'p25': '${result.p25.round()}',
+      'p75': '${result.p75.round()}',
     });
-    if (settings.lifeExpectancyYears == applied.appliedYears) return summary;
+    if (settings.lifeExpectancyYears == result.years) return summary;
     return '$summary · ${l10n.translate('estimate_adjusted')}';
   }
 

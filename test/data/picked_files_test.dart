@@ -193,4 +193,95 @@ void main() {
       expect(picked.existsSync(), isTrue);
     });
   });
+
+  group('deletePickedImageCopy', () {
+    late Directory temp;
+
+    setUp(() => temp = Directory.systemTemp.createTempSync('picked_image_'));
+    tearDown(() => temp.deleteSync(recursive: true));
+
+    File write(String relativePath) =>
+        File('${temp.path}/$relativePath')
+          ..createSync(recursive: true)
+          ..writeAsStringSync('photo');
+
+    test('deletes the scaled copy in the cache directory', () async {
+      final picked = write('scaled_photo.jpg');
+      await deletePickedImageCopy(picked.path, temporaryDirectory: temp);
+      expect(picked.existsSync(), isFalse);
+    });
+
+    test('deletes an unscaled copy and its empty folder', () async {
+      final picked = write('0b9c-uuid/photo.jpg');
+      await deletePickedImageCopy(picked.path, temporaryDirectory: temp);
+      expect(picked.existsSync(), isFalse);
+      expect(picked.parent.existsSync(), isFalse);
+    });
+
+    test('keeps a file outside the temp directory', () async {
+      final outside = Directory.systemTemp.createTempSync('outside_');
+      addTearDown(() => outside.deleteSync(recursive: true));
+      final file = File('${outside.path}/photo.jpg')..writeAsStringSync('x');
+      await deletePickedImageCopy(file.path, temporaryDirectory: temp);
+      expect(file.existsSync(), isTrue);
+    });
+
+    test('never throws for a missing file', () async {
+      await expectLater(
+        deletePickedImageCopy('${temp.path}/gone.jpg', temporaryDirectory: temp),
+        completes,
+      );
+    });
+  });
+
+  group('readPickedBytes', () {
+    test('reads a file within the cap', () async {
+      final file = _SizedFile([1, 2, 3], reported: 3);
+      expect(await readPickedBytes(file, maxBytes: 3), [1, 2, 3]);
+    });
+
+    test('refuses a file the picker reports as too large, without reading',
+        () async {
+      final file = _SizedFile([1, 2, 3], reported: 4);
+      await expectLater(
+        readPickedBytes(file, maxBytes: 3),
+        throwsA(isA<PickedFileTooLargeException>()),
+      );
+      expect(file.streamed, isFalse);
+    });
+
+    test('stops streaming once an unknown or wrong size passes the cap',
+        () async {
+      for (final reported in [null, 1]) {
+        final file = _SizedFile([1, 2, 3, 4], reported: reported);
+        await expectLater(
+          readPickedBytes(file, maxBytes: 3),
+          throwsA(isA<PickedFileTooLargeException>()),
+          reason: 'reported $reported',
+        );
+      }
+    });
+  });
+}
+
+/// A picked file whose reported size can differ from its [bytes]; streams
+/// them one byte per chunk.
+final class _SizedFile extends _File {
+  _SizedFile(this.bytes, {required this.reported});
+
+  final List<int> bytes;
+  final int? reported;
+  bool streamed = false;
+
+  @override
+  int? lengthSync() => reported;
+
+  @override
+  Future<int?> length() async => reported;
+
+  @override
+  Stream<Uint8List> readAsByteStream() {
+    streamed = true;
+    return Stream.fromIterable([for (final b in bytes) Uint8List.fromList([b])]);
+  }
 }

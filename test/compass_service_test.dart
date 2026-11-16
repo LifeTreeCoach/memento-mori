@@ -7,7 +7,23 @@ import 'package:memento_mori_life_in_weeks/compass/life_phase.dart';
 import 'package:memento_mori_life_in_weeks/core/life_calculator.dart';
 import 'package:memento_mori_life_in_weeks/life/life_mode.dart';
 import 'package:memento_mori_life_in_weeks/life/life_period.dart';
+import 'package:memento_mori_life_in_weeks/security/personal_store.dart';
+import 'package:memento_mori_life_in_weeks/security/shared_prefs_personal_store.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+/// A [PersonalStore] whose reads fail (e.g. a vault that cannot decrypt).
+class _FailingReadStore extends SharedPrefsPersonalStore {
+  int writes = 0;
+
+  @override
+  String? getString(String key) => throw StateError('unreadable');
+
+  @override
+  Future<bool> setString(String key, String value) async {
+    writes++;
+    return true;
+  }
+}
 
 Future<Map<String, dynamic>> _stored() async {
   final prefs = await SharedPreferences.getInstance();
@@ -233,6 +249,37 @@ void main() {
       SharedPreferences.setMockInitialValues({CompassService.dataKey: '{oops'});
       await _reload();
       expect(CompassService.data.isEmpty, isTrue);
+    });
+
+    test('unreadable stored data is never overwritten that session', () async {
+      SharedPreferences.setMockInitialValues({CompassService.dataKey: '{oops'});
+      await _reload();
+      expect(CompassService.isReadOnly, isTrue);
+
+      await CompassService.addIntention(title: 'a');
+
+      final prefs = await SharedPreferences.getInstance();
+      expect(prefs.getString(CompassService.dataKey), '{oops');
+      expect(CompassService.data.isEmpty, isTrue);
+    });
+
+    test('a store that fails to read makes the session read-only', () async {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString(CompassService.dataKey, '{"intentions":[]}');
+      final store = _FailingReadStore();
+      PersonalStore.configure(store);
+      addTearDown(() => PersonalStore.configure(SharedPrefsPersonalStore()));
+      await _reload();
+      expect(CompassService.isReadOnly, isTrue);
+
+      await CompassService.addIntention(title: 'a');
+
+      expect(store.writes, 0);
+    });
+
+    test('readable data stays writable', () async {
+      await _reload();
+      expect(CompassService.isReadOnly, isFalse);
     });
   });
 

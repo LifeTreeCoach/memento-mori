@@ -11,7 +11,6 @@ import 'package:memento_mori_life_in_weeks/core/life_calculator.dart';
 import 'package:memento_mori_life_in_weeks/friends_service.dart';
 import 'package:memento_mori_life_in_weeks/life/life_grid_painter.dart';
 import 'package:memento_mori_life_in_weeks/localization.dart';
-import 'package:memento_mori_life_in_weeks/lifespan/sex.dart';
 import 'package:memento_mori_life_in_weeks/onboarding/onboarding_answers.dart';
 import 'package:memento_mori_life_in_weeks/onboarding/onboarding_screen.dart';
 import 'package:memento_mori_life_in_weeks/onboarding/reminder_opt_in.dart';
@@ -566,7 +565,7 @@ void main() {
       expect(find.byType(OnboardingScreen), findsNothing);
       // Skipped estimate: nothing about it is stored.
       final prefs = await SharedPreferences.getInstance();
-      expect(prefs.getString('lifespan_estimate'), isNull);
+      expect(prefs.getString(SettingsService.lifespanResultKey), isNull);
       expect(prefs.getString('lifespan_country'), isNull);
     });
 
@@ -672,10 +671,11 @@ void main() {
       await tester.tap(find.text('Turn on reminders'));
       await tester.pumpAndSettle();
       expect(SettingsService.getLifeExpectancyYears(), 92);
-      expect(SettingsService.getLifespanSex(), Sex.female);
-      expect(SettingsService.getLifespanCountry(), isNotNull);
-      expect(SettingsService.getLifespanAnswers().isEmpty, isTrue);
-      expect(SettingsService.getLifespanEstimate()!.appliedYears, 92);
+      expect(SettingsService.getLifespanResult()!.years, 92);
+      final prefs = await SharedPreferences.getInstance();
+      for (final key in ['lifespan_country', 'lifespan_sex']) {
+        expect(prefs.containsKey(key), isFalse, reason: key);
+      }
     });
 
     testWidgets('back inside the estimate walks its pages first', (

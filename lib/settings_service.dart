@@ -9,29 +9,34 @@ import 'package:memento_mori_life_in_weeks/reminders/reminder_rhythm.dart';
 import 'package:memento_mori_life_in_weeks/core/life_calculator.dart';
 import 'package:memento_mori_life_in_weeks/theme/theme_options.dart';
 import 'package:memento_mori_life_in_weeks/life/visualization_settings.dart';
-import 'package:memento_mori_life_in_weeks/lifespan/applied_estimate.dart';
-import 'package:memento_mori_life_in_weeks/lifespan/lifestyle_model.dart';
-import 'package:memento_mori_life_in_weeks/lifespan/sex.dart';
+import 'package:memento_mori_life_in_weeks/lifespan/lifespan_result.dart';
+import 'package:memento_mori_life_in_weeks/security/personal_store.dart';
 
+/// App settings. Personal values (birth date, name, life expectancy,
+/// lifespan result) live in the [PersonalStore]; everything else in plain
+/// `SharedPreferences`.
 class SettingsService {
   static late SharedPreferences _prefs;
+
+  static PersonalStore get _personal => PersonalStore.instance;
 
   /// Decoded [getVisualizationSettings], dropped on every save.
   static VisualizationSettings? _visualizationSettings;
 
   static Future<void> initialize() async {
     _prefs = await SharedPreferences.getInstance();
+    await _personal.reload();
     _visualizationSettings = null;
   }
 
   static DateTime? getBirthDate() {
-    String? dateStr = _prefs.getString('birth_date');
+    String? dateStr = _personal.getString(PersonalKeys.birthDate);
     if (dateStr != null) return DateTime.parse(dateStr);
     return null;
   }
 
   static void setBirthDate(DateTime date) {
-    _prefs.setString('birth_date', date.toIso8601String());
+    _personal.setString(PersonalKeys.birthDate, date.toIso8601String());
   }
 
   /// Stored language, or the device language if the user never chose one.
@@ -62,12 +67,12 @@ class SettingsService {
   /// Expected lifespan in years used for all life calculations
   /// (default [LifeCalculator.defaultLifeExpectancyYears]).
   static int getLifeExpectancyYears() {
-    return _prefs.getInt('life_expectancy_years') ??
+    return _personal.getInt(PersonalKeys.lifeExpectancyYears) ??
         LifeCalculator.defaultLifeExpectancyYears;
   }
 
   static Future<void> setLifeExpectancyYears(int years) async {
-    await _prefs.setInt('life_expectancy_years', years);
+    await _personal.setInt(PersonalKeys.lifeExpectancyYears, years);
   }
 
   /// Unit the home-screen widget counts down in: weeks, months, years or days.
@@ -128,11 +133,11 @@ class SettingsService {
   }
 
   static String getUserName() {
-    return _prefs.getString('user_name') ?? '';
+    return _personal.getString(PersonalKeys.userName) ?? '';
   }
 
   static void setUserName(String name) {
-    _prefs.setString('user_name', name);
+    _personal.setString(PersonalKeys.userName, name);
   }
 
   static bool hasCompletedOnboarding() {
@@ -142,6 +147,16 @@ class SettingsService {
   static void setOnboardingCompleted(bool completed) {
     _prefs.setBool('onboarding_completed', completed);
   }
+
+  /// Set once the first-launch logo was shown (or skipped for people who
+  /// had onboarded before it existed); never reset, not even by
+  /// "Start fresh", so the logo appears only on the very first launch.
+  static const String introLogoShownKey = 'intro_logo_shown';
+
+  static bool hasShownIntroLogo() => _prefs.getBool(introLogoShownKey) ?? false;
+
+  static Future<void> setIntroLogoShown() =>
+      _prefs.setBool(introLogoShownKey, true);
 
   static const String weeklyReminderEnabledKey = 'weekly_reminder_enabled';
   static const String reminderRhythmKey = 'compass_reminder_rhythm';
@@ -241,47 +256,18 @@ class SettingsService {
     await _prefs.setString(friendLifespanViewKey, view);
   }
 
-  // Personal lifespan estimate (lib/lifespan/). Stays on the device only.
+  // Personal lifespan estimate (lib/lifespan/): only its result is kept,
+  // never the answers (country, sex, lifestyle, health conditions).
+  static const String lifespanResultKey = PersonalKeys.lifespanResult;
 
-  /// Life-table code chosen for the estimate (ISO2 or `WLD`), null if never set.
-  static String? getLifespanCountry() {
-    return _prefs.getString('lifespan_country');
+  /// The last applied estimate's result, or null if none (or unreadable).
+  static LifespanResult? getLifespanResult() {
+    final json = _decodeJsonObject(_personal.getString(lifespanResultKey));
+    return json == null ? null : LifespanResult.fromJson(json);
   }
 
-  static Future<void> setLifespanCountry(String country) async {
-    await _prefs.setString('lifespan_country', country);
-  }
-
-  static Sex? getLifespanSex() {
-    return Sex.fromName(_prefs.getString('lifespan_sex'));
-  }
-
-  static Future<void> setLifespanSex(Sex sex) async {
-    await _prefs.setString('lifespan_sex', sex.name);
-  }
-
-  /// Optional lifestyle answers; empty when none were given.
-  static LifestyleAnswers getLifespanAnswers() {
-    final json = _decodeJsonObject(_prefs.getString('lifespan_answers'));
-    return json == null
-        ? const LifestyleAnswers()
-        : LifestyleAnswers.fromJson(json);
-  }
-
-  static Future<void> setLifespanAnswers(LifestyleAnswers answers) async {
-    await _prefs.setString('lifespan_answers', jsonEncode(answers.toJson()));
-  }
-
-  /// The last applied estimate, or null if none (or unreadable).
-  static AppliedLifespanEstimate? getLifespanEstimate() {
-    final json = _decodeJsonObject(_prefs.getString('lifespan_estimate'));
-    return json == null ? null : AppliedLifespanEstimate.fromJson(json);
-  }
-
-  static Future<void> setLifespanEstimate(
-    AppliedLifespanEstimate estimate,
-  ) async {
-    await _prefs.setString('lifespan_estimate', jsonEncode(estimate.toJson()));
+  static Future<void> setLifespanResult(LifespanResult result) async {
+    await _personal.setString(lifespanResultKey, jsonEncode(result.toJson()));
   }
 
   static Map<String, Object?>? _decodeJsonObject(String? text) {

@@ -253,40 +253,6 @@ void main() {
         {_stroke},
       );
     });
-
-    test('JSON round trip; empty stays "none", null stays skipped', () {
-      for (final answers in const [
-        LifestyleAnswers(smoking: Smoking.never, conditions: {_mi, _t2}),
-        LifestyleAnswers(conditions: {}),
-        LifestyleAnswers(activity: Activity.some),
-      ]) {
-        final json = jsonDecode(jsonEncode(answers.toJson()));
-        expect(
-          LifestyleAnswers.fromJson(json as Map<String, Object?>),
-          answers,
-        );
-      }
-      expect(
-        const LifestyleAnswers(conditions: {_mi, _t2}).toJson()['conditions'],
-        ['type2Diabetes', 'heartAttack'],
-      );
-      expect(
-        const LifestyleAnswers().toJson().containsKey('conditions'),
-        isFalse,
-      );
-    });
-
-    test('unknown condition names are ignored', () {
-      final answers = LifestyleAnswers.fromJson({
-        'v': 1,
-        'conditions': ['copd', 'gout', 7],
-      });
-      expect(answers.conditions, {ChronicCondition.copd});
-      expect(
-        LifestyleAnswers.fromJson({'conditions': 'copd'}).conditions,
-        isNull,
-      );
-    });
   });
 
   group('estimator', () {
@@ -387,16 +353,12 @@ void main() {
       expect(e.gains.keys, [LifestyleFactor.smoking]);
     });
 
-    test('estimate exposes Md and keeps it through JSON', () {
+    test('estimate exposes Md', () {
       final e = run(40, {_mi});
       expect(
         e.conditionMultiplier,
         closeTo(2.0 * noConditionFactor(e.age), 1e-12),
       );
-      final copy = LifespanEstimate.fromJson(e.toJson())!;
-      expect(copy.conditionMultiplier, e.conditionMultiplier);
-      final legacy = e.toJson()..remove('conditionMultiplier');
-      expect(LifespanEstimate.fromJson(legacy)!.conditionMultiplier, 1.0);
     });
   });
 }

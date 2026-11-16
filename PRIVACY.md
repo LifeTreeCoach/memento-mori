@@ -1,6 +1,6 @@
 # Privacy
 
-Effective date: 2026-11-08
+Effective date: 2026-11-13
 
 Deutsche Fassung: [weiter unten](#datenschutz).
 Version française : [plus bas](#confidentialité).
@@ -15,25 +15,43 @@ account, no analytics or tracking, no ads and no server of ours.
 
 On your device only:
 
-- your birth date, life expectancy and settings (language, theme, reminders,
-  widget)
+- your name (optional), birth date, life expectancy and settings (language,
+  theme, reminders, widget)
 - the people you add: name, birthday (with or without year), groups, an
-  optional photo, message and meeting frequency. People you import also keep
-  where they came from (contacts or vCard) and the contact's id there, so a
-  later import only shows new or changed birthdays.
+  optional photo, message, meeting frequency and life expectancy. People you
+  import also keep where they came from (contacts or vCard) and the contact's
+  id there, so a later import only shows new or changed birthdays.
 - your Compass entries and weekly questions
-- the answers to the lifespan estimate: country, sex and the lifestyle answers.
-  For weight only the BMI band is saved; the height and weight you type in are
-  never stored.
-- optional health answers for the lifespan estimate: the chronic conditions
-  you tick (for example diabetes or a past heart attack), or that you ticked
-  none. They stay on the device and are never sent anywhere. They are part of
-  the device's own backups (Android Auto Backup, iCloud or computer backup),
-  but not of the JSON export. You can remove them at any time by opening the
-  estimate again, skipping that question (or unticking everything) and
-  applying the estimate, or by deleting the app's data or the app.
-  If you enter such information about other people, please only do so with
-  their consent.
+- of the lifespan estimate, only the result: the years (for you also the
+  average and the range). The answers - country, sex, height and weight,
+  smoking, activity, alcohol, social life and the optional health answers
+  such as chronic conditions - are only used for the calculation and are
+  never saved: not on the device, not in backups and not in exports. This
+  applies to estimates for other people too.
+
+### How your data is protected
+
+- **Encrypted on the device**: your name, birth date, life expectancy,
+  estimate result, people, Compass entries, calendar sync state and
+  reminder state, and the photos of your people, are stored encrypted with
+  AES-256-GCM. The 256-bit key is held by the system key store (Android
+  Keystore, iPhone Keychain), available after the first unlock and not synced
+  to your other devices. Only a backup can carry it, together with the data:
+  on iPhone it travels with iCloud and encrypted computer backups (see
+  "Backups and export"). Settings that are not personal (theme, language and
+  similar switches) are stored without encryption.
+- **What stays readable**, because the system or the native parts of the app
+  need it:
+  - the home-screen widget and the watch inputs: birth date, life expectancy
+    and display settings
+  - the list of scheduled notifications, kept by the notification library so
+    reminders still arrive after a restart; it contains their texts,
+    including names
+  - calendar events, if you turn on birthday sync
+- If the encrypted data reaches a device without its key (for example after
+  restoring an unencrypted computer backup on an iPhone), the app shows that
+  the data is locked and offers "Try again" or "Start fresh". Nothing is
+  deleted automatically.
 
 ### Internet
 
@@ -72,13 +90,23 @@ platform.
 
 ### Backups and export
 
-- **Android Auto Backup** is on. If you have it enabled in your phone's
-  settings, Android backs up the app's data (settings incl. the lifespan
-  answers, people, Compass, photos) to your Google account and restores it on a new phone. On iPhone,
-  the app's data is part of your normal iCloud or computer backup.
-- **Export / import** (Settings > Data): creates a JSON file with your people,
-  their photos and your Compass entries (not your lifespan answers). You decide where it goes; the app
-  never uploads it.
+- **Android backup and device transfer**: the app's data is only backed up to
+  the cloud when the backup is end-to-end encrypted (Android skips it
+  otherwise); a direct transfer to a new phone works too. The data key goes
+  only into such an end-to-end encrypted backup or the device-to-device
+  transfer.
+- **iPhone**: the key travels with iCloud backups and encrypted computer
+  backups. Without Advanced Data Protection, Apple can technically access
+  iCloud backups, which contain the data and the key. An unencrypted computer
+  backup restores the data without its key, so it stays locked (see above).
+- Backups made before this version may still contain unencrypted data until
+  they are replaced by newer ones.
+- **Export / import** (Settings > Data): creates a file with your people
+  (including their life expectancy), their photos and your Compass entries.
+  It never contains estimate answers. By default it is a readable JSON file;
+  you can protect it with a password instead (PBKDF2-HMAC-SHA256 with 600,000
+  iterations and AES-256-GCM). Without the password nobody can restore a
+  protected export. You decide where the file goes; the app never uploads it.
 
 ### Watches
 
@@ -110,7 +138,7 @@ https://github.com/LifeTreeCoach/memento-mori/discussions
 
 ## Datenschutz
 
-Gültig ab: 2026-11-08
+Gültig ab: 2026-11-13
 
 Memento Mori speichert alles auf deinem Gerät. Es gibt kein
 Konto, keine Analyse oder Tracking, keine Werbung und keinen eigenen Server.
@@ -119,27 +147,47 @@ Konto, keine Analyse oder Tracking, keine Werbung und keinen eigenen Server.
 
 Nur auf deinem Gerät:
 
-- dein Geburtsdatum, deine Lebenserwartung und Einstellungen (Sprache, Design,
-  Erinnerungen, Widget)
+- deinen Namen (optional), dein Geburtsdatum, deine Lebenserwartung und
+  Einstellungen (Sprache, Design, Erinnerungen, Widget)
 - die Personen, die du hinzufügst: Name, Geburtstag (mit oder ohne Jahr),
-  Gruppen, optional ein Foto, eine Nachricht und wie oft ihr euch seht. Bei
-  importierten Personen merkt sich die App außerdem die Herkunft (Kontakte
-  oder vCard) und die Kontakt-ID dort, damit ein späterer Import nur neue
-  oder geänderte Geburtstage zeigt.
+  Gruppen, optional ein Foto, eine Nachricht, wie oft ihr euch seht und ihre
+  Lebenserwartung. Bei importierten Personen merkt sich die App außerdem die
+  Herkunft (Kontakte oder vCard) und die Kontakt-ID dort, damit ein späterer
+  Import nur neue oder geänderte Geburtstage zeigt.
 - deine Kompass-Einträge und Wochenfragen
-- die Antworten zur Lebenserwartungs-Schätzung: Land, Geschlecht und die
-  Lebensstil-Antworten. Beim Gewicht wird nur der BMI-Bereich gespeichert;
-  Größe und Gewicht, die du eintippst, werden nie gespeichert.
-- optionale Gesundheitsangaben für die Lebenserwartungs-Schätzung: die
-  chronischen Erkrankungen, die du ankreuzt (zum Beispiel Diabetes oder ein
-  früherer Herzinfarkt), oder dass du keine angekreuzt hast. Sie bleiben auf
-  dem Gerät und werden nirgendwohin gesendet. Sie sind Teil der Sicherungen
-  deines Geräts (Android Auto Backup, iCloud- oder Computer-Sicherung), aber
-  nicht des JSON-Exports. Du kannst sie jederzeit entfernen: Schätzung erneut
-  öffnen, die Frage überspringen (oder alle Häkchen entfernen) und die
-  Schätzung übernehmen, oder die App-Daten bzw. die App löschen.
-  Wenn du solche Angaben über andere Menschen machst, tu das bitte nur mit
-  ihrer Einwilligung.
+- von der Lebenserwartungs-Schätzung nur das Ergebnis: die Jahre (für dich
+  außerdem Mittelwert und Spanne). Die Antworten - Land, Geschlecht, Größe und
+  Gewicht, Rauchen, Bewegung, Alkohol, soziales Leben und die optionalen
+  Gesundheitsangaben wie chronische Erkrankungen - dienen nur der Berechnung
+  und werden nie gespeichert: weder auf dem Gerät noch in Sicherungen oder
+  Exporten. Das gilt auch für Schätzungen für andere Menschen.
+
+### Wie deine Daten geschützt sind
+
+- **Verschlüsselt auf dem Gerät**: dein Name, Geburtsdatum, deine
+  Lebenserwartung, das Ergebnis der Schätzung, deine Personen,
+  Kompass-Einträge, der Stand der Kalender-Synchronisierung und der
+  Erinnerungen sowie die Fotos deiner Personen werden mit AES-256-GCM
+  verschlüsselt gespeichert. Den 256-Bit-Schlüssel verwahrt der
+  Schlüsselspeicher des Systems (Android Keystore, iPhone-Schlüsselbund),
+  verfügbar nach dem ersten Entsperren und nicht mit deinen anderen Geräten
+  synchronisiert. Nur eine Sicherung kann ihn zusammen mit den Daten
+  mitnehmen: Auf dem iPhone reist er mit iCloud-Backups und verschlüsselten
+  Computer-Backups (siehe „Sicherungen und Export“). Nicht persönliche Einstellungen (Design, Sprache und
+  ähnliche Schalter) werden unverschlüsselt gespeichert.
+- **Was lesbar bleibt**, weil das System oder die nativen Teile der App es
+  brauchen:
+  - die Eingaben für Widget und Uhr: Geburtsdatum, Lebenserwartung und
+    Anzeige-Einstellungen
+  - die Liste der geplanten Benachrichtigungen, die die
+    Benachrichtigungs-Bibliothek aufbewahrt, damit Erinnerungen auch nach
+    einem Neustart ankommen; sie enthält deren Texte samt Namen
+  - Kalendertermine, wenn du die Geburtstags-Synchronisierung einschaltest
+- Kommen die verschlüsselten Daten ohne ihren Schlüssel auf ein Gerät (zum
+  Beispiel nach dem Wiederherstellen einer unverschlüsselten
+  Computer-Sicherung auf einem iPhone), zeigt die App, dass die Daten
+  verschlossen sind, und bietet "Noch einmal versuchen" oder "Neu beginnen"
+  an. Es wird nichts automatisch gelöscht.
 
 ### Internet
 
@@ -178,16 +226,27 @@ also nichts versenden. Die App enthält auf keiner Plattform Netzwerk-Code.
 
 ### Sicherungen und Export
 
-- **Android Auto Backup** ist eingeschaltet. Wenn du es in den Einstellungen
-  deines Handys aktiviert hast, sichert Android die Daten der App
-  (Einstellungen samt Antworten zur Lebenserwartung, Personen, Kompass,
-  Fotos) in deinem Google-Konto und stellt
-  sie auf einem neuen Handy wieder her. Auf dem iPhone sind die Daten Teil
-  deiner normalen iCloud- oder Computer-Sicherung.
-- **Export / Import** (Einstellungen > Daten): erstellt eine JSON-Datei mit
-  deinen Personen, ihren Fotos und deinen Kompass-Einträgen (nicht deinen
-  Antworten zur Lebenserwartung). Du entscheidest,
-  wo sie landet; die App lädt sie nirgends hoch.
+- **Android-Sicherung und Geräteübertragung**: Die Daten der App werden nur
+  dann in der Cloud gesichert, wenn die Sicherung Ende-zu-Ende-verschlüsselt
+  ist (sonst lässt Android sie aus); eine direkte Übertragung auf ein neues
+  Handy geht ebenfalls. Der Datenschlüssel kommt nur in eine solche
+  Ende-zu-Ende-verschlüsselte Sicherung oder in die Übertragung von Gerät zu
+  Gerät.
+- **iPhone**: Der Schlüssel reist mit iCloud-Backups und verschlüsselten
+  Computer-Backups mit. Ohne den erweiterten Datenschutz kann Apple technisch
+  auf iCloud-Backups zugreifen, die Daten und Schlüssel enthalten. Ein
+  unverschlüsseltes Computer-Backup stellt die Daten ohne ihren Schlüssel
+  wieder her, sie bleiben dann verschlossen (siehe oben).
+- Sicherungen, die vor dieser Version entstanden sind, können noch
+  unverschlüsselte Daten enthalten, bis neuere sie ersetzen.
+- **Export / Import** (Einstellungen > Daten): erstellt eine Datei mit deinen
+  Personen (samt ihrer Lebenserwartung), ihren Fotos und deinen
+  Kompass-Einträgen. Antworten zur Schätzung enthält sie nie. Standardmäßig
+  ist sie eine lesbare JSON-Datei; du kannst sie stattdessen mit einem
+  Passwort schützen (PBKDF2-HMAC-SHA256 mit 600.000 Durchläufen und
+  AES-256-GCM). Ohne das Passwort kann niemand einen geschützten Export
+  wiederherstellen. Du entscheidest, wo die Datei landet; die App lädt sie
+  nirgends hoch.
 
 ### Uhren
 
@@ -220,7 +279,7 @@ https://github.com/LifeTreeCoach/memento-mori/discussions
 
 ## Confidentialité
 
-En vigueur depuis le : 2026-11-08
+En vigueur depuis le : 2026-11-13
 
 Memento Mori - Life in Weeks garde tout sur ton appareil. Il n’y a ni
 compte, ni analyse ou suivi, ni publicité, ni serveur à nous.
@@ -229,28 +288,51 @@ compte, ni analyse ou suivi, ni publicité, ni serveur à nous.
 
 Uniquement sur ton appareil :
 
-- ta date de naissance, ton espérance de vie et tes réglages (langue, thème,
-  rappels, widget)
+- ton prénom (facultatif), ta date de naissance, ton espérance de vie et tes
+  réglages (langue, thème, rappels, widget)
 - les personnes que tu ajoutes : nom, anniversaire (avec ou sans année),
-  groupes, et en option une photo, un message et la fréquence de vos
-  rencontres. Pour les personnes importées, l’app retient aussi leur provenance
-  (contacts ou vCard) et l’identifiant du contact là-bas, pour qu’une
-  importation ultérieure n’affiche que les anniversaires nouveaux ou modifiés.
+  groupes, et en option une photo, un message, la fréquence de vos rencontres
+  et leur espérance de vie. Pour les personnes importées, l’app retient aussi
+  leur provenance (contacts ou vCard) et l’identifiant du contact là-bas, pour
+  qu’une importation ultérieure n’affiche que les anniversaires nouveaux ou
+  modifiés.
 - tes entrées de la Boussole et les questions de la semaine
-- les réponses à l’estimation de l’espérance de vie : pays, sexe et réponses
-  sur le mode de vie. Pour le poids, seule la tranche d’IMC est enregistrée ;
-  la taille et le poids que tu saisis ne sont jamais enregistrés.
-- des réponses de santé facultatives pour l’estimation de l’espérance de vie :
-  les maladies chroniques que tu coches (par exemple le diabète ou un ancien
-  infarctus), ou le fait que tu n’en as coché aucune. Elles restent sur
-  l’appareil et ne sont jamais envoyées nulle part. Elles font partie des
-  sauvegardes de l’appareil (Android Auto Backup, iCloud ou sauvegarde sur
-  ordinateur), mais pas de l’export JSON. Tu peux les supprimer à tout moment
-  en rouvrant l’estimation, en passant cette question (ou en décochant tout)
-  et en appliquant l’estimation, ou en supprimant les données de l’app ou
-  l’app elle-même.
-  Si tu saisis de telles informations sur d’autres personnes, fais-le
-  uniquement avec leur consentement.
+- de l’estimation de l’espérance de vie, uniquement le résultat : les années
+  (pour toi aussi la moyenne et la fourchette). Les réponses - pays, sexe,
+  taille et poids, tabac, activité, alcool, vie sociale et les réponses de
+  santé facultatives comme les maladies chroniques - servent uniquement au
+  calcul et ne sont jamais enregistrées : ni sur l’appareil, ni dans les
+  sauvegardes, ni dans les exports. Cela vaut aussi pour les estimations
+  faites pour d’autres personnes.
+
+### Comment tes données sont protégées
+
+- **Chiffrées sur l’appareil** : ton prénom, ta date de naissance, ton
+  espérance de vie, le résultat de l’estimation, tes personnes, tes entrées
+  de la Boussole, l’état de la synchronisation du calendrier et des rappels,
+  ainsi que les photos de tes personnes, sont enregistrés chiffrés avec
+  AES-256-GCM. La clé de 256 bits est gardée par le stockage de clés du
+  système (Android Keystore, trousseau de l’iPhone), disponible après le
+  premier déverrouillage et non synchronisée avec tes autres appareils. Seule
+  une sauvegarde peut l’emporter, avec les données : sur iPhone, elle
+  voyage avec les sauvegardes iCloud et les sauvegardes chiffrées sur
+  ordinateur (voir « Sauvegardes et export »). Les
+  réglages non personnels (thème, langue et interrupteurs similaires) sont
+  enregistrés sans chiffrement.
+- **Ce qui reste lisible**, parce que le système ou les parties natives de
+  l’app en ont besoin :
+  - les données du widget et de la montre : date de naissance, espérance de
+    vie et réglages d’affichage
+  - la liste des notifications programmées, conservée par la bibliothèque de
+    notifications pour que les rappels arrivent même après un redémarrage ;
+    elle contient leurs textes, noms compris
+  - les événements du calendrier, si tu actives la synchronisation des
+    anniversaires
+- Si les données chiffrées arrivent sur un appareil sans leur clé (par
+  exemple après la restauration d’une sauvegarde non chiffrée sur ordinateur
+  sur un iPhone), l’app indique que les données sont verrouillées et propose
+  « Réessayer » ou « Repartir de zéro ». Rien n’est supprimé
+  automatiquement.
 
 ### Internet
 
@@ -293,16 +375,26 @@ code réseau, sur aucune plateforme.
 
 ### Sauvegardes et export
 
-- **Android Auto Backup** est activé. Si tu l’as activé dans les réglages de
-  ton téléphone, Android sauvegarde les données de l’app (réglages, y compris
-  les réponses sur l’espérance de vie, personnes, Boussole, photos) dans ton
-  compte Google et les restaure sur un nouveau téléphone. Sur iPhone, les
-  données de l’app font partie de ta sauvegarde iCloud ou sur ordinateur
-  habituelle.
-- **Export / import** (Réglages > Données) : crée un fichier JSON avec tes
-  personnes, leurs photos et tes entrées de la Boussole (pas tes réponses sur
-  l’espérance de vie). C’est toi qui décides où il va ; l’app ne le
-  téléverse jamais.
+- **Sauvegarde Android et transfert d’appareil** : les données de l’app ne
+  sont sauvegardées dans le cloud que si la sauvegarde est chiffrée de bout
+  en bout (sinon Android les ignore) ; un transfert direct vers un nouveau
+  téléphone fonctionne aussi. La clé des données ne va que dans une telle
+  sauvegarde chiffrée de bout en bout ou dans le transfert d’appareil à
+  appareil.
+- **iPhone** : la clé voyage avec les sauvegardes iCloud et les sauvegardes
+  chiffrées sur ordinateur. Sans la protection avancée des données, Apple
+  peut techniquement accéder aux sauvegardes iCloud, qui contiennent les
+  données et la clé. Une sauvegarde non chiffrée sur ordinateur restaure les
+  données sans leur clé ; elles restent alors verrouillées (voir plus haut).
+- Les sauvegardes faites avant cette version peuvent encore contenir des
+  données non chiffrées jusqu’à ce que de plus récentes les remplacent.
+- **Export / import** (Réglages > Données) : crée un fichier avec tes
+  personnes (y compris leur espérance de vie), leurs photos et tes entrées de
+  la Boussole. Il ne contient jamais les réponses de l’estimation. Par
+  défaut, c’est un fichier JSON lisible ; tu peux le protéger par un mot de
+  passe (PBKDF2-HMAC-SHA256 avec 600 000 itérations et AES-256-GCM). Sans le
+  mot de passe, personne ne peut restaurer un export protégé. C’est toi qui
+  décides où va le fichier ; l’app ne le téléverse jamais.
 
 ### Montres
 
@@ -336,7 +428,7 @@ https://github.com/LifeTreeCoach/memento-mori/discussions
 
 ## Privacidad
 
-En vigor desde: 2026-11-08
+En vigor desde: 2026-11-13
 
 Memento Mori - Life in Weeks guarda todo en tu dispositivo. No hay cuenta,
 ni analíticas o seguimiento, ni anuncios, ni servidor propio.
@@ -345,27 +437,47 @@ ni analíticas o seguimiento, ni anuncios, ni servidor propio.
 
 Solo en tu dispositivo:
 
-- tu fecha de nacimiento, tu esperanza de vida y tus ajustes (idioma, tema,
-  recordatorios, widget)
+- tu nombre (opcional), tu fecha de nacimiento, tu esperanza de vida y tus
+  ajustes (idioma, tema, recordatorios, widget)
 - las personas que añades: nombre, cumpleaños (con o sin año), grupos y, de
-  forma opcional, una foto, un mensaje y la frecuencia con la que os veis. De
-  las personas importadas, la app guarda además su origen (contactos o vCard)
-  y el identificador del contacto allí, para que una importación posterior
-  solo muestre cumpleaños nuevos o cambiados.
+  forma opcional, una foto, un mensaje, la frecuencia con la que os veis y su
+  esperanza de vida. De las personas importadas, la app guarda además su
+  origen (contactos o vCard) y el identificador del contacto allí, para que
+  una importación posterior solo muestre cumpleaños nuevos o cambiados.
 - tus entradas de la Brújula y las preguntas semanales
-- las respuestas de la estimación de la esperanza de vida: país, sexo y las
-  respuestas sobre el estilo de vida. Del peso solo se guarda la franja de
-  IMC; la altura y el peso que escribes nunca se guardan.
-- respuestas de salud opcionales para la estimación de la esperanza de vida:
-  las enfermedades crónicas que marcas (por ejemplo, diabetes o un infarto
-  anterior), o que no marcaste ninguna. Se quedan en el dispositivo y nunca se
-  envían a ningún sitio. Forman parte de las copias de seguridad del propio
-  dispositivo (Android Auto Backup, iCloud o copia en el ordenador), pero no
-  de la exportación JSON. Puedes eliminarlas en cualquier momento abriendo de
-  nuevo la estimación, saltando esa pregunta (o desmarcándolo todo) y
-  aplicando la estimación, o borrando los datos de la app o la app.
-  Si introduces este tipo de información sobre otras personas, hazlo solo con
-  su consentimiento.
+- de la estimación de la esperanza de vida, solo el resultado: los años (para
+  ti también la media y el rango). Las respuestas - país, sexo, altura y
+  peso, tabaco, actividad, alcohol, vida social y las respuestas de salud
+  opcionales como las enfermedades crónicas - solo se usan para el cálculo y
+  nunca se guardan: ni en el dispositivo, ni en las copias de seguridad, ni
+  en las exportaciones. Esto vale también para las estimaciones de otras
+  personas.
+
+### Cómo se protegen tus datos
+
+- **Cifrados en el dispositivo**: tu nombre, tu fecha de nacimiento, tu
+  esperanza de vida, el resultado de la estimación, tus personas, tus
+  entradas de la Brújula, el estado de la sincronización del calendario y de
+  los recordatorios, y las fotos de tus personas se guardan cifrados con
+  AES-256-GCM. La clave de 256 bits la guarda el almacén de claves del
+  sistema (Android Keystore, llavero del iPhone), disponible tras el primer
+  desbloqueo y sin sincronizar con tus otros dispositivos. Solo una copia de
+  seguridad puede llevarla, junto con los datos: en el iPhone viaja con las
+  copias de iCloud y las copias cifradas en el ordenador (ver «Copias de
+  seguridad y exportación»). Los ajustes no
+  personales (tema, idioma e interruptores similares) se guardan sin cifrar.
+- **Lo que sigue siendo legible**, porque el sistema o las partes nativas de
+  la app lo necesitan:
+  - los datos del widget y del reloj: fecha de nacimiento, esperanza de vida
+    y ajustes de visualización
+  - la lista de notificaciones programadas, que guarda la biblioteca de
+    notificaciones para que los recordatorios lleguen también después de un
+    reinicio; contiene sus textos, nombres incluidos
+  - los eventos del calendario, si activas la sincronización de cumpleaños
+- Si los datos cifrados llegan a un dispositivo sin su clave (por ejemplo,
+  tras restaurar una copia sin cifrar del ordenador en un iPhone), la app
+  indica que los datos están bloqueados y ofrece "Intentar de nuevo" o
+  "Empezar de cero". No se borra nada automáticamente.
 
 ### Internet
 
@@ -405,15 +517,26 @@ de red en ninguna plataforma.
 
 ### Copias de seguridad y exportación
 
-- **Android Auto Backup** está activado. Si lo tienes activado en los ajustes
-  de tu móvil, Android hace una copia de seguridad de los datos de la app
-  (ajustes, incluidas las respuestas sobre la esperanza de vida, personas,
-  Brújula, fotos) en tu cuenta de Google y los restaura en un móvil nuevo. En
-  el iPhone, los datos de la app forman parte de tu copia de seguridad
-  habitual de iCloud o del ordenador.
-- **Exportar / importar** (Ajustes > Datos): crea un archivo JSON con tus
-  personas, sus fotos y tus entradas de la Brújula (no tus respuestas sobre la
-  esperanza de vida). Tú decides adónde va; la app nunca lo sube.
+- **Copia de seguridad de Android y transferencia entre dispositivos**: los
+  datos de la app solo se copian en la nube cuando la copia está cifrada de
+  extremo a extremo (si no, Android los omite); también funciona una
+  transferencia directa a un móvil nuevo. La clave de los datos solo va en
+  una copia así, cifrada de extremo a extremo, o en la transferencia de
+  dispositivo a dispositivo.
+- **iPhone**: la clave viaja con las copias de iCloud y las copias cifradas
+  en el ordenador. Sin la Protección de datos avanzada, Apple puede acceder
+  técnicamente a las copias de iCloud, que contienen los datos y la clave.
+  Una copia sin cifrar en el ordenador restaura los datos sin su clave, así
+  que siguen bloqueados (ver arriba).
+- Las copias hechas antes de esta versión pueden seguir conteniendo datos
+  sin cifrar hasta que otras más recientes las sustituyan.
+- **Exportar / importar** (Ajustes > Datos): crea un archivo con tus personas
+  (incluida su esperanza de vida), sus fotos y tus entradas de la Brújula.
+  Nunca contiene respuestas de la estimación. Por defecto es un archivo JSON
+  legible; también puedes protegerlo con una contraseña (PBKDF2-HMAC-SHA256
+  con 600.000 iteraciones y AES-256-GCM). Sin la contraseña, nadie puede
+  restaurar una exportación protegida. Tú decides adónde va el archivo; la
+  app nunca lo sube.
 
 ### Relojes
 

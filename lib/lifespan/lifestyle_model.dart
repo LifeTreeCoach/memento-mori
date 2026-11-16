@@ -243,7 +243,6 @@ class LifestyleAnswers {
     this.conditions,
   });
 
-  static const int jsonVersion = 1;
   static const double minMultiplier = 0.6;
   static const double maxMultiplier = 2.5;
   static const double adultAge = 18;
@@ -320,48 +319,6 @@ class LifestyleAnswers {
   /// Chronic condition multiplier Md at [age] (see [conditionMultiplier]).
   double conditionMultiplierAt({required double age}) =>
       conditionMultiplier(conditions, age);
-
-  Map<String, Object?> toJson() => {
-    'v': jsonVersion,
-    for (final factor in LifestyleFactor.values)
-      if (answerFor(factor) != null) factor.name: answerFor(factor)!.name,
-    if (conditions != null)
-      conditionsJsonKey: [
-        for (final c in ChronicCondition.values)
-          if (conditions!.contains(c)) c.name,
-      ],
-  };
-
-  static const String conditionsJsonKey = 'conditions';
-
-  /// A list of names becomes a set (unknown names ignored); else null.
-  static Set<ChronicCondition>? _conditionsFromJson(Object? value) {
-    if (value is! List) return null;
-    return {
-      for (final condition in ChronicCondition.values)
-        if (value.contains(condition.name)) condition,
-    };
-  }
-
-  /// Unknown or missing values become null (skipped).
-  factory LifestyleAnswers.fromJson(Map<String, Object?> json) {
-    T? pick<T extends LifestyleOption>(LifestyleFactor factor) {
-      final value = json[factor.name];
-      for (final option in factor.options) {
-        if (option.name == value) return option as T;
-      }
-      return null;
-    }
-
-    return LifestyleAnswers(
-      smoking: pick(LifestyleFactor.smoking),
-      activity: pick(LifestyleFactor.activity),
-      alcohol: pick(LifestyleFactor.alcohol),
-      bmi: pick(LifestyleFactor.bmi),
-      social: pick(LifestyleFactor.social),
-      conditions: _conditionsFromJson(json[conditionsJsonKey]),
-    );
-  }
 
   @override
   bool operator ==(Object other) =>

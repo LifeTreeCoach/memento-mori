@@ -30,6 +30,8 @@ const Map<String, String> lifespanStringsEn = {
       'Has a doctor ever told you that you have one of these?',
   'estimate_hint_conditions':
       'Only if you like – you can skip this. Tick all that apply.',
+  'estimate_conditions_privacy':
+      'These answers are never saved – they’re only used to calculate your number.',
   'estimate_condition_type2Diabetes': 'Type 2 diabetes',
   'estimate_condition_type1Diabetes': 'Type 1 diabetes',
   'estimate_condition_heartAttack': 'A heart attack',
@@ -75,7 +77,7 @@ const Map<String, String> lifespanStringsEn = {
   'estimate_weight': 'Weight',
   'estimate_weight_result': 'Your range: {band}',
   'estimate_weight_privacy':
-      'Only the range is kept, never your height or weight.',
+      'Your height and weight are only used for this calculation and never saved. Only the resulting number is kept.',
   'estimate_question_social': 'How connected do you feel to other people?',
   'estimate_hint_social': 'Friends, family, community.',
   'estimate_option_social_oftenLonely': 'Often lonely',
@@ -142,6 +144,8 @@ const Map<String, String> lifespanStringsDe = {
       'Hat dir eine Ärztin oder ein Arzt schon einmal gesagt, dass du eines davon hast oder hattest?',
   'estimate_hint_conditions':
       'Nur wenn du magst – du kannst das überspringen. Kreuze alles an, was zutrifft.',
+  'estimate_conditions_privacy':
+      'Diese Antworten werden nie gespeichert – sie dienen nur dazu, deine Zahl zu berechnen.',
   'estimate_condition_type2Diabetes': 'Typ-2-Diabetes',
   'estimate_condition_type1Diabetes': 'Typ-1-Diabetes',
   'estimate_condition_heartAttack': 'Einen Herzinfarkt',
@@ -189,7 +193,7 @@ const Map<String, String> lifespanStringsDe = {
   'estimate_weight': 'Gewicht',
   'estimate_weight_result': 'Dein Bereich: {band}',
   'estimate_weight_privacy':
-      'Gespeichert wird nur der Bereich, nie Größe oder Gewicht.',
+      'Deine Größe und dein Gewicht dienen nur dieser Berechnung und werden nie gespeichert. Nur die Zahl, die dabei herauskommt, bleibt.',
   'estimate_question_social':
       'Wie verbunden fühlst du dich mit anderen Menschen?',
   'estimate_hint_social': 'Freunde, Familie, Gemeinschaft.',
@@ -258,6 +262,8 @@ const Map<String, String> lifespanStringsFr = {
       'Un médecin t’a-t-il déjà dit que tu as l’une de ces maladies\u00A0?',
   'estimate_hint_conditions':
       'Seulement si tu le souhaites – tu peux passer cette question. Coche tout ce qui s’applique.',
+  'estimate_conditions_privacy':
+      'Ces réponses ne sont jamais enregistrées – elles servent uniquement à calculer ton nombre.',
   'estimate_condition_type2Diabetes': 'Diabète de type 2',
   'estimate_condition_type1Diabetes': 'Diabète de type 1',
   'estimate_condition_heartAttack': 'Un infarctus',
@@ -306,7 +312,7 @@ const Map<String, String> lifespanStringsFr = {
   'estimate_weight': 'Poids',
   'estimate_weight_result': 'Ta tranche\u00A0: {band}',
   'estimate_weight_privacy':
-      'Seule la tranche est enregistrée, jamais ta taille ni ton poids.',
+      'Ta taille et ton poids servent uniquement à ce calcul et ne sont jamais enregistrés. Seul le nombre obtenu est gardé.',
   'estimate_question_social': 'Comment vis-tu tes liens avec les autres\u00A0?',
   'estimate_hint_social': 'Amis, famille, communauté.',
   'estimate_option_social_oftenLonely': 'Solitude fréquente',
@@ -373,6 +379,8 @@ const Map<String, String> lifespanStringsEs = {
       '¿Algún médico te ha dicho alguna vez que tienes alguna de estas enfermedades?',
   'estimate_hint_conditions':
       'Solo si quieres: puedes saltarte esta pregunta. Marca todo lo que corresponda.',
+  'estimate_conditions_privacy':
+      'Estas respuestas nunca se guardan: solo sirven para calcular tu número.',
   'estimate_condition_type2Diabetes': 'Diabetes tipo 2',
   'estimate_condition_type1Diabetes': 'Diabetes tipo 1',
   'estimate_condition_heartAttack': 'Un infarto',
@@ -419,7 +427,7 @@ const Map<String, String> lifespanStringsEs = {
   'estimate_weight': 'Peso',
   'estimate_weight_result': 'Tu rango: {band}',
   'estimate_weight_privacy':
-      'Solo se guarda el rango, nunca tu altura ni tu peso.',
+      'Tu altura y tu peso solo sirven para este cálculo y nunca se guardan. Solo se guarda el número que resulta.',
   'estimate_question_social': '¿Cómo vives tus vínculos con los demás?',
   'estimate_hint_social': 'Amistades, familia, comunidad.',
   'estimate_option_social_oftenLonely': 'Soledad frecuente',

@@ -79,6 +79,7 @@ abstract final class SubjectKeys {
     'estimate_question_conditions',
     'estimate_hint_conditions',
     'estimate_conditions_note',
+    'estimate_conditions_privacy',
     'estimate_question_smoking',
     'estimate_hint_smoking',
     'estimate_question_activity',

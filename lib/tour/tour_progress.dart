@@ -69,7 +69,7 @@ class TourProgressStore {
       if (seen is! List) return <String>{};
       return seen.whereType<String>().toSet();
     } on FormatException catch (e) {
-      debugPrint('Error loading product tours: $e');
+      debugPrint('Error loading product tours (${e.runtimeType})');
       return <String>{};
     }
   }

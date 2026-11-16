@@ -112,34 +112,4 @@ void main() {
       expect(bmiBandFor(180, 0), isNull);
     });
   });
-
-  group('LifestyleAnswers JSON', () {
-    test('round trip', () {
-      const answers = LifestyleAnswers(
-        smoking: Smoking.quitBefore40,
-        activity: Activity.some,
-        bmi: BmiBand.over30,
-        social: SocialConnection.sometimes,
-      );
-      final json = answers.toJson();
-      expect(json['v'], LifestyleAnswers.jsonVersion);
-      expect(json.containsKey('alcohol'), isFalse);
-      expect(LifestyleAnswers.fromJson(json), answers);
-    });
-
-    test('unknown values become null; no raw height or weight stored', () {
-      final answers = LifestyleAnswers.fromJson({
-        'v': 1,
-        'smoking': 'pipe',
-        'activity': 42,
-        'alcohol': 'over28',
-      });
-      expect(answers.smoking, isNull);
-      expect(answers.activity, isNull);
-      expect(answers.alcohol, Alcohol.over28);
-      final keys = const LifestyleAnswers(bmi: BmiBand.healthy).toJson().keys;
-      expect(keys, isNot(contains('height')));
-      expect(keys, isNot(contains('weight')));
-    });
-  });
 }

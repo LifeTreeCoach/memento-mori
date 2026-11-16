@@ -34,7 +34,11 @@ class _FakeCalendarPlatform extends DeviceCalendarPlusPlatform
   Future<List<Map<String, dynamic>>> listCalendars() async => [
         {'id': 'cal', 'name': 'Local', 'readOnly': false, 'accountName': 'local'},
         {'id': 'ro', 'name': 'Holidays', 'readOnly': true},
+        ...extraCalendars,
       ];
+
+  /// Further calendars a test adds (e.g. a second writable one).
+  final extraCalendars = <Map<String, dynamic>>[];
 
   @override
   Future<String> createEvent(
@@ -204,7 +208,6 @@ void main() {
   test('a renamed friend updates the whole series in place', () async {
     await FriendsService.addFriend(_friend('a', 'Anna', DateTime(1990, 5, 1)));
     await setUpSync();
-    await CalendarService.syncAllBirthdays();
 
     await FriendsService.updateFriend(_friend('a', 'Annie', DateTime(1990, 8, 15)));
     await CalendarService.autoSyncIdle;
@@ -221,7 +224,6 @@ void main() {
   test('an event deleted outside the app is created anew', () async {
     await FriendsService.addFriend(_friend('a', 'Anna', DateTime(1990, 5, 1)));
     await setUpSync();
-    await CalendarService.syncAllBirthdays();
     platform.events.clear();
 
     expect(await CalendarService.syncAllBirthdays(), isTrue);
@@ -253,6 +255,80 @@ void main() {
     expect(await CalendarService.clearAllBirthdayEvents(), isTrue);
     expect(CalendarService.selectedCalendarId, isNull);
     expect(CalendarService.syncStatus, CalendarSyncStatus.notConfigured);
+  });
+
+  test('unreadable synced events: no sync and never overwritten that session',
+      () async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('calendar_synced_events', '{oops');
+    await FriendsService.addFriend(_friend('a', 'Anna', DateTime(1990, 5, 1)));
+    await setUpSync();
+
+    expect(await CalendarService.syncAllBirthdays(), isFalse);
+    await CalendarService.syncChanges();
+
+    expect(platform.events, isEmpty);
+    expect(CalendarService.syncStatus, CalendarSyncStatus.error);
+    expect(prefs.getString('calendar_synced_events'), '{oops');
+    expect(prefs.getString('calendar_sync_calendar_id'), 'cal');
+  });
+
+  test('readable synced events are saved', () async {
+    await FriendsService.addFriend(_friend('a', 'Anna', DateTime(1990, 5, 1)));
+    await setUpSync();
+    await CalendarService.syncAllBirthdays();
+
+    final prefs = await SharedPreferences.getInstance();
+    final stored = CalendarService.decodeSyncedEvents(
+        prefs.getString('calendar_synced_events'));
+    expect(stored.single.friendId, 'a');
+  });
+
+  group('selecting a calendar', () {
+    final anna = _friend('a', 'Anna', DateTime(1990, 5, 1));
+    final ben = _friend('b', 'Ben', DateTime(1985, 2, 3));
+
+    test('selecting a calendar syncs right away', () async {
+      await FriendsService.addFriends([anna, ben]);
+      await CalendarService.autoSyncIdle;
+      expect(await CalendarService.initialize(), isTrue);
+      final revision = CalendarService.revision.value;
+
+      expect(await CalendarService.selectCalendar('cal'), isTrue);
+
+      expect(platform.calls, ['create 1', 'create 2']);
+      expect(platform.events.values.map((e) => e['calendarId']), ['cal', 'cal']);
+      expect(await stats(), containsPair('unsyncedFriends', 0));
+      expect(CalendarService.syncStatus, CalendarSyncStatus.synced);
+      expect(CalendarService.revision.value, greaterThan(revision));
+    });
+
+    test('switching calendars moves the events', () async {
+      platform.extraCalendars.add(
+          {'id': 'other', 'name': 'Family', 'readOnly': false, 'accountName': 'local'});
+      await setUpSyncedFriends([anna, ben]);
+
+      expect(await CalendarService.selectCalendar('other'), isTrue);
+
+      expect(platform.calls,
+          ['delete 1 allEvents', 'create 3', 'delete 2 allEvents', 'create 4']);
+      expect(platform.events.keys, ['3', '4']);
+      expect(platform.events.values.map((e) => e['calendarId']), ['other', 'other']);
+      expect(await stats(), containsPair('unsyncedFriends', 0));
+    });
+
+    test('without calendar access selecting syncs nothing and never asks', () async {
+      await FriendsService.addFriend(anna);
+      await setUpSync();
+      platform.calls.clear();
+      platform.events.clear();
+      platform.permission = 'denied';
+
+      expect(await CalendarService.selectCalendar('cal'), isTrue);
+
+      expect(platform.calls, isEmpty);
+      expect(platform.events, isEmpty);
+    });
   });
 
   group('automatic sync', () {

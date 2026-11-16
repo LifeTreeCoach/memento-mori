@@ -40,6 +40,7 @@ Außerdem
 
 Deine Daten bleiben bei dir
 • Alles wird auf deinem Gerät gespeichert
+• Persönliche Daten werden verschlüsselt auf deinem Gerät gespeichert, Gesundheitsangaben nie
 • Deine Kontakte werden nur gelesen, wenn du Geburtstage importierst, und nur die Personen, die du auswählst, bleiben gespeichert
 • Kein Konto, keine Werbung, kein Tracking
 • Die App hat keine Internetberechtigung und kann deine Daten daher nirgendwohin senden

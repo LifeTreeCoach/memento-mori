@@ -40,6 +40,7 @@ And also
 
 Your data stays with you
 • Everything is stored on your device
+• Personal data is stored encrypted on your device; health answers are never saved
 • Your contacts are only read when you import birthdays, and only the people you choose are kept
 • No account, no ads, no tracking
 • The app has no internet permission, so it cannot send your data anywhere

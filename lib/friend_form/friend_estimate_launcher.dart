@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:memento_mori_life_in_weeks/lifespan/lifespan_profile_store.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/ui/lifespan_estimate_screen.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/ui/lifespan_profile.dart';
-import 'package:memento_mori_life_in_weeks/people/friend_lifespan_estimate.dart';
 
 /// What the friend form hands to the estimate about a person.
 class FriendEstimateRequest {
@@ -20,13 +18,9 @@ class FriendEstimateRequest {
   /// The slider value ("keep" in the flow).
   final int currentYears;
 
-  /// The answers to start from: the stored ones, or an empty profile with
-  /// the user's own country (from [own]); sex is left to choose.
-  static LifespanProfile initialProfile(
-    FriendLifespanEstimate? stored, {
-    LifespanProfileStore own = const SettingsLifespanProfileStore(),
-  }) =>
-      stored?.profile ?? LifespanProfile(country: own.load().effectiveCountry);
+  /// The answers to start from: none, as answers are never stored (the
+  /// flow falls back to the device region for the country).
+  static LifespanProfile initialProfile() => const LifespanProfile();
 }
 
 /// Opens the estimate for a person; completes with the applied profile or

@@ -8,12 +8,14 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:memento_mori_life_in_weeks/reminders/birthday_catch_up.dart';
 import 'package:memento_mori_life_in_weeks/reminders/birthday_reminder_scheduler.dart';
+import 'package:memento_mori_life_in_weeks/reminders/lost_alarm_check.dart';
 import 'package:memento_mori_life_in_weeks/reminders/notification_ids.dart';
 import 'package:memento_mori_life_in_weeks/reminders/notification_service.dart';
 import 'package:memento_mori_life_in_weeks/reminders/phase_check_in_planner.dart';
 import 'package:memento_mori_life_in_weeks/reminders/reminder_fingerprints.dart';
 import 'package:memento_mori_life_in_weeks/reminders/reminder_install_marker.dart';
 import 'package:memento_mori_life_in_weeks/reminders/reminder_rhythm.dart';
+import 'package:memento_mori_life_in_weeks/reminders/scheduled_alarm_probe.dart';
 import 'package:memento_mori_life_in_weeks/reminders/weekly_reflection_planner.dart';
 import 'package:memento_mori_life_in_weeks/settings_service.dart';
 import 'package:memento_mori_life_in_weeks/friends_service.dart';
@@ -35,8 +37,24 @@ class ReminderService {
   static const String compassPayload = WeeklyReflectionPlanner.payload;
 
   static Future<void> initialize() async {
-    await forgetScheduledRemindersIfRestored();
+    if (!await forgetScheduledRemindersIfRestored()) {
+      await forgetScheduledRemindersIfAlarmsLost();
+    }
     await _createChannels();
+  }
+
+  /// Android only: clears the birthday reminder fingerprints when the OS
+  /// lost alarms the plugin still lists as pending (a "force stop" cancels
+  /// them), so the next pass re-arms everything (see [LostAlarmCheck]).
+  /// No-op on other platforms. Returns whether the fingerprints were cleared.
+  static Future<bool> forgetScheduledRemindersIfAlarmsLost({LostAlarmCheck? check}) async {
+    if (kIsWeb || defaultTargetPlatform != TargetPlatform.android) return false;
+    return (check ??
+            LostAlarmCheck(
+              probe: const MethodChannelScheduledAlarmProbe(),
+              pendingIds: BirthdayReminderScheduler().pendingReminderIds,
+            ))
+        .run();
   }
 
   /// Clears the birthday reminder fingerprints when [ReminderInstallMarker]

@@ -170,22 +170,6 @@ void main() {
     expect(run(Sex.female).recommendedYears, run(Sex.female).mean.round());
   });
 
-  test('LifespanEstimate JSON round trip', () {
-    final e = run(Sex.unspecified, answers: risky);
-    final copy = LifespanEstimate.fromJson(e.toJson())!;
-    expect(copy.toJson(), e.toJson());
-    expect(copy.sex, Sex.unspecified);
-    expect(copy.gains, e.gains);
-    expect(LifespanEstimate.fromJson({'v': 1}), isNull);
-    final old = estimator.estimate(
-      country: 'DE',
-      sex: Sex.male,
-      birthDate: DateTime(1930),
-      now: now,
-    );
-    expect(LifespanEstimate.fromJson(old.toJson())!.reach90, isNull);
-  });
-
   test('sample outputs (DE, age 36)', () {
     String fmt(LifespanEstimate e) =>
         'mean ${e.mean.toStringAsFixed(2)} p25 ${e.p25.toStringAsFixed(1)} '

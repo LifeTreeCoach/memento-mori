@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:memento_mori_life_in_weeks/data/avatar_store.dart';
 import 'package:memento_mori_life_in_weeks/friend.dart';
+import 'package:memento_mori_life_in_weeks/people/encrypted_file_image.dart';
 import 'package:memento_mori_life_in_weeks/theme/life_palette.dart';
 
 /// A friend's photo, or their initials on a softly tinted circle.
@@ -29,13 +30,14 @@ class FriendAvatar extends StatelessWidget {
   }
 
   /// Photo at [path] (resolved by [AvatarStore.resolve], so photos survive
-  /// a moved app container), or null when none is set. A missing or unreadable
-  /// file is handled by the avatar's image error callback, so build never
-  /// touches the file system synchronously.
+  /// a moved app container), or null when none is set. Sealed photos are
+  /// decrypted while loading ([EncryptedFileImage]). A missing, unreadable or
+  /// unopenable file is handled by the avatar's image error callback, so
+  /// build never touches the file system synchronously.
   static ImageProvider? photoAt(String? path) {
     final resolved = AvatarStore.resolve(path);
     if (resolved == null) return null;
-    return FileImage(File(resolved));
+    return EncryptedFileImage(File(resolved));
   }
 
   /// Like [photoAt], but decoded at [diameter] logical pixels times

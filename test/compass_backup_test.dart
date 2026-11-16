@@ -31,7 +31,7 @@ final _compass = CompassData(
 void main() {
   test('backup round trip keeps friends and Compass data', () {
     final backup = FriendsService.encodeBackup([_anna()], compass: _compass);
-    expect(jsonDecode(backup)['version'], '1.5');
+    expect(jsonDecode(backup)['version'], '2.0');
 
     final contents = FriendsService.decodeBackupContents(backup);
     expect(contents.entries.single.friend.name, 'Anna');

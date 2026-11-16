@@ -13,6 +13,17 @@ class Motion {
   static const Duration reveal = Duration(milliseconds: 1500);
   static const Duration pulse = Duration(seconds: 4);
 
+  /// The badge on the very first launch (fade in, hold, fade out).
+  ///
+  /// Half of how long the former native launch screen showed the badge on a
+  /// first launch: measured 2026-11-13 on a Pixel 5 (Android 14), profile
+  /// build, screen recordings 913 ms median (552-953 ms; `am start -W`
+  /// TotalTime 593-1071 ms). Half = ~460 ms, raised to the 500 ms floor
+  /// (allowed range 500-1200 ms): below it the fades read as a flicker
+  /// rather than a calm moment. Debug builds (JIT) took 3.4-4.2 s and are no
+  /// measure of what users see.
+  static const Duration firstLaunchLogo = Duration(milliseconds: 500);
+
   static const Curve standard = Curves.easeOutCubic;
   static const Curve emphasized = Curves.easeInOutCubicEmphasized;
 

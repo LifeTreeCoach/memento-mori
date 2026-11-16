@@ -232,6 +232,23 @@ class Intention {
   Intention withPhase(String? phaseId) =>
       copyWith(phaseId: phaseId, clearPhaseId: phaseId == null);
 
+  /// Copy about friend [friendId] (null: about nobody).
+  Intention withFriend(String? friendId) => Intention(
+        id: id,
+        title: title,
+        note: note,
+        area: area,
+        horizon: horizon,
+        status: status,
+        createdAt: createdAt,
+        doneAt: doneAt,
+        friendId: friendId,
+        kind: kind,
+        phaseId: phaseId,
+        dueDate: dueDate,
+        letGoAt: letGoAt,
+      );
+
   /// Copy released on [today]; it keeps its phase.
   Intention letGo(DateTime today) => copyWith(
       status: IntentionStatus.letGo, letGoAt: today, clearDoneAt: true);

@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Auto Backup and device-to-device transfer on Android 12+ (API 31+);
-     keep in sync with backup_rules.xml (API <= 30), which explains the paths.
-     Only shared_prefs and app_flutter/ (avatars) are included, so cache/,
-     code_cache/ and no_backup/ stay out; the plugin's pending-notification
-     list (shared_prefs/scheduled_notifications.xml) is excluded. -->
+     keep in sync with backup_rules.xml (API <= 30), which explains the paths
+     and exclusions. Only shared_prefs, app_flutter/ (encrypted vault,
+     avatars) and files/vault_transfer/ (see below) are included, without the engine's extracted debug assets
+     (app_flutter/flutter_assets/); excluded are the plugin's pending-notification
+     list, flutter_secure_storage's files (bound to this device's Keystore),
+     the plaintext widget inputs and the watch sync state. files/vault_transfer/
+     is VaultBackupAgent's staging copy of the data key: present only while the
+     agent adds it, included so the restore never skips it
+     (isFileEligibleForRestore).
+     Cloud backup only runs when the transport is end-to-end encrypted
+     (disableIfNoEncryptionCapabilities): only then does VaultBackupAgent add
+     the data key, and a backup without it could not be opened anyway. -->
 <data-extraction-rules>
-    <cloud-backup>
+    <cloud-backup disableIfNoEncryptionCapabilities="true">
         <include domain="sharedpref" path="." />
         <include domain="root" path="app_flutter/" />
+        <include domain="file" path="vault_transfer/" />
+        <exclude domain="root" path="app_flutter/flutter_assets/" />
         <exclude domain="sharedpref" path="scheduled_notifications.xml" />
+        <exclude domain="sharedpref" path="FlutterSecureStorage.xml" />
+        <exclude domain="sharedpref" path="FlutterSecureKeyStorage.xml" />
+        <exclude domain="sharedpref" path="FlutterSecureStorageConfiguration.xml" />
+        <exclude domain="sharedpref" path="FlutterSecureStorageConfiguration:FlutterSecureStorage.xml" />
+        <exclude domain="sharedpref" path="HomeWidgetPreferences.xml" />
+        <exclude domain="sharedpref" path="WearSyncState.xml" />
     </cloud-backup>
     <device-transfer>
         <include domain="sharedpref" path="." />
         <include domain="root" path="app_flutter/" />
+        <include domain="file" path="vault_transfer/" />
+        <exclude domain="root" path="app_flutter/flutter_assets/" />
         <exclude domain="sharedpref" path="scheduled_notifications.xml" />
+        <exclude domain="sharedpref" path="FlutterSecureStorage.xml" />
+        <exclude domain="sharedpref" path="FlutterSecureKeyStorage.xml" />
+        <exclude domain="sharedpref" path="FlutterSecureStorageConfiguration.xml" />
+        <exclude domain="sharedpref" path="FlutterSecureStorageConfiguration:FlutterSecureStorage.xml" />
+        <exclude domain="sharedpref" path="HomeWidgetPreferences.xml" />
+        <exclude domain="sharedpref" path="WearSyncState.xml" />
     </device-transfer>
 </data-extraction-rules>

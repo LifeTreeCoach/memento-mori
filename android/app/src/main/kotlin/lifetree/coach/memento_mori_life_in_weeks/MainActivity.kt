@@ -6,12 +6,17 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
+import android.util.Log
 import es.antonborri.home_widget.HomeWidgetLaunchIntent
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
+import lifetree.coach.memento_mori_life_in_weeks.backup.VaultTransferStaging
 import lifetree.coach.memento_mori_life_in_weeks.contacts.ContactBirthdayTexts
 import lifetree.coach.memento_mori_life_in_weeks.contacts.ContactsPicker
+import lifetree.coach.memento_mori_life_in_weeks.reminders.ScheduledAlarmProbe
+import lifetree.coach.memento_mori_life_in_weeks.store.PlayStoreListing
 import lifetree.coach.memento_mori_life_in_weeks.widget.WidgetLaunchFlag
 
 class MainActivity : FlutterActivity() {
@@ -24,6 +29,23 @@ class MainActivity : FlutterActivity() {
         super.onCreate(savedInstanceState)
         // A recreated activity keeps its old intent; that launch was handled already.
         if (savedInstanceState == null) widgetLaunch.record(intent?.action)
+        clearStagedDataKey()
+    }
+
+    /**
+     * Removes a plain data key the backup agent may have left in
+     * `files/vault_transfer/` when its process died mid-backup. A tiny delete
+     * (usually nothing there) on a background thread; errors are only logged.
+     */
+    private fun clearStagedDataKey() {
+        val staging = VaultTransferStaging(filesDir)
+        Thread({
+            try {
+                if (!staging.clear()) Log.w(TAG, "Staged data key not removed")
+            } catch (e: Exception) {
+                Log.w(TAG, "Staged data key not removed: ${e.javaClass.simpleName}")
+            }
+        }, "vault-staging-cleanup").start()
     }
 
     override fun onNewIntent(intent: Intent) {
@@ -43,8 +65,21 @@ class MainActivity : FlutterActivity() {
                         startActivity(notificationSettingsIntent())
                         result.success(null)
                     }
-                    OPEN_PLAY_STORE_LISTING ->
-                        result.success(openPlayStoreListing(call.argument<String>("uri")))
+                    OPEN_PLAY_STORE_LISTING -> {
+                        // Only this app's own listing; any argument (type) is ignored.
+                        if (PlayStoreListing.isIgnored(requestedUri(call), packageName)) {
+                            Log.w(TAG, "openPlayStoreListing: other URI ignored")
+                        }
+                        result.success(openPlayStoreListing())
+                    }
+                    HAS_SCHEDULED_ALARM -> {
+                        val id = ScheduledAlarmProbe.idFrom(call.arguments)
+                        if (id == null) {
+                            result.error("bad_argument", "hasScheduledAlarm expects an int id", null)
+                        } else {
+                            result.success(ScheduledAlarmProbe(applicationContext).hasScheduledAlarm(id))
+                        }
+                    }
                     else -> result.notImplemented()
                 }
             }
@@ -86,13 +121,17 @@ class MainActivity : FlutterActivity() {
             Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:$packageName"))
         }
 
+    /** The `uri` argument of [call] if its arguments are a map, else null (never throws). */
+    private fun requestedUri(call: MethodCall): Any? = (call.arguments as? Map<*, *>)?.get("uri")
+
     /**
-     * Opens [uri] (default: this app's `market://` listing) in the Play Store app only, so
-     * other stores that also handle `market://` (F-Droid, ...) don't raise a chooser.
-     * Returns false when the Play Store is not installed; Flutter then opens the web page.
+     * Opens this app's own `market://` listing ([PlayStoreListing]) in the Play Store app
+     * only, so other stores that also handle `market://` (F-Droid, ...) don't raise a
+     * chooser. Returns false when the Play Store is not installed; Flutter then opens the
+     * web page.
      */
-    private fun openPlayStoreListing(uri: String?): Boolean {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri ?: "market://details?id=$packageName"))
+    private fun openPlayStoreListing(): Boolean {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(PlayStoreListing.uriFor(packageName)))
             .setPackage(PLAY_STORE_PACKAGE)
         return try {
             startActivity(intent)
@@ -103,8 +142,10 @@ class MainActivity : FlutterActivity() {
     }
 
     private companion object {
+        const val TAG = "MainActivity"
         const val APP_SETTINGS_CHANNEL = "memento/app_settings"
         const val OPEN_PLAY_STORE_LISTING = "openPlayStoreListing"
+        const val HAS_SCHEDULED_ALARM = "hasScheduledAlarm"
         const val PLAY_STORE_PACKAGE = "com.android.vending"
         const val WIDGET_LAUNCH_CHANNEL = "memento/widget_launch"
         const val CONSUME_WIDGET_LAUNCH = "consumeWidgetLaunch"

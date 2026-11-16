@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:intl/intl.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:memento_mori_life_in_weeks/reminders/birthday_reminder_scheduler.dart';
 import 'package:memento_mori_life_in_weeks/friend.dart';
 import 'package:memento_mori_life_in_weeks/reminders/reminder_budget.dart';
+import 'package:memento_mori_life_in_weeks/security/personal_store.dart';
 
 /// What the catch-up remembers between reschedules.
 class BirthdayCatchUpState {
@@ -256,34 +256,40 @@ class BirthdayCatchUpPolicy {
       a.year == b.year && a.month == b.month && a.day == b.day;
 }
 
-/// Persists [BirthdayCatchUpState] in SharedPreferences.
+/// Persists [BirthdayCatchUpState] in the [PersonalStore].
 class BirthdayCatchUpStore {
-  static const String notifiedKey = 'birthday_catchup_shown';
-  static const String scheduledKey = 'birthday_catchup_scheduled_day_of';
-  static const String notifiedDayBeforeKey = 'birthday_catchup_shown_day_before';
-  static const String scheduledDayBeforeKey = 'birthday_catchup_scheduled_day_before';
+  static const String notifiedKey = PersonalKeys.birthdayCatchUpShown;
+  static const String scheduledKey = PersonalKeys.birthdayCatchUpScheduledDayOf;
+  static const String notifiedDayBeforeKey = PersonalKeys.birthdayCatchUpShownDayBefore;
+  static const String scheduledDayBeforeKey = PersonalKeys.birthdayCatchUpScheduledDayBefore;
+
+  /// The store, re-read first.
+  static Future<PersonalStore> _loaded() async {
+    final store = PersonalStore.instance;
+    await store.reload();
+    return store;
+  }
 
   /// False until the first catch-up run saved its state (e.g. right after
   /// updating from a version without catch-up).
-  Future<bool> hasState() async =>
-      (await SharedPreferences.getInstance()).containsKey(scheduledKey);
+  Future<bool> hasState() async => (await _loaded()).containsKey(scheduledKey);
 
   Future<BirthdayCatchUpState> load() async {
-    final prefs = await SharedPreferences.getInstance();
+    final store = await _loaded();
     return BirthdayCatchUpState(
-      notifiedOn: _decode(prefs.getString(notifiedKey)),
-      notifiedDayBeforeOn: _decode(prefs.getString(notifiedDayBeforeKey)),
-      scheduledDayOf: _decodeMoments(prefs.getString(scheduledKey)),
-      scheduledDayBefore: _decodeMoments(prefs.getString(scheduledDayBeforeKey)),
+      notifiedOn: _decode(store.getString(notifiedKey)),
+      notifiedDayBeforeOn: _decode(store.getString(notifiedDayBeforeKey)),
+      scheduledDayOf: _decodeMoments(store.getString(scheduledKey)),
+      scheduledDayBefore: _decodeMoments(store.getString(scheduledDayBeforeKey)),
     );
   }
 
   Future<void> save(BirthdayCatchUpState state) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(notifiedKey, jsonEncode(state.notifiedOn));
-    await prefs.setString(notifiedDayBeforeKey, jsonEncode(state.notifiedDayBeforeOn));
-    await prefs.setString(scheduledKey, _encodeMoments(state.scheduledDayOf));
-    await prefs.setString(scheduledDayBeforeKey, _encodeMoments(state.scheduledDayBefore));
+    final store = PersonalStore.instance;
+    await store.setString(notifiedKey, jsonEncode(state.notifiedOn));
+    await store.setString(notifiedDayBeforeKey, jsonEncode(state.notifiedDayBeforeOn));
+    await store.setString(scheduledKey, _encodeMoments(state.scheduledDayOf));
+    await store.setString(scheduledDayBeforeKey, _encodeMoments(state.scheduledDayBefore));
   }
 
   static String _encodeMoments(Map<String, DateTime> moments) =>

@@ -94,6 +94,14 @@ class ConditionsPage extends StatelessWidget {
             ],
           ),
         ),
+        const SizedBox(height: 12),
+        Text(
+          subject.translate(l10n, 'estimate_conditions_privacy'),
+          key: const ValueKey('lifespan_conditions_privacy'),
+          style: Theme.of(
+            context,
+          ).textTheme.bodySmall?.copyWith(color: scheme.onSurfaceVariant),
+        ),
       ],
     );
   }

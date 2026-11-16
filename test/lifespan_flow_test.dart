@@ -8,8 +8,7 @@ import 'package:memento_mori_life_in_weeks/app_settings_controller.dart';
 import 'package:memento_mori_life_in_weeks/compass/ui/phase/lifespan_bar.dart';
 import 'package:memento_mori_life_in_weeks/friends_service.dart';
 import 'package:memento_mori_life_in_weeks/life/visualization_settings.dart';
-import 'package:memento_mori_life_in_weeks/lifespan/lifespan_profile_store.dart';
-import 'package:memento_mori_life_in_weeks/lifespan/applied_estimate.dart';
+import 'package:memento_mori_life_in_weeks/lifespan/lifespan_result_store.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/lifespan_estimator.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/lifestyle_model.dart';
 import 'package:memento_mori_life_in_weeks/lifespan/sex.dart';
@@ -165,7 +164,7 @@ void main() {
       expect(find.text('World'), findsOneWidget);
     });
 
-    testWidgets('a stored country wins over the device region', (tester) async {
+    testWidgets('a given country wins over the device region', (tester) async {
       await _pumpFlow(
         tester,
         initial: const LifespanProfile(country: 'FR', sex: Sex.female),
@@ -273,7 +272,10 @@ void main() {
       await tester.pumpAndSettle();
       expect(find.text('Your range: BMI 18.5 to 25'), findsOneWidget);
       expect(
-        find.text('Only the range is kept, never your height or weight.'),
+        find.text(
+          'Your height and weight are only used for this calculation and '
+          'never saved. Only the resulting number is kept.',
+        ),
         findsOneWidget,
       );
       await _tapKey(tester, 'lifespan_next');
@@ -508,29 +510,27 @@ void main() {
   });
 
   group('storage', () {
-    test('profile round-trips through SettingsService', () async {
+    test('only the result is kept, never the answers', () async {
       final estimate = _population('DE', Sex.female);
-      await const SettingsLifespanProfileStore().save(
+      await const SettingsLifespanResultStore().save(
         LifespanProfile.applied(
           estimate: estimate,
           answers: const LifestyleAnswers(smoking: Smoking.never),
           years: 90,
         ),
       );
-      final stored = const SettingsLifespanProfileStore().load();
-      expect(stored.country, 'DE');
-      expect(stored.sex, Sex.female);
-      expect(stored.answers.smoking, Smoking.never);
-      expect(stored.applied!.appliedYears, 90);
-      expect(stored.applied!.estimate.mean, estimate.mean);
+      final stored = const SettingsLifespanResultStore().load()!;
+      expect(stored.years, 90);
+      expect(stored.mean, estimate.mean);
+      final prefs = await SharedPreferences.getInstance();
+      final text = prefs.getString(SettingsService.lifespanResultKey)!;
+      expect(text, isNot(contains('smoking')));
+      expect(text, isNot(contains('DE')));
     });
 
-    test('unreadable stored JSON reads as empty', () async {
-      await _init(
-        extra: {'lifespan_answers': '{oops', 'lifespan_estimate': '[]'},
-      );
-      expect(SettingsService.getLifespanAnswers().isEmpty, isTrue);
-      expect(SettingsService.getLifespanEstimate(), isNull);
+    test('an unreadable stored result reads as none', () async {
+      await _init(extra: {SettingsService.lifespanResultKey: '[]'});
+      expect(SettingsService.getLifespanResult(), isNull);
     });
   });
 
@@ -556,7 +556,7 @@ void main() {
       await tester.pumpAndSettle();
     }
 
-    testWidgets('the tile opens the estimate; applying saves all keys', (
+    testWidgets('the tile opens the estimate; applying saves the result only', (
       tester,
     ) async {
       await pumpSettings(tester);
@@ -585,18 +585,19 @@ void main() {
 
       expect(find.byType(LifespanEstimateScreen), findsNothing);
       final prefs = await SharedPreferences.getInstance();
-      expect(prefs.getString('lifespan_country'), 'DE');
-      expect(prefs.getString('lifespan_sex'), 'female');
-      expect(jsonDecode(prefs.getString('lifespan_answers')!), {'v': 1});
-      final stored = AppliedLifespanEstimate.fromJson(
-        jsonDecode(prefs.getString('lifespan_estimate')!)
-            as Map<String, Object?>,
-      )!;
-      expect(stored.appliedYears, 97);
-      expect(stored.estimate.country, 'DE');
+      for (final key in [
+        'lifespan_country',
+        'lifespan_sex',
+        'lifespan_answers',
+        'lifespan_estimate',
+      ]) {
+        expect(prefs.containsKey(key), isFalse, reason: key);
+      }
+      final stored = SettingsService.getLifespanResult()!;
+      expect(stored.years, 97);
       expect(prefs.getInt('life_expectancy_years'), 97);
       expect(find.text('97\u00A0years'), findsOneWidget);
-      final mean = stored.estimate.mean.round();
+      final mean = stored.mean.round();
       expect(find.textContaining('About $mean · range'), findsOneWidget);
       expect(find.textContaining('adjusted by you'), findsNothing);
     });
@@ -605,7 +606,7 @@ void main() {
       tester,
     ) async {
       final estimate = _population('DE', Sex.female);
-      await const SettingsLifespanProfileStore().save(
+      await const SettingsLifespanResultStore().save(
         LifespanProfile.applied(
           estimate: estimate,
           answers: const LifestyleAnswers(),
@@ -631,7 +632,7 @@ void main() {
       await tester.tap(find.byTooltip('Back'));
       await tester.pumpAndSettle();
       expect(find.byType(LifespanEstimateScreen), findsNothing);
-      expect(SettingsService.getLifespanEstimate(), isNull);
+      expect(SettingsService.getLifespanResult(), isNull);
     });
   });
 }

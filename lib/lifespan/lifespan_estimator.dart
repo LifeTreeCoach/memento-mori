@@ -30,8 +30,6 @@ class LifespanEstimate {
     this.conditionMultiplier = 1.0,
   });
 
-  static const int jsonVersion = 1;
-
   /// Resolved location key (`WLD` when the country is unknown).
   final String country;
   final Sex sex;
@@ -61,68 +59,6 @@ class LifespanEstimate {
   /// Years the mean would rise per answered factor at its best category
   /// (only gains >= [minimumShownGainYears]), largest first.
   final Map<LifestyleFactor, double> gains;
-
-  Map<String, Object?> toJson() => {
-    'v': jsonVersion,
-    'country': country,
-    'sex': sex.name,
-    'age': age,
-    'mean': mean,
-    'p25': p25,
-    'median': median,
-    'p75': p75,
-    'reach80': reach80,
-    'reach90': reach90,
-    'multiplier': multiplier,
-    'conditionMultiplier': conditionMultiplier,
-    'recommendedYears': recommendedYears,
-    'gains': {for (final e in gains.entries) e.key.name: e.value},
-  };
-
-  /// Returns null when [json] is not a valid stored estimate.
-  static LifespanEstimate? fromJson(Map<String, Object?> json) {
-    double? number(String key) => (json[key] as num?)?.toDouble();
-    final sex = Sex.fromName(json['sex'] as String?);
-    final country = json['country'];
-    final mean = number('mean'), p25 = number('p25');
-    final median = number('median'), p75 = number('p75');
-    final age = number('age'), multiplier = number('multiplier');
-    final recommended = json['recommendedYears'];
-    if (sex == null ||
-        country is! String ||
-        mean == null ||
-        p25 == null ||
-        median == null ||
-        p75 == null ||
-        age == null ||
-        multiplier == null ||
-        recommended is! int) {
-      return null;
-    }
-    final rawGains = json['gains'];
-    final gains = <LifestyleFactor, double>{};
-    if (rawGains is Map) {
-      for (final factor in LifestyleFactor.values) {
-        final value = rawGains[factor.name];
-        if (value is num) gains[factor] = value.toDouble();
-      }
-    }
-    return LifespanEstimate(
-      country: country,
-      sex: sex,
-      age: age,
-      mean: mean,
-      p25: p25,
-      median: median,
-      p75: p75,
-      reach80: number('reach80'),
-      reach90: number('reach90'),
-      multiplier: multiplier,
-      recommendedYears: recommended,
-      gains: gains,
-      conditionMultiplier: number('conditionMultiplier') ?? 1.0,
-    );
-  }
 }
 
 /// Personal cohort life expectancy from the WPP 2024 tables plus lifestyle.

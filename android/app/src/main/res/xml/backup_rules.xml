@@ -1,21 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Auto Backup up to Android 11 (API <= 30); keep in sync with
-     data_extraction_rules.xml (API 31+).
+     data_extraction_rules.xml (API 31+). The manifest also names
+     backup/VaultBackupAgent.kt: it applies these rules (super.onFullBackup)
+     and adds the data key only when the backup is end-to-end encrypted or a
+     device-to-device transfer.
      Everything the app keeps:
-     - shared_prefs: settings, people, Compass, lifespan answers
-       (FlutterSharedPreferences), widget inputs (HomeWidgetPreferences),
-       state of the plugins
-     - except scheduled_notifications.xml: flutter_local_notifications' list
-       of pending notifications. The alarms themselves are never restored, so
-       a restored list would claim reminders that don't exist and the diff
+     - shared_prefs: settings and the state of the plugins
+     - app_flutter/: path_provider's documents directory: the encrypted vault
+       (app_flutter/vault/*.bin, AES-256-GCM) and the avatars
+       (app_flutter/avatars/)
+     - except app_flutter/flutter_assets/: assets the Flutter engine extracts
+       from the APK in debug builds (~100 MB, over the 25 MB backup quota);
+       recreated on every start, never user data.
+     Excluded from shared_prefs:
+     - scheduled_notifications.xml: flutter_local_notifications' list of
+       pending notifications. The alarms themselves are never restored, so a
+       restored list would claim reminders that don't exist and the diff
        scheduler would skip them (lib/reminders/reminder_install_marker.dart
        covers restores that ignore these rules).
-     - app_flutter/: path_provider's documents directory, holds the avatars
-       (lib/data/avatar_store.dart: app_flutter/avatars/)
-     Listing includes means nothing else is backed up, so cache/, code_cache/
-     and no_backup/ stay out (the system never backs them up either). -->
+     - FlutterSecureStorage*.xml / FlutterSecureKeyStorage.xml:
+       flutter_secure_storage's values, its Keystore-wrapped AES key and its
+       algorithm markers. Android Keystore keys never leave the device, so on
+       another device these files can't be decrypted. The vault's data key
+       travels only through VaultBackupAgent (encrypted backups / transfer).
+     - HomeWidgetPreferences.xml: plaintext widget inputs (birth date, ...),
+       republished on every app start anyway.
+     - WearSyncState.xml: fingerprint of the last watch sync; a restored one
+       would suppress the first sync on the new device.
+     - files/vault_transfer/: VaultBackupAgent's staging copy of the data key
+       (backup/VaultTransferStaging.kt). It exists only while the agent adds
+       the key to an encrypted backup or transfer (fullBackupFile), so a
+       normal backup finds nothing there. The include is still needed: before
+       calling onRestoreFile, AOSP checks isFileEligibleForRestore against these
+       includes and would skip a file outside them (seen as a possibility on
+       API 28-30). MainActivity deletes the folder at app start in case the
+       agent's process died before its own cleanup.
+     Listing includes means nothing else is backed up, so cache/, code_cache/,
+     no_backup/ and the rest of files/ stay out.
+     requireFlags (read on API 28-30; API 31+ uses data_extraction_rules.xml):
+     every include exists twice, once per flag, because the flags of one
+     include are ANDed (AOSP BackupAgent.areIncludeRequiredTransportFlagsSatisfied:
+     all set bits must be set by the transport), so
+     requireFlags="clientSideEncryption|deviceToDeviceTransfer" would need an
+     encrypted D2D transfer and match nothing. Two includes = either flag, the
+     same cases in which VaultBackupAgent adds the data key, like 31+
+     (cloud-backup disableIfNoEncryptionCapabilities + device-transfer). A plain
+     cloud backup therefore stays empty instead of holding a vault it could
+     never open (restore -> locked screen). A transport with both flags writes
+     the files twice; restore just overwrites them. API 24-27 have no transport
+     flags (the attribute is ignored there), so VaultBackupAgent skips the
+     backup itself (DekBackupPolicy.mayBackUp). -->
 <full-backup-content>
-    <include domain="sharedpref" path="." />
-    <include domain="root" path="app_flutter/" />
+    <include domain="sharedpref" path="." requireFlags="clientSideEncryption" />
+    <include domain="sharedpref" path="." requireFlags="deviceToDeviceTransfer" />
+    <include domain="root" path="app_flutter/" requireFlags="clientSideEncryption" />
+    <include domain="root" path="app_flutter/" requireFlags="deviceToDeviceTransfer" />
+    <include domain="file" path="vault_transfer/" requireFlags="clientSideEncryption" />
+    <include domain="file" path="vault_transfer/" requireFlags="deviceToDeviceTransfer" />
+    <exclude domain="root" path="app_flutter/flutter_assets/" />
     <exclude domain="sharedpref" path="scheduled_notifications.xml" />
+    <exclude domain="sharedpref" path="FlutterSecureStorage.xml" />
+    <exclude domain="sharedpref" path="FlutterSecureKeyStorage.xml" />
+    <exclude domain="sharedpref" path="FlutterSecureStorageConfiguration.xml" />
+    <exclude domain="sharedpref" path="FlutterSecureStorageConfiguration:FlutterSecureStorage.xml" />
+    <exclude domain="sharedpref" path="HomeWidgetPreferences.xml" />
+    <exclude domain="sharedpref" path="WearSyncState.xml" />
 </full-backup-content>
